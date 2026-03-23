@@ -15,7 +15,7 @@
 
 /* MAP AREA */
 
-.map-container {
+.map-container-outer {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -23,14 +23,27 @@
   background: #ddd;
   padding: 10px;
   border-radius: 8px;
-
+  position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-.map-container img {
+.map-container-inner{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.map-container-inner img {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
 /* SIDEBAR */

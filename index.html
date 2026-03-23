@@ -6,6 +6,7 @@
   <title>RFC-DoC-Atlas</title>
   <link rel="icon" type=image/ico href="icon.ico">
   <link rel="stylesheet" href="style.css">
+  
   <style>
     body {
       margin: 0;
@@ -26,8 +27,12 @@
   <h3>Layers:</h3>
 
   <div class="options-container">
-    <!-- many options to force scroll -->
     <details open>
+        <summary>Outline</summary>
+        <label class="option"><input type="checkbox" data-target="overlay_outline"> outline</label>
+    </details>
+
+    <details map>
         <summary>Core</summary>
         <label class="option"><input type="checkbox"> Civ 1</label>
         <label class="option"><input type="checkbox"> Civ 2</label>
@@ -60,12 +65,15 @@
 
 </div>
 <!-- MAP -->
-<div class="map-container" id="map">
+<div class="map-container-outer" id="map">
+  <div class="map-container-inner">
    <img src="maps/World.jpg" alt="Map">
-</div>
+   <img id="overlay_outline" src="maps/tile_outline.png" class="overlay">
+  </div>
+  </div>
 
   </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
