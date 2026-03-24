@@ -1,3 +1,25 @@
+.dark-mode {
+  --bg: #121212;
+  --text: #ffffff;
+  --sidebar: #1e1e1e;
+  --card: #1a1a1a;
+  --border: #333;
+  --hover: #2a2a2a;
+
+  --brightness: brightness(0.85)
+}
+:root{
+  --bg: #ffffff;
+  --text: #000000;
+  --sidebar: #fff;
+  --sb-border: #ccc;
+  --card: #fafafa;
+  --bg-map: #ddd;
+  --hover: #eee;
+  --border: #ddd;
+  --brightness: brightness(1)
+}
+
 
 .container {
   display: flex;
@@ -20,11 +42,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ddd;
+  background: var(--bg-map);
   padding: 10px;
   border-radius: 8px;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  overflow:hidden;
 }
 .map-container-inner{
   flex: 1;
@@ -32,11 +55,15 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow:hidden;
 }
 .map-container-inner img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
   border-radius: 4px;
+  filter: var(--brightness);
+  
 }
 
 .overlay {
@@ -48,14 +75,14 @@
 
 /* SIDEBAR */
 .sidebar {
-  width: 220px;
+  width: 200px;
   height: 85vh; /* fixed height → enables internal scrolling */
 
   display: flex;
   flex-direction: column;
 
-  background: #fff;
-  border: 1px solid #ccc;
+  background: var(--sidebar);
+  border: 1px solid var(--sb-border);
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -72,7 +99,7 @@
 }
 /* DROPDOWNS */ 
 .details { 
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 6px;
     margin-bottom: 10px;
     background: #fafafa; 
@@ -85,7 +112,7 @@
 } 
 
 details[open] summary {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
 /* OPTIONS */
 .option {
@@ -96,14 +123,14 @@ details[open] summary {
   padding: 8px;
   margin-bottom: 8px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 6px;
 
-  background: #fafafa;
+  background: var(--card);
 }
 
 .option:hover {
-  background: #eee;
+  background: var(--hover);
   cursor: pointer;
 }
 
