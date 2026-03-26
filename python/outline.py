@@ -15,13 +15,13 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
     # Draw vertical lines
     for i in range(tiles_x + 1):
         x = int(round(i * tile_width))
-        draw.line([(x, 0), (x, image_height)], fill=(0, 0, 0, 255), width=1)
+        draw.line([(x, 0), (x, image_height)], fill=(0, 0, 0, 200), width=1)
 
     # Draw horizontal lines
     offset_y = 0
     for i in range(tiles_y + 1):
         y = int(round(i * tile_height)) + offset_y
-        draw.line([(0, y), (image_width, y)], fill=(0, 0, 0, 255), width=1)
+        draw.line([(0, y), (image_width, y)], fill=(0, 0, 0, 200), width=1)
 
     # Save image
     img.save(output_path)
