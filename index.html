@@ -41,9 +41,11 @@
         <label class="option"><input type="checkbox" data-target="stability_Periods/Arabia_Saudi">Arabia -> Saudi</label>
         <label class="option"><input type="checkbox" data-target="stability_Argentina">Argentina</label>
         <label class="option"><input type="checkbox" data-target="stability_Assyria">Assyria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Australia">Australia</label>
         <label class="option"><input type="checkbox" data-target="stability_Aztecs">Aztecs</label>
         <label class="option"><input type="checkbox" data-target="stability_Babylonia">Babylonia</label>
         <label class="option"><input type="checkbox" data-target="stability_Brazil">Brazil</label>
+        <label class="option"><input type="checkbox" data-target="stability_Burma">Burma</label>
         <label class="option"><input type="checkbox" data-target="stability_Byzantium">Byzantium</label>
         <label class="option"><input type="checkbox" data-target="stability_Periods/Byzantium_Byzantine_Constantinople">Byzantium -> Byzantine Constantinople</label>
         <label class="option"><input type="checkbox" data-target="stability_Canada">Canada</label>
@@ -84,9 +86,13 @@
         <label class="option"><input type="checkbox" data-target="stability_Congo">Congo</label>
         <label class="option"><input type="checkbox" data-target="stability_Korea">Korea</label>
         <label class="option"><input type="checkbox" data-target="stability_Kushans">Kushans</label>
+        <label class="option"><input type="checkbox" data-target="stability_Malaya">Malaya</label>
         <label class="option"><input type="checkbox" data-target="stability_Mali">Mali</label>
+        <label class="option"><input type="checkbox" data-target="stability_Manchuria">Manchuria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Manchuria_Qing">Manchuria -> Qing</label>
         <label class="option"><input type="checkbox" data-target="stability_Maya">Maya</label>
         <label class="option"><input type="checkbox" data-target="stability_Mexico">Mexico</label>
+        <label class="option"><input type="checkbox" data-target="stability_Misr">Misr</label>
         <label class="option"><input type="checkbox" data-target="stability_Mongolia">Mongolia</label>
         <label class="option"><input type="checkbox" data-target="stability_Periods/Mongolia_Yuan">Mongolia -> Yuan</label>
         <label class="option"><input type="checkbox" data-target="stability_Moors">Moors</label>
@@ -139,8 +145,16 @@
 
     <details>
         <summary>Religion</summary>
-        <label class="option"><input type="checkbox"> Christianity</label>
-        <label class="option"><input type="checkbox"> Islam</label>
+        <label class="option"><input type="checkbox" data-target="religion_Judaism">Judaism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Orthodoxy">Orthodoxy</label>
+        <label class="option"><input type="checkbox" data-target="religion_Catholicism">Catholicism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Protestantism">Protestantism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Islam">Islam</label>
+        <label class="option"><input type="checkbox" data-target="religion_Hinduism">Hinduism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Buddhism">Buddhism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Confucianism">Confucianism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Taoism">Taoism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Zoroastrianism">Zoroastrianism</label>
     </details>
   </div>
 
@@ -156,10 +170,12 @@
    <img id="stability_Periods/Arabia_Saudi" src="maps/layers/Stability/Periods/Arabia_Saudi.png" class="overlay">
    <img id="stability_Argentina" src="maps/layers/Stability/Argentina.png" class="overlay">
    <img id="stability_Assyria" src="maps/layers/Stability/Assyria.png" class="overlay">
+   <img id="stability_Australia" src="maps/layers/Stability/Australia.png" class="overlay">
    <img id="stability_Aztecs" src="maps/layers/Stability/Aztecs.png" class="overlay">
    <img id="stability_Babylonia" src="maps/layers/Stability/Babylonia.png" class="overlay">
    <img id="stability_Brazil" src="maps/layers/Stability/Brazil.png" class="overlay">
    <img id="stability_Byzantium" src="maps/layers/Stability/Byzantium.png" class="overlay">
+   <img id="stability_Burma" src="maps/layers/Stability/Burma.png" class="overlay">
    <img id="stability_Periods/Byzantium_Byzantine_Constantinople" src="maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.png" class="overlay">
    <img id="stability_Canada" src="maps/layers/Stability/Canada.png" class="overlay">
    <img id="stability_Phoenicia" src="maps/layers/Stability/Phoenicia.png" class="overlay">
@@ -199,9 +215,13 @@
    <img id="stability_Congo" src="maps/layers/Stability/Congo.png" class="overlay">
    <img id="stability_Korea" src="maps/layers/Stability/Korea.png" class="overlay">
    <img id="stability_Kushans" src="maps/layers/Stability/Kushans.png" class="overlay">
+   <img id="stability_Malaya" src="maps/layers/Stability/Malaya.png" class="overlay">
    <img id="stability_Mali" src="maps/layers/Stability/Mali.png" class="overlay">
+   <img id="stability_Manchuria" src="maps/layers/Stability/Manchuria.png" class="overlay">
+   <img id="stability_Periods/Manchuria_Qing" src="maps/layers/Stability/Periods/Manchuria_Qing.png" class="overlay">
    <img id="stability_Maya" src="maps/layers/Stability/Maya.png" class="overlay">
    <img id="stability_Mexico" src="maps/layers/Stability/Mexico.png" class="overlay">
+   <img id="stability_Misr" src="maps/layers/Stability/Misr.png" class="overlay">
    <img id="stability_Mongolia" src="maps/layers/Stability/Mongolia.png" class="overlay">
    <img id="stability_Periods/Mongolia_Yuan" src="maps/layers/Stability/Periods/Mongolia_Yuan.png" class="overlay">
    <img id="stability_Moors" src="maps/layers/Stability/Moors.png" class="overlay">
@@ -231,6 +251,17 @@
    <img id="stability_Turkestan" src="maps/layers/Stability/Turkestan.png" class="overlay">
    <img id="stability_Periods/Turkestan_Seljuks" src="maps/layers/Stability/Periods/Turkestan_Seljuks.png" class="overlay">
    <img id="stability_Vietnam" src="maps/layers/Stability/Vietnam.png" class="overlay">
+<!-- Religion -->
+    <img id="religion_Judaism" src="maps/layers/Religion/Judaism.png" class="overlay">
+    <img id="religion_Orthodoxy" src="maps/layers/Religion/Orthodoxy.png" class="overlay">
+    <img id="religion_Catholicism" src="maps/layers/Religion/Catholicism.png" class="overlay">
+    <img id="religion_Protestantism" src="maps/layers/Religion/Protestantism.png" class="overlay">
+    <img id="religion_Islam" src="maps/layers/Religion/Islam.png" class="overlay">
+    <img id="religion_Hinduism" src="maps/layers/Religion/Hinduism.png" class="overlay">
+    <img id="religion_Buddhism" src="maps/layers/Religion/Buddhism.png" class="overlay">
+    <img id="religion_Confucianism" src="maps/layers/Religion/Confucianism.png" class="overlay">
+    <img id="religion_Taoism" src="maps/layers/Religion/Taoism.png" class="overlay">
+    <img id="religion_Zoroastrianism" src="maps/layers/Religion/Zoroastrianism.png" class="overlay">
 
   </div>
   </div>
