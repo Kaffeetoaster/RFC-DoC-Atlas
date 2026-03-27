@@ -1,6 +1,12 @@
-
+from python.consts import *
 import config
 
+
+import os
+import csv
+
+from PIL import Image
+from pathlib import Path
 
 def get_full_path(path):
 	return config.INPUT_PATH / "Assets/Maps" / path
@@ -198,3 +204,5 @@ def draw_religion_map(iReligion):
 	
 	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{dReligionNames[iReligion]}.png"
 	image.save(image_path)
+
+	
