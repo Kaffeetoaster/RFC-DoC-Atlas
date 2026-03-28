@@ -40,76 +40,37 @@ def iterate_map(file_path):
 					yield (x, y), int(value)
 
 
-def draw_extended_birth_map(iCiv):
 
-    if iCiv not in dExtendedBirthArea:
-        return
+
+def draw_birth_map(iCiv, area, exceptions, folder):
+
     terrain_values = iterate_map("Export/BaseTerrain.csv")
     name = dCivNames.get(iCiv)
     print(name)
-    name_display = f"{name} extended"
-    print(f"""        <label class="option"><input type="checkbox" data-target="spawn_extended_{name}">{name_display}</label>""")
-    print(f"""   <img id="spawn_extended_{name}" src="maps/layers/Spawns/Extended/{name}.png" class="overlay">""")
+    if area == dBirthArea or area == dCoreArea:
+        name_display = f"{name}"
+        id = "spawn"
+    elif area == dExtendedBirthArea:
+        name_display = f"{name} extended"
+        id = "spawn_extended"
+    elif area == dRespawnArea:
+        name_display = f"{name} respawn"
+        id = "respawn"
+		
+
+    print(f"""        <label class="option"><input type="checkbox" data-target="{id}_{name}">{name_display}</label>""")
+    print(f"""   <img id="{id}_{name}" src="{folder}/{name}.png" class="overlay">""")
 	    
     image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
     pixels = image.load()
 
     for (x, y), iTerrainValue in terrain_values:
-        if iTerrainValue != 0 and is_area(dExtendedBirthArea, dExtendedBirthAreaExceptions, iCiv, (x, iWorldY-1-y)):
+        if iTerrainValue != 0 and is_area(area, exceptions, iCiv, (x, iWorldY-1-y)):
                 pixels[x,y] = plot_colors[CORE]
 
     image = image.resize((iWorldX * 52, iWorldY * 52), resample=Image.Resampling.NEAREST)
 	
-    image_path = config.OUTPUT_PATH / "maps/layers/Spawns/Extended" / f"{name}.png"
-    #print(image_path)
-    image.save(image_path)
-
-def draw_birth_map(iCiv):
-
-    if iCiv not in dBirthArea:
-        return
-    terrain_values = iterate_map("Export/BaseTerrain.csv")
-    name = dCivNames.get(iCiv)
-    print(name)
-    name_display = f"{name}"
-    print(f"""        <label class="option"><input type="checkbox" data-target="spawn_{name}">{name_display}</label>""")
-    print(f"""   <img id="spawn_{name}" src="maps/layers/Spawns/{name}.png" class="overlay">""")
-	    
-    image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
-    pixels = image.load()
-
-    for (x, y), iTerrainValue in terrain_values:
-        if iTerrainValue != 0 and is_area(dBirthArea, dBirthAreaExceptions, iCiv, (x, iWorldY-1-y)):
-                pixels[x,y] = plot_colors[CORE]
-
-    image = image.resize((iWorldX * 52, iWorldY * 52), resample=Image.Resampling.NEAREST)
-	
-    image_path = config.OUTPUT_PATH / "maps/layers/Spawns" / f"{name}.png"
-    #print(image_path)
-    image.save(image_path)
-
-def draw_respawn_map(iCiv):
-
-    if iCiv not in dRespawnArea:
-        return
-
-    terrain_values = iterate_map("Export/BaseTerrain.csv")
-    name = dCivNames.get(iCiv)
-    print(name)
-    name_display = f"{name} respawn"
-    #print(f"""        <label class="option"><input type="checkbox" data-target="respawn_{name}">{name_display}</label>""")
-    #print(f"""   <img id="respawn_{name}" src="maps/layers/Spawns/Respawns/{name}.png" class="overlay">""")
-	    
-    image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
-    pixels = image.load()
-
-    for (x, y), iTerrainValue in terrain_values:
-        if iTerrainValue != 0 and is_area(dRespawnArea, dRespawnAreaExceptions, iCiv, (x, iWorldY-1-y)):
-                pixels[x,y] = plot_colors[CORE]
-
-    image = image.resize((iWorldX * 52, iWorldY * 52), resample=Image.Resampling.NEAREST)
-	
-    image_path = config.OUTPUT_PATH / "maps/layers/Spawns/Respawns" / f"{name}.png"
+    image_path = config.OUTPUT_PATH / folder / f"{name}.png"
     #print(image_path)
     image.save(image_path)
 
