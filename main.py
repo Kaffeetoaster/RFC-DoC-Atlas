@@ -1,5 +1,6 @@
 from python.consts import *  # all relevant game data
 from python.DrawMaps.DrawStabAndReligon import *
+from python.DrawMaps.DrawSpawn import *
 import config
 
 
@@ -23,15 +24,28 @@ if __name__ == "__main__":
     for iReligion in range(iNumReligions):
         draw_religion_map(iReligion)
 
-### Draw Spawn Maps ### 
+### Draw Birth Maps, extended Birth and Respawn too ### 
     for iCiv in dCivNames:
-        draw_birth_map(iCiv)
-        draw_respawn_map(iCiv)
+        if iCiv in dBirthArea:
+            draw_birth_map(iCiv, dBirthArea, dBirthAreaExceptions, "maps/layers/Spawns")
+        else:
+            draw_birth_map(iCiv, dCoreArea, dCoreAreaExceptions, "maps/layers/Spawns")
         
+        for iPeriod in dCivPeriods.get(iCiv, []):
+            if should_draw_for_period(iPeriod):
+                draw_birth_map(iCiv, iPeriod)
 
-### Draw Resource Spawn Map ###
+        if iCiv in dExtendedBirthArea:
+            draw_birth_map(iCiv, dExtendedBirthArea, dExtendedBirthAreaExceptions, "maps/layers/Spawns/Extended")
+
+        if iCiv in dRespawnArea:
+            draw_birth_map(iCiv, dRespawnArea, dRespawnAreaExceptions, "maps/layers/Spawns/Respawns")
+            
+
+### Draw Resource Map ###
  
 ### Draw UHV Maps ###
+
 
 ### Draw Geography ###
 # Regions

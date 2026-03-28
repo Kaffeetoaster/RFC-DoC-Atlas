@@ -8,6 +8,7 @@ extract_variables(config.INPUT_PATH /'Assets/Python/Areas.py', global_context)
 extract_variables(config.INPUT_PATH /'Assets/Python/Resources.py', global_context)
 extract_variables(config.INPUT_PATH /'Assets/Python/RegionMap.py', global_context)
 extract_variables(config.INPUT_PATH /'Assets/Python/Locations.py', global_context)
+extract_variables(config.INPUT_PATH /'Assets/Python/Periods.py', global_context)
 
 globals().update(global_context)
 
@@ -104,38 +105,6 @@ dCivPeriods = {
     iOttomans: [iPeriodOttomanConstantinople],
     iGermany: [iPeriodModernGermany],
     iManchuria: [iPeriodQing],
-}
-
-dPeriodNames = {
-    iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
-    iPeriodMakuria:					"Makuria",
-    iPeriodMing:					"Ming",
-    iPeriodMaratha:					"Maratha",
-    iPeriodModernGreece:			"Modern_Greece",
-    iPeriodCarthage:				"Carthage",
-    iPeriodInsularCelts:			"Insular_Celts",
-    iPeriodVijayanagara:			"Vijayanagara",
-    iPeriodByzantineConstantinople:	"Byzantine_Constantinople",
-    iPeriodSeljuks:					"Seljuks",
-    iPeriodNationalFrance:			"National_France",
-    iPeriodMeiji:					"Meiji",
-    iPeriodDenmark:					"Denmark",
-    iPeriodNorway:					"Norway",
-    iPeriodUzbeks:					"Uzbeks",
-    iPeriodSaudi:					"Saudi",
-    iPeriodMorocco:					"Morocco",
-    iPeriodSpain:					"Spain",
-    iPeriodAustria:					"Austria",
-    iPeriodUnitedKingdom:			"United_Kingdom",
-    iPeriodGreatBritain:			"Great_Britain",
-    iPeriodYuan:					"Yuan",
-    iPeriodPeru:					"Peru",
-    iPeriodLateInca:				"Late_Inca",
-    iPeriodModernItaly:				"Modern_Italy",
-    iPeriodPakistan:				"Pakistan",
-    iPeriodOttomanConstantinople:   "Ottoman_Constantinople",
-    iPeriodQing:	                "Qing",
-    iPeriodModernGermany:			"Modern_Germany",
 }
 
 dReligionNames = {
