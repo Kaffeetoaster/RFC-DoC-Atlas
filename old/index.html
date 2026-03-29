@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RFC-DoC-Atlas</title>
+  <link rel="icon" type=image/ico href="icon.ico">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+
+
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h3>Layers:</h3>
+
+  <div class="options-container">
+    <details open>
+        <summary>Grid</summary>
+        <label class="option"><input type="checkbox" data-target="overlay_outline"> Grid</label>
+    </details>
+
+    <details map>
+        <summary>Stability</summary>
+        <label class="option"><input type="checkbox" data-target="stability_America">America</label>
+        <label class="option"><input type="checkbox" data-target="stability_Arabia">Arabia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Arabia_Saudi">Arabia -> Saudi</label>
+        <label class="option"><input type="checkbox" data-target="stability_Argentina">Argentina</label>
+        <label class="option"><input type="checkbox" data-target="stability_Assyria">Assyria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Australia">Australia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Aztecs">Aztecs</label>
+        <label class="option"><input type="checkbox" data-target="stability_Babylonia">Babylonia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Brazil">Brazil</label>
+        <label class="option"><input type="checkbox" data-target="stability_Burma">Burma</label>
+        <label class="option"><input type="checkbox" data-target="stability_Byzantium">Byzantium</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Byzantium_Byzantine_Constantinople">Byzantium -> Byzantine Constantinople</label>
+        <label class="option"><input type="checkbox" data-target="stability_Canada">Canada</label>
+        <label class="option"><input type="checkbox" data-target="stability_Phoenicia">Phoenicia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Phoenicia_Carthage">Phoenicia -> Carthage</label>
+        <label class="option"><input type="checkbox" data-target="stability_Celts">Celts</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Celts_Insular_Celts">Celts -> Insular Celts</label>
+        <label class="option"><input type="checkbox" data-target="stability_China">China</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/China_Ming">China -> Ming</label>
+        <label class="option"><input type="checkbox" data-target="stability_Colombia">Colombia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Dravidia">Dravidia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Egypt">Egypt</label>
+        <label class="option"><input type="checkbox" data-target="stability_England">England</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/England_United_Kingdom">England -> United Kingdom</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/England_Great_Britain">England -> Great Britain</label>
+        <label class="option"><input type="checkbox" data-target="stability_Ethiopia">Ethiopia</label>
+        <label class="option"><input type="checkbox" data-target="stability_France">France</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/France_National_France">France -> National France</label>
+        <label class="option"><input type="checkbox" data-target="stability_Germany">Germany</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Germany_Modern_Germany">Germany -> Modern Germany</label>
+        <label class="option"><input type="checkbox" data-target="stability_Greece">Greece</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Greece_Modern_Greece">Greece -> Modern Greece</label>
+        <label class="option"><input type="checkbox" data-target="stability_Harappa">Harappa</label>
+        <label class="option"><input type="checkbox" data-target="stability_Hittites">Hittites</label>
+        <label class="option"><input type="checkbox" data-target="stability_Holy_Rome">Holy Rome</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Holy_Rome_Austria">Holy Rome -> Austria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Inca">Inca</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Inca_Late_Inca">Inca -> Late Inca</label>
+        <label class="option"><input type="checkbox" data-target="stability_India">India</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/India_Maratha">India -> Maratha</label>
+        <label class="option"><input type="checkbox" data-target="stability_Iran">Iran</label>
+        <label class="option"><input type="checkbox" data-target="stability_Italy">Italy</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Italy_Modern_Italy">Italy -> Modern Italy</label>
+        <label class="option"><input type="checkbox" data-target="stability_Japan">Japan</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Japan_Meiji">Japan -> Meiji</label>
+        <label class="option"><input type="checkbox" data-target="stability_Java">Java</label>
+        <label class="option"><input type="checkbox" data-target="stability_Khmer">Khmer</label>
+        <label class="option"><input type="checkbox" data-target="stability_Congo">Congo</label>
+        <label class="option"><input type="checkbox" data-target="stability_Korea">Korea</label>
+        <label class="option"><input type="checkbox" data-target="stability_Kushans">Kushans</label>
+        <label class="option"><input type="checkbox" data-target="stability_Malaya">Malaya</label>
+        <label class="option"><input type="checkbox" data-target="stability_Mali">Mali</label>
+        <label class="option"><input type="checkbox" data-target="stability_Manchuria">Manchuria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Manchuria_Qing">Manchuria -> Qing</label>
+        <label class="option"><input type="checkbox" data-target="stability_Maya">Maya</label>
+        <label class="option"><input type="checkbox" data-target="stability_Mexico">Mexico</label>
+        <label class="option"><input type="checkbox" data-target="stability_Misr">Misr</label>
+        <label class="option"><input type="checkbox" data-target="stability_Mongolia">Mongolia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Mongolia_Yuan">Mongolia -> Yuan</label>
+        <label class="option"><input type="checkbox" data-target="stability_Moors">Moors</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Moors_Morocco">Moors -> Morocco</label>
+        <label class="option"><input type="checkbox" data-target="stability_Mughals">Mughals</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Mughals_Pakistan">Mughals -> Pakistan</label>
+        <label class="option"><input type="checkbox" data-target="stability_Netherlands">Netherlands</label>
+        <label class="option"><input type="checkbox" data-target="stability_Norse">Norse</label>
+        <label class="option"><input type="checkbox" data-target="stability_Nubia">Nubia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Nubia_Makuria">Nubia -> Makuria</label>
+        <label class="option"><input type="checkbox" data-target="stability_Turkey">Turkey</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Turkey_Ottoman_Constantinople">Turkey -> Ottoman Constantinople</label>
+        <label class="option"><input type="checkbox" data-target="stability_Persia">Persia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Poland">Poland</label>
+        <label class="option"><input type="checkbox" data-target="stability_Polynesia">Polynesia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Portugal">Portugal</label>
+        <label class="option"><input type="checkbox" data-target="stability_Rome">Rome</label>
+        <label class="option"><input type="checkbox" data-target="stability_Ruthenia">Ruthenia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Russia">Russia</label>
+        <label class="option"><input type="checkbox" data-target="stability_Spain">Spain</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Spain_Spain">Castilia -> Spain</label>
+        <label class="option"><input type="checkbox" data-target="stability_Swahili">Swahili</label>
+        <label class="option"><input type="checkbox" data-target="stability_Sweden">Sweden</label>
+        <label class="option"><input type="checkbox" data-target="stability_Thailand">Thailand</label>
+        <label class="option"><input type="checkbox" data-target="stability_Tibet">Tibet</label>
+        <label class="option"><input type="checkbox" data-target="stability_Toltecs">Toltecs</label>
+        <label class="option"><input type="checkbox" data-target="stability_Turkestan">Turkestan</label>
+        <label class="option"><input type="checkbox" data-target="stability_Periods/Turkestan_Seljuks">Turkestan -> Seljuks</label>
+        <label class="option"><input type="checkbox" data-target="stability_Vietnam">Vietnam</label>
+
+    </details>
+
+    <details>
+        <summary>Spawn</summary>
+        <label class="option"><input type="checkbox" data-target="spawn_America">America</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Arabia">Arabia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Argentina">Argentina</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Assyria">Assyria</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Australia">Australia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Aztecs">Aztecs</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Babylonia">Babylonia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Brazil">Brazil</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Burma">Burma</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Byzantium">Byzantium</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Canada">Canada</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Celts">Celts</label>
+        <label class="option"><input type="checkbox" data-target="spawn_China">China</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Colombia">Colombia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Dravidia">Dravidia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Egypt">Egypt</label>
+        <label class="option"><input type="checkbox" data-target="spawn_England">England</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Ethiopia">Ethiopia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_France">France</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Germany">Germany</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Greece">Greece</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Harappa">Harappa</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Hittites">Hittites</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Holy_Rome">Holy_Rome</label>
+        <label class="option"><input type="checkbox" data-target="spawn_India">India</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Iran">Iran</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Italy">Italy</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Japan">Japan</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Java">Java</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Khmer">Khmer</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Korea">Korea</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Kushans">Kushans</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Malaya">Malaya</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Mali">Mali</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Manchuria">Manchuria</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Maya">Maya</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Mexico">Mexico</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Misr">Misr</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Mongolia">Mongolia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Moors">Moors</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Mughals">Mughals</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Netherlands">Netherlands</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Norse">Norse</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Nubia">Nubia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Persia">Persia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Phoenicia">Phoenicia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Poland">Poland</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Polynesia">Polynesia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Portugal">Portugal</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Ruthenia">Ruthenia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Spain">Spain</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Swahili">Swahili</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Russia">Russia</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Sweden">Sweden</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Thailand">Thailand</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Tibet">Tibet</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Toltecs">Toltecs</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Turkestan">Turkestan</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Turkey">Turkey</label>
+        <label class="option"><input type="checkbox" data-target="spawn_Vietnam">Vietnam</label>
+        <!-- Period Spawns -->
+        <label class="option"><input type="checkbox" data-target="spawn_period_Arabia_Saudi">Arabia -> Saudi</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Byzantium_Byzantine_Constantinople">Byzantium -> Byzantine Constantinople</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Phoenicia_Carthage">Phoenicia -> Carthage</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Celts_Insular_Celts">Celts -> Insular Celts</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_China_Ming">China -> Ming</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_England_United_Kingdom">England -> United Kingdom</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_England_Great_Britain">England -> Great Britain</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_France_National_France">France -> National France</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Germany_Modern_Germany">Germany -> Modern Germany</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Greece_Modern_Greece">Greece -> Modern Greece</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Holy_Rome_Austria">Holy_Rome -> Austria</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Inca_Late_Inca">Inca -> Late Inca</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_India_Maratha">India -> Maratha</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Italy_Modern_Italy">Italy -> Modern Italy</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Japan_Meiji">Japan -> Meiji</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Manchuria_Qing">Manchuria -> Qing</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Mongolia_Yuan">Mongolia -> Yuan</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Moors_Morocco">Moors -> Morocco</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Mughals_Pakistan">Mughals -> Pakistan</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Nubia_Makuria">Nubia -> Makuria</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Turkey_Ottoman_Constantinople">Turkey -> Ottoman Constantinople</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Spain_Spain">Spain -> Spain</label>
+        <label class="option"><input type="checkbox" data-target="spawn_period_Turkestan_Seljuks">Turkestan -> Seljuks</label>
+
+    </details>
+
+    <details>
+      <summary>extended spawn and respawn (AI only)</summary>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Argentina">Argentina extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Germany">Germany extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Inca">Inca extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Java">Java extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Manchuria">Manchuria extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Mongolia">Mongolia extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Turkey">Turkey extended</label>
+        <label class="option"><input type="checkbox" data-target="spawn_extended_Spain">Spain extended</label>
+
+        <label class="option"><input type="checkbox" data-target="respawn_Byzantium">Byzantium respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Celts">Celts respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_China">China respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Egypt">Egypt respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Inca">Inca respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_India">India respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Misr">Misr respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Mongolia">Mongolia respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Moors">Moors respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Mughals">Mughals respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Turkey">Turkey respawn</label>
+        <label class="option"><input type="checkbox" data-target="respawn_Turkestan">Turkestan respawn</label>
+    </details>
+
+    <details>
+        <summary>UHV</summary>
+        <label class="option"><input type="checkbox"> Goal 1</label>
+        <label class="option"><input type="checkbox"> Goal 2</label>
+    </details>
+
+
+    <details>
+        <summary>Religion</summary>
+        <label class="option"><input type="checkbox" data-target="religion_Judaism">Judaism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Orthodoxy">Orthodoxy</label>
+        <label class="option"><input type="checkbox" data-target="religion_Catholicism">Catholicism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Protestantism">Protestantism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Islam">Islam</label>
+        <label class="option"><input type="checkbox" data-target="religion_Hinduism">Hinduism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Buddhism">Buddhism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Confucianism">Confucianism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Taoism">Taoism</label>
+        <label class="option"><input type="checkbox" data-target="religion_Zoroastrianism">Zoroastrianism</label>
+    </details>
+  </div>
+
+</div>
+<!-- MAP -->
+<div class="map-container-outer">
+  <div class="map-container-inner" id="map">
+   <img src="maps/World_cropped.jpg" alt="Map">
+   <img id="overlay_outline" src="maps/tile_outline_cropped.png" class="overlay">
+<!-- Stability -->
+  <img id="stability_America" src="maps/layers/Stability/America.png" class="overlay">
+   <img id="stability_Arabia" src="maps/layers/Stability/Arabia.png" class="overlay">
+   <img id="stability_Periods/Arabia_Saudi" src="maps/layers/Stability/Periods/Arabia_Saudi.png" class="overlay">
+   <img id="stability_Argentina" src="maps/layers/Stability/Argentina.png" class="overlay">
+   <img id="stability_Assyria" src="maps/layers/Stability/Assyria.png" class="overlay">
+   <img id="stability_Australia" src="maps/layers/Stability/Australia.png" class="overlay">
+   <img id="stability_Aztecs" src="maps/layers/Stability/Aztecs.png" class="overlay">
+   <img id="stability_Babylonia" src="maps/layers/Stability/Babylonia.png" class="overlay">
+   <img id="stability_Brazil" src="maps/layers/Stability/Brazil.png" class="overlay">
+   <img id="stability_Byzantium" src="maps/layers/Stability/Byzantium.png" class="overlay">
+   <img id="stability_Burma" src="maps/layers/Stability/Burma.png" class="overlay">
+   <img id="stability_Periods/Byzantium_Byzantine_Constantinople" src="maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.png" class="overlay">
+   <img id="stability_Canada" src="maps/layers/Stability/Canada.png" class="overlay">
+   <img id="stability_Phoenicia" src="maps/layers/Stability/Phoenicia.png" class="overlay">
+   <img id="stability_Periods/Phoenicia_Carthage" src="maps/layers/Stability/Periods/Phoenicia_Carthage.png" class="overlay">
+   <img id="stability_Celts" src="maps/layers/Stability/Celts.png" class="overlay">
+   <img id="stability_Periods/Celts_Insular_Celts" src="maps/layers/Stability/Periods/Celts_Insular_Celts.png" class="overlay">
+   <img id="stability_China" src="maps/layers/Stability/China.png" class="overlay">
+   <img id="stability_Periods/China_Ming" src="maps/layers/Stability/Periods/China_Ming.png" class="overlay">
+   <img id="stability_Colombia" src="maps/layers/Stability/Colombia.png" class="overlay">
+   <img id="stability_Dravidia" src="maps/layers/Stability/Dravidia.png" class="overlay">
+   <img id="stability_Egypt" src="maps/layers/Stability/Egypt.png" class="overlay">
+   <img id="stability_England" src="maps/layers/Stability/England.png" class="overlay">
+   <img id="stability_Periods/England_United_Kingdom" src="maps/layers/Stability/Periods/England_United_Kingdom.png" class="overlay">
+   <img id="stability_Periods/England_Great_Britain" src="maps/layers/Stability/Periods/England_Great_Britain.png" class="overlay">
+   <img id="stability_Ethiopia" src="maps/layers/Stability/Ethiopia.png" class="overlay">
+   <img id="stability_France" src="maps/layers/Stability/France.png" class="overlay">
+   <img id="stability_Periods/France_National_France" src="maps/layers/Stability/Periods/France_National_France.png" class="overlay">
+   <img id="stability_Germany" src="maps/layers/Stability/Germany.png" class="overlay">
+   <img id="stability_Periods/Germany_Modern_Germany" src="maps/layers/Stability/Periods/Germany_Modern_Germany.png" class="overlay">
+   <img id="stability_Greece" src="maps/layers/Stability/Greece.png" class="overlay">
+   <img id="stability_Periods/Greece_Modern_Greece" src="maps/layers/Stability/Periods/Greece_Modern_Greece.png" class="overlay">
+   <img id="stability_Harappa" src="maps/layers/Stability/Harappa.png" class="overlay">
+   <img id="stability_Hittites" src="maps/layers/Stability/Hittites.png" class="overlay">
+   <img id="stability_Holy_Rome" src="maps/layers/Stability/Holy_Rome.png" class="overlay">
+   <img id="stability_Periods/Holy_Rome_Austria" src="maps/layers/Stability/Periods/Holy_Rome_Austria.png" class="overlay">
+   <img id="stability_Inca" src="maps/layers/Stability/Inca.png" class="overlay">
+   <img id="stability_Periods/Inca_Late_Inca" src="maps/layers/Stability/Periods/Inca_Late_Inca.png" class="overlay">
+   <img id="stability_India" src="maps/layers/Stability/India.png" class="overlay">
+   <img id="stability_Periods/India_Maratha" src="maps/layers/Stability/Periods/India_Maratha.png" class="overlay">
+   <img id="stability_Iran" src="maps/layers/Stability/Iran.png" class="overlay">
+   <img id="stability_Italy" src="maps/layers/Stability/Italy.png" class="overlay">
+   <img id="stability_Periods/Italy_Modern_Italy" src="maps/layers/Stability/Periods/Italy_Modern_Italy.png" class="overlay">
+   <img id="stability_Japan" src="maps/layers/Stability/Japan.png" class="overlay">
+   <img id="stability_Periods/Japan_Meiji" src="maps/layers/Stability/Periods/Japan_Meiji.png" class="overlay">
+   <img id="stability_Java" src="maps/layers/Stability/Java.png" class="overlay">
+   <img id="stability_Khmer" src="maps/layers/Stability/Khmer.png" class="overlay">
+   <img id="stability_Congo" src="maps/layers/Stability/Congo.png" class="overlay">
+   <img id="stability_Korea" src="maps/layers/Stability/Korea.png" class="overlay">
+   <img id="stability_Kushans" src="maps/layers/Stability/Kushans.png" class="overlay">
+   <img id="stability_Malaya" src="maps/layers/Stability/Malaya.png" class="overlay">
+   <img id="stability_Mali" src="maps/layers/Stability/Mali.png" class="overlay">
+   <img id="stability_Manchuria" src="maps/layers/Stability/Manchuria.png" class="overlay">
+   <img id="stability_Periods/Manchuria_Qing" src="maps/layers/Stability/Periods/Manchuria_Qing.png" class="overlay">
+   <img id="stability_Maya" src="maps/layers/Stability/Maya.png" class="overlay">
+   <img id="stability_Mexico" src="maps/layers/Stability/Mexico.png" class="overlay">
+   <img id="stability_Misr" src="maps/layers/Stability/Misr.png" class="overlay">
+   <img id="stability_Mongolia" src="maps/layers/Stability/Mongolia.png" class="overlay">
+   <img id="stability_Periods/Mongolia_Yuan" src="maps/layers/Stability/Periods/Mongolia_Yuan.png" class="overlay">
+   <img id="stability_Moors" src="maps/layers/Stability/Moors.png" class="overlay">
+   <img id="stability_Periods/Moors_Morocco" src="maps/layers/Stability/Periods/Moors_Morocco.png" class="overlay">
+   <img id="stability_Mughals" src="maps/layers/Stability/Mughals.png" class="overlay">
+   <img id="stability_Periods/Mughals_Pakistan" src="maps/layers/Stability/Periods/Mughals_Pakistan.png" class="overlay">
+   <img id="stability_Netherlands" src="maps/layers/Stability/Netherlands.png" class="overlay">
+   <img id="stability_Norse" src="maps/layers/Stability/Norse.png" class="overlay">
+   <img id="stability_Nubia" src="maps/layers/Stability/Nubia.png" class="overlay">
+   <img id="stability_Periods/Nubia_Makuria" src="maps/layers/Stability/Periods/Nubia_Makuria.png" class="overlay">
+   <img id="stability_Turkey" src="maps/layers/Stability/Turkey.png" class="overlay">
+   <img id="stability_Periods/Turkey_Ottoman_Constantinople" src="maps/layers/Stability/Periods/Turkey_Ottoman_Constantinople.png" class="overlay">
+   <img id="stability_Persia" src="maps/layers/Stability/Persia.png" class="overlay">
+   <img id="stability_Poland" src="maps/layers/Stability/Poland.png" class="overlay">
+   <img id="stability_Polynesia" src="maps/layers/Stability/Polynesia.png" class="overlay">
+   <img id="stability_Portugal" src="maps/layers/Stability/Portugal.png" class="overlay">
+   <img id="stability_Rome" src="maps/layers/Stability/Rome.png" class="overlay">
+   <img id="stability_Ruthenia" src="maps/layers/Stability/Ruthenia.png" class="overlay">
+   <img id="stability_Russia" src="maps/layers/Stability/Russia.png" class="overlay">
+   <img id="stability_Spain" src="maps/layers/Stability/Spain.png" class="overlay">
+   <img id="stability_Periods/Spain_Spain" src="maps/layers/Stability/Periods/Spain_Spain.png" class="overlay">
+   <img id="stability_Swahili" src="maps/layers/Stability/Swahili.png" class="overlay">
+   <img id="stability_Sweden" src="maps/layers/Stability/Sweden.png" class="overlay">
+   <img id="stability_Thailand" src="maps/layers/Stability/Thailand.png" class="overlay">
+   <img id="stability_Tibet" src="maps/layers/Stability/Tibet.png" class="overlay">
+   <img id="stability_Toltecs" src="maps/layers/Stability/Toltecs.png" class="overlay">
+   <img id="stability_Turkestan" src="maps/layers/Stability/Turkestan.png" class="overlay">
+   <img id="stability_Periods/Turkestan_Seljuks" src="maps/layers/Stability/Periods/Turkestan_Seljuks.png" class="overlay">
+   <img id="stability_Vietnam" src="maps/layers/Stability/Vietnam.png" class="overlay">
+<!-- Religion -->
+    <img id="religion_Judaism" src="maps/layers/Religions/Judaism.png" class="overlay">
+    <img id="religion_Orthodoxy" src="maps/layers/Religions/Orthodoxy.png" class="overlay">
+    <img id="religion_Catholicism" src="maps/layers/Religions/Catholicism.png" class="overlay">
+    <img id="religion_Protestantism" src="maps/layers/Religions/Protestantism.png" class="overlay">
+    <img id="religion_Islam" src="maps/layers/Religions/Islam.png" class="overlay">
+    <img id="religion_Hinduism" src="maps/layers/Religions/Hinduism.png" class="overlay">
+    <img id="religion_Buddhism" src="maps/layers/Religions/Buddhism.png" class="overlay">
+    <img id="religion_Confucianism" src="maps/layers/Religions/Confucianism.png" class="overlay">
+    <img id="religion_Taoism" src="maps/layers/Religions/Taoism.png" class="overlay">
+    <img id="religion_Zoroastrianism" src="maps/layers/Religions/Zoroastrianism.png" class="overlay">
+
+
+<!-- Spawn  -->
+   <img id="spawn_America" src="maps/layers/Spawns/America.png" class="overlay">
+   <img id="spawn_Arabia" src="maps/layers/Spawns/Arabia.png" class="overlay">
+   <img id="spawn_Argentina" src="maps/layers/Spawns/Argentina.png" class="overlay">
+   <img id="spawn_Assyria" src="maps/layers/Spawns/Assyria.png" class="overlay">
+   <img id="spawn_Australia" src="maps/layers/Spawns/Australia.png" class="overlay">
+   <img id="spawn_Aztecs" src="maps/layers/Spawns/Aztecs.png" class="overlay">
+   <img id="spawn_Babylonia" src="maps/layers/Spawns/Babylonia.png" class="overlay">
+   <img id="spawn_Brazil" src="maps/layers/Spawns/Brazil.png" class="overlay">
+   <img id="spawn_Burma" src="maps/layers/Spawns/Burma.png" class="overlay">
+   <img id="spawn_Byzantium" src="maps/layers/Spawns/Byzantium.png" class="overlay">
+   <img id="spawn_Canada" src="maps/layers/Spawns/Canada.png" class="overlay">
+   <img id="spawn_Celts" src="maps/layers/Spawns/Celts.png" class="overlay">
+   <img id="spawn_China" src="maps/layers/Spawns/China.png" class="overlay">
+   <img id="spawn_Colombia" src="maps/layers/Spawns/Colombia.png" class="overlay">
+    <img id="spawn_Dravidia" src="maps/layers/Spawns/Dravidia.png" class="overlay">
+    <img id="spawn_Egypt" src="maps/layers/Spawns/Egypt.png" class="overlay">
+    <img id="spawn_England" src="maps/layers/Spawns/England.png" class="overlay">
+    <img id="spawn_Ethiopia" src="maps/layers/Spawns/Ethiopia.png" class="overlay">
+   <img id="spawn_France" src="maps/layers/Spawns/France.png" class="overlay">
+   <img id="spawn_Germany" src="maps/layers/Spawns/Germany.png" class="overlay">
+    <img id="spawn_Greece" src="maps/layers/Spawns/Greece.png" class="overlay">
+    <img id="spawn_Harappa" src="maps/layers/Spawns/Harappa.png" class="overlay">
+    <img id="spawn_Hittites" src="maps/layers/Spawns/Hittites.png" class="overlay">
+   <img id="spawn_Holy_Rome" src="maps/layers/Spawns/Holy_Rome.png" class="overlay">
+   <img id="spawn_Inca" src="maps/layers/Spawns/Inca.png" class="overlay">
+   <img id="spawn_India" src="maps/layers/Spawns/India.png" class="overlay">
+   <img id="spawn_Iran" src="maps/layers/Spawns/Iran.png" class="overlay">
+   <img id="spawn_Italy" src="maps/layers/Spawns/Italy.png" class="overlay">
+   <img id="spawn_Japan" src="maps/layers/Spawns/Japan.png" class="overlay">
+   <img id="spawn_Java" src="maps/layers/Spawns/Java.png" class="overlay">
+    <img id="spawn_Khmer" src="maps/layers/Spawns/Khmer.png" class="overlay">
+   <img id="spawn_Korea" src="maps/layers/Spawns/Korea.png" class="overlay">
+   <img id="spawn_Kushans" src="maps/layers/Spawns/Kushans.png" class="overlay">
+   <img id="spawn_Malaya" src="maps/layers/Spawns/Malaya.png" class="overlay">
+    <img id="spawn_Mali" src="maps/layers/Spawns/Mali.png" class="overlay">
+   <img id="spawn_Manchuria" src="maps/layers/Spawns/Manchuria.png" class="overlay">
+    <img id="spawn_Maya" src="maps/layers/Spawns/Maya.png" class="overlay">
+   <img id="spawn_Mexico" src="maps/layers/Spawns/Mexico.png" class="overlay">
+   <img id="spawn_Misr" src="maps/layers/Spawns/Misr.png" class="overlay">
+   <img id="spawn_Mongolia" src="maps/layers/Spawns/Mongolia.png" class="overlay">
+   <img id="spawn_Moors" src="maps/layers/Spawns/Moors.png" class="overlay">
+   <img id="spawn_Mughals" src="maps/layers/Spawns/Mughals.png" class="overlay">
+   <img id="spawn_Netherlands" src="maps/layers/Spawns/Netherlands.png" class="overlay">
+    <img id="spawn_Norse" src="maps/layers/Spawns/Norse.png" class="overlay">
+    <img id="spawn_Nubia" src="maps/layers/Spawns/Nubia.png" class="overlay">
+   <img id="spawn_Turkey" src="maps/layers/Spawns/Turkey.png" class="overlay">
+   <img id="spawn_Persia" src="maps/layers/Spawns/Persia.png" class="overlay">
+    <img id="spawn_Phoenicia" src="maps/layers/Spawns/Phoenicia.png" class="overlay">
+    <img id="spawn_Poland" src="maps/layers/Spawns/Poland.png" class="overlay">
+    <img id="spawn_Polynesia" src="maps/layers/Spawns/Polynesia.png" class="overlay">
+   <img id="spawn_Portugal" src="maps/layers/Spawns/Portugal.png" class="overlay">
+    <img id="spawn_Rome" src="maps/layers/Spawns/Rome.png" class="overlay">
+   <img id="spawn_Ruthenia" src="maps/layers/Spawns/Ruthenia.png" class="overlay">
+   <img id="spawn_Spain" src="maps/layers/Spawns/Spain.png" class="overlay">
+    <img id="spawn_Swahili" src="maps/layers/Spawns/Swahili.png" class="overlay">
+   <img id="spawn_Russia" src="maps/layers/Spawns/Russia.png" class="overlay">
+   <img id="spawn_Sweden" src="maps/layers/Spawns/Sweden.png" class="overlay">
+   <img id="spawn_Thailand" src="maps/layers/Spawns/Thailand.png" class="overlay">
+   <img id="spawn_Tibet" src="maps/layers/Spawns/Tibet.png" class="overlay">
+    <img id="spawn_Toltecs" src="maps/layers/Spawns/Toltecs.png" class="overlay">
+   <img id="spawn_Turkestan" src="maps/layers/Spawns/Turkestan.png" class="overlay">
+    <img id="spawn_Vietnam" src="maps/layers/Spawns/Vietnam.png" class="overlay">
+
+<!-- Period Respawns -->
+   <img id="spawn_period_Arabia_Saudi" src="maps/layers/Spawns/Periods/Arabia_Saudi.png" class="overlay">
+   <img id="spawn_period_Byzantium_Byzantine_Constantinople" src="maps/layers/Spawns/Periods/Byzantium_Byzantine_Constantinople.png" class="overlay">
+   <img id="spawn_period_Phoenicia_Carthage" src="maps/layers/Spawns/Periods/Phoenicia_Carthage.png" class="overlay">
+   <img id="spawn_period_Celts_Insular_Celts" src="maps/layers/Spawns/Periods/Celts_Insular_Celts.png" class="overlay">
+   <img id="spawn_period_China_Ming" src="maps/layers/Spawns/Periods/China_Ming.png" class="overlay">
+   <img id="spawn_period_England_United_Kingdom" src="maps/layers/Spawns/Periods/England_United_Kingdom.png" class="overlay">
+   <img id="spawn_period_England_Great_Britain" src="maps/layers/Spawns/Periods/England_Great_Britain.png" class="overlay">
+   <img id="spawn_period_France_National_France" src="maps/layers/Spawns/Periods/France_National_France.png" class="overlay">
+   <img id="spawn_period_Germany_Modern_Germany" src="maps/layers/Spawns/Periods/Germany_Modern_Germany.png" class="overlay">
+   <img id="spawn_period_Greece_Modern_Greece" src="maps/layers/Spawns/Periods/Greece_Modern_Greece.png" class="overlay">
+   <img id="spawn_period_Holy_Rome_Austria" src="maps/layers/Spawns/Periods/Holy_Rome_Austria.png" class="overlay">
+   <img id="spawn_period_Inca_Late_Inca" src="maps/layers/Spawns/Periods/Inca_Late_Inca.png" class="overlay">
+   <img id="spawn_period_India_Maratha" src="maps/layers/Spawns/Periods/India_Maratha.png" class="overlay">
+   <img id="spawn_period_Italy_Modern_Italy" src="maps/layers/Spawns/Periods/Italy_Modern_Italy.png" class="overlay">
+   <img id="spawn_period_Japan_Meiji" src="maps/layers/Spawns/Periods/Japan_Meiji.png" class="overlay">
+   <img id="spawn_period_Manchuria_Qing" src="maps/layers/Spawns/Periods/Manchuria_Qing.png" class="overlay">
+   <img id="spawn_period_Mongolia_Yuan" src="maps/layers/Spawns/Periods/Mongolia_Yuan.png" class="overlay">
+   <img id="spawn_period_Moors_Morocco" src="maps/layers/Spawns/Periods/Moors_Morocco.png" class="overlay">
+   <img id="spawn_period_Mughals_Pakistan" src="maps/layers/Spawns/Periods/Mughals_Pakistan.png" class="overlay">
+   <img id="spawn_period_Nubia_Makuria" src="maps/layers/Spawns/Periods/Nubia_Makuria.png" class="overlay">
+   <img id="spawn_period_Turkey_Ottoman_Constantinople" src="maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.png" class="overlay">
+   <img id="spawn_period_Spain_Spain" src="maps/layers/Spawns/Periods/Spain_Spain.png" class="overlay">
+   <img id="spawn_period_Turkestan_Seljuks" src="maps/layers/Spawns/Periods/Turkestan_Seljuks.png" class="overlay">
+
+
+
+<!-- Extended Spawn and Respawn -->
+   <img id="respawn_Byzantium" src="maps/layers/Spawns/Respawns/Byzantium.png" class="overlay">
+   <img id="respawn_Celts" src="maps/layers/Spawns/Respawns/Celts.png" class="overlay">
+   <img id="respawn_China" src="maps/layers/Spawns/Respawns/China.png" class="overlay">
+   <img id="respawn_Egypt" src="maps/layers/Spawns/Respawns/Egypt.png" class="overlay">
+   <img id="respawn_Inca" src="maps/layers/Spawns/Respawns/Inca.png" class="overlay">
+   <img id="respawn_India" src="maps/layers/Spawns/Respawns/India.png" class="overlay">
+   <img id="respawn_Misr" src="maps/layers/Spawns/Respawns/Misr.png" class="overlay">
+   <img id="respawn_Mongolia" src="maps/layers/Spawns/Respawns/Mongolia.png" class="overlay">
+   <img id="respawn_Moors" src="maps/layers/Spawns/Respawns/Moors.png" class="overlay">
+   <img id="respawn_Mughals" src="maps/layers/Spawns/Respawns/Mughals.png" class="overlay">
+   <img id="respawn_Turkey" src="maps/layers/Spawns/Respawns/Turkey.png" class="overlay">
+   <img id="respawn_Turkestan" src="maps/layers/Spawns/Respawns/Turkestan.png" class="overlay">
+
+   <img id="spawn_extended_Argentina" src="maps/layers/Spawns/Extended/Argentina.png" class="overlay">
+   <img id="spawn_extended_Germany" src="maps/layers/Spawns/Extended/Germany.png" class="overlay">
+   <img id="spawn_extended_Inca" src="maps/layers/Spawns/Extended/Inca.png" class="overlay">
+   <img id="spawn_extended_Java" src="maps/layers/Spawns/Extended/Java.png" class="overlay">
+   <img id="spawn_extended_Manchuria" src="maps/layers/Spawns/Extended/Manchuria.png" class="overlay">
+   <img id="spawn_extended_Mongolia" src="maps/layers/Spawns/Extended/Mongolia.png" class="overlay">
+   <img id="spawn_extended_Turkey" src="maps/layers/Spawns/Extended/Turkey.png" class="overlay">
+   <img id="spawn_extended_Spain" src="maps/layers/Spawns/Extended/Spain.png" class="overlay">
+  </div>
+  </div>
+
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

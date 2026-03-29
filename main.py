@@ -30,16 +30,16 @@ if __name__ == "__main__":
             draw_birth_map(iCiv, dBirthArea, dBirthAreaExceptions, "maps/layers/Spawns")
         else:
             draw_birth_map(iCiv, dCoreArea, dCoreAreaExceptions, "maps/layers/Spawns")
-        
+
         for iPeriod in dCivPeriods.get(iCiv, []):
-            if should_draw_for_period(iPeriod):
-                draw_birth_map(iCiv, iPeriod)
+                if should_draw_for_period(iPeriod):
+                    draw_birth_map(iCiv, dPeriodCoreArea, dPeriodCoreAreaExceptions, "maps/layers/Spawns/Periods",iPeriod)
 
         if iCiv in dExtendedBirthArea:
             draw_birth_map(iCiv, dExtendedBirthArea, dExtendedBirthAreaExceptions, "maps/layers/Spawns/Extended")
-
         if iCiv in dRespawnArea:
             draw_birth_map(iCiv, dRespawnArea, dRespawnAreaExceptions, "maps/layers/Spawns/Respawns")
+
             
 
 ### Draw Resource Map ###

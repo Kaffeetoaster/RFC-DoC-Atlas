@@ -1,0 +1,136 @@
+.dark-mode {
+  --bg: #121212;
+  --text: #ffffff;
+  --sidebar: #1e1e1e;
+  --card: #1a1a1a;
+  --border: #333;
+  --hover: #2a2a2a;
+
+  --brightness: brightness(0.85)
+}
+:root{
+  --bg: #ffffff;
+  --text: #000000;
+  --sidebar: #fff;
+  --sb-border: #ccc;
+  --card: #fafafa;
+  --bg-map: #ddd;
+  --hover: #eee;
+  --border: #ddd;
+  --brightness: brightness(1)
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  max-width: 1800px;
+  width: 100%;
+  align-items: stretch; 
+}
+
+/* MAP AREA */
+
+.map-container-outer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-map);
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  overflow:hidden;
+}
+.map-container-inner{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow:hidden;
+}
+.map-container-inner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  filter: var(--brightness);
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 200px;
+  height: 85vh; /* fixed height → enables internal scrolling */
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--sidebar);
+  border: 1px solid var(--sb-border);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+  margin: 0 0 10px 0;
+}
+
+/* SCROLLABLE AREA */
+.options-container {
+  flex: 1;              /* take remaining space */
+  overflow-y: auto;    /* scroll ONLY here */
+}
+/* DROPDOWNS */ 
+.details { 
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #fafafa; 
+} 
+
+.summary { 
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer; 
+} 
+
+details[open] summary {
+    border-bottom: 1px solid var(--border);
+}
+/* OPTIONS */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px;
+  margin-bottom: 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  background: var(--card);
+}
+
+.option:hover {
+  background: var(--hover);
+  cursor: pointer;
+}
+
