@@ -148,10 +148,9 @@ details[open] summary {
     height: 12px;
     width: 12px;
     background-color: transparent;
-    border: 1px solid var(--civ-white);
+    border: 1px solid #999;
     border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Text becomes gold when checked */
@@ -172,8 +171,14 @@ details[open] summary {
     height: 4px;
     border-radius: 50%;
     background: #0099ff;
-    box-shadow: 0 0 12px 1px #add2ec, 0 0 6px #add2ec, 0 0 2px 1px white;
+    box-shadow: 
+            0 0 5px 2px #0099ff,
+            0 0 12px 4px #0099ff,
+            0 0 20px 6px #0099ff,
+            0 0 2px white;
 }
+        
+  
 
 .checkbox-container input:checked ~ .checkmark:after {
     display: block;
