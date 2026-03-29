@@ -98,16 +98,21 @@ fetch('json/layers.json')
       // Add checkboxes for each layer in this category
       categories[categoryName].forEach(layerData => {
         const label = document.createElement('label');
-        label.className = 'option';
+        label.className = 'checkbox-container';
         
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.dataset.layerId = layerData.id;
         
+        const checkmark = document.createElement('span');
+        checkmark.className = 'checkmark';
+        
         const text = document.createElement('span');
+        text.className = 'label-text';
         text.textContent = layerData.displayName;
         
         label.appendChild(checkbox);
+        label.appendChild(checkmark);
         label.appendChild(text);
         details.appendChild(label);
         
