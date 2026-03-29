@@ -9,18 +9,49 @@ const map = L.map('map', {
   scrollWheelZoom: true,   // zoom only
   dragging: true           // drag to pan
 });
+// for better cylindrcal map performance, disable inertia and fade animation
+// i dont know this cylindriacl map stuff is weird.
+map.options.inertia = false;
+map.options.fadeAnimation = false;
+
 
 // Define bounds using image dimensions
 const bounds = [[0, 0], [height, width]];
 
-map.setMaxBounds([[-height/3, 0], [height+height/3, width]]);
-// Add your image
+map.setMaxBounds([[-height/10, -width], [height+height/10, width*2]]);
+// left copy
+L.imageOverlay('maps/World_cropped.jpg', [[0,-width],[height,0]]).addTo(map);
+// center copy
 L.imageOverlay('maps/World_cropped.jpg', bounds).addTo(map);
+// right copy
+L.imageOverlay('maps/World_cropped.jpg', [[0,width],[height,2*width]]).addTo(map);
+
 
 // Fit map to image
 map.fitBounds(bounds, { padding: [0, 0] });
 map.setView([height / 2, width / 2], -2);
 
+// set up cylindrical map by wrapping when user scrolls past edges
+let isWrapping = false; // prevent recursive wrapping
+
+map.on('moveend', () => {
+  if (isWrapping) return;
+  
+  const center = map.getCenter();
+  const currentZoom = map.getZoom();
+  
+  if (center.lng < width * 0.20) {
+    // user scrolled past left edge → wrap to the right
+    isWrapping = true;
+    map.setView([center.lat, center.lng + width], currentZoom, {animate: false});
+    setTimeout(() => { isWrapping = false; }, 100);
+  } else if (center.lng > width * 0.8) {
+    // user scrolled past right edge → wrap to the left
+    isWrapping = true;
+    map.setView([center.lat, center.lng - width], currentZoom, {animate: false});
+    setTimeout(() => { isWrapping = false; }, 100);
+  }
+});
 
 
 
@@ -83,13 +114,19 @@ fetch('json/layers.json')
         // Create the image overlay
         const bounds = [[layerData.y, layerData.x], [layerData.y + layerData.h, layerData.x + layerData.w]];
         const imageOverlay = L.imageOverlay(layerData.source, bounds);
+        const imageOverlayLeft = L.imageOverlay(layerData.source, [[layerData.y, layerData.x - width], [layerData.y + layerData.h, layerData.x + layerData.w - width]]);
+        const imageOverlayRight = L.imageOverlay(layerData.source, [[layerData.y, layerData.x + width], [layerData.y + layerData.h, layerData.x + layerData.w + width]]);
         
         // Toggle overlay on checkbox change
         checkbox.addEventListener('change', function() {
           if (this.checked) {
             imageOverlay.addTo(map);
+            imageOverlayLeft.addTo(map);
+            imageOverlayRight.addTo(map);
           } else {
             imageOverlay.removeFrom(map);
+            imageOverlayLeft.removeFrom(map);
+            imageOverlayRight.removeFrom(map);
           }
         });
       });
