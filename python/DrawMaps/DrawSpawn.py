@@ -65,8 +65,8 @@ def draw_birth_map(iCiv, area, exceptions, folder, iPeriod=None):
         name = f"{name}_{dPeriodNames.get(iPeriod, '')}"
         id = "spawn_period"
         
-        print(f"""        <label class="option"><input type="checkbox" data-target="{id}_{name}">{name_display}</label>""")
-        print(f"""   <img id="{id}_{name}" src="{folder}/{name}.png" class="overlay">""")
+        #print(f"""        <label class="option"><input type="checkbox" data-target="{id}_{name}">{name_display}</label>""")
+        #print(f"""   <img id="{id}_{name}" src="{folder}/{name}.png" class="overlay">""")
     
 	    
     image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))

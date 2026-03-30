@@ -1,0 +1,58 @@
+from python.consts import *
+from load_resources import *
+
+import config
+
+from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+
+
+def create_tile_overlay(coordinates, text, button, spawn):
+
+    img = Image.new('RGBA', (52, 52), (0, 0, 0, 0))
+    # Draw the button image onto the tile
+    button_img = Image.open(button)
+    button_img = button_img.resize((32, 32), Image.LANCZOS)
+    img.paste(button_img, (10, 10), button_img)
+    # Create a drawing object
+    draw = ImageDraw.Draw(img)
+
+
+
+    # # Get text size
+    bbox = draw.textbbox((0, 0), text)
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
+
+    # Center at point (cx, cy)
+    cx, cy = 26, 40
+    x = cx - text_width // 2
+    ## y = cy - text_height // 2
+    x = 10
+    y = 40
+    for dx in (0,1):
+        for dy in (0,1):
+            draw.text((x+dx, y+dy), text,fill= "green" if spawn else "red")
+    return coordinates, img
+
+### load xml resource infos and convert images to png for web usage
+dResourceInfos = extract_all_resource_infos()
+#print(dResourceInfos)
+convert_resource_images(dResourceInfos)
+
+
+
+resource_spawn_layer = Image.new('RGBA', (7800,4160 ), (0, 0, 0, 0))
+for coords, event in dResourcesDict.items():
+    (x,y),img = create_tile_overlay(coords, str(event[0]),dResourceInfos[event[1]]["path_art"], True)
+    resource_spawn_layer.paste(img, (x * 52,(iWorldY-1-y)* 52), img)
+    print(f"Spawned {event[1]} at {coords}")
+resource_spawn_layer.save(config.OUTPUT_PATH / "maps/layers/Resources/resource_spawns_and_despawns.png")
+
+
+
+
+
+
+
+
