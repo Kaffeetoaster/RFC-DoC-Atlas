@@ -184,3 +184,68 @@ details[open] summary {
 .checkbox-container input:checked ~ .checkmark:after {
     display: block;
 }
+
+
+/* Tooltip styling */
+
+
+
+.custom-tooltip {
+  background: transparent; /* No background for the tooltip itself */
+  border: none;           /* No border for the tooltip itself */
+  padding: 0;             /* No padding for the tooltip itself */
+  box-shadow: none;          /* No shadow for the tooltip itself */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* whole tooltip box */
+.custom-tooltip .tooltip-box {
+  padding: 4px 4px; 
+  /* border-radius: 6px; */
+  text-align: center;     /* centers image and text */
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center horizontally */
+}
+
+/* the image */
+.custom-tooltip .tooltip-spawn {
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #7fff19;
+  
+  background: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  margin-bottom: 1px;     /* space between image and text */
+}
+.custom-tooltip .tooltip-despawn {
+  width: 64px;
+  height: 64px;
+  border: 2px solid #ff0000;
+
+  background: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  margin-bottom: 4px;     /* space between image and text */
+}
+
+/* the text */
+.custom-tooltip .tooltip-text {
+  
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+/* .leaflet-tooltip-top:before {
+bottom: 0;
+margin-bottom: -39px;
+margin-left: -20px;
+border-top-color: rgba(0, 0, 0, 1);
+border-width: 39px 20px 0px 20px;
+} */

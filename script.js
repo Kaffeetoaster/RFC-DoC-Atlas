@@ -27,6 +27,14 @@ L.imageOverlay('maps/World_cropped.jpg', bounds).addTo(map);
 L.imageOverlay('maps/World_cropped.jpg', [[0,width],[height,2*width]]).addTo(map);
 
 
+
+
+
+
+
+
+
+
 // Fit map to image
 map.fitBounds(bounds, { padding: [0, 0] });
 map.setView([height / 2, width / 2], -2);
@@ -143,5 +151,116 @@ fetch('json/layers.json')
   })
   .catch(error => {
     console.error('Error loading layers:', error);
+    console.error('Error details:', error.message);
+  });
+
+
+
+// Load tooltips from JSON and create tooltips
+console.log('Starting to fetch tooltips.json...');
+fetch('json/tooltips.json')
+  .then(response => {
+    console.log('Response received:', response.status);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.json();
+  })
+  .then(data => {
+    console.log('JSON loaded successfully. Total spawns:', data.resource_spawns.length);
+    const container = document.querySelector('.options-container');
+    
+    if (!container) {
+      console.error('ERROR: .options-container not found in HTML!');
+      return;
+    }
+    
+    const subcategories = {};
+    
+    // Group by subcategory
+    data.resource_spawns.forEach(spawn => {
+      if (!subcategories[spawn.sub_category]) {
+        subcategories[spawn.sub_category] = [];
+      }
+      subcategories[spawn.sub_category].push(spawn);
+    });
+    
+    console.log('Subcategories created:', Object.keys(subcategories));
+    
+    // Create main category details
+    const details = document.createElement('details');
+    const summary = document.createElement('summary');
+    summary.textContent = 'Resource spawns and despawns';
+    details.appendChild(summary);
+    
+    // Store tooltips by subcategory
+    const tooltipsBySubcategory = {};
+    
+    // For each subcategory
+    Object.keys(subcategories).forEach(subcategoryName => {
+      console.log('Creating subcategory:', subcategoryName, 'with', subcategories[subcategoryName].length, 'spawns');
+      
+      tooltipsBySubcategory[subcategoryName] = [];
+      
+      // Create checkbox for subcategory
+      const label = document.createElement('label');
+      label.className = 'checkbox-container';
+      
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.dataset.subcategory = subcategoryName;
+      checkbox.checked = false;
+      
+      const checkmark = document.createElement('span');
+      checkmark.className = 'checkmark';
+      
+      const text = document.createElement('span');
+      text.className = 'label-text';
+      text.textContent = subcategoryName;
+      
+      label.appendChild(checkbox);
+      label.appendChild(checkmark);
+      label.appendChild(text);
+      details.appendChild(label);
+      
+      // For each spawn in subcategory - create tooltips
+      subcategories[subcategoryName].forEach(spawnData => {
+        const lat = 52 * (spawnData.y) + 26;
+        const lng = 52 * (spawnData.x) + 26;
+        const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
+        
+        const tooltip = L.tooltip({
+          permanent: true,
+          direction: 'top',
+          className: 'custom-tooltip',
+          offset: [0, 0]
+        })
+        .setLatLng([lat, lng])
+        .setContent(
+          `<div class="tooltip-box">
+            <img src="${spawnData.source}" class="${tooltipClass}" />
+            <span class="tooltip-text">${spawnData.display_name}</span>
+          </div>`
+        );
+        
+        tooltipsBySubcategory[subcategoryName].push(tooltip);
+      });
+      
+      // Event listener for checkbox - show/hide all tooltips in subcategory
+      checkbox.addEventListener('change', function() {
+        tooltipsBySubcategory[subcategoryName].forEach(tooltip => {
+          if (this.checked) {
+            tooltip.addTo(map);
+          } else {
+            tooltip.removeFrom(map);
+          }
+        });
+      });
+    });
+    
+    container.appendChild(details);
+    
+    console.log('All tooltips loaded and UI created successfully!');
+  })
+  .catch(error => {
+    console.error('Error loading tooltips:', error);
     console.error('Error details:', error.message);
   });

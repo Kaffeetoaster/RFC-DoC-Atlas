@@ -70,7 +70,7 @@ def extract_resource_infos(iresource, dBonusXML, dArtXML, dTextXML, dResourceTex
         text_info = get_infos(dWarlordsTextXML["Civ4GameText"]["TEXT"],"Tag", description_tag)
     text = text_info["English"] if text_info else description_tag
 
-    #print(f"description was {description_tag}, text is {text_info}")
+    #print(f"resource {iresource} with description was {description_tag}")
     return {
         "text": text,   
         "path_art": button_info
@@ -91,8 +91,7 @@ def extract_all_resource_infos():
 
     return dResourceInfos
 
-#/home/anton/.wine/drive_c/Program Files (x86)/2K Games/Firaxis Games/Art Assets/Art/interface/buttons/worldbuilder
-#
+
 def convert_resource_images(dResourceInfos):
     for iresource, resource_info in dResourceInfos.items():
         input_path_part = resource_info["path_art"]

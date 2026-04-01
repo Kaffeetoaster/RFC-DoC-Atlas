@@ -1,3 +1,5 @@
+from multiprocessing import spawn
+
 from python.consts import *
 from load_resources import *
 
@@ -5,6 +7,7 @@ import config
 
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
+import json
 
 
 def create_tile_overlay(coordinates, text, button, spawn):
@@ -41,15 +44,46 @@ dResourceInfos = extract_all_resource_infos()
 convert_resource_images(dResourceInfos)
 
 
+# generate whole resource spawn layer (deprecated)
+# resource_spawn_layer = Image.new('RGBA', (7800,4160 ), (0, 0, 0, 0))
+# for coords, event in dResourcesDict.items():
+#     (x,y),img = create_tile_overlay(coords, str(event[0]),dResourceInfos[event[1]]["path_art"], True)
+#     resource_spawn_layer.paste(img, (x * 52,(iWorldY-1-y)* 52), img)
+#     #print(f"Spawned {event[1]} at {coords}")
+# resource_spawn_layer.save(config.OUTPUT_PATH / "maps/layers/Resources/resource_spawns_and_despawns.png")
 
-resource_spawn_layer = Image.new('RGBA', (7800,4160 ), (0, 0, 0, 0))
+
+def add_resource_config_entry(config_dict, coords, text, path_art, category, bSpawn):
+    entry = {
+        "x": coords[0],
+        "y": coords[1],
+        "display_name": text,
+        "source": str(path_art),
+        "category": category,
+        "sub_category": "resource spawns and despawns",
+        "spawn": bSpawn # important for color
+    }
+    config_dict["resource_spawns"].append(entry)
+
+
+### generate tooltip infos and json entries for resource spawn ###
+resource_config ={
+    "resource_spawns": []
+}
+
 for coords, event in dResourcesDict.items():
-    (x,y),img = create_tile_overlay(coords, str(event[0]),dResourceInfos[event[1]]["path_art"], True)
-    resource_spawn_layer.paste(img, (x * 52,(iWorldY-1-y)* 52), img)
-    print(f"Spawned {event[1]} at {coords}")
-resource_spawn_layer.save(config.OUTPUT_PATH / "maps/layers/Resources/resource_spawns_and_despawns.png")
-
-
+    iresource = event[1]
+    year = str(event[0])
+    resource_info = dResourceInfos[iresource]
+    path_art = resource_info["path_art"]
+    old_img = Image.open(path_art)
+    if old_img.size == (64,64):
+        img = old_img.crop((3,3,60,60))
+        img.save(path_art)
+    add_resource_config_entry(resource_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "object_spawn_despawn", bSpawn=True)
+    
+with open("json/spawns_and_despawns.json", "w") as f:
+    json.dump(resource_config, f, indent=2)
 
 
 
