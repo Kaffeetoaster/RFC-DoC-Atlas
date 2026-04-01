@@ -5,17 +5,15 @@
       "y": 42,
       "display_name": "-1000",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 78,
       "y": 44,
       "display_name": "-600",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -23,8 +21,7 @@
       "y": 44,
       "display_name": "-200",
       "source": "resources/Rice.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -32,8 +29,7 @@
       "y": 46,
       "display_name": "-200",
       "source": "resources/Rice.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -41,8 +37,7 @@
       "y": 45,
       "display_name": "-200",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -50,8 +45,7 @@
       "y": 47,
       "display_name": "-200",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -59,8 +53,7 @@
       "y": 46,
       "display_name": "-200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -68,8 +61,7 @@
       "y": 43,
       "display_name": "-200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -77,8 +69,7 @@
       "y": 50,
       "display_name": "-200",
       "source": "resources/Clam.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -86,8 +77,7 @@
       "y": 51,
       "display_name": "200",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -95,8 +85,7 @@
       "y": 45,
       "display_name": "200",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -104,8 +93,7 @@
       "y": 44,
       "display_name": "200",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -113,8 +101,7 @@
       "y": 58,
       "display_name": "200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -122,8 +109,7 @@
       "y": 54,
       "display_name": "200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -131,8 +117,7 @@
       "y": 45,
       "display_name": "200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -140,8 +125,7 @@
       "y": 19,
       "display_name": "400",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -149,17 +133,15 @@
       "y": 18,
       "display_name": "400",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 99,
       "y": 43,
       "display_name": "400",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -167,8 +149,7 @@
       "y": 46,
       "display_name": "500",
       "source": "resources/Clam.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -176,8 +157,7 @@
       "y": 56,
       "display_name": "550",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -185,8 +165,7 @@
       "y": 47,
       "display_name": "600",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -194,8 +173,7 @@
       "y": 27,
       "display_name": "600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -203,8 +181,7 @@
       "y": 31,
       "display_name": "600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -212,8 +189,7 @@
       "y": 43,
       "display_name": "600",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -221,8 +197,7 @@
       "y": 48,
       "display_name": "700",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -230,8 +205,7 @@
       "y": 46,
       "display_name": "700",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -239,8 +213,7 @@
       "y": 48,
       "display_name": "700",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -248,8 +221,7 @@
       "y": 50,
       "display_name": "700",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -257,8 +229,7 @@
       "y": 46,
       "display_name": "700",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -266,8 +237,7 @@
       "y": 41,
       "display_name": "700",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -275,8 +245,7 @@
       "y": 44,
       "display_name": "800",
       "source": "resources/Opium.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -284,8 +253,7 @@
       "y": 42,
       "display_name": "800",
       "source": "resources/Fish.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -293,8 +261,7 @@
       "y": 45,
       "display_name": "800",
       "source": "resources/Clam.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -302,8 +269,7 @@
       "y": 41,
       "display_name": "800",
       "source": "resources/Clam.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -311,8 +277,7 @@
       "y": 40,
       "display_name": "900",
       "source": "resources/Iron.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -320,8 +285,7 @@
       "y": 25,
       "display_name": "1000",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -329,8 +293,7 @@
       "y": 30,
       "display_name": "1000",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -338,8 +301,7 @@
       "y": 32,
       "display_name": "1000",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -347,8 +309,7 @@
       "y": 42,
       "display_name": "1000",
       "source": "resources/Opium.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -356,8 +317,7 @@
       "y": 45,
       "display_name": "1000",
       "source": "resources/Opium.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -365,8 +325,7 @@
       "y": 24,
       "display_name": "1100",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -374,8 +333,7 @@
       "y": 19,
       "display_name": "1100",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -383,8 +341,7 @@
       "y": 60,
       "display_name": "1200",
       "source": "resources/Silk.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -392,8 +349,7 @@
       "y": 47,
       "display_name": "1200",
       "source": "resources/Opium.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -401,17 +357,15 @@
       "y": 44,
       "display_name": "1400",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 112,
       "y": 43,
       "display_name": "1400",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -419,8 +373,7 @@
       "y": 48,
       "display_name": "1400",
       "source": "resources/Fish.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -428,8 +381,7 @@
       "y": 65,
       "display_name": "1500",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -437,8 +389,7 @@
       "y": 18,
       "display_name": "1500",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -446,8 +397,7 @@
       "y": 48,
       "display_name": "1500",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -455,8 +405,7 @@
       "y": 44,
       "display_name": "1500",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -464,8 +413,7 @@
       "y": 43,
       "display_name": "1500",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -473,8 +421,7 @@
       "y": 42,
       "display_name": "1500",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -482,8 +429,7 @@
       "y": 42,
       "display_name": "1500",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -491,8 +437,7 @@
       "y": 34,
       "display_name": "1550",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -500,8 +445,7 @@
       "y": 27,
       "display_name": "1550",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -509,8 +453,7 @@
       "y": 21,
       "display_name": "1550",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -518,8 +461,7 @@
       "y": 44,
       "display_name": "1600",
       "source": "resources/Fish.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -527,8 +469,7 @@
       "y": 53,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -536,8 +477,7 @@
       "y": 57,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -545,8 +485,7 @@
       "y": 61,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -554,8 +493,7 @@
       "y": 16,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -563,8 +501,7 @@
       "y": 23,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -572,8 +509,7 @@
       "y": 37,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -581,8 +517,7 @@
       "y": 50,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -590,8 +525,7 @@
       "y": 46,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -599,8 +533,7 @@
       "y": 9,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -608,8 +541,7 @@
       "y": 11,
       "display_name": "1600",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -617,8 +549,7 @@
       "y": 48,
       "display_name": "1600",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -626,8 +557,7 @@
       "y": 53,
       "display_name": "1600",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -635,8 +565,7 @@
       "y": 30,
       "display_name": "1600",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -644,8 +573,7 @@
       "y": 31,
       "display_name": "1600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -653,8 +581,7 @@
       "y": 29,
       "display_name": "1600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -662,8 +589,7 @@
       "y": 20,
       "display_name": "1600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -671,8 +597,7 @@
       "y": 35,
       "display_name": "1600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -680,8 +605,7 @@
       "y": 37,
       "display_name": "1600",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -689,8 +613,7 @@
       "y": 41,
       "display_name": "1600",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -698,8 +621,7 @@
       "y": 19,
       "display_name": "1600",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -707,8 +629,7 @@
       "y": 24,
       "display_name": "1600",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -716,8 +637,7 @@
       "y": 57,
       "display_name": "1650",
       "source": "resources/Pig.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -725,8 +645,7 @@
       "y": 61,
       "display_name": "1650",
       "source": "resources/Pig.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -734,17 +653,15 @@
       "y": 25,
       "display_name": "1650",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 46,
       "y": 30,
       "display_name": "1650",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -752,8 +669,7 @@
       "y": 25,
       "display_name": "1650",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -761,8 +677,7 @@
       "y": 53,
       "display_name": "1700",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -770,8 +685,7 @@
       "y": 63,
       "display_name": "1700",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -779,8 +693,7 @@
       "y": 64,
       "display_name": "1700",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -788,8 +701,7 @@
       "y": 56,
       "display_name": "1700",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -797,8 +709,7 @@
       "y": 13,
       "display_name": "1700",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -806,8 +717,7 @@
       "y": 52,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -815,8 +725,7 @@
       "y": 41,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -824,8 +733,7 @@
       "y": 57,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -833,8 +741,7 @@
       "y": 57,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -842,8 +749,7 @@
       "y": 58,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -851,8 +757,7 @@
       "y": 32,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -860,8 +765,7 @@
       "y": 16,
       "display_name": "1700",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -869,8 +773,7 @@
       "y": 63,
       "display_name": "1700",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -878,8 +781,7 @@
       "y": 51,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -887,8 +789,7 @@
       "y": 50,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -896,8 +797,7 @@
       "y": 62,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -905,8 +805,7 @@
       "y": 23,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -914,8 +813,7 @@
       "y": 14,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -923,8 +821,7 @@
       "y": 11,
       "display_name": "1700",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -932,8 +829,7 @@
       "y": 15,
       "display_name": "1700",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -941,8 +837,7 @@
       "y": 6,
       "display_name": "1700",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -950,8 +845,7 @@
       "y": 52,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -959,8 +853,7 @@
       "y": 55,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -968,8 +861,7 @@
       "y": 59,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -977,8 +869,7 @@
       "y": 63,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -986,8 +877,7 @@
       "y": 35,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -995,8 +885,7 @@
       "y": 12,
       "display_name": "1700",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1004,8 +893,7 @@
       "y": 70,
       "display_name": "1700",
       "source": "resources/Fish.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1013,8 +901,7 @@
       "y": 30,
       "display_name": "1700",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1022,8 +909,7 @@
       "y": 40,
       "display_name": "1700",
       "source": "resources/Banana.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1031,8 +917,7 @@
       "y": 42,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1040,8 +925,7 @@
       "y": 25,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1049,8 +933,7 @@
       "y": 22,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1058,8 +941,7 @@
       "y": 22,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1067,8 +949,7 @@
       "y": 19,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1076,8 +957,7 @@
       "y": 26,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1085,26 +965,23 @@
       "y": 24,
       "display_name": "1700",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 78,
       "y": 55,
       "display_name": "1700",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Tobacco.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 103,
       "y": 38,
       "display_name": "1700",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Tobacco.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1112,8 +989,7 @@
       "y": 44,
       "display_name": "1700",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1121,8 +997,7 @@
       "y": 62,
       "display_name": "1750",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1130,8 +1005,7 @@
       "y": 66,
       "display_name": "1750",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1139,8 +1013,7 @@
       "y": 62,
       "display_name": "1750",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1148,8 +1021,7 @@
       "y": 64,
       "display_name": "1750",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1157,44 +1029,39 @@
       "y": 64,
       "display_name": "1750",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 25,
       "y": 51,
       "display_name": "1750",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 21,
       "y": 50,
       "display_name": "1750",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 22,
       "y": 52,
       "display_name": "1750",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 23,
       "y": 51,
       "display_name": "1750",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1202,8 +1069,7 @@
       "y": 12,
       "display_name": "1750",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1211,8 +1077,7 @@
       "y": 17,
       "display_name": "1750",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1220,8 +1085,7 @@
       "y": 62,
       "display_name": "1800",
       "source": "resources/Corn.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1229,8 +1093,7 @@
       "y": 63,
       "display_name": "1800",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1238,8 +1101,7 @@
       "y": 65,
       "display_name": "1800",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1247,8 +1109,7 @@
       "y": 51,
       "display_name": "1800",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1256,8 +1117,7 @@
       "y": 11,
       "display_name": "1800",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1265,8 +1125,7 @@
       "y": 13,
       "display_name": "1800",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1274,8 +1133,7 @@
       "y": 22,
       "display_name": "1800",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1283,8 +1141,7 @@
       "y": 18,
       "display_name": "1800",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1292,8 +1149,7 @@
       "y": 16,
       "display_name": "1800",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1301,8 +1157,7 @@
       "y": 14,
       "display_name": "1800",
       "source": "resources/Sugar.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1310,8 +1165,7 @@
       "y": 25,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1319,8 +1173,7 @@
       "y": 39,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1328,8 +1181,7 @@
       "y": 27,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1337,8 +1189,7 @@
       "y": 18,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1346,8 +1197,7 @@
       "y": 21,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1355,8 +1205,7 @@
       "y": 18,
       "display_name": "1800",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1364,8 +1213,7 @@
       "y": 32,
       "display_name": "1800",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1373,8 +1221,7 @@
       "y": 33,
       "display_name": "1800",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1382,17 +1229,15 @@
       "y": 38,
       "display_name": "1800",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 10,
       "y": 51,
       "display_name": "1800",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1400,8 +1245,7 @@
       "y": 43,
       "display_name": "1800",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1409,8 +1253,7 @@
       "y": 4,
       "display_name": "1800",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1418,8 +1261,7 @@
       "y": 9,
       "display_name": "1800",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1427,8 +1269,7 @@
       "y": 55,
       "display_name": "1850",
       "source": "resources/Rice.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1436,8 +1277,7 @@
       "y": 62,
       "display_name": "1850",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1445,8 +1285,7 @@
       "y": 61,
       "display_name": "1850",
       "source": "resources/Iron.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1454,8 +1293,7 @@
       "y": 53,
       "display_name": "1850",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1463,8 +1301,7 @@
       "y": 17,
       "display_name": "1850",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1472,8 +1309,7 @@
       "y": 12,
       "display_name": "1850",
       "source": "resources/Horse.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1481,8 +1317,7 @@
       "y": 52,
       "display_name": "1850",
       "source": "resources/Sheep.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1490,8 +1325,7 @@
       "y": 54,
       "display_name": "1850",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1499,8 +1333,7 @@
       "y": 41,
       "display_name": "1850",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1508,8 +1341,7 @@
       "y": 11,
       "display_name": "1850",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1517,8 +1349,7 @@
       "y": 52,
       "display_name": "1850",
       "source": "resources/Dates.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1526,8 +1357,7 @@
       "y": 22,
       "display_name": "1850",
       "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1535,8 +1365,7 @@
       "y": 27,
       "display_name": "1850",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1544,8 +1373,7 @@
       "y": 24,
       "display_name": "1850",
       "source": "resources/Coffee.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1553,8 +1381,7 @@
       "y": 32,
       "display_name": "1850",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1562,8 +1389,7 @@
       "y": 32,
       "display_name": "1850",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1571,8 +1397,7 @@
       "y": 32,
       "display_name": "1850",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1580,44 +1405,39 @@
       "y": 29,
       "display_name": "1850",
       "source": "resources/Cocoa.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 82,
       "y": 20,
       "display_name": "1850",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Tobacco.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 122,
       "y": 48,
       "display_name": "1850",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Tobacco.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 128,
       "y": 61,
       "display_name": "1850",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Tobacco.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
       "x": 110,
       "y": 56,
       "display_name": "1850",
-      "source": "resources/Spices.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "source": "resources/Cotton.png",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1625,8 +1445,7 @@
       "y": 35,
       "display_name": "1850",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1634,8 +1453,7 @@
       "y": 31,
       "display_name": "1850",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1643,8 +1461,7 @@
       "y": 54,
       "display_name": "1850",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1652,8 +1469,7 @@
       "y": 55,
       "display_name": "1850",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1661,8 +1477,7 @@
       "y": 13,
       "display_name": "1850",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1670,8 +1485,7 @@
       "y": 12,
       "display_name": "1850",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1679,8 +1493,7 @@
       "y": 10,
       "display_name": "1850",
       "source": "resources/Wine.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1688,8 +1501,7 @@
       "y": 33,
       "display_name": "1850",
       "source": "resources/Gold.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1697,8 +1509,7 @@
       "y": 53,
       "display_name": "1850",
       "source": "resources/Gold.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1706,8 +1517,7 @@
       "y": 56,
       "display_name": "1850",
       "source": "resources/Gold.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1715,8 +1525,7 @@
       "y": 54,
       "display_name": "1850",
       "source": "resources/Silver.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1724,8 +1533,7 @@
       "y": 54,
       "display_name": "1860",
       "source": "resources/Gold.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1733,8 +1541,7 @@
       "y": 60,
       "display_name": "1860",
       "source": "resources/Silver.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1742,8 +1549,7 @@
       "y": 61,
       "display_name": "1900",
       "source": "resources/Potato.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1751,8 +1557,7 @@
       "y": 52,
       "display_name": "1900",
       "source": "resources/Cow.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1760,8 +1565,7 @@
       "y": 9,
       "display_name": "1900",
       "source": "resources/Wheat.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1769,8 +1573,7 @@
       "y": 49,
       "display_name": "1900",
       "source": "resources/Citrus.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1778,8 +1581,7 @@
       "y": 29,
       "display_name": "1900",
       "source": "resources/Tea.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1787,8 +1589,7 @@
       "y": 29,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1796,8 +1597,7 @@
       "y": 29,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1805,8 +1605,7 @@
       "y": 24,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1814,8 +1613,7 @@
       "y": 36,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1823,8 +1621,7 @@
       "y": 33,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1832,8 +1629,7 @@
       "y": 29,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1841,8 +1637,7 @@
       "y": 30,
       "display_name": "1900",
       "source": "resources/Rubber.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     },
     {
@@ -1850,8 +1645,7 @@
       "y": 18,
       "display_name": "1900",
       "source": "resources/Camel_button.png",
-      "category": "object_spawn_despawn",
-      "sub_category": "resource spawns and despawns",
+      "category": "Resource spawns",
       "spawn": true
     }
   ]

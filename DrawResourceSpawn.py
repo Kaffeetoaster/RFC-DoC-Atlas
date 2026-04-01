@@ -1,7 +1,7 @@
 from multiprocessing import spawn
 
 from python.consts import *
-from load_resources import *
+from python.load_resources import *
 
 import config
 
@@ -60,7 +60,6 @@ def add_resource_config_entry(config_dict, coords, text, path_art, category, bSp
         "display_name": text,
         "source": str(path_art),
         "category": category,
-        "sub_category": "resource spawns and despawns",
         "spawn": bSpawn # important for color
     }
     config_dict["resource_spawns"].append(entry)
@@ -80,9 +79,17 @@ for coords, event in dResourcesDict.items():
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_resource_config_entry(resource_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "object_spawn_despawn", bSpawn=True)
+    add_resource_config_entry(resource_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
     
-with open("json/spawns_and_despawns.json", "w") as f:
+
+
+# for coords, event in dRemovedResourcesDict.items():
+#     year = str(event)
+
+
+
+
+with open("json/tooltips.json", "w") as f:
     json.dump(resource_config, f, indent=2)
 
 

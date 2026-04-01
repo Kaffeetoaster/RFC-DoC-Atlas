@@ -61,8 +61,10 @@ def extract_resource_infos(iresource, dBonusXML, dArtXML, dTextXML, dResourceTex
     
 
     value = art_info["Button"].split(',')
-    button_info = value[1] if len(value) > 1 else value[0]
-    
+    button_info = value[2:] if len(value) > 1 else value[0]
+    specialcase = ["ART_DEF_BONUS_COTTON", "ART_DEF_BONUS_OLIVES", "ART_DEF_BONUS_TOBACCO"]
+    if art_define_tag in specialcase:
+        button_info = value[2:]
     text_info = get_infos(dResourceTextXML["Civ4GameText"]["TEXT"],"Tag", description_tag)
     if text_info is None:
         text_info = get_infos(dTextXML["Civ4GameText"]["TEXT"],"Tag", description_tag)
@@ -91,30 +93,53 @@ def extract_all_resource_infos():
 
     return dResourceInfos
 
+def load_from_atlas(atlas_info):
+
+    #print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
+    if Path(atlas_info[0]).stem == "Unit_Resource_Atlas":
+        input_path_part = atlas_info[0]
+        input_path_part = Path(input_path_part).parent / Path(input_path_part).name.lower()
+        img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+
+    else:
+        img = Image.open(config.INPUT_PATH.parent.parent.parent/ "Warlords/Assets" / atlas_info[0])
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+    
 
 def convert_resource_images(dResourceInfos):
     for iresource, resource_info in dResourceInfos.items():
-        input_path_part = resource_info["path_art"]
+        if type(resource_info["path_art"]) is list:
+            print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+            img = load_from_atlas(resource_info["path_art"])
+            input_path_part = f"{resource_info['text']}.png"
+        else:
 
-        input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()
-        
-        # try open the image from the config.INPUT_PATH
-        try:
-            img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
-            img.load()
-        except Exception:
-            # Try with lowercase filename
+            print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+            input_path_part = resource_info["path_art"]
+
+            input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()
+            
+            # try open the image from the config.INPUT_PATH
             try:
-                img = Image.open(config.INPUT_PATH / "Assets" / input_path_lower)
+                img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
                 img.load()
             except Exception:
+                # Try with lowercase filename
                 try:
-                    img = Image.open(config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets" / input_path_part)
+                    img = Image.open(config.INPUT_PATH / "Assets" / input_path_lower)
                     img.load()
-                except Exception as e:
-                        print(f"Error occurred while opening {input_path_part}: {e}")
-                        continue
-
+                except Exception:
+                    # try in base extarcted archive
+                    try:
+                        img = Image.open(config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets" / input_path_part)
+                        img.load()
+                    except Exception as e:
+                            print(f"Error occurred while opening {input_path_part}: {e}")
+                            continue
+                        
         output_path = config.OUTPUT_PATH / f"resources/{Path(input_path_part).stem}.png"
         img.save(output_path)
         dResourceInfos[iresource]["path_art"] = output_path
