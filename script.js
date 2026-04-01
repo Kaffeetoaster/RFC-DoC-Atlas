@@ -227,21 +227,30 @@ fetch('json/tooltips.json')
         const lng = 52 * (spawnData.x) + 26;
         const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
         
-        const tooltip = L.tooltip({
-          permanent: true,
-          direction: 'top',
-          className: 'custom-tooltip',
-          offset: [0, 0]
-        })
-        .setLatLng([lat, lng])
-        .setContent(
-          `<div class="tooltip-box">
-            <img src="${spawnData.source}" class="${tooltipClass}" />
-            <span class="tooltip-text">${spawnData.display_name}</span>
-          </div>`
-        );
+        // Create tooltips for center, left wrap (-7800), and right wrap (+7800)
+        const positionsToCreate = [
+          { lat: lat, lng: lng },
+          { lat: lat, lng: lng + 7800 },
+          { lat: lat, lng: lng - 7800 }
+        ];
         
-        tooltipsBySubcategory[subcategoryName].push(tooltip);
+        positionsToCreate.forEach(position => {
+          const tooltip = L.tooltip({
+            permanent: true,
+            direction: 'top',
+            className: 'custom-tooltip',
+            offset: [0, 0]
+          })
+          .setLatLng([position.lat, position.lng])
+          .setContent(
+            `<div class="tooltip-box">
+              <img src="${spawnData.source}" class="${tooltipClass}" />
+              <span class="tooltip-text">${spawnData.display_name}</span>
+            </div>`
+          );
+          
+          tooltipsBySubcategory[subcategoryName].push(tooltip);
+        });
       });
       
       // Event listener for checkbox - show/hide all tooltips in subcategory
