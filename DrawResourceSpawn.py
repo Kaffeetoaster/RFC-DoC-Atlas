@@ -62,12 +62,15 @@ def add_resource_config_entry(config_dict, coords, text, path_art, category, bSp
         "category": category,
         "spawn": bSpawn # important for color
     }
-    config_dict["resource_spawns"].append(entry)
-
+    if bSpawn:
+        config_dict["resource_spawns"].append(entry)
+    elif not bSpawn:
+        config_dict["resource_despawns"].append(entry)
 
 ### generate tooltip infos and json entries for resource spawn ###
-resource_config ={
-    "resource_spawns": []
+markers_config ={
+    "resource_spawns": [],
+    "resource_despawns": []
 }
 
 for coords, event in dResourcesDict.items():
@@ -79,18 +82,24 @@ for coords, event in dResourcesDict.items():
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_resource_config_entry(resource_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
+    add_resource_config_entry(markers_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
     
 
 
-# for coords, event in dRemovedResourcesDict.items():
-#     year = str(event)
+for coords, event in dRemovedResourcesDict.items():
+    year = str(event)
+    path_art = "resources/Deletion.png"
+    old_img = Image.open(path_art)
+    if old_img.size == (64,64):
+        img = old_img.crop((3,3,60,60))
+        img.save(path_art)
+    add_resource_config_entry(markers_config, coords, year, Path(path_art), category = "Resource despawns", bSpawn=False)
 
 
 
 
 with open("json/tooltips.json", "w") as f:
-    json.dump(resource_config, f, indent=2)
+    json.dump(markers_config, f, indent=2)
 
 
 

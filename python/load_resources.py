@@ -112,12 +112,12 @@ def load_from_atlas(atlas_info):
 def convert_resource_images(dResourceInfos):
     for iresource, resource_info in dResourceInfos.items():
         if type(resource_info["path_art"]) is list:
-            print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+            #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
             img = load_from_atlas(resource_info["path_art"])
             input_path_part = f"{resource_info['text']}.png"
         else:
 
-            print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+            #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
             input_path_part = resource_info["path_art"]
 
             input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()

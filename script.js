@@ -177,12 +177,14 @@ fetch('json/tooltips.json')
     
     const categories = {};
     
-    // Group by category
-    data.resource_spawns.forEach(spawn => {
-      if (!categories[spawn.category]) {
-        categories[spawn.category] = [];
-      }
-      categories[spawn.category].push(spawn);
+    // Group by category from ALL lists in the JSON
+    Object.keys(data).forEach(listName => {
+      data[listName].forEach(spawn => {
+        if (!categories[spawn.category]) {
+          categories[spawn.category] = [];
+        }
+        categories[spawn.category].push(spawn);
+      });
     });
     
     console.log('Categories created:', Object.keys(categories));
@@ -228,7 +230,7 @@ fetch('json/tooltips.json')
         const lat = 52 * (spawnData.y) + 26;
         const lng = 52 * (spawnData.x) + 26;
         const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
-        
+        const direction = spawnData.spawn ? 'top' : 'bottom';
         // Create tooltips for center, left wrap (-7800), and right wrap (+7800)
         const positionsToCreate = [
           { lat: lat, lng: lng },
@@ -239,7 +241,7 @@ fetch('json/tooltips.json')
         positionsToCreate.forEach(position => {
           const tooltip = L.tooltip({
             permanent: true,
-            direction: 'top',
+            direction: direction,
             className: 'custom-tooltip',
             offset: [0, 0]
           })
