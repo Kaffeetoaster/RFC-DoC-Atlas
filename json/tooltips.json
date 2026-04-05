@@ -4,7 +4,7 @@
       "x": 103,
       "y": 42,
       "display_name": "-1000",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -12,7 +12,7 @@
       "x": 78,
       "y": 44,
       "display_name": "-600",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -20,7 +20,7 @@
       "x": 127,
       "y": 44,
       "display_name": "-200",
-      "source": "resources/Rice.png",
+      "source": "Assets/Art/Interface/Buttons/Rice.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -28,7 +28,7 @@
       "x": 125,
       "y": 46,
       "display_name": "-200",
-      "source": "resources/Rice.png",
+      "source": "Assets/Art/Interface/Buttons/Rice.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -36,7 +36,7 @@
       "x": 125,
       "y": 45,
       "display_name": "-200",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -44,7 +44,7 @@
       "x": 129,
       "y": 47,
       "display_name": "-200",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -52,7 +52,7 @@
       "x": 124,
       "y": 46,
       "display_name": "-200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -60,7 +60,7 @@
       "x": 124,
       "y": 43,
       "display_name": "-200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -68,7 +68,7 @@
       "x": 128,
       "y": 50,
       "display_name": "-200",
-      "source": "resources/Clam.png",
+      "source": "Assets/Art/Interface/Buttons/Clam.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -76,7 +76,7 @@
       "x": 85,
       "y": 51,
       "display_name": "200",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -84,7 +84,7 @@
       "x": 83,
       "y": 45,
       "display_name": "200",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -92,7 +92,7 @@
       "x": 76,
       "y": 44,
       "display_name": "200",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -100,7 +100,7 @@
       "x": 98,
       "y": 58,
       "display_name": "200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -108,7 +108,7 @@
       "x": 99,
       "y": 54,
       "display_name": "200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -116,7 +116,7 @@
       "x": 113,
       "y": 45,
       "display_name": "200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -124,7 +124,7 @@
       "x": 90,
       "y": 19,
       "display_name": "400",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -132,7 +132,7 @@
       "x": 90,
       "y": 18,
       "display_name": "400",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -140,7 +140,7 @@
       "x": 99,
       "y": 43,
       "display_name": "400",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -148,7 +148,7 @@
       "x": 73,
       "y": 46,
       "display_name": "500",
-      "source": "resources/Clam.png",
+      "source": "Assets/Art/Interface/Buttons/Clam.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -156,7 +156,7 @@
       "x": 78,
       "y": 56,
       "display_name": "550",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -164,7 +164,7 @@
       "x": 92,
       "y": 47,
       "display_name": "600",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -172,7 +172,7 @@
       "x": 76,
       "y": 27,
       "display_name": "600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -180,7 +180,7 @@
       "x": 75,
       "y": 31,
       "display_name": "600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -188,7 +188,7 @@
       "x": 0,
       "y": 43,
       "display_name": "600",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -196,7 +196,7 @@
       "x": 62,
       "y": 48,
       "display_name": "700",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -204,7 +204,7 @@
       "x": 57,
       "y": 46,
       "display_name": "700",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -212,7 +212,7 @@
       "x": 57,
       "y": 48,
       "display_name": "700",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -220,7 +220,7 @@
       "x": 59,
       "y": 50,
       "display_name": "700",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -228,7 +228,7 @@
       "x": 89,
       "y": 46,
       "display_name": "700",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -236,7 +236,7 @@
       "x": 78,
       "y": 41,
       "display_name": "700",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -244,7 +244,7 @@
       "x": 113,
       "y": 44,
       "display_name": "800",
-      "source": "resources/Opium.png",
+      "source": "Assets/Art/Interface/Buttons/Opium.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -252,7 +252,7 @@
       "x": 127,
       "y": 42,
       "display_name": "800",
-      "source": "resources/Fish.png",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -260,7 +260,7 @@
       "x": 129,
       "y": 45,
       "display_name": "800",
-      "source": "resources/Clam.png",
+      "source": "Assets/Art/Interface/Buttons/Clam.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -268,7 +268,7 @@
       "x": 125,
       "y": 41,
       "display_name": "800",
-      "source": "resources/Clam.png",
+      "source": "Assets/Art/Interface/Buttons/Clam.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -276,7 +276,7 @@
       "x": 82,
       "y": 40,
       "display_name": "900",
-      "source": "resources/Iron.png",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -284,7 +284,7 @@
       "x": 73,
       "y": 25,
       "display_name": "1000",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -292,7 +292,7 @@
       "x": 70,
       "y": 30,
       "display_name": "1000",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -300,7 +300,7 @@
       "x": 62,
       "y": 32,
       "display_name": "1000",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -308,7 +308,7 @@
       "x": 116,
       "y": 42,
       "display_name": "1000",
-      "source": "resources/Opium.png",
+      "source": "Assets/Art/Interface/Buttons/Opium.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -316,7 +316,7 @@
       "x": 117,
       "y": 45,
       "display_name": "1000",
-      "source": "resources/Opium.png",
+      "source": "Assets/Art/Interface/Buttons/Opium.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -324,7 +324,7 @@
       "x": 83,
       "y": 24,
       "display_name": "1100",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -332,7 +332,7 @@
       "x": 83,
       "y": 19,
       "display_name": "1100",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -340,7 +340,7 @@
       "x": 92,
       "y": 60,
       "display_name": "1200",
-      "source": "resources/Silk.png",
+      "source": "Assets/Art/Interface/Buttons/Silk.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -348,7 +348,7 @@
       "x": 121,
       "y": 47,
       "display_name": "1200",
-      "source": "resources/Opium.png",
+      "source": "Assets/Art/Interface/Buttons/Opium.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -356,7 +356,7 @@
       "x": 52,
       "y": 44,
       "display_name": "1400",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -364,7 +364,7 @@
       "x": 112,
       "y": 43,
       "display_name": "1400",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -372,7 +372,7 @@
       "x": 130,
       "y": 48,
       "display_name": "1400",
-      "source": "resources/Fish.png",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -380,7 +380,7 @@
       "x": 63,
       "y": 65,
       "display_name": "1500",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -388,7 +388,7 @@
       "x": 81,
       "y": 18,
       "display_name": "1500",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -396,7 +396,7 @@
       "x": 70,
       "y": 48,
       "display_name": "1500",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -404,7 +404,7 @@
       "x": 28,
       "y": 44,
       "display_name": "1500",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -412,7 +412,7 @@
       "x": 31,
       "y": 43,
       "display_name": "1500",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -420,7 +420,7 @@
       "x": 28,
       "y": 42,
       "display_name": "1500",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -428,7 +428,7 @@
       "x": 35,
       "y": 42,
       "display_name": "1500",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -436,7 +436,7 @@
       "x": 39,
       "y": 34,
       "display_name": "1550",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -444,7 +444,7 @@
       "x": 48,
       "y": 27,
       "display_name": "1550",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -452,7 +452,7 @@
       "x": 43,
       "y": 21,
       "display_name": "1550",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -460,7 +460,7 @@
       "x": 132,
       "y": 44,
       "display_name": "1600",
-      "source": "resources/Fish.png",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -468,7 +468,7 @@
       "x": 29,
       "y": 53,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -476,7 +476,7 @@
       "x": 32,
       "y": 57,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -484,7 +484,7 @@
       "x": 32,
       "y": 61,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -492,7 +492,7 @@
       "x": 40,
       "y": 16,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -500,7 +500,7 @@
       "x": 44,
       "y": 23,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -508,7 +508,7 @@
       "x": 33,
       "y": 37,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -516,7 +516,7 @@
       "x": 24,
       "y": 50,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -524,7 +524,7 @@
       "x": 15,
       "y": 46,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -532,7 +532,7 @@
       "x": 36,
       "y": 9,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -540,7 +540,7 @@
       "x": 39,
       "y": 11,
       "display_name": "1600",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -548,7 +548,7 @@
       "x": 16,
       "y": 48,
       "display_name": "1600",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -556,7 +556,7 @@
       "x": 28,
       "y": 53,
       "display_name": "1600",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -564,7 +564,7 @@
       "x": 45,
       "y": 30,
       "display_name": "1600",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -572,7 +572,7 @@
       "x": 44,
       "y": 31,
       "display_name": "1600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -580,7 +580,7 @@
       "x": 49,
       "y": 29,
       "display_name": "1600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -588,7 +588,7 @@
       "x": 43,
       "y": 20,
       "display_name": "1600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -596,7 +596,7 @@
       "x": 28,
       "y": 35,
       "display_name": "1600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -604,7 +604,7 @@
       "x": 25,
       "y": 37,
       "display_name": "1600",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -612,7 +612,7 @@
       "x": 37,
       "y": 41,
       "display_name": "1600",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -620,7 +620,7 @@
       "x": 96,
       "y": 19,
       "display_name": "1600",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -628,7 +628,7 @@
       "x": 123,
       "y": 24,
       "display_name": "1600",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -636,7 +636,7 @@
       "x": 24,
       "y": 57,
       "display_name": "1650",
-      "source": "resources/Pig.png",
+      "source": "Assets/Art/Interface/Buttons/Pig.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -644,7 +644,7 @@
       "x": 30,
       "y": 61,
       "display_name": "1650",
-      "source": "resources/Pig.png",
+      "source": "Assets/Art/Interface/Buttons/Pig.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -652,7 +652,7 @@
       "x": 42,
       "y": 25,
       "display_name": "1650",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -660,7 +660,7 @@
       "x": 46,
       "y": 30,
       "display_name": "1650",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -668,7 +668,7 @@
       "x": 47,
       "y": 25,
       "display_name": "1650",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -676,7 +676,7 @@
       "x": 17,
       "y": 53,
       "display_name": "1700",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -684,7 +684,7 @@
       "x": 19,
       "y": 63,
       "display_name": "1700",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -692,7 +692,7 @@
       "x": 14,
       "y": 64,
       "display_name": "1700",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -700,7 +700,7 @@
       "x": 20,
       "y": 56,
       "display_name": "1700",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -708,7 +708,7 @@
       "x": 37,
       "y": 13,
       "display_name": "1700",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -716,7 +716,7 @@
       "x": 126,
       "y": 52,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -724,7 +724,7 @@
       "x": 104,
       "y": 41,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -732,7 +732,7 @@
       "x": 74,
       "y": 57,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -740,7 +740,7 @@
       "x": 78,
       "y": 57,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -748,7 +748,7 @@
       "x": 60,
       "y": 58,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -756,7 +756,7 @@
       "x": 64,
       "y": 32,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -764,7 +764,7 @@
       "x": 77,
       "y": 16,
       "display_name": "1700",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -772,7 +772,7 @@
       "x": 57,
       "y": 63,
       "display_name": "1700",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -780,7 +780,7 @@
       "x": 17,
       "y": 51,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -788,7 +788,7 @@
       "x": 18,
       "y": 50,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -796,7 +796,7 @@
       "x": 15,
       "y": 62,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -804,7 +804,7 @@
       "x": 41,
       "y": 23,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -812,7 +812,7 @@
       "x": 36,
       "y": 14,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -820,7 +820,7 @@
       "x": 32,
       "y": 11,
       "display_name": "1700",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -828,7 +828,7 @@
       "x": 40,
       "y": 15,
       "display_name": "1700",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -836,7 +836,7 @@
       "x": 35,
       "y": 6,
       "display_name": "1700",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -844,7 +844,7 @@
       "x": 18,
       "y": 52,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -852,7 +852,7 @@
       "x": 19,
       "y": 55,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -860,7 +860,7 @@
       "x": 15,
       "y": 59,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -868,7 +868,7 @@
       "x": 16,
       "y": 63,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -876,7 +876,7 @@
       "x": 33,
       "y": 35,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -884,7 +884,7 @@
       "x": 37,
       "y": 12,
       "display_name": "1700",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -892,7 +892,7 @@
       "x": 79,
       "y": 70,
       "display_name": "1700",
-      "source": "resources/Fish.png",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -900,7 +900,7 @@
       "x": 81,
       "y": 30,
       "display_name": "1700",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -908,7 +908,7 @@
       "x": 21,
       "y": 40,
       "display_name": "1700",
-      "source": "resources/Banana.png",
+      "source": "Assets/Art/Interface/Buttons/Banana.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -916,7 +916,7 @@
       "x": 33,
       "y": 42,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -924,7 +924,7 @@
       "x": 46,
       "y": 25,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -932,7 +932,7 @@
       "x": 46,
       "y": 22,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -940,7 +940,7 @@
       "x": 43,
       "y": 22,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -948,7 +948,7 @@
       "x": 42,
       "y": 19,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -956,7 +956,7 @@
       "x": 43,
       "y": 26,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -964,7 +964,7 @@
       "x": 125,
       "y": 24,
       "display_name": "1700",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -972,7 +972,7 @@
       "x": 78,
       "y": 55,
       "display_name": "1700",
-      "source": "resources/Tobacco.png",
+      "source": "Assets/Art/Interface/Buttons/Tobacco.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -980,7 +980,7 @@
       "x": 103,
       "y": 38,
       "display_name": "1700",
-      "source": "resources/Tobacco.png",
+      "source": "Assets/Art/Interface/Buttons/Tobacco.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -988,7 +988,7 @@
       "x": 131,
       "y": 44,
       "display_name": "1700",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -996,7 +996,7 @@
       "x": 87,
       "y": 62,
       "display_name": "1750",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1004,7 +1004,7 @@
       "x": 58,
       "y": 66,
       "display_name": "1750",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1012,7 +1012,7 @@
       "x": 60,
       "y": 62,
       "display_name": "1750",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1020,7 +1020,7 @@
       "x": 69,
       "y": 64,
       "display_name": "1750",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1028,7 +1028,7 @@
       "x": 74,
       "y": 64,
       "display_name": "1750",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1036,7 +1036,7 @@
       "x": 25,
       "y": 51,
       "display_name": "1750",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1044,7 +1044,7 @@
       "x": 21,
       "y": 50,
       "display_name": "1750",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1052,7 +1052,7 @@
       "x": 22,
       "y": 52,
       "display_name": "1750",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1060,7 +1060,7 @@
       "x": 23,
       "y": 51,
       "display_name": "1750",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1068,7 +1068,7 @@
       "x": 74,
       "y": 12,
       "display_name": "1750",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1076,7 +1076,7 @@
       "x": 41,
       "y": 17,
       "display_name": "1750",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1084,7 +1084,7 @@
       "x": 128,
       "y": 62,
       "display_name": "1800",
-      "source": "resources/Corn.png",
+      "source": "Assets/Art/Interface/Buttons/Corn.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1092,7 +1092,7 @@
       "x": 80,
       "y": 63,
       "display_name": "1800",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1100,7 +1100,7 @@
       "x": 87,
       "y": 65,
       "display_name": "1800",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1108,7 +1108,7 @@
       "x": 124,
       "y": 51,
       "display_name": "1800",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1116,7 +1116,7 @@
       "x": 139,
       "y": 11,
       "display_name": "1800",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1124,7 +1124,7 @@
       "x": 140,
       "y": 13,
       "display_name": "1800",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1132,7 +1132,7 @@
       "x": 47,
       "y": 22,
       "display_name": "1800",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1140,7 +1140,7 @@
       "x": 41,
       "y": 18,
       "display_name": "1800",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1148,7 +1148,7 @@
       "x": 78,
       "y": 16,
       "display_name": "1800",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1156,7 +1156,7 @@
       "x": 80,
       "y": 14,
       "display_name": "1800",
-      "source": "resources/Sugar.png",
+      "source": "Assets/Art/Interface/Buttons/Sugar.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1164,7 +1164,7 @@
       "x": 85,
       "y": 25,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1172,7 +1172,7 @@
       "x": 37,
       "y": 39,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1180,7 +1180,7 @@
       "x": 93,
       "y": 27,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1188,7 +1188,7 @@
       "x": 94,
       "y": 18,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1196,7 +1196,7 @@
       "x": 90,
       "y": 21,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1204,7 +1204,7 @@
       "x": 88,
       "y": 18,
       "display_name": "1800",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1212,7 +1212,7 @@
       "x": 30,
       "y": 32,
       "display_name": "1800",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1220,7 +1220,7 @@
       "x": 32,
       "y": 33,
       "display_name": "1800",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1228,7 +1228,7 @@
       "x": 30,
       "y": 38,
       "display_name": "1800",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1236,7 +1236,7 @@
       "x": 10,
       "y": 51,
       "display_name": "1800",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1244,7 +1244,7 @@
       "x": 111,
       "y": 43,
       "display_name": "1800",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1252,7 +1252,7 @@
       "x": 149,
       "y": 4,
       "display_name": "1800",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1260,7 +1260,7 @@
       "x": 0,
       "y": 9,
       "display_name": "1800",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1268,7 +1268,7 @@
       "x": 8,
       "y": 55,
       "display_name": "1850",
-      "source": "resources/Rice.png",
+      "source": "Assets/Art/Interface/Buttons/Rice.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1276,7 +1276,7 @@
       "x": 137,
       "y": 62,
       "display_name": "1850",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1284,7 +1284,7 @@
       "x": 84,
       "y": 61,
       "display_name": "1850",
-      "source": "resources/Iron.png",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1292,7 +1292,7 @@
       "x": 8,
       "y": 53,
       "display_name": "1850",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1300,7 +1300,7 @@
       "x": 142,
       "y": 17,
       "display_name": "1850",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1308,7 +1308,7 @@
       "x": 138,
       "y": 12,
       "display_name": "1850",
-      "source": "resources/Horse.png",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1316,7 +1316,7 @@
       "x": 8,
       "y": 52,
       "display_name": "1850",
-      "source": "resources/Sheep.png",
+      "source": "Assets/Art/Interface/Buttons/Sheep.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1324,7 +1324,7 @@
       "x": 8,
       "y": 54,
       "display_name": "1850",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1332,7 +1332,7 @@
       "x": 4,
       "y": 41,
       "display_name": "1850",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1340,7 +1340,7 @@
       "x": 142,
       "y": 11,
       "display_name": "1850",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1348,7 +1348,7 @@
       "x": 9,
       "y": 52,
       "display_name": "1850",
-      "source": "resources/Dates.png",
+      "source": "Assets/Art/Interface/Buttons/Dates.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1356,7 +1356,7 @@
       "x": 10,
       "y": 22,
       "display_name": "1850",
-      "source": "resources/Spices.png",
+      "source": "Assets/Art/Interface/Buttons/Spices.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1364,7 +1364,7 @@
       "x": 83,
       "y": 27,
       "display_name": "1850",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1372,7 +1372,7 @@
       "x": 81,
       "y": 24,
       "display_name": "1850",
-      "source": "resources/Coffee.png",
+      "source": "Assets/Art/Interface/Buttons/Coffee.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1380,7 +1380,7 @@
       "x": 58,
       "y": 32,
       "display_name": "1850",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1388,7 +1388,7 @@
       "x": 61,
       "y": 32,
       "display_name": "1850",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1396,7 +1396,7 @@
       "x": 68,
       "y": 32,
       "display_name": "1850",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1404,7 +1404,7 @@
       "x": 69,
       "y": 29,
       "display_name": "1850",
-      "source": "resources/Cocoa.png",
+      "source": "Assets/Art/Interface/Buttons/Cocoa.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1412,7 +1412,7 @@
       "x": 82,
       "y": 20,
       "display_name": "1850",
-      "source": "resources/Tobacco.png",
+      "source": "Assets/Art/Interface/Buttons/Tobacco.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1420,7 +1420,7 @@
       "x": 122,
       "y": 48,
       "display_name": "1850",
-      "source": "resources/Tobacco.png",
+      "source": "Assets/Art/Interface/Buttons/Tobacco.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1428,7 +1428,7 @@
       "x": 128,
       "y": 61,
       "display_name": "1850",
-      "source": "resources/Tobacco.png",
+      "source": "Assets/Art/Interface/Buttons/Tobacco.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1436,7 +1436,7 @@
       "x": 110,
       "y": 56,
       "display_name": "1850",
-      "source": "resources/Cotton.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1444,7 +1444,7 @@
       "x": 105,
       "y": 35,
       "display_name": "1850",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1452,7 +1452,7 @@
       "x": 109,
       "y": 31,
       "display_name": "1850",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1460,7 +1460,7 @@
       "x": 91,
       "y": 54,
       "display_name": "1850",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1468,7 +1468,7 @@
       "x": 7,
       "y": 55,
       "display_name": "1850",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1476,7 +1476,7 @@
       "x": 35,
       "y": 13,
       "display_name": "1850",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1484,7 +1484,7 @@
       "x": 33,
       "y": 12,
       "display_name": "1850",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1492,7 +1492,7 @@
       "x": 138,
       "y": 10,
       "display_name": "1850",
-      "source": "resources/Wine.png",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1500,7 +1500,7 @@
       "x": 38,
       "y": 33,
       "display_name": "1850",
-      "source": "resources/Gold.png",
+      "source": "Assets/Art/Interface/Buttons/Gold.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1508,7 +1508,7 @@
       "x": 9,
       "y": 53,
       "display_name": "1850",
-      "source": "resources/Gold.png",
+      "source": "Assets/Art/Interface/Buttons/Gold.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1516,7 +1516,7 @@
       "x": 7,
       "y": 56,
       "display_name": "1850",
-      "source": "resources/Gold.png",
+      "source": "Assets/Art/Interface/Buttons/Gold.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1524,7 +1524,7 @@
       "x": 10,
       "y": 54,
       "display_name": "1850",
-      "source": "resources/Silver.png",
+      "source": "Assets/Art/Interface/Buttons/Silver.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1532,7 +1532,7 @@
       "x": 16,
       "y": 54,
       "display_name": "1860",
-      "source": "resources/Gold.png",
+      "source": "Assets/Art/Interface/Buttons/Gold.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1540,7 +1540,7 @@
       "x": 12,
       "y": 60,
       "display_name": "1860",
-      "source": "resources/Silver.png",
+      "source": "Assets/Art/Interface/Buttons/Silver.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1548,7 +1548,7 @@
       "x": 90,
       "y": 61,
       "display_name": "1900",
-      "source": "resources/Potato.png",
+      "source": "Assets/Art/Interface/Buttons/Potatoes.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1556,7 +1556,7 @@
       "x": 11,
       "y": 52,
       "display_name": "1900",
-      "source": "resources/Cow.png",
+      "source": "Assets/Art/Interface/Buttons/Cow.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1564,7 +1564,7 @@
       "x": 138,
       "y": 9,
       "display_name": "1900",
-      "source": "resources/Wheat.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1572,7 +1572,7 @@
       "x": 26,
       "y": 49,
       "display_name": "1900",
-      "source": "resources/Citrus.png",
+      "source": "Assets/Art/Interface/Buttons/Citrus.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1580,7 +1580,7 @@
       "x": 83,
       "y": 29,
       "display_name": "1900",
-      "source": "resources/Tea.png",
+      "source": "Assets/Art/Interface/Buttons/Tea.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1588,7 +1588,7 @@
       "x": 71,
       "y": 29,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1596,7 +1596,7 @@
       "x": 74,
       "y": 29,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1604,7 +1604,7 @@
       "x": 74,
       "y": 24,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1612,7 +1612,7 @@
       "x": 118,
       "y": 36,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1620,7 +1620,7 @@
       "x": 119,
       "y": 33,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1628,7 +1628,7 @@
       "x": 125,
       "y": 29,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1636,7 +1636,7 @@
       "x": 130,
       "y": 30,
       "display_name": "1900",
-      "source": "resources/Rubber.png",
+      "source": "Assets/Art/Interface/Buttons/Rubber.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1644,7 +1644,7 @@
       "x": 131,
       "y": 18,
       "display_name": "1900",
-      "source": "resources/Camel_button.png",
+      "source": "Assets/Art/Interface/Buttons/Camel.png",
       "category": "Resource spawns",
       "spawn": true
     }
@@ -1654,7 +1654,7 @@
       "x": 88,
       "y": 51,
       "display_name": "-200",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Olives_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1662,7 +1662,7 @@
       "x": 75,
       "y": 51,
       "display_name": "-50",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Silver_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1670,7 +1670,7 @@
       "x": 82,
       "y": 39,
       "display_name": "-50",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1678,7 +1678,7 @@
       "x": 74,
       "y": 44,
       "display_name": "200",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Spices_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1686,7 +1686,7 @@
       "x": 87,
       "y": 49,
       "display_name": "200",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Horse_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1694,7 +1694,7 @@
       "x": 125,
       "y": 53,
       "display_name": "200",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Copper_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1702,7 +1702,7 @@
       "x": 55,
       "y": 53,
       "display_name": "400",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1710,7 +1710,7 @@
       "x": 59,
       "y": 51,
       "display_name": "400",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Silver_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1718,7 +1718,7 @@
       "x": 83,
       "y": 48,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Clam_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1726,7 +1726,7 @@
       "x": 83,
       "y": 47,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye (Murex)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1734,7 +1734,7 @@
       "x": 73,
       "y": 46,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Clam_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1742,7 +1742,7 @@
       "x": 68,
       "y": 47,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye (Murex)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1750,7 +1750,7 @@
       "x": 70,
       "y": 50,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye (Murex)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1758,7 +1758,7 @@
       "x": 61,
       "y": 48,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye (Murex)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1766,7 +1766,7 @@
       "x": 58,
       "y": 47,
       "display_name": "500",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye (Murex)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1774,7 +1774,7 @@
       "x": 66,
       "y": 46,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Ivory (African)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1782,7 +1782,7 @@
       "x": 58,
       "y": 45,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Ivory (African)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1790,7 +1790,7 @@
       "x": 78,
       "y": 37,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Ivory (African)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1798,7 +1798,7 @@
       "x": 81,
       "y": 36,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Ivory (African)_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1806,7 +1806,7 @@
       "x": 94,
       "y": 43,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Ivory_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1814,7 +1814,7 @@
       "x": 69,
       "y": 49,
       "display_name": "550",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Wheat_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1822,7 +1822,7 @@
       "x": 100,
       "y": 50,
       "display_name": "1100",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Silver_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1830,7 +1830,7 @@
       "x": 97,
       "y": 54,
       "display_name": "1100",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Millet_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1838,7 +1838,7 @@
       "x": 79,
       "y": 39,
       "display_name": "1200",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Cotton_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1846,7 +1846,7 @@
       "x": 78,
       "y": 56,
       "display_name": "1300",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Silk_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1854,7 +1854,7 @@
       "x": 75,
       "y": 58,
       "display_name": "1400",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1862,7 +1862,7 @@
       "x": 92,
       "y": 60,
       "display_name": "1600",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Silk_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1870,7 +1870,7 @@
       "x": 32,
       "y": 42,
       "display_name": "1650",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1878,7 +1878,7 @@
       "x": 47,
       "y": 24,
       "display_name": "1650",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -1886,7 +1886,7 @@
       "x": 110,
       "y": 49,
       "display_name": "1750",
-      "source": "resources/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     }
