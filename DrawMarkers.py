@@ -1,13 +1,12 @@
-from multiprocessing import spawn
-
 from python.consts import *
-from python.load_resources import *
 
 import config
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 from pathlib import Path
 import json
+
+
 
 
 def create_tile_overlay(coordinates, text, button, spawn):
@@ -39,9 +38,8 @@ def create_tile_overlay(coordinates, text, button, spawn):
     return coordinates, img
 
 ### load xml resource infos and convert images to png for web usage
-dResourceInfos = extract_all_resource_infos()
-#print(dResourceInfos)
-convert_resource_images(dResourceInfos)
+update_all_infos(LBonusXML, dArtXML, dTextXML)
+
 
 
 # generate whole resource spawn layer (deprecated)
@@ -67,6 +65,23 @@ def add_resource_config_entry(config_dict, coords, text, path_art, category, bSp
     elif not bSpawn:
         config_dict["resource_despawns"].append(entry)
 
+
+### -------------------------------------------------------------- refactor to use for features too.
+def update_resource_despawn():
+    # updates the resource despawn entries, by getting the reosource, that spawned there before or the starting resource.
+    dRemovedResourcesDictExtended = dRemovedResourcesDict
+    for (x,y), event in dRemovedResourcesDictExtended.items():
+        if (x,y) in dResourcesDict:
+            # maybe a spawned resource will despawn
+            iresource = dResourcesDict[(x,y)][1]
+            dRemovedResourcesDictExtended[(x,y)] = (event, iresource)
+            #print(f"Resource at {(x,y)} despawns, spawned resource was {iresource}")
+        else:
+            # otherwise its just the starting resource that despawns
+            dRemovedResourcesDictExtended[(x,y)] = (event, dTileMap[(x, iWorldY-1-y)]["bonus"])
+            #print(f"Resource at {(x,y)} despawns, starting resource was {dTileMap[(x, iWorldY-1-y)]['bonus']}")
+    return dRemovedResourcesDictExtended
+
 ### generate tooltip infos and json entries for resource spawn ###
 markers_config ={
     "resource_spawns": [],
@@ -76,8 +91,8 @@ markers_config ={
 for coords, event in dResourcesDict.items():
     iresource = event[1]
     year = str(event[0])
-    resource_info = dResourceInfos[iresource]
-    path_art = resource_info["path_art"]
+    resource_info = LBonusXML[iresource]
+    path_art = resource_info["ArtDefineTag"]
     old_img = Image.open(path_art)
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
@@ -85,15 +100,24 @@ for coords, event in dResourcesDict.items():
     add_resource_config_entry(markers_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
     
 
+dRemovedResourcesDictExtended = update_resource_despawn()
+# print(dRemovedResourcesDictExtended)
+for coords, event in dRemovedResourcesDictExtended.items():
+    year = str(event[0])
+    iresource = event[1]
+    resource_info = LBonusXML[iresource]
+    path_art = resource_info["ArtDefineTag"]
+    new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_despawn.png"
 
-for coords, event in dRemovedResourcesDict.items():
-    year = str(event)
-    path_art = "resources/Deletion.png"
+    print(old_img.size)
+    
     old_img = Image.open(path_art)
+    deletion_img = Image.open("Assets/Art/Interface/Buttons/Deletion.png")
     if old_img.size == (64,64):
-        img = old_img.crop((3,3,60,60))
-        img.save(path_art)
-    add_resource_config_entry(markers_config, coords, year, Path(path_art), category = "Resource despawns", bSpawn=False)
+        old_img = old_img.crop((3,3,60,60))
+    old_img.paste(deletion_img, (0,0), deletion_img)
+    old_img.save(new_path)
+    add_resource_config_entry(markers_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Resource despawns", bSpawn=False)
 
 
 
