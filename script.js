@@ -231,7 +231,8 @@ fetch('json/tooltips.json')
         const lat = 52 * (spawnData.y) + 26;
         const lng = 52 * (spawnData.x) + 26;
         const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
-        const direction = spawnData.spawn ? 'top' : 'bottom';
+        const direction1 = spawnData.spawn ? 'right' : 'left';
+        const direction = spawnData.category.includes('Terrain changes') ? 'top' : direction1;
         // Create tooltips for center, left wrap (-7800), and right wrap (+7800)
         const positionsToCreate = [
           { lat: lat, lng: lng },
