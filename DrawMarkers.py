@@ -199,6 +199,20 @@ for (x,y), event in dCivGroupResourcesDict.items():
     add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "City in same region", bSpawn=True)
 
 
+### start resources ###
+
+for (x,y), Tile in dTileMap.items():
+    if "bonus" in Tile:
+        iResource = Tile["bonus"]
+        resource_info = LBonusXML[iResource]
+        path_art = resource_info["ArtDefineTag"]
+        old_img = Image.open(path_art)
+        if old_img.size == (64,64):
+            img = old_img.crop((3,3,60,60))
+            img.save(path_art)
+        text = ""
+        add_marker_config_entry(markers_config, (x,iWorldY -1- y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Start resources", bSpawn=True)
+
 
 with open("json/tooltips.json", "w") as f:
     json.dump(markers_config, f, indent=2)

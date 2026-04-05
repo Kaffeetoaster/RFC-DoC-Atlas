@@ -114,7 +114,7 @@ def get_path(path_str):
 
 def load_from_atlas(atlas_info):
 
-    print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
+    #print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
     if Path(atlas_info[0]).stem == "Unit_Resource_Atlas":
         input_path_part = atlas_info[0]
         input_path_part = Path(input_path_part).parent / Path(input_path_part).name.lower()
@@ -192,27 +192,22 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
     ## update description in place to english name
     description_tag = LGameObjectXML[iObject]["Description"]
     text_info = dTextXML.get(description_tag, description_tag)
-    #print(f"Updating description for {description_tag} with text info {text_info}")
     if text_info == description_tag:
-        print(f"Description tag {description_tag} not found in text XML, using original tag as description.")
+        
         text = description_tag
     else:
         text = text_info.get("English", description_tag) 
     
     ## update short description. civ only have short descriptions, so check if it exists first
     if "ShortDescription" in LGameObjectXML[iObject]:
-        print(f"Updating short description for {description_tag}")
         short_description_tag = LGameObjectXML[iObject]["ShortDescription"]
         short_text_info = dTextXML.get(short_description_tag, short_description_tag)
         if short_text_info == short_description_tag:
-            print(f"Short description tag {short_description_tag} not found in text XML, using original tag as short description.")
             short_text = description_tag
         else:
             short_text = short_text_info.get("English", short_description_tag) 
         LGameObjectXML[iObject]["ShortDescription"] = short_text
-        print(f"short description for {description_tag} was {short_description_tag} and is now {short_text}")
 
-    #print(f"resource {iresource} with description was {description_tag}")
     new_path = convert_button_image(button_info, text)
     LGameObjectXML[iObject]["ArtDefineTag"] = new_path
     LGameObjectXML[iObject]["Description"] = text
