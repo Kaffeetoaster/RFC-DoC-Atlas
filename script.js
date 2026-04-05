@@ -167,7 +167,7 @@ fetch('json/tooltips.json')
     return response.json();
   })
   .then(data => {
-    console.log('JSON loaded successfully. Total spawns:', data.resource_spawns.length);
+    console.log('JSON loaded successfully. Total number of markers:', data.length);
     const container = document.querySelector('.options-container');
     
     if (!container) {
@@ -178,14 +178,15 @@ fetch('json/tooltips.json')
     const categories = {};
     
     // Group by category from ALL lists in the JSON
-    Object.keys(data).forEach(listName => {
-      data[listName].forEach(spawn => {
-        if (!categories[spawn.category]) {
-          categories[spawn.category] = [];
-        }
-        categories[spawn.category].push(spawn);
-      });
+    
+    data.spawns_and_despawns.forEach(spawn => {
+      if (!categories[spawn.category]) {
+        categories[spawn.category] = [];
+      }
+      categories[spawn.category].push(spawn);
     });
+    
+    
     
     console.log('Categories created:', Object.keys(categories));
     

@@ -105,7 +105,12 @@ def load_from_atlas(atlas_info):
         img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
         img.load()
         return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
-
+    elif Path(atlas_info[0]).stem == "BaseTerrain_TerrainFeatures_Atlas":
+        input_path_part = atlas_info[0]
+        input_path_part = Path(input_path_part).parent / Path(input_path_part).name.lower()
+        img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
     else:
         img = Image.open(config.INPUT_PATH.parent.parent.parent/ "Warlords/Assets" / atlas_info[0])
         img.load()
@@ -114,12 +119,14 @@ def load_from_atlas(atlas_info):
 
 def convert_button_image(button_info, new_filename):
     # fix file path, save it on config.OUTPUT_PATH and return the new path
+    if button_info == "":
+        print(f"No button info for {new_filename}, skipping image conversion.")
+        return None
+    #print(f"Converting button image for {new_filename} with button info {button_info}")
     if type(button_info) is list:
-            #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
             img = load_from_atlas(button_info)
             input_path_part = button_info[0]
     else:
-        #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
         input_path_part = button_info
         input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()
         
@@ -139,8 +146,7 @@ def convert_button_image(button_info, new_filename):
                     img.load()
                 except Exception as e:
                         print(f"Error occurred while opening {input_path_part}: {e}")
-                        
-    ### workout the path. hm i will need object name? so its not just atlas.png
+                        return ""
     output_path = config.OUTPUT_PATH / f"Assets/Art/Interface/Buttons/{new_filename}.png"
     img.save(output_path)
     return output_path
@@ -164,7 +170,7 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
 
     ## update description in place to english name
     description_tag = LGameObjectXML[iObject]["Description"]
-    text_info = dTextXML[description_tag]
+    text_info = dTextXML.get(description_tag,description_tag)
     text = text_info["English"] if text_info != "" else description_tag
     
     #print(f"resource {iresource} with description was {description_tag}")

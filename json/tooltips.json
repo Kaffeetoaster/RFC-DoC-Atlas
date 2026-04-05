@@ -1,5 +1,5 @@
 {
-  "resource_spawns": [
+  "spawns_and_despawns": [
     {
       "x": 103,
       "y": 42,
@@ -1647,9 +1647,7 @@
       "source": "Assets/Art/Interface/Buttons/Camel.png",
       "category": "Resource spawns",
       "spawn": true
-    }
-  ],
-  "resource_despawns": [
+    },
     {
       "x": 88,
       "y": 51,
@@ -1888,6 +1886,334 @@
       "display_name": "1750",
       "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
       "category": "Resource despawns",
+      "spawn": false
+    },
+    {
+      "x": 82,
+      "y": 54,
+      "display_name": "-1800 - TXT_KEY_CIV_HITTITES_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 107,
+      "y": 61,
+      "display_name": "552 - TXT_KEY_CIV_TURKS_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Horse.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 113,
+      "y": 47,
+      "display_name": "630 - TXT_KEY_CIV_TIBET_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 55,
+      "y": 52,
+      "display_name": "1130 - TXT_KEY_CIV_PORTUGAL_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 85,
+      "y": 64,
+      "display_name": "1263 - TXT_KEY_CIV_RUSSIA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 86,
+      "y": 65,
+      "display_name": "1263 - TXT_KEY_CIV_RUSSIA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Wheat.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 61,
+      "y": 66,
+      "display_name": "1580 - TXT_KEY_CIV_NETHERLANDS_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 128,
+      "y": 57,
+      "display_name": "1586 - TXT_KEY_CIV_MANCHU_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 15,
+      "y": 47,
+      "display_name": "1810 - TXT_KEY_CIV_MEXICO_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Iron.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 48,
+      "y": 21,
+      "display_name": "1822 - TXT_KEY_CIV_BRAZIL_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Fish.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
+      "x": 78,
+      "y": 45,
+      "display_name": "900 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 79,
+      "y": 45,
+      "display_name": "900 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 80,
+      "y": 44,
+      "display_name": "900 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 66,
+      "y": 57,
+      "display_name": "1100 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 68,
+      "y": 57,
+      "display_name": "1100 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 67,
+      "y": 55,
+      "display_name": "1100 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 120,
+      "y": 40,
+      "display_name": "1700 - Rainforest",
+      "source": "Assets/Art/Interface/Buttons/Rainforest.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 8,
+      "y": 55,
+      "display_name": "1850 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 8,
+      "y": 54,
+      "display_name": "1850 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 8,
+      "y": 53,
+      "display_name": "1850 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 9,
+      "y": 52,
+      "display_name": "1850 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true
+    },
+    {
+      "x": 69,
+      "y": 56,
+      "display_name": "400 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 80,
+      "y": 37,
+      "display_name": "550 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 81,
+      "y": 39,
+      "display_name": "550 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 81,
+      "y": 38,
+      "display_name": "550 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 129,
+      "y": 50,
+      "display_name": "800 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 87,
+      "y": 48,
+      "display_name": "1050 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 89,
+      "y": 45,
+      "display_name": "1050 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 91,
+      "y": 45,
+      "display_name": "1050 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 88,
+      "y": 46,
+      "display_name": "1050 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 79,
+      "y": 38,
+      "display_name": "1200 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 80,
+      "y": 38,
+      "display_name": "1200 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 63,
+      "y": 65,
+      "display_name": "1500 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 62,
+      "y": 64,
+      "display_name": "1500 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 99,
+      "y": 59,
+      "display_name": "1600 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 98,
+      "y": 58,
+      "display_name": "1600 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 96,
+      "y": 56,
+      "display_name": "1600 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 97,
+      "y": 57,
+      "display_name": "1600 - Flood Plains",
+      "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 81,
+      "y": 70,
+      "display_name": "1700 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 80,
+      "y": 69,
+      "display_name": "1700 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
+      "x": 59,
+      "y": 65,
+      "display_name": "1750 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
+      "category": "Feature spawns and despawns",
       "spawn": false
     }
   ]

@@ -51,15 +51,41 @@ for key, gen in gens:
 
 ## load xml resource infos and convert images to png for web usage
 LBonusXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4BonusInfos.xml")
+print(f"Loaded {len(LBonusXML)} Bonus XML entries")
+LFeatureXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4FeatureInfos.xml")
+print(f"Loaded {len(LFeatureXML)} Feature XML entries")
+LTerrainXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4TerrainInfos.xml")
+print(f"Loaded {len(LTerrainXML)} Terrain XML entries")
+LCivXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Civilizations/CIV4CivilizationInfos.xml")
+print(f"Loaded {len(LCivXML)} Civilization XML entries")
+LReligionXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/GameInfo/CIV4ReligionInfo.xml")
+print(f"Loaded {len(LReligionXML)} Religion XML entries")
+
+
 dArtXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Bonus.xml")
+print(f"Loaded {len(dArtXML)} Bonus Art XML entries")
+dArtXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Feature.xml")
+print(f"Loaded {len(dArtXML)} Feature Art XML entries")
+dArtXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Civilization.xml")
+print(f"Loaded {len(dArtXML)} Civilization Art XML entries")
+dArtXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Terrain.xml")
+print(f"Loaded {len(dArtXML)} Terrain Art XML entries")
+
 dTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Assets/XML/Text/CIV4GameTextInfos_Objects.xml")
-dResourceTextXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
-dWarlordsTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
-    
+print(f"Loaded {len(dTextXML)} GameText Object XML entries")
+dTextXML |= parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
+print(f"Loaded {len(dTextXML)} Warlords Text XML entries")
 
-dTextXML |= dResourceTextXML 
-dTextXML|= dWarlordsTextXML
-
+dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
+print(f"Loaded {len(dTextXML)} Resource Text XML entries")
+dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Features.xml")
+print(f"Loaded {len(dTextXML)} Feature Text XML entries")
+dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Terrain.xml")
+print(f"Loaded {len(dTextXML)} Terrain Text XML entries")
+dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Regions.xml")
+print(f"Loaded {len(dTextXML)} Regions Text XML entries")
+dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Religions.xml")
+print(f"Loaded {len(dTextXML)} Religions Text XML entries")
 
 
 
