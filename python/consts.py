@@ -4,6 +4,7 @@ from python.xml_parser import *
 
 import config
 from collections import defaultdict
+from pathlib import Path
 
 ### load and resolve consts from Python files ###
 global_context = {}
@@ -88,6 +89,10 @@ dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Religions.xml")
 print(f"Loaded {len(dTextXML)} Religions Text XML entries")
 
 
+
+for file in Path(config.INPUT_PATH / "Assets/XML/Text/DynamicNames").glob("*.xml"):
+    dTextXML |= parse_xml_file(file)
+    print(f"Loaded {len(dTextXML)} Dynamic Names Text XML entries from {file.name}")
 
 
 ### set some variables ###

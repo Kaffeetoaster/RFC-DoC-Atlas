@@ -90,15 +90,31 @@ def parse_xml_file(file_path):
     return result
 
 
+## build file index for loading with unknown capitalization
+def build_case_index(root):
+    root = Path(root).resolve()
+    index = {}
+    
+    for path in root.rglob("*"):
+        if path.is_file():
+            rel = path.relative_to(root)
+            index[str(rel).lower()] = path
+    
+    return index
 
+print("Built file index for case-insensitive loading of files.")
+index = build_case_index(config.INPUT_PATH / "Assets")
+print(f"file index built with {len(index)} entries.")
 
+def get_path(path_str):
+    return index.get(path_str.lower())
 
 ### Resolving XML tags ###
 
 
 def load_from_atlas(atlas_info):
 
-    #print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
+    print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
     if Path(atlas_info[0]).stem == "Unit_Resource_Atlas":
         input_path_part = atlas_info[0]
         input_path_part = Path(input_path_part).parent / Path(input_path_part).name.lower()
@@ -111,7 +127,18 @@ def load_from_atlas(atlas_info):
         img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
         img.load()
         return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+    elif Path(atlas_info[0]).stem == "Beyond the Sword_Atlas":
+        input_path_part = atlas_info[0]
+        img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+    elif Path(atlas_info[0]).stem == "Beyond_the_Sword_Atlas":
+        input_path_part = atlas_info[0]
+        img = Image.open(config.INPUT_PATH.parent.parent / "Assets" / input_path_part)
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
     else:
+
         img = Image.open(config.INPUT_PATH.parent.parent.parent/ "Warlords/Assets" / atlas_info[0])
         img.load()
         return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
@@ -128,25 +155,21 @@ def convert_button_image(button_info, new_filename):
             input_path_part = button_info[0]
     else:
         input_path_part = button_info
-        input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()
+        input_path_part = get_path(input_path_part)
         
         # try open the image from the config.INPUT_PATH
         try:
             img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
             img.load()
+
         except Exception:
-            # Try with lowercase filename
+            # try in base extracted archive
             try:
-                img = Image.open(config.INPUT_PATH / "Assets" / input_path_lower)
+                img = Image.open(config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets" / input_path_part)
                 img.load()
-            except Exception:
-                # try in base extracted archive
-                try:
-                    img = Image.open(config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets" / input_path_part)
-                    img.load()
-                except Exception as e:
-                        print(f"Error occurred while opening {input_path_part}: {e}")
-                        return ""
+            except Exception as e:
+                    print(f"Error occurred while opening {input_path_part}: {e}")
+                    return ""
     output_path = config.OUTPUT_PATH / f"Assets/Art/Interface/Buttons/{new_filename}.png"
     img.save(output_path)
     return output_path
@@ -165,18 +188,35 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
     art_info = dArtXML[art_define_tag]
     value = art_info["Button"].split(',')
     button_info = value[2:] if len(value) > 1 else value[0]
-    
-    
 
     ## update description in place to english name
     description_tag = LGameObjectXML[iObject]["Description"]
-    text_info = dTextXML.get(description_tag,description_tag)
-    text = text_info["English"] if text_info != "" else description_tag
+    text_info = dTextXML.get(description_tag, description_tag)
+    #print(f"Updating description for {description_tag} with text info {text_info}")
+    if text_info == description_tag:
+        print(f"Description tag {description_tag} not found in text XML, using original tag as description.")
+        text = description_tag
+    else:
+        text = text_info.get("English", description_tag) 
     
+    ## update short description. civ only have short descriptions, so check if it exists first
+    if "ShortDescription" in LGameObjectXML[iObject]:
+        print(f"Updating short description for {description_tag}")
+        short_description_tag = LGameObjectXML[iObject]["ShortDescription"]
+        short_text_info = dTextXML.get(short_description_tag, short_description_tag)
+        if short_text_info == short_description_tag:
+            print(f"Short description tag {short_description_tag} not found in text XML, using original tag as short description.")
+            short_text = description_tag
+        else:
+            short_text = short_text_info.get("English", short_description_tag) 
+        LGameObjectXML[iObject]["ShortDescription"] = short_text
+        print(f"short description for {description_tag} was {short_description_tag} and is now {short_text}")
+
     #print(f"resource {iresource} with description was {description_tag}")
     new_path = convert_button_image(button_info, text)
     LGameObjectXML[iObject]["ArtDefineTag"] = new_path
     LGameObjectXML[iObject]["Description"] = text
+    
 
 def update_all_infos(LGameObjectXML, dArtXML, dTextXML):
     # iteriere über alle Objecte (civs, religions, boni, etc.) aus der LGameObjectXML und extrahiere die Infos für alle Objecte

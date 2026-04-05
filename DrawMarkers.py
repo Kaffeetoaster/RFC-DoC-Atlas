@@ -13,7 +13,13 @@ import json
 update_all_infos(LBonusXML, dArtXML, dTextXML)
 update_all_infos(LFeatureXML, dArtXML, dTextXML)
 update_all_infos(LTerrainXML, dArtXML, dTextXML)
-#update_all_infos(LCivXML, dArtXML, dTextXML)
+
+
+#print(LCivXML[:3])
+
+print(dTextXML["TXT_KEY_CIV_ARGENTINA_DESC"])
+update_all_infos(LCivXML, dArtXML, dTextXML)
+
 # Religions dont have an ARTDefineTag, the Path to the Button is in the ReligionXML itself.
 # update_all_infos(LReligionXML, dArtXML, dTextXML)
 
@@ -65,7 +71,7 @@ def update_Spawnresources():
     for (x,y), event in dSpawnResourcesDictExtended.items():
         iresource = event[1]
         iCiv = event[0]
-        new_event = f"{dBirth[iCiv]} - {LCivXML[iCiv]['Description']} spawn" 
+        new_event = f"{dBirth[iCiv]} - {LCivXML[iCiv]['ShortDescription']} spawn" 
         dSpawnResourcesDictExtended[(x,y)] = (new_event, iresource)
     return dSpawnResourcesDictExtended
 
@@ -120,7 +126,7 @@ for (x,y), event in dSpawnResourcesDictExtended.items():
 
 
 
-### Feature spawns ###
+### Feature spawns and despawns ###
 
 for (x,y), event in dFeaturesDict.items():
     ifeature = event[1]
@@ -152,6 +158,7 @@ for (x,y), event in dRemovedFeaturesDictExtended.items():
     old_img.save(new_path)
     add_marker_config_entry(markers_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=False)
 
+### Terrain changes ###
 
 for (x,y), event in dTerrainsDict.items():
     iterrain = event[1]
@@ -165,9 +172,10 @@ for (x,y), event in dTerrainsDict.items():
         img.save(path_art)
     add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Terrain changes", bSpawn=True)
 
+### Plot changes ###
 for (x,y), event in dConquerorPlotTypesDict.items():
     iCiv = event[0]
-    text = f"{dBirth[iCiv]} - {LCivXML[iCiv]['Description']} spawn" 
+    text = f"Inca conquerer spawn" 
     ## be careful only hill spawns are supported right now.
     old_img = load_from_atlas(["Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds",4,1])
     
@@ -177,17 +185,18 @@ for (x,y), event in dConquerorPlotTypesDict.items():
 
     add_marker_config_entry(markers_config, (x,y), text, Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), category = "Plot changes", bSpawn=True)    
 
+### Region based resource spawns ###
 for (x,y), event in dCivGroupResourcesDict.items():
     tCivs = event[0]
     iResource = event[1]
-    text = f"{event[2]} - {', '.join([LCivXML[iCiv]['Description'] for iCiv in tCivs])}"
+    text = f"{event[2]} - {', '.join([LCivXML[iCiv]['ShortDescription'] for iCiv in tCivs])}"
     resource_info = LBonusXML[iResource]
     path_art = resource_info["ArtDefineTag"]
     old_img = Image.open(path_art)
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Civ city in same region", bSpawn=True)
+    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "City in same region", bSpawn=True)
 
 
 
