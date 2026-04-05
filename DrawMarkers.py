@@ -21,7 +21,7 @@ update_all_infos(LTerrainXML, dArtXML, dTextXML)
 
 
 
-def add_resource_config_entry(config_dict, coords, text, path_art, category, bSpawn):
+def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpawn):
     entry = {
         "x": coords[0],
         "y": coords[1],
@@ -31,7 +31,7 @@ def add_resource_config_entry(config_dict, coords, text, path_art, category, bSp
         "spawn": bSpawn # important for color
     }
     config_dict["spawns_and_despawns"].append(entry)
-    
+
 
 
 ### -------------------------------------------------------------- refactor to use for features too.
@@ -84,7 +84,7 @@ for coords, event in dResourcesDict.items():
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_resource_config_entry(markers_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
+    add_marker_config_entry(markers_config, coords, year, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True)
     
 ### resource despawns ###
 dRemovedResourcesDictExtended = update_resource_despawn()
@@ -103,7 +103,7 @@ for coords, event in dRemovedResourcesDictExtended.items():
         old_img = old_img.crop((3,3,60,60))
     old_img.paste(deletion_img, (0,0), deletion_img)
     old_img.save(new_path)
-    add_resource_config_entry(markers_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Resource despawns", bSpawn=False)
+    add_marker_config_entry(markers_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Resource despawns", bSpawn=False)
 
 ## civ spawn resources
 dSpawnResourcesDictExtended = update_Spawnresources()
@@ -116,7 +116,7 @@ for (x,y), event in dSpawnResourcesDictExtended.items():
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_resource_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Civ spawn Resources", bSpawn=True)
+    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Civ spawn Resources", bSpawn=True)
 
 
 
@@ -132,7 +132,7 @@ for (x,y), event in dFeaturesDict.items():
     if old_img.size == (64,64):
         img = old_img.crop((3,3,60,60))
         img.save(path_art)
-    add_resource_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=True)
+    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=True)
 
 
 dRemovedFeaturesDictExtended = update_feature_despawn()
@@ -150,10 +150,44 @@ for (x,y), event in dRemovedFeaturesDictExtended.items():
         old_img = old_img.crop((3,3,60,60))
     old_img.paste(deletion_img, (0,0), deletion_img)
     old_img.save(new_path)
-    add_resource_config_entry(markers_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=False)
+    add_marker_config_entry(markers_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=False)
 
 
+for (x,y), event in dTerrainsDict.items():
+    iterrain = event[1]
+    year = str(event[0])
+    terrain_info = LTerrainXML[iterrain]
+    text = f"{year} - {terrain_info['Description']}"
+    path_art = terrain_info["ArtDefineTag"]
+    old_img = Image.open(path_art)
+    if old_img.size == (64,64):
+        img = old_img.crop((4,4,59,59))
+        img.save(path_art)
+    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Terrain changes", bSpawn=True)
 
+for (x,y), event in dConquerorPlotTypesDict.items():
+    iCiv = event[0]
+    text = f"{dBirth[iCiv]} - {LCivXML[iCiv]['Description']} spawn" 
+    ## be careful only hill spawns are supported right now.
+    old_img = load_from_atlas(["Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds",4,1])
+    
+    if old_img.size == (64,64):
+        img = old_img.crop((4,4,59,59))
+        img.save(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png")
+
+    add_marker_config_entry(markers_config, (x,y), text, Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), category = "Plot changes", bSpawn=True)    
+
+for (x,y), event in dCivGroupResourcesDict.items():
+    tCivs = event[0]
+    iResource = event[1]
+    text = f"{event[2]} - {', '.join([LCivXML[iCiv]['Description'] for iCiv in tCivs])}"
+    resource_info = LBonusXML[iResource]
+    path_art = resource_info["ArtDefineTag"]
+    old_img = Image.open(path_art)
+    if old_img.size == (64,64):
+        img = old_img.crop((3,3,60,60))
+        img.save(path_art)
+    add_marker_config_entry(markers_config, (x,y), text, Path(path_art).relative_to(config.OUTPUT_PATH), category = "Civ city in same region", bSpawn=True)
 
 
 

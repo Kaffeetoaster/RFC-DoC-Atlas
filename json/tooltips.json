@@ -2215,6 +2215,102 @@
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false
+    },
+    {
+      "x": 78,
+      "y": 45,
+      "display_name": "900 - Semidesert",
+      "source": "Assets/Art/Interface/Buttons/Semidesert.png",
+      "category": "Terrain changes",
+      "spawn": true
+    },
+    {
+      "x": 79,
+      "y": 45,
+      "display_name": "900 - Semidesert",
+      "source": "Assets/Art/Interface/Buttons/Semidesert.png",
+      "category": "Terrain changes",
+      "spawn": true
+    },
+    {
+      "x": 33,
+      "y": 25,
+      "display_name": "1150 - TXT_KEY_CIV_INCA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Hill_spawn.png",
+      "category": "Plot changes",
+      "spawn": true
+    },
+    {
+      "x": 36,
+      "y": 22,
+      "display_name": "1150 - TXT_KEY_CIV_INCA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Hill_spawn.png",
+      "category": "Plot changes",
+      "spawn": true
+    },
+    {
+      "x": 29,
+      "y": 29,
+      "display_name": "1150 - TXT_KEY_CIV_INCA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Hill_spawn.png",
+      "category": "Plot changes",
+      "spawn": true
+    },
+    {
+      "x": 33,
+      "y": 12,
+      "display_name": "1150 - TXT_KEY_CIV_INCA_DESC spawn",
+      "source": "Assets/Art/Interface/Buttons/Hill_spawn.png",
+      "category": "Plot changes",
+      "spawn": true
+    },
+    {
+      "x": 63,
+      "y": 56,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Olives.png",
+      "category": "Civ city in same region",
+      "spawn": true
+    },
+    {
+      "x": 63,
+      "y": 55,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
+      "category": "Civ city in same region",
+      "spawn": true
+    },
+    {
+      "x": 60,
+      "y": 56,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
+      "category": "Civ city in same region",
+      "spawn": true
+    },
+    {
+      "x": 63,
+      "y": 59,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
+      "category": "Civ city in same region",
+      "spawn": true
+    },
+    {
+      "x": 65,
+      "y": 60,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
+      "category": "Civ city in same region",
+      "spawn": true
+    },
+    {
+      "x": 72,
+      "y": 59,
+      "display_name": "490 - TXT_KEY_CIV_GREECE_DESC, TXT_KEY_CIV_ROME_DESC, TXT_KEY_CIV_FRANCE_DESC",
+      "source": "Assets/Art/Interface/Buttons/Wine.png",
+      "category": "Civ city in same region",
+      "spawn": true
     }
   ]
 }
