@@ -1,6 +1,11 @@
-from python.extract_data import *
-import config
+from python.extract_python_data import *
+from python.load_csv import *
+from python.xml_parser import *
 
+import config
+from collections import defaultdict
+
+### load and resolve consts from Python files ###
 global_context = {}
 
 extract_variables(config.INPUT_PATH /'Assets/Python/Consts.py', global_context)
@@ -11,6 +16,53 @@ extract_variables(config.INPUT_PATH /'Assets/Python/Locations.py', global_contex
 extract_variables(config.INPUT_PATH /'Assets/Python/Periods.py', global_context)
 
 globals().update(global_context)
+
+### consts from Python files loaded and resolved ###
+
+### load tile infos from csv maps ### 
+gen_Bonus = iterate_number_map("Bonus.csv")
+gen_BonusVariety = iterate_number_map("BonusVariety.csv")
+gen_Feature = iterate_number_map("Feature.csv")
+gen_FeatureVariety = iterate_number_map("FeatureVariety.csv")
+gen_Plot = iterate_string_map("Plot.csv")
+gen_Terrain = iterate_number_map("Terrain.csv")
+
+
+gens = [
+    ("terrain", gen_Terrain),
+    ("bonus", gen_Bonus),
+    ("bonus", gen_BonusVariety),
+    ("feature", gen_Feature),
+    ("feature_variety", gen_FeatureVariety),
+    ("plot", gen_Plot),
+]
+
+dTileMap = defaultdict(dict)
+
+for key, gen in gens:
+    for (x, y), value in gen:
+        if value is not None:
+            dTileMap[(x, y)][key] = value 
+
+
+### tile infos from csv maps loaded ###
+
+### load xml infos ###
+
+## load xml resource infos and convert images to png for web usage
+LBonusXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4BonusInfos.xml")
+dArtXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Bonus.xml")
+dTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Assets/XML/Text/CIV4GameTextInfos_Objects.xml")
+dResourceTextXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
+dWarlordsTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
+    
+
+dTextXML |= dResourceTextXML 
+dTextXML|= dWarlordsTextXML
+
+
+
+
 
 ### set some variables ###
 dCivNames = {

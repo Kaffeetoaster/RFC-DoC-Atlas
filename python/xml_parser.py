@@ -1,0 +1,179 @@
+import xml.etree.ElementTree as ET
+
+import config
+
+from PIL import Image
+from pathlib import Path
+
+def strip_namespace(tag):
+    return tag.split('}', 1)[-1] if '}' in tag else tag
+
+def xml_to_dict(element):
+    result = {}
+    children = list(element)
+
+    if children:
+        child_dict = {}
+        for child in children:
+            tag = strip_namespace(child.tag)
+            child_result = xml_to_dict(child)
+
+            if tag not in child_dict:
+                child_dict[tag] = child_result
+            else:
+                if not isinstance(child_dict[tag], list):
+                    child_dict[tag] = [child_dict[tag]]
+                child_dict[tag].append(child_result)
+
+        return child_dict
+    else:
+        return element.text.strip() if element.text else ""
+
+def xml_to_dict(element):
+    result = {}
+    children = list(element)
+
+    if children:
+        child_dict = {}
+        for child in children:
+            tag = strip_namespace(child.tag)
+            child_result = xml_to_dict(child)
+
+            if tag not in child_dict:
+                child_dict[tag] = child_result
+            else:
+                if not isinstance(child_dict[tag], list):
+                    child_dict[tag] = [child_dict[tag]]
+                child_dict[tag].append(child_result)
+
+        return child_dict
+    else:
+        return element.text.strip() if element.text else ""
+
+def parse_xml_file(file_path):
+    # takes an xml file and returns a parsed representation depending on the root tag
+    tree = ET.parse(file_path)
+    root = tree.getroot()
+    root_tag = strip_namespace(root.tag)
+
+    # Case 1: Civ4GameText -> dict keyed by <Tag>
+    if root_tag == "Civ4GameText":
+        result = {}
+        for text_entry in root:
+
+            entry_dict = xml_to_dict(text_entry)
+            key = entry_dict.get("Tag")
+            if key:
+                result[key] = entry_dict
+
+        return result
+
+    # Case 2: Civ4ArtDefines -> dict keyed by <Type>
+    if root_tag == "Civ4ArtDefines":
+        result = {}
+        for category in root:
+            for art_entry in category:
+                entry_dict = xml_to_dict(art_entry)
+                key = entry_dict.get("Type")
+                if key:
+                    result[key] = entry_dict
+
+        return result
+
+    # Case 3: all others -> list of entries, skipping the first two levels
+    result = []
+    if len(root) > 0:
+        container = root[0]
+        for item in container:
+            result.append(xml_to_dict(item))
+
+    return result
+
+
+
+
+
+### Resolving XML tags ###
+
+
+def load_from_atlas(atlas_info):
+
+    #print(f"loading from atlas {atlas_info[0]} with coords {atlas_info[1]}, {atlas_info[2]}")
+    if Path(atlas_info[0]).stem == "Unit_Resource_Atlas":
+        input_path_part = atlas_info[0]
+        input_path_part = Path(input_path_part).parent / Path(input_path_part).name.lower()
+        img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+
+    else:
+        img = Image.open(config.INPUT_PATH.parent.parent.parent/ "Warlords/Assets" / atlas_info[0])
+        img.load()
+        return img.crop(((int(atlas_info[1])-1)*64, (int(atlas_info[2])-1)*64, int(atlas_info[1])*64, int(atlas_info[2])*64))
+   
+
+def convert_button_image(button_info, new_filename):
+    # fix file path, save it on config.OUTPUT_PATH and return the new path
+    if type(button_info) is list:
+            #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+            img = load_from_atlas(button_info)
+            input_path_part = button_info[0]
+    else:
+        #print(f"loading {resource_info["text"]} from atlas with path {resource_info["path_art"]}")
+        input_path_part = button_info
+        input_path_lower = Path(input_path_part).parent / Path(input_path_part).name.lower()
+        
+        # try open the image from the config.INPUT_PATH
+        try:
+            img = Image.open(config.INPUT_PATH / "Assets" / input_path_part)
+            img.load()
+        except Exception:
+            # Try with lowercase filename
+            try:
+                img = Image.open(config.INPUT_PATH / "Assets" / input_path_lower)
+                img.load()
+            except Exception:
+                # try in base extracted archive
+                try:
+                    img = Image.open(config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets" / input_path_part)
+                    img.load()
+                except Exception as e:
+                        print(f"Error occurred while opening {input_path_part}: {e}")
+                        
+    ### workout the path. hm i will need object name? so its not just atlas.png
+    output_path = config.OUTPUT_PATH / f"Assets/Art/Interface/Buttons/{new_filename}.png"
+    img.save(output_path)
+    return output_path
+
+
+## dObjcetXML should be a list of objects eg civs, features, terrains, etc. ggf. a dict with "0", "1", etc. as keys, 
+# and the infos as dicts. to keep it consisten with the other xmls?
+## dArtXML, should be a dict of ART defines, that uses the "Type" tag as a key, and the infos as a dict.
+## dTxtXML should be a dict of text defines, that uses the "tag" tag as a key, and the infos as a dict
+## preping the results of parse_xml should happen in xml_parser.py
+
+### resolving xml tags ###
+def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
+    # update ArteDefineTag to path of button image
+    art_define_tag = LGameObjectXML[iObject]["ArtDefineTag"]
+    art_info = dArtXML[art_define_tag]
+    value = art_info["Button"].split(',')
+    button_info = value[2:] if len(value) > 1 else value[0]
+    
+    
+
+    ## update description in place to english name
+    description_tag = LGameObjectXML[iObject]["Description"]
+    text_info = dTextXML[description_tag]
+    text = text_info["English"] if text_info != "" else description_tag
+    
+    #print(f"resource {iresource} with description was {description_tag}")
+    new_path = convert_button_image(button_info, text)
+    LGameObjectXML[iObject]["ArtDefineTag"] = new_path
+    LGameObjectXML[iObject]["Description"] = text
+
+def update_all_infos(LGameObjectXML, dArtXML, dTextXML):
+    # iteriere über alle Objecte (civs, religions, boni, etc.) aus der LGameObjectXML und extrahiere die Infos für alle Objecte
+    # das erste object hat die ID 0, die zweite die ID 1 etc.
+    for iObject, dObject_info in enumerate(LGameObjectXML):
+        update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML)
