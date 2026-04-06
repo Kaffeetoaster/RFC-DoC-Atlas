@@ -45,7 +45,7 @@ def update_resource_despawn():
     # updates the resource despawn entries, by getting the reosource, that spawned there before or the starting resource.
     dRemovedResourcesDictExtended = dRemovedResourcesDict
     for (x,y), event in dRemovedResourcesDictExtended.items():
-        if (x,y) in dResourcesDict:
+        if (x,y) in dResourcesDict and dResourcesDict[(x,y)][0] < event[0]:
             # maybe a spawned resource will despawn
             iresource = dResourcesDict[(x,y)][1]
             dRemovedResourcesDictExtended[(x,y)] = (event, iresource)

@@ -198,13 +198,15 @@ fetch('json/tooltips.json')
     
     // Store tooltips by subcategory
     const tooltipsBySubcategory = {};
-    
+    const categoryLayerGroups = {};
     // For each subcategory
     Object.keys(categories).forEach(categoryName => {
-      console.log('Creating subcategory:', categoryName, 'with', categories[categoryName].length, 'spawns');
+
+      console.log('Creating subcategory:', categoryName, 'with', categories[categoryName].length, 'spawns/despawns');
       
-      tooltipsBySubcategory[categoryName] = [];
-      
+      tooltipsBySubcategory[categoryName] = {};
+      const layerGroup = L.layerGroup();
+      categoryLayerGroups[categoryName] = layerGroup;
       // Create checkbox for subcategory
       const label = document.createElement('label');
       label.className = 'checkbox-container';
@@ -227,12 +229,13 @@ fetch('json/tooltips.json')
       details.appendChild(label);
       
       // For each spawn in subcategory - create tooltips
+      // also creat a lookuptables for each category for the tooltips by lat,lng
       categories[categoryName].forEach(spawnData => {
         const lat = 52 * (spawnData.y) + 26;
         const lng = 52 * (spawnData.x) + 26;
         const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
-        const direction1 = spawnData.spawn ? 'right' : 'left';
-        const direction = spawnData.category.includes('Terrain changes') ? 'top' : direction1;
+        const direction1 = spawnData.spawn ? 'top' : 'bottom';
+        const direction = spawnData.category.includes('Terrain changes') ? 'bottom' : direction1;
         // Create tooltips for center, left wrap (-7800), and right wrap (+7800)
         const positionsToCreate = [
           { lat: lat, lng: lng },
@@ -254,14 +257,18 @@ fetch('json/tooltips.json')
               <span class="tooltip-text">${spawnData.display_name}</span>
             </div>`
           );
-          
-          tooltipsBySubcategory[categoryName].push(tooltip);
+          layerGroup.addLayer(tooltip);
+          tooltipsBySubcategory[categoryName][`${position.lat},${position.lng}`] = tooltip;
         });
       });
       
+
+
       // Event listener for checkbox - show/hide all tooltips in subcategory
       checkbox.addEventListener('change', function() {
-        tooltipsBySubcategory[categoryName].forEach(tooltip => {
+
+        
+        Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
           const mapBounds = map.getBounds();
           if (this.checked && mapBounds.contains(tooltip.getLatLng())) { 
               tooltip.addTo(map);
@@ -269,7 +276,7 @@ fetch('json/tooltips.json')
               tooltip.removeFrom(map);
           }
         });
-      });
+      });        
     });
     
     container.appendChild(details);
@@ -278,7 +285,7 @@ fetch('json/tooltips.json')
     map.on('moveend', () => {
       const mapBounds = map.getBounds();
       Object.keys(tooltipsBySubcategory).forEach(categoryName => {
-        tooltipsBySubcategory[categoryName].forEach(tooltip => {
+        Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
           const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
           const isEnabled = checkbox && checkbox.checked;
           const isInBounds = mapBounds.contains(tooltip.getLatLng());
@@ -297,7 +304,7 @@ fetch('json/tooltips.json')
     map.on('zoomend', () => {
       const mapBounds = map.getBounds();
       Object.keys(tooltipsBySubcategory).forEach(categoryName => {
-        tooltipsBySubcategory[categoryName].forEach(tooltip => {
+        Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
           const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
           const isEnabled = checkbox && checkbox.checked;
           const isInBounds = mapBounds.contains(tooltip.getLatLng());
