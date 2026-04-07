@@ -45,7 +45,7 @@ def update_resource_despawn():
     # updates the resource despawn entries, by getting the reosource, that spawned there before or the starting resource.
     dRemovedResourcesDictExtended = dRemovedResourcesDict
     for (x,y), event in dRemovedResourcesDictExtended.items():
-        if (x,y) in dResourcesDict and dResourcesDict[(x,y)][0] < event[0]:
+        if (x,y) in dResourcesDict and dResourcesDict[(x,y)][0] < event:
             # maybe a spawned resource will despawn
             iresource = dResourcesDict[(x,y)][1]
             dRemovedResourcesDictExtended[(x,y)] = (event, iresource)
@@ -71,7 +71,8 @@ def update_Spawnresources():
     for (x,y), event in dSpawnResourcesDictExtended.items():
         iresource = event[1]
         iCiv = event[0]
-        new_event = f"{dBirth[iCiv]} - {LCivXML[iCiv]['ShortDescription']} spawn" 
+        desc = LCivXML[iCiv]['ShortDescription'] if LCivXML[iCiv]['ShortDescription'].startswith("TXT_KEY_CIV_") else LCivXML[iCiv]['Description']
+        new_event = f"{dBirth[iCiv]} - {desc} spawn" 
         dSpawnResourcesDictExtended[(x,y)] = (new_event, iresource)
     return dSpawnResourcesDictExtended
 
