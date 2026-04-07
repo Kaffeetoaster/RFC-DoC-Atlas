@@ -13,12 +13,8 @@ import json
 update_all_infos(LBonusXML, dArtXML, dTextXML)
 update_all_infos(LFeatureXML, dArtXML, dTextXML)
 update_all_infos(LTerrainXML, dArtXML, dTextXML)
-
-
-#print(LCivXML[:3])
-
-print(dTextXML["TXT_KEY_CIV_ARGENTINA_DESC"])
 update_all_infos(LCivXML, dArtXML, dTextXML)
+
 
 # Religions dont have an ARTDefineTag, the Path to the Button is in the ReligionXML itself.
 # update_all_infos(LReligionXML, dArtXML, dTextXML)
@@ -71,7 +67,7 @@ def update_Spawnresources():
     for (x,y), event in dSpawnResourcesDictExtended.items():
         iresource = event[1]
         iCiv = event[0]
-        desc = LCivXML[iCiv]['ShortDescription'] if LCivXML[iCiv]['ShortDescription'].startswith("TXT_KEY_CIV_") else LCivXML[iCiv]['Description']
+        desc = LCivXML[iCiv]['Description'] if LCivXML[iCiv]['ShortDescription'].startswith("TXT_KEY_CIV_") else LCivXML[iCiv]['ShortDescription']
         new_event = f"{dBirth[iCiv]} - {desc} spawn" 
         dSpawnResourcesDictExtended[(x,y)] = (new_event, iresource)
     return dSpawnResourcesDictExtended

@@ -1891,7 +1891,7 @@
     {
       "x": 82,
       "y": 54,
-      "display_name": "-1800 - The Hittites spawn",
+      "display_name": "-1800 - Hittites spawn",
       "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1899,7 +1899,7 @@
     {
       "x": 107,
       "y": 61,
-      "display_name": "552 - The Turks spawn",
+      "display_name": "552 - Turkestan spawn",
       "source": "Assets/Art/Interface/Buttons/Horse.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1907,7 +1907,7 @@
     {
       "x": 113,
       "y": 47,
-      "display_name": "630 - The Tibetans spawn",
+      "display_name": "630 - Tibet spawn",
       "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1915,7 +1915,7 @@
     {
       "x": 55,
       "y": 52,
-      "display_name": "1130 - The Portuguese spawn",
+      "display_name": "1130 - Portugal spawn",
       "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1923,7 +1923,7 @@
     {
       "x": 85,
       "y": 64,
-      "display_name": "1263 - The Russians spawn",
+      "display_name": "1263 - Russia spawn",
       "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1931,7 +1931,7 @@
     {
       "x": 86,
       "y": 65,
-      "display_name": "1263 - The Russians spawn",
+      "display_name": "1263 - Russia spawn",
       "source": "Assets/Art/Interface/Buttons/Wheat.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1939,7 +1939,7 @@
     {
       "x": 61,
       "y": 66,
-      "display_name": "1580 - TXT_KEY_CIV_NETHERLANDS_DESC spawn",
+      "display_name": "1580 - The Dutch spawn",
       "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1947,7 +1947,7 @@
     {
       "x": 128,
       "y": 57,
-      "display_name": "1586 - The Manchus spawn",
+      "display_name": "1586 - Manchuria spawn",
       "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1955,7 +1955,7 @@
     {
       "x": 15,
       "y": 47,
-      "display_name": "1810 - The Mexicans spawn",
+      "display_name": "1810 - Mexico spawn",
       "source": "Assets/Art/Interface/Buttons/Iron.png",
       "category": "Civ spawn Resources",
       "spawn": true
@@ -1963,7 +1963,7 @@
     {
       "x": 48,
       "y": 21,
-      "display_name": "1822 - The Brazilians spawn",
+      "display_name": "1822 - Brazil spawn",
       "source": "Assets/Art/Interface/Buttons/Fish.png",
       "category": "Civ spawn Resources",
       "spawn": true
