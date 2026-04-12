@@ -1,12 +1,8 @@
 from python.consts import *
 import config
 
-
-import os
 import csv
-
 from PIL import Image
-from pathlib import Path
 
 def get_full_path(path):
 	return config.INPUT_PATH / "Assets/Maps" / path

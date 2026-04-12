@@ -20,22 +20,24 @@ globals().update(global_context)
 
 ### consts from Python files loaded and resolved ###
 
-### load tile infos from csv maps ### 
-gen_Bonus = iterate_number_map("Bonus.csv")
-gen_BonusVariety = iterate_number_map("BonusVariety.csv")
-gen_Feature = iterate_number_map("Feature.csv")
-gen_FeatureVariety = iterate_number_map("FeatureVariety.csv")
-gen_Plot = iterate_string_map("Plot.csv")
-gen_Terrain = iterate_number_map("Terrain.csv")
 
+### load tile infos from csv maps ### 
+gen_Bonus = iterate_number_map("Earth/Bonus.csv")
+gen_BonusVariety = iterate_number_map("Earth/BonusVariety.csv")
+gen_Feature = iterate_number_map("Earth/Feature.csv")
+gen_FeatureVariety = iterate_number_map("Earth/FeatureVariety.csv")
+gen_Plot = iterate_string_map("Earth/Plot.csv")
+gen_Terrain = iterate_number_map("Earth/Terrain.csv")
+gen_Region = iterate_number_map("Regions.csv")
 
 gens = [
     ("terrain", gen_Terrain),
     ("bonus", gen_Bonus),
-    ("bonus", gen_BonusVariety),
+    ("bonus_variety", gen_BonusVariety),
     ("feature", gen_Feature),
     ("feature_variety", gen_FeatureVariety),
     ("plot", gen_Plot),
+    ("region", gen_Region),
 ]
 
 dTileMap = defaultdict(dict)
@@ -47,6 +49,7 @@ for key, gen in gens:
 
 
 ### tile infos from csv maps loaded ###
+
 
 ### load xml infos ###
 
@@ -93,6 +96,17 @@ print(f"Loaded {len(dTextXML)} Religions Text XML entries")
 for file in Path(config.INPUT_PATH / "Assets/XML/Text/DynamicNames").glob("*.xml"):
     dTextXML |= parse_xml_file(file)
     print(f"Loaded {len(dTextXML)} Dynamic Names Text XML entries from {file.name}")
+
+### load xml resource infos and convert images to png for web usage
+update_all_infos(LBonusXML, dArtXML, dTextXML)
+update_all_infos(LFeatureXML, dArtXML, dTextXML)
+update_all_infos(LTerrainXML, dArtXML, dTextXML)
+update_all_infos(LCivXML, dArtXML, dTextXML)
+
+# Religions dont have an ARTDefineTag, the Path to the Button is in the ReligionXML itself.
+update_all_infos(LReligionXML, dArtXML, dTextXML)
+
+
 
 
 ### set some variables ###
@@ -217,3 +231,5 @@ plot_colors = {
     PERIPHERY: (250, 184, 56, 150),
     MINORITY: (255, 220, 115, 150),
 }
+
+TILE_SIZE = 52

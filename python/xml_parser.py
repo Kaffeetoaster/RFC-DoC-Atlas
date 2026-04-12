@@ -107,7 +107,7 @@ index = build_case_index(config.INPUT_PATH / "Assets")
 print(f"file index built with {len(index)} entries.")
 
 def get_path(path_str):
-    return index.get(path_str.lower())
+    return index.get(path_str.lower(), path_str)
 
 ### Resolving XML tags ###
 
@@ -146,8 +146,8 @@ def load_from_atlas(atlas_info):
 
 def convert_button_image(button_info, new_filename):
     # fix file path, save it on config.OUTPUT_PATH and return the new path
-    if button_info == "":
-        print(f"No button info for {new_filename}, skipping image conversion.")
+    if button_info == "" or button_info is None:
+        #print(f"No button info for {new_filename}, skipping image conversion.")
         return None
     #print(f"Converting button image for {new_filename} with button info {button_info}")
     if type(button_info) is list:
@@ -155,7 +155,9 @@ def convert_button_image(button_info, new_filename):
             input_path_part = button_info[0]
     else:
         input_path_part = button_info
+        #print(f"Original input path: {input_path_part}")
         input_path_part = get_path(input_path_part)
+        #print(f"Resolved input path: {input_path_part}")
         
         # try open the image from the config.INPUT_PATH
         try:
@@ -183,30 +185,33 @@ def convert_button_image(button_info, new_filename):
 
 ### resolving xml tags ###
 def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
-    # update ArteDefineTag to path of button image
-    art_define_tag = LGameObjectXML[iObject]["ArtDefineTag"]
-    art_info = dArtXML[art_define_tag]
-    value = art_info["Button"].split(',')
-    button_info = value[2:] if len(value) > 1 else value[0]
 
     ## update description in place to english name
     description_tag = LGameObjectXML[iObject]["Description"]
     text_info = dTextXML.get(description_tag, description_tag)
     if text_info == description_tag:
-        
         text = description_tag
     else:
         text = text_info.get("English", description_tag) 
     
-    ## update short description. civ only have short descriptions, so check if it exists first
+    ## update short description. only civs have short descriptions, so check if it exists first
     if "ShortDescription" in LGameObjectXML[iObject]:
         short_description_tag = LGameObjectXML[iObject]["ShortDescription"]
         short_text_info = dTextXML.get(short_description_tag, short_description_tag)
         if short_text_info == short_description_tag:
-            short_text = description_tag
+            short_text = short_description_tag
         else:
             short_text = short_text_info.get("English", short_description_tag) 
         LGameObjectXML[iObject]["ShortDescription"] = short_text
+    # update ArteDefineTag to path of button image
+    # Religions dont have an ArtDefineTag, so check if it exists first
+    if "ArtDefineTag" in LGameObjectXML[iObject]:
+        art_define_tag = LGameObjectXML[iObject]["ArtDefineTag"]
+        art_info = dArtXML[art_define_tag]
+        value = art_info["Button"].split(',')
+        button_info = value[2:] if len(value) > 1 else value[0]
+    else: # case Religion
+        button_info = LGameObjectXML[iObject].get("Button", "")
 
     new_path = convert_button_image(button_info, text)
     LGameObjectXML[iObject]["ArtDefineTag"] = new_path
