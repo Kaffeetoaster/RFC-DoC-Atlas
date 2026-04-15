@@ -1,3 +1,28 @@
+const sidebar = document.getElementById("sidebar");
+const burger = document.getElementById("burger");
+const header = document.getElementById("sidebar-header");
+
+console.log('Script loaded. Elements found:', {
+  sidebar: !!sidebar,
+  burger: !!burger,
+  header: !!header
+});
+// open on burger click
+burger.addEventListener("click", () => {
+  sidebar.classList.remove("hidden");
+  burger.classList.add("hidden");
+});
+
+// close on header click
+header.addEventListener("click", () => {
+  sidebar.classList.add("hidden");
+  burger.classList.remove("hidden");
+});
+
+
+
+
+
 const width = 7800;   // image width in pixels
 const height = 4160;  // image height in pixels
 
@@ -155,7 +180,6 @@ fetch('json/layers.json')
     console.error('Error loading layers:', error);
     console.error('Error details:', error.message);
   });
-
 
 
 // Load tooltips from JSON and create tooltips

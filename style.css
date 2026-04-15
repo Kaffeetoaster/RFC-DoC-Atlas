@@ -66,6 +66,12 @@ html, body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
+    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out, background-color 0.3s ease;
+    cursor: default;
+}
+
+#sidebar.hidden {
+    transform: translateY(-110%);
 }
 
 #sidebar h3 {
@@ -74,11 +80,33 @@ html, body {
             font-size: 20px;
             font-weight: bold;
             color: var(--civ-white);
-            margin-bottom: 12px;
+            margin: 0 0 12px 0; 
             letter-spacing: 1.5px;
             border-bottom: 1px solid var(--civ-border);
-            padding-bottom: 8px;
+            padding-bottom: 4px;
+            cursor: pointer;
         }
+
+
+/* burger button */
+#burger {
+  position: absolute;
+  top: 10px;
+  left: 10px; /* center over sidebar */
+  z-index: 1100;
+  font-size: 20px;
+  color: var(--civ-white);
+  cursor: pointer;
+  background: var(--civ-blue-bg);
+  border: 2px solid var(--civ-border);
+  border-radius: 8px;
+    
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#burger.hidden {
+  display: none;
+}
 
 /* Scrollable options container */
 .options-container {
