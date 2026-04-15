@@ -6,3 +6,5 @@ config.py
 __pycache__/
 *.py[cod]
 Maps/
+
+time.log
