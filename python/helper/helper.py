@@ -39,8 +39,7 @@ def add_terrain_exceptions(tArea, LExceptions, dTileMap):
         for y in range(y1, y2 + 1):
             if dTileMap[transform_coordinates((x, y))]["plot"] == "PLOT_OCEAN":
                 LExceptions.append((x, y))
-                
-    return tArea, LExceptions
+    
 
 def measure(func,*args, **kwargs):
     start = time.perf_counter()

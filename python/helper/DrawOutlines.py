@@ -63,7 +63,7 @@ def draw_outlines(lines, width_px, height_px, color, line_strength):
 
     for start_point, end_point in lines:
         # start_point and end_point are (x, y) tuples
-        # transform 
+        
         draw.line([start_point, end_point], fill=color, width=line_strength)
 
     return img
@@ -85,14 +85,4 @@ def draw_outlines_for_area( tArea, LExceptions, color, line_strength):
 
 
 
-color = (round(255*0.32), round(255*0.32), round(255*0.75))
-
-print("Measuring outline drawing for core area...")
-print(dCoreArea[0])
-print(dCoreAreaExceptions.get(0, []))
-tArea,LExceptions = add_terrain_exceptions(dCoreArea[0], dCoreAreaExceptions.get(0, []),dTileMap)
-print("Terrain exceptions added.")
-print(tArea)
-print(LExceptions)
-img = measure(draw_outlines_for_area, tArea, LExceptions, color, 3)
 
