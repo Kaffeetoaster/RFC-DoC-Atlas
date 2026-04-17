@@ -12,7 +12,7 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     color = (round(0), round(0), round(0),round(255))
 
     color = LCivXML[iCiv]["Color"].get("ColorTypePrimary", color)
-    print(f"Color for {LCivXML[iCiv]['Description']}: {color}")
+    
 
 
     name = LCivXML[iCiv].get("ShortDescription")

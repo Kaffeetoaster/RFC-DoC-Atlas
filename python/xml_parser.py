@@ -235,7 +235,7 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML, dPlayerC
                     A = float(color_values.get("fAlpha", 1.0))
                     color_infos_new[ColorCategory] = (round(R*255), round(G*255), round(B*255), round(A*255))
                     
-                    print(f"Updated color for {LGameObjectXML[iObject]['Description']} - {ColorCategory}: {color_infos_new[ColorCategory]}")
+                    #print(f"Updated color for {LGameObjectXML[iObject]['Description']} - {ColorCategory}: {color_infos_new[ColorCategory]}")
         LGameObjectXML[iObject]["Color"] = color_infos_new
 
     
