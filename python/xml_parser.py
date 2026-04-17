@@ -69,7 +69,8 @@ def parse_xml_file(file_path):
         return result
 
     # Case 2: Civ4ArtDefines -> dict keyed by <Type>
-    if root_tag == "Civ4ArtDefines":
+    case2 = ["Civ4ArtDefines", "Civ4PlayerColorInfos", "Civ4ColorVals"]
+    if root_tag in case2:
         result = {}
         for category in root:
             for art_entry in category:
@@ -184,7 +185,7 @@ def convert_button_image(button_info, new_filename):
 ## preping the results of parse_xml should happen in xml_parser.py
 
 ### resolving xml tags ###
-def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
+def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML, dPlayerColorXML, dColorXML):
 
     ## update description in place to english name
     description_tag = LGameObjectXML[iObject]["Description"]
@@ -193,6 +194,7 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
         text = description_tag
     else:
         text = text_info.get("English", description_tag) 
+    LGameObjectXML[iObject]["Description"] = text
     
     ## update short description. only civs have short descriptions, so check if it exists first
     if "ShortDescription" in LGameObjectXML[iObject]:
@@ -203,6 +205,7 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
         else:
             short_text = short_text_info.get("English", short_description_tag) 
         LGameObjectXML[iObject]["ShortDescription"] = short_text
+
     # update ArteDefineTag to path of button image
     # Religions dont have an ArtDefineTag, so check if it exists first
     if "ArtDefineTag" in LGameObjectXML[iObject]:
@@ -212,14 +215,35 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML):
         button_info = value[2:] if len(value) > 1 else value[0]
     else: # case Religion
         button_info = LGameObjectXML[iObject].get("Button", "")
-
     new_path = convert_button_image(button_info, text)
     LGameObjectXML[iObject]["ArtDefineTag"] = new_path
-    LGameObjectXML[iObject]["Description"] = text
+
+    # update Color
+    
+    if "DefaultPlayerColor" in LGameObjectXML[iObject]:
+        #print(f"Updating color for {LGameObjectXML[iObject]['Description']}")
+        color_infos = dPlayerColorXML.get(LGameObjectXML[iObject]["DefaultPlayerColor"])
+        color_infos_new = color_infos.copy()
+
+        if color_infos:
+            for ColorCategory, color in color_infos.items():
+                if ColorCategory != "Type":
+                    color_values = dColorXML.get(color, {})
+                    R = float(color_values.get("fRed", 0.0))
+                    G = float(color_values.get("fGreen", 0.0))
+                    B = float(color_values.get("fBlue", 0.0))
+                    A = float(color_values.get("fAlpha", 1.0))
+                    color_infos_new[ColorCategory] = (round(R*255), round(G*255), round(B*255), round(A*255))
+                    
+                    print(f"Updated color for {LGameObjectXML[iObject]['Description']} - {ColorCategory}: {color_infos_new[ColorCategory]}")
+        LGameObjectXML[iObject]["Color"] = color_infos_new
+
+    
+    
     
 
-def update_all_infos(LGameObjectXML, dArtXML, dTextXML):
+def update_all_infos(LGameObjectXML, dArtXML, dTextXML, dPlayerColorXML = None, dColorXML= None):
     # iteriere über alle Objecte (civs, religions, boni, etc.) aus der LGameObjectXML und extrahiere die Infos für alle Objecte
     # das erste object hat die ID 0, die zweite die ID 1 etc.
     for iObject, dObject_info in enumerate(LGameObjectXML):
-        update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML)
+        update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML, dPlayerColorXML, dColorXML)

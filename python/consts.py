@@ -3,8 +3,11 @@ from python.load_csv import *
 from python.xml_parser import *
 
 import config
+
 from collections import defaultdict
 from pathlib import Path
+import time
+
 
 ### load and resolve consts from Python files ###
 global_context = {}
@@ -54,6 +57,7 @@ for key, gen in gens:
 ### load xml infos ###
 
 ## load xml resource infos and convert images to png for web usage
+# base Objects
 LBonusXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4BonusInfos.xml")
 print(f"Loaded {len(LBonusXML)} Bonus XML entries")
 LFeatureXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4FeatureInfos.xml")
@@ -65,7 +69,7 @@ print(f"Loaded {len(LCivXML)} Civilization XML entries")
 LReligionXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/GameInfo/CIV4ReligionInfo.xml")
 print(f"Loaded {len(LReligionXML)} Religion XML entries")
 
-
+# Art
 dArtXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Bonus.xml")
 print(f"Loaded {len(dArtXML)} Bonus Art XML entries")
 dArtXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Feature.xml")
@@ -75,33 +79,45 @@ print(f"Loaded {len(dArtXML)} Civilization Art XML entries")
 dArtXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Terrain.xml")
 print(f"Loaded {len(dArtXML)} Terrain Art XML entries")
 
+# Colors
+dColorXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Interface/CIV4ColorVals.xml")
+dPlayerColorXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Interface/CIV4PlayerColorInfos.xml")
+
+# Text
 dTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Assets/XML/Text/CIV4GameTextInfos_Objects.xml")
 print(f"Loaded {len(dTextXML)} GameText Object XML entries")
-dTextXML |= parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
-print(f"Loaded {len(dTextXML)} Warlords Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Warlords Text XML entries")
 
-dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
-print(f"Loaded {len(dTextXML)} Resource Text XML entries")
-dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Features.xml")
-print(f"Loaded {len(dTextXML)} Feature Text XML entries")
-dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Terrain.xml")
-print(f"Loaded {len(dTextXML)} Terrain Text XML entries")
-dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Regions.xml")
-print(f"Loaded {len(dTextXML)} Regions Text XML entries")
-dTextXML |= parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Religions.xml")
-print(f"Loaded {len(dTextXML)} Religions Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Resource Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Features.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Feature Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Terrain.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Terrain Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Regions.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Regions Text XML entries")
+dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Religions.xml")
+dTextXML |= dTextXML_temp
+print(f"Loaded {len(dTextXML_temp)} Religions Text XML entries")
 
 
 
 for file in Path(config.INPUT_PATH / "Assets/XML/Text/DynamicNames").glob("*.xml"):
-    dTextXML |= parse_xml_file(file)
-    print(f"Loaded {len(dTextXML)} Dynamic Names Text XML entries from {file.name}")
+    dTextXML_temp= parse_xml_file(file)
+    dTextXML |= dTextXML_temp
+    print(f"Loaded {len(dTextXML_temp)} Dynamic Names Text XML entries from {file.name}")
 
 ### load xml resource infos and convert images to png for web usage
 update_all_infos(LBonusXML, dArtXML, dTextXML)
 update_all_infos(LFeatureXML, dArtXML, dTextXML)
 update_all_infos(LTerrainXML, dArtXML, dTextXML)
-update_all_infos(LCivXML, dArtXML, dTextXML)
+update_all_infos(LCivXML, dArtXML, dTextXML,dPlayerColorXML, dColorXML)
 
 # Religions dont have an ARTDefineTag, the Path to the Button is in the ReligionXML itself.
 update_all_infos(LReligionXML, dArtXML, dTextXML)
