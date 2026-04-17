@@ -1,4 +1,5 @@
 from python.consts import *
+from python.helper.helper import *
 import config
 
 
@@ -114,12 +115,10 @@ def iterate_plot_types(identifier, settler_values, war_values, core_func):
 		#	yield (x, y), LAND
 
 
-def draw_stability_map(name, values):
-	print(name)
-	name_display = name.replace("Periods/","").replace("_"," -> ")
-	#print(f"""        <label class="option"><input type="checkbox" data-target="stability_{name}">{name_display}</label>""")
-	#print(f"""   <img id="stability_{name}" src="maps/layers/stability/{name}.png" class="overlay">""")
-	
+def draw_stability_map(civ_name, period_name, values, json_config):
+	display_name= f"{civ_name} -> {period_name.replace('_', ' ')}" if period_name else civ_name
+	print(display_name)
+
 	image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
 	pixels = image.load()
 	
@@ -128,24 +127,30 @@ def draw_stability_map(name, values):
 	
 	image = image.resize((iWorldX * 52, iWorldY * 52), resample=Image.Resampling.NEAREST)
 	
-	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{name}.png"
-	print(image_path)
+	if period_name != "":
+		filename = f"Periods/{civ_name}_{period_name}"
+	else:
+		filename = civ_name
+	
+	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.png"
+	#print(image_path)
 	image.save(image_path)
+	add_layer_config_entry(json_config, display_name, category="Stability", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size)
 
 
-def draw_stability_map_for_civ(iCiv):
+def draw_stability_map_for_civ(iCiv,json_config):
 	civ_name = dCivNames[iCiv]
 	values = iterate_civ_map(iCiv)
-	
-	draw_stability_map(civ_name, values)
+	period_name = ""
+	draw_stability_map(civ_name, period_name, values,json_config)
 
 
-def draw_stability_map_for_period(iCiv, iPeriod):
+def draw_stability_map_for_period(iCiv, iPeriod, json_config):
 	civ_name = dCivNames[iCiv]
 	period_name = dPeriodNames[iPeriod]
 	values = iterate_period_map(iCiv, iPeriod)
 	
-	draw_stability_map(f"Periods/{civ_name}_{period_name}", values)
+	draw_stability_map(civ_name, period_name, values, json_config)
 
 
 def should_draw_for_period(iPeriod):
@@ -154,4 +159,12 @@ def should_draw_for_period(iPeriod):
 	return map_exists(f"Settler/Period/{period_name}.csv") or map_exists(f"War/Period/{period_name}.csv") or iPeriod in dPeriodCoreArea
 
 
+
+def DrawStabilityMaps(json_config):
+	for iCiv in dCivNames:
+		draw_stability_map_for_civ(iCiv, json_config)
+		
+		for iPeriod in dCivPeriods.get(iCiv, []):
+			if should_draw_for_period(iPeriod):
+				draw_stability_map_for_period(iCiv, iPeriod, json_config)
 	

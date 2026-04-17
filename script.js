@@ -25,6 +25,7 @@ header.addEventListener("click", () => {
 
 const width = 7800;   // image width in pixels
 const height = 4160;  // image height in pixels
+const TILE_SIZE = 52; // size of each game tile in pixels 
 
 const map = L.map('map', {
   crs: L.CRS.Simple,
@@ -34,6 +35,10 @@ const map = L.map('map', {
   scrollWheelZoom: true,   // zoom only
   dragging: true           // drag to pan
 });
+
+map.createPane("OutlinePane");
+map.getPane("OutlinePane").style.zIndex = 500; // above overlays but below tooltips
+
 // for better cylindrcal map performance, disable inertia and fade animation
 // i dont know this cylindriacl map stuff is weird.
 map.options.inertia = false;
@@ -50,12 +55,6 @@ L.imageOverlay('maps/World_cropped.jpg', [[0,-width],[height,0]]).addTo(map);
 L.imageOverlay('maps/World_cropped.jpg', bounds).addTo(map);
 // right copy
 L.imageOverlay('maps/World_cropped.jpg', [[0,width],[height,2*width]]).addTo(map);
-
-
-
-
-
-
 
 
 
@@ -100,7 +99,7 @@ fetch('json/layers.json')
     return response.json();
   })
   .then(data => {
-    console.log('JSON loaded successfully. Total layers:', data.layers.length);
+    console.log('JSON loaded successfully.');
     const container = document.querySelector('.options-container');
     console.log('Container found:', container);
     
@@ -108,43 +107,27 @@ fetch('json/layers.json')
       console.error('ERROR: .options-container not found in HTML!');
       return;
     }
-    
-    const categories = {};
-    
-    // Group layers by category
-    data.layers.forEach(layer => {
-      if (!categories[layer.category]) {
-        categories[layer.category] = [];
-      }
-      categories[layer.category].push(layer);
-    });
-    
-    console.log('Categories created:', Object.keys(categories));
-    
-    // Create detail tags for each category
-    Object.keys(categories).forEach(categoryName => {
-      console.log('Creating category:', categoryName, 'with', categories[categoryName].length, 'layers');
+    for (const [category, items] of Object.entries(data)) {
+      console.log("Category:", category, "with", items.length, "items");
       const details = document.createElement('details');
       
       const summary = document.createElement('summary');
-      summary.textContent = categoryName;
+      summary.textContent = category;
       details.appendChild(summary);
-      
-      // Add checkboxes for each layer in this category
-      categories[categoryName].forEach(layerData => {
+
+      for (const layerData of items) {
         const label = document.createElement('label');
         label.className = 'checkbox-container';
         
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.dataset.layerId = layerData.id;
         
         const checkmark = document.createElement('span');
         checkmark.className = 'checkmark';
         
         const text = document.createElement('span');
         text.className = 'label-text';
-        text.textContent = layerData.displayName;
+        text.textContent = layerData.display_name;
         
         label.appendChild(checkbox);
         label.appendChild(checkmark);
@@ -152,11 +135,27 @@ fetch('json/layers.json')
         details.appendChild(label);
         
         // Create the image overlay
-        const bounds = [[layerData.y, layerData.x], [layerData.y + layerData.h, layerData.x + layerData.w]];
-        const imageOverlay = L.imageOverlay(layerData.source, bounds);
-        const imageOverlayLeft = L.imageOverlay(layerData.source, [[layerData.y, layerData.x - width], [layerData.y + layerData.h, layerData.x + layerData.w - width]]);
-        const imageOverlayRight = L.imageOverlay(layerData.source, [[layerData.y, layerData.x + width], [layerData.y + layerData.h, layerData.x + layerData.w + width]]);
+        const lat = TILE_SIZE * (layerData.y);
+        const lng = TILE_SIZE * (layerData.x);
+        const bounds = [[lat, lng], [lat + layerData.h, lng + layerData.w]];
+        const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
+        const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];
         
+        let imageOverlay, imageOverlayLeft, imageOverlayRight;
+        if (category === "Birth") {
+          imageOverlay = L.imageOverlay(layerData.source, bounds, {pane: "OutlinePane"});
+          imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, {pane: "OutlinePane"});
+          imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, {pane: "OutlinePane"});
+        
+        } else {
+          imageOverlay = L.imageOverlay(layerData.source, bounds);
+          imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft);
+          imageOverlayRight = L.imageOverlay(layerData.source, boundsRight);
+        }
+
+
+
+
         // Toggle overlay on checkbox change
         checkbox.addEventListener('change', function() {
           if (this.checked) {
@@ -169,10 +168,10 @@ fetch('json/layers.json')
             imageOverlayRight.removeFrom(map);
           }
         });
-      });
+      };
       
       container.appendChild(details);
-    });
+    };
     
     console.log('All layers loaded and UI created successfully!');
   })
@@ -255,8 +254,8 @@ fetch('json/tooltips.json')
       // For each spawn in subcategory - create tooltips
       // also creat a lookuptables for each category for the tooltips by lat,lng
       categories[categoryName].forEach(spawnData => {
-        const lat = 52 * (spawnData.y) + 26;
-        const lng = 52 * (spawnData.x) + 26;
+        const lat = TILE_SIZE * (spawnData.y) + TILE_SIZE / 2;
+        const lng = TILE_SIZE * (spawnData.x) + TILE_SIZE / 2;
         const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
         const direction1 = spawnData.spawn ? 'top' : 'bottom';
         const direction = spawnData.category.includes('Terrain changes') ? 'bottom' : direction1;

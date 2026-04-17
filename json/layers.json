@@ -1,2024 +1,1837 @@
 {
-  "layers": [
+  "Grid": [
     {
-      "id": "overlay_outline",
-      "displayName": "Grid",
-      "category": "Grid",
-      "source": "maps/tile_outline_cropped.png",
       "x": 0,
       "y": 0,
+      "display_name": "Grid",
+      "source": "./maps/tile_outline_cropped.png",
       "w": 7800,
-      "h": 4160
-    },
+      "h": 4160,
+      "category": "Grid"
+    }
+  ],
+  "Stability": [
     {
-      "id": "stability_America",
-      "displayName": "America",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "America",
       "source": "maps/layers/Stability/America.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Arabia",
-      "displayName": "Arabia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Arabia",
       "source": "maps/layers/Stability/Arabia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Arabia_Saudi",
-      "displayName": "Arabia -> Saudi",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Arabia -> Saudi",
       "source": "maps/layers/Stability/Periods/Arabia_Saudi.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Argentina",
-      "displayName": "Argentina",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Argentina",
       "source": "maps/layers/Stability/Argentina.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Assyria",
-      "displayName": "Assyria",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Assyria",
       "source": "maps/layers/Stability/Assyria.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Australia",
-      "displayName": "Australia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Australia",
       "source": "maps/layers/Stability/Australia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Aztecs",
-      "displayName": "Aztecs",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Aztecs",
       "source": "maps/layers/Stability/Aztecs.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Babylonia",
-      "displayName": "Babylonia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Babylonia",
       "source": "maps/layers/Stability/Babylonia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Brazil",
-      "displayName": "Brazil",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Brazil",
       "source": "maps/layers/Stability/Brazil.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Byzantium",
-      "displayName": "Byzantium",
-      "category": "Stability",
-      "source": "maps/layers/Stability/Byzantium.png",
       "x": 0,
       "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "stability_Burma",
-      "displayName": "Burma",
-      "category": "Stability",
+      "display_name": "Burma",
       "source": "maps/layers/Stability/Burma.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Byzantium_Byzantine_Constantinople",
-      "displayName": "Byzantium -> Byzantine Constantinople",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Byzantium",
+      "source": "maps/layers/Stability/Byzantium.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Stability"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Byzantium -> Byzantine Constantinople",
       "source": "maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Canada",
-      "displayName": "Canada",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Canada",
       "source": "maps/layers/Stability/Canada.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Phoenicia",
-      "displayName": "Phoenicia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Phoenicia",
       "source": "maps/layers/Stability/Phoenicia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Phoenicia_Carthage",
-      "displayName": "Phoenicia -> Carthage",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Phoenicia -> Carthage",
       "source": "maps/layers/Stability/Periods/Phoenicia_Carthage.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Celts",
-      "displayName": "Celts",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Celts",
       "source": "maps/layers/Stability/Celts.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Celts_Insular_Celts",
-      "displayName": "Celts -> Insular Celts",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Celts -> Insular Celts",
       "source": "maps/layers/Stability/Periods/Celts_Insular_Celts.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_China",
-      "displayName": "China",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "China",
       "source": "maps/layers/Stability/China.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/China_Ming",
-      "displayName": "China -> Ming",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "China -> Ming",
       "source": "maps/layers/Stability/Periods/China_Ming.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Colombia",
-      "displayName": "Colombia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Colombia",
       "source": "maps/layers/Stability/Colombia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Dravidia",
-      "displayName": "Dravidia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Dravidia",
       "source": "maps/layers/Stability/Dravidia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Egypt",
-      "displayName": "Egypt",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Egypt",
       "source": "maps/layers/Stability/Egypt.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_England",
-      "displayName": "England",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "England",
       "source": "maps/layers/Stability/England.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/England_United_Kingdom",
-      "displayName": "England -> United Kingdom",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "England -> United Kingdom",
       "source": "maps/layers/Stability/Periods/England_United_Kingdom.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/England_Great_Britain",
-      "displayName": "England -> Great Britain",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "England -> Great Britain",
       "source": "maps/layers/Stability/Periods/England_Great_Britain.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Ethiopia",
-      "displayName": "Ethiopia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Ethiopia",
       "source": "maps/layers/Stability/Ethiopia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_France",
-      "displayName": "France",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "France",
       "source": "maps/layers/Stability/France.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/France_National_France",
-      "displayName": "France -> National France",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "France -> National France",
       "source": "maps/layers/Stability/Periods/France_National_France.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Germany",
-      "displayName": "Germany",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Germany",
       "source": "maps/layers/Stability/Germany.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Germany_Modern_Germany",
-      "displayName": "Germany -> Modern Germany",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Germany -> Modern Germany",
       "source": "maps/layers/Stability/Periods/Germany_Modern_Germany.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Greece",
-      "displayName": "Greece",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Greece",
       "source": "maps/layers/Stability/Greece.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Greece_Modern_Greece",
-      "displayName": "Greece -> Modern Greece",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Greece -> Modern Greece",
       "source": "maps/layers/Stability/Periods/Greece_Modern_Greece.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Harappa",
-      "displayName": "Harappa",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Harappa",
       "source": "maps/layers/Stability/Harappa.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Hittites",
-      "displayName": "Hittites",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Hittites",
       "source": "maps/layers/Stability/Hittites.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Holy_Rome",
-      "displayName": "Holy Rome",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Holy_Rome",
       "source": "maps/layers/Stability/Holy_Rome.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Holy_Rome_Austria",
-      "displayName": "Holy Rome -> Austria",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Holy_Rome -> Austria",
       "source": "maps/layers/Stability/Periods/Holy_Rome_Austria.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Inca",
-      "displayName": "Inca",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Inca",
       "source": "maps/layers/Stability/Inca.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Inca_Late_Inca",
-      "displayName": "Inca -> Late Inca",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Inca -> Late Inca",
       "source": "maps/layers/Stability/Periods/Inca_Late_Inca.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_India",
-      "displayName": "India",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "India",
       "source": "maps/layers/Stability/India.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/India_Maratha",
-      "displayName": "India -> Maratha",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "India -> Maratha",
       "source": "maps/layers/Stability/Periods/India_Maratha.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Iran",
-      "displayName": "Iran",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Iran",
       "source": "maps/layers/Stability/Iran.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Italy",
-      "displayName": "Italy",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Italy",
       "source": "maps/layers/Stability/Italy.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Italy_Modern_Italy",
-      "displayName": "Italy -> Modern Italy",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Italy -> Modern Italy",
       "source": "maps/layers/Stability/Periods/Italy_Modern_Italy.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Japan",
-      "displayName": "Japan",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Japan",
       "source": "maps/layers/Stability/Japan.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Japan_Meiji",
-      "displayName": "Japan -> Meiji",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Japan -> Meiji",
       "source": "maps/layers/Stability/Periods/Japan_Meiji.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Java",
-      "displayName": "Java",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Java",
       "source": "maps/layers/Stability/Java.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Khmer",
-      "displayName": "Khmer",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Khmer",
       "source": "maps/layers/Stability/Khmer.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Congo",
-      "displayName": "Congo",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Congo",
       "source": "maps/layers/Stability/Congo.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Korea",
-      "displayName": "Korea",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Korea",
       "source": "maps/layers/Stability/Korea.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Kushans",
-      "displayName": "Kushans",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Kushans",
       "source": "maps/layers/Stability/Kushans.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Malaya",
-      "displayName": "Malaya",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Malaya",
       "source": "maps/layers/Stability/Malaya.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Mali",
-      "displayName": "Mali",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mali",
       "source": "maps/layers/Stability/Mali.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Manchuria",
-      "displayName": "Manchuria",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Manchuria",
       "source": "maps/layers/Stability/Manchuria.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Manchuria_Qing",
-      "displayName": "Manchuria -> Qing",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Manchuria -> Qing",
       "source": "maps/layers/Stability/Periods/Manchuria_Qing.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Maya",
-      "displayName": "Maya",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Maya",
       "source": "maps/layers/Stability/Maya.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Mexico",
-      "displayName": "Mexico",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mexico",
       "source": "maps/layers/Stability/Mexico.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Misr",
-      "displayName": "Misr",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Misr",
       "source": "maps/layers/Stability/Misr.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Mongolia",
-      "displayName": "Mongolia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mongolia",
       "source": "maps/layers/Stability/Mongolia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Mongolia_Yuan",
-      "displayName": "Mongolia -> Yuan",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mongolia -> Yuan",
       "source": "maps/layers/Stability/Periods/Mongolia_Yuan.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Moors",
-      "displayName": "Moors",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Moors",
       "source": "maps/layers/Stability/Moors.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Moors_Morocco",
-      "displayName": "Moors -> Morocco",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Moors -> Morocco",
       "source": "maps/layers/Stability/Periods/Moors_Morocco.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Mughals",
-      "displayName": "Mughals",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mughals",
       "source": "maps/layers/Stability/Mughals.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Mughals_Pakistan",
-      "displayName": "Mughals -> Pakistan",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Mughals -> Pakistan",
       "source": "maps/layers/Stability/Periods/Mughals_Pakistan.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Netherlands",
-      "displayName": "Netherlands",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Netherlands",
       "source": "maps/layers/Stability/Netherlands.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Norse",
-      "displayName": "Norse",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Norse",
       "source": "maps/layers/Stability/Norse.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Nubia",
-      "displayName": "Nubia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Nubia",
       "source": "maps/layers/Stability/Nubia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Nubia_Makuria",
-      "displayName": "Nubia -> Makuria",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Nubia -> Makuria",
       "source": "maps/layers/Stability/Periods/Nubia_Makuria.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Turkey",
-      "displayName": "Turkey",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Turkey",
       "source": "maps/layers/Stability/Turkey.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Turkey_Ottoman_Constantinople",
-      "displayName": "Turkey -> Ottoman Constantinople",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Turkey -> Ottoman Constantinople",
       "source": "maps/layers/Stability/Periods/Turkey_Ottoman_Constantinople.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Persia",
-      "displayName": "Persia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Persia",
       "source": "maps/layers/Stability/Persia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Poland",
-      "displayName": "Poland",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Poland",
       "source": "maps/layers/Stability/Poland.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Polynesia",
-      "displayName": "Polynesia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Polynesia",
       "source": "maps/layers/Stability/Polynesia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Portugal",
-      "displayName": "Portugal",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Portugal",
       "source": "maps/layers/Stability/Portugal.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Rome",
-      "displayName": "Rome",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Rome",
       "source": "maps/layers/Stability/Rome.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Ruthenia",
-      "displayName": "Ruthenia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Ruthenia",
       "source": "maps/layers/Stability/Ruthenia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Russia",
-      "displayName": "Russia",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Russia",
       "source": "maps/layers/Stability/Russia.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Spain",
-      "displayName": "Spain",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Spain",
       "source": "maps/layers/Stability/Spain.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Spain_Spain",
-      "displayName": "Castilia -> Spain",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Spain -> Spain",
       "source": "maps/layers/Stability/Periods/Spain_Spain.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Swahili",
-      "displayName": "Swahili",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Swahili",
       "source": "maps/layers/Stability/Swahili.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Sweden",
-      "displayName": "Sweden",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Sweden",
       "source": "maps/layers/Stability/Sweden.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Thailand",
-      "displayName": "Thailand",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Thailand",
       "source": "maps/layers/Stability/Thailand.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Tibet",
-      "displayName": "Tibet",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Tibet",
       "source": "maps/layers/Stability/Tibet.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Toltecs",
-      "displayName": "Toltecs",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Toltecs",
       "source": "maps/layers/Stability/Toltecs.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Turkestan",
-      "displayName": "Turkestan",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Turkestan",
       "source": "maps/layers/Stability/Turkestan.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Periods/Turkestan_Seljuks",
-      "displayName": "Turkestan -> Seljuks",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Turkestan -> Seljuks",
       "source": "maps/layers/Stability/Periods/Turkestan_Seljuks.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Stability"
     },
     {
-      "id": "stability_Vietnam",
-      "displayName": "Vietnam",
-      "category": "Stability",
+      "x": 0,
+      "y": 0,
+      "display_name": "Vietnam",
       "source": "maps/layers/Stability/Vietnam.png",
-      "x": 0,
-      "y": 0,
       "w": 7800,
-      "h": 4160
-    },
+      "h": 4160,
+      "category": "Stability"
+    }
+  ],
+  "Birth": [
     {
-      "id": "religion_Judaism",
-      "displayName": "Judaism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Judaism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Orthodoxy",
-      "displayName": "Orthodoxy",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Orthodoxy.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Catholicism",
-      "displayName": "Catholicism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Catholicism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Protestantism",
-      "displayName": "Protestantism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Protestantism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Islam",
-      "displayName": "Islam",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Islam.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Hinduism",
-      "displayName": "Hinduism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Hinduism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Buddhism",
-      "displayName": "Buddhism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Buddhism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Confucianism",
-      "displayName": "Confucianism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Confucianism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Taoism",
-      "displayName": "Taoism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Taoism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "religion_Zoroastrianism",
-      "displayName": "Zoroastrianism",
-      "category": "Religion",
-      "source": "maps/layers/Religions/Zoroastrianism.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_America",
-      "displayName": "America",
-      "category": "Spawn",
+      "x": 23,
+      "y": 50,
+      "display_name": "America",
       "source": "maps/layers/Spawns/America.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 572,
+      "h": 572,
+      "category": "Birth"
     },
     {
-      "id": "spawn_Arabia",
-      "displayName": "Arabia",
-      "category": "Spawn",
+      "x": 76,
+      "y": 35,
+      "display_name": "Arabia",
       "source": "maps/layers/Spawns/Arabia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 1092,
+      "h": 832,
+      "category": "Birth"
     },
     {
-      "id": "spawn_Argentina",
-      "displayName": "Argentina",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Argentina.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Assyria",
-      "displayName": "Assyria",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Assyria.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Australia",
-      "displayName": "Australia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Australia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Aztecs",
-      "displayName": "Aztecs",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Aztecs.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Babylonia",
-      "displayName": "Babylonia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Babylonia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Brazil",
-      "displayName": "Brazil",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Brazil.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Burma",
-      "displayName": "Burma",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Burma.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Byzantium",
-      "displayName": "Byzantium",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Byzantium.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Canada",
-      "displayName": "Canada",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Canada.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Celts",
-      "displayName": "Celts",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Celts.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_China",
-      "displayName": "China",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/China.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Colombia",
-      "displayName": "Colombia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Colombia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Dravidia",
-      "displayName": "Dravidia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Dravidia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Egypt",
-      "displayName": "Egypt",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Egypt.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_England",
-      "displayName": "England",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/England.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Ethiopia",
-      "displayName": "Ethiopia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Ethiopia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_France",
-      "displayName": "France",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/France.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Germany",
-      "displayName": "Germany",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Germany.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Greece",
-      "displayName": "Greece",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Greece.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Harappa",
-      "displayName": "Harappa",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Harappa.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Hittites",
-      "displayName": "Hittites",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Hittites.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Holy_Rome",
-      "displayName": "Holy_Rome",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Holy_Rome.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Inca",
-      "displayName": "Inca",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Inca.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_India",
-      "displayName": "India",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/India.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Iran",
-      "displayName": "Iran",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Iran.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Italy",
-      "displayName": "Italy",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Italy.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Japan",
-      "displayName": "Japan",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Japan.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Java",
-      "displayName": "Java",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Java.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Khmer",
-      "displayName": "Khmer",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Khmer.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Korea",
-      "displayName": "Korea",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Korea.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Kushans",
-      "displayName": "Kushans",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Kushans.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Malaya",
-      "displayName": "Malaya",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Malaya.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Mali",
-      "displayName": "Mali",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Mali.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Manchuria",
-      "displayName": "Manchuria",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Manchuria.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Maya",
-      "displayName": "Maya",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Maya.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Mexico",
-      "displayName": "Mexico",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Mexico.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Misr",
-      "displayName": "Misr",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Misr.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Mongolia",
-      "displayName": "Mongolia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Mongolia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Moors",
-      "displayName": "Moors",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Moors.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Mughals",
-      "displayName": "Mughals",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Mughals.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Netherlands",
-      "displayName": "Netherlands",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Netherlands.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Norse",
-      "displayName": "Norse",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Norse.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Nubia",
-      "displayName": "Nubia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Nubia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Persia",
-      "displayName": "Persia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Persia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Phoenicia",
-      "displayName": "Phoenicia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Phoenicia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Poland",
-      "displayName": "Poland",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Poland.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Polynesia",
-      "displayName": "Polynesia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Polynesia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Portugal",
-      "displayName": "Portugal",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Portugal.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Rome",
-      "displayName": "Rome",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Rome.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Ruthenia",
-      "displayName": "Ruthenia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Ruthenia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Spain",
-      "displayName": "Spain",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Spain.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Swahili",
-      "displayName": "Swahili",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Swahili.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Russia",
-      "displayName": "Russia",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Russia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Sweden",
-      "displayName": "Sweden",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Sweden.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Thailand",
-      "displayName": "Thailand",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Thailand.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Tibet",
-      "displayName": "Tibet",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Tibet.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Toltecs",
-      "displayName": "Toltecs",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Toltecs.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Turkestan",
-      "displayName": "Turkestan",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Turkestan.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Turkey",
-      "displayName": "Turkey",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Turkey.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_Vietnam",
-      "displayName": "Vietnam",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Vietnam.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Arabia_Saudi",
-      "displayName": "Arabia -> Saudi",
-      "category": "Spawn",
+      "x": 84,
+      "y": 38,
+      "display_name": "Arabia -> Saudi",
       "source": "maps/layers/Spawns/Periods/Arabia_Saudi.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 364,
+      "h": 312,
+      "category": "Birth"
     },
     {
-      "id": "spawn_period_Byzantium_Byzantine_Constantinople",
-      "displayName": "Byzantium -> Byzantine Constantinople",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Byzantium_Byzantine_Constantinople.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "x": 34,
+      "y": 9,
+      "display_name": "Argentina",
+      "source": "maps/layers/Spawns/Argentina.png",
+      "w": 312,
+      "h": 468,
+      "category": "Birth"
     },
     {
-      "id": "spawn_period_Phoenicia_Carthage",
-      "displayName": "Phoenicia -> Carthage",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Phoenicia_Carthage.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Celts_Insular_Celts",
-      "displayName": "Celts -> Insular Celts",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Celts_Insular_Celts.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_China_Ming",
-      "displayName": "China -> Ming",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/China_Ming.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_England_United_Kingdom",
-      "displayName": "England -> United Kingdom",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/England_United_Kingdom.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_England_Great_Britain",
-      "displayName": "England -> Great Britain",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/England_Great_Britain.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_France_National_France",
-      "displayName": "France -> National France",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/France_National_France.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Germany_Modern_Germany",
-      "displayName": "Germany -> Modern Germany",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Germany_Modern_Germany.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Greece_Modern_Greece",
-      "displayName": "Greece -> Modern Greece",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Greece_Modern_Greece.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Holy_Rome_Austria",
-      "displayName": "Holy_Rome -> Austria",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Holy_Rome_Austria.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Inca_Late_Inca",
-      "displayName": "Inca -> Late Inca",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Inca_Late_Inca.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_India_Maratha",
-      "displayName": "India -> Maratha",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/India_Maratha.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Italy_Modern_Italy",
-      "displayName": "Italy -> Modern Italy",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Italy_Modern_Italy.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Japan_Meiji",
-      "displayName": "Japan -> Meiji",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Japan_Meiji.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Manchuria_Qing",
-      "displayName": "Manchuria -> Qing",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Manchuria_Qing.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Mongolia_Yuan",
-      "displayName": "Mongolia -> Yuan",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Mongolia_Yuan.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Moors_Morocco",
-      "displayName": "Moors -> Morocco",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Moors_Morocco.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Mughals_Pakistan",
-      "displayName": "Mughals -> Pakistan",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Mughals_Pakistan.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Nubia_Makuria",
-      "displayName": "Nubia -> Makuria",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Nubia_Makuria.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Turkey_Ottoman_Constantinople",
-      "displayName": "Turkey -> Ottoman Constantinople",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Spain_Spain",
-      "displayName": "Spain -> Spain",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Spain_Spain.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_period_Turkestan_Seljuks",
-      "displayName": "Turkestan -> Seljuks",
-      "category": "Spawn",
-      "source": "maps/layers/Spawns/Periods/Turkestan_Seljuks.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Byzantium",
-      "displayName": "Byzantium respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Byzantium.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Celts",
-      "displayName": "Celts respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Celts.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_China",
-      "displayName": "China respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/China.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Egypt",
-      "displayName": "Egypt respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Egypt.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Inca",
-      "displayName": "Inca respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Inca.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_India",
-      "displayName": "India respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/India.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Misr",
-      "displayName": "Misr respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Misr.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Mongolia",
-      "displayName": "Mongolia respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Mongolia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Moors",
-      "displayName": "Moors respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Moors.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Mughals",
-      "displayName": "Mughals respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Mughals.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Turkey",
-      "displayName": "Turkey respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Turkey.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "respawn_Turkestan",
-      "displayName": "Turkestan respawn",
-      "category": "Extended Spawn & Respawn",
-      "source": "maps/layers/Spawns/Respawns/Turkestan.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
-    },
-    {
-      "id": "spawn_extended_Argentina",
-      "displayName": "Argentina extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 32,
+      "y": 9,
+      "display_name": "Argentina extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Argentina.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 416,
+      "h": 468,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Germany",
-      "displayName": "Germany extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 88,
+      "y": 49,
+      "display_name": "Assyria",
+      "source": "maps/layers/Spawns/Assyria.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 126,
+      "y": 6,
+      "display_name": "Australia",
+      "source": "maps/layers/Spawns/Australia.png",
+      "w": 988,
+      "h": 988,
+      "category": "Birth"
+    },
+    {
+      "x": 16,
+      "y": 41,
+      "display_name": "Aztecs",
+      "source": "maps/layers/Spawns/Aztecs.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 88,
+      "y": 45,
+      "display_name": "Babylonia",
+      "source": "maps/layers/Spawns/Babylonia.png",
+      "w": 156,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 40,
+      "y": 16,
+      "display_name": "Brazil",
+      "source": "maps/layers/Spawns/Brazil.png",
+      "w": 520,
+      "h": 832,
+      "category": "Birth"
+    },
+    {
+      "x": 115,
+      "y": 38,
+      "display_name": "Burma",
+      "source": "maps/layers/Spawns/Burma.png",
+      "w": 260,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 72,
+      "y": 48,
+      "display_name": "Byzantium",
+      "source": "maps/layers/Spawns/Byzantium.png",
+      "w": 832,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 77,
+      "y": 54,
+      "display_name": "Byzantium -> Byzantine Constantinople",
+      "source": "maps/layers/Spawns/Periods/Byzantium_Byzantine_Constantinople.png",
+      "w": 208,
+      "h": 104,
+      "category": "Birth"
+    },
+    {
+      "x": 76,
+      "y": 51,
+      "display_name": "Byzantium respawn",
+      "source": "maps/layers/Spawns/Respawns/Byzantium.png",
+      "w": 624,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 6,
+      "y": 59,
+      "display_name": "Canada",
+      "source": "maps/layers/Spawns/Canada.png",
+      "w": 1664,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 84,
+      "y": 47,
+      "display_name": "Phoenicia",
+      "source": "maps/layers/Spawns/Phoenicia.png",
+      "w": 104,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 64,
+      "y": 45,
+      "display_name": "Phoenicia -> Carthage",
+      "source": "maps/layers/Spawns/Periods/Phoenicia_Carthage.png",
+      "w": 364,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 59,
+      "y": 55,
+      "display_name": "Celts",
+      "source": "maps/layers/Spawns/Celts.png",
+      "w": 468,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 52,
+      "y": 64,
+      "display_name": "Celts -> Insular Celts",
+      "source": "maps/layers/Spawns/Periods/Celts_Insular_Celts.png",
+      "w": 260,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 52,
+      "y": 64,
+      "display_name": "Celts respawn",
+      "source": "maps/layers/Spawns/Respawns/Celts.png",
+      "w": 260,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 120,
+      "y": 51,
+      "display_name": "China",
+      "source": "maps/layers/Spawns/China.png",
+      "w": 364,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 120,
+      "y": 49,
+      "display_name": "China -> Ming",
+      "source": "maps/layers/Spawns/Periods/China_Ming.png",
+      "w": 520,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 117,
+      "y": 43,
+      "display_name": "China respawn",
+      "source": "maps/layers/Spawns/Respawns/China.png",
+      "w": 676,
+      "h": 832,
+      "category": "Birth"
+    },
+    {
+      "x": 26,
+      "y": 31,
+      "display_name": "Colombia",
+      "source": "maps/layers/Spawns/Colombia.png",
+      "w": 572,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 105,
+      "y": 31,
+      "display_name": "Dravidia",
+      "source": "maps/layers/Spawns/Dravidia.png",
+      "w": 208,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 78,
+      "y": 41,
+      "display_name": "Egypt",
+      "source": "maps/layers/Spawns/Egypt.png",
+      "w": 156,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 76,
+      "y": 39,
+      "display_name": "Egypt respawn",
+      "source": "maps/layers/Spawns/Respawns/Egypt.png",
+      "w": 416,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 56,
+      "y": 63,
+      "display_name": "England",
+      "source": "maps/layers/Spawns/England.png",
+      "w": 208,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 56,
+      "y": 63,
+      "display_name": "England -> United Kingdom",
+      "source": "maps/layers/Spawns/Periods/England_United_Kingdom.png",
+      "w": 208,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 53,
+      "y": 62,
+      "display_name": "England -> Great Britain",
+      "source": "maps/layers/Spawns/Periods/England_Great_Britain.png",
+      "w": 364,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 82,
+      "y": 33,
+      "display_name": "Ethiopia",
+      "source": "maps/layers/Spawns/Ethiopia.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 59,
+      "y": 55,
+      "display_name": "France",
+      "source": "maps/layers/Spawns/France.png",
+      "w": 312,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 59,
+      "y": 56,
+      "display_name": "France -> National France",
+      "source": "maps/layers/Spawns/Periods/France_National_France.png",
+      "w": 260,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 64,
+      "y": 61,
+      "display_name": "Germany",
+      "source": "maps/layers/Spawns/Germany.png",
+      "w": 676,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 65,
+      "y": 61,
+      "display_name": "Germany -> Modern Germany",
+      "source": "maps/layers/Spawns/Periods/Germany_Modern_Germany.png",
+      "w": 260,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 64,
+      "y": 59,
+      "display_name": "Germany extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Germany.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 676,
+      "h": 416,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Inca",
-      "displayName": "Inca extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 74,
+      "y": 49,
+      "display_name": "Greece",
+      "source": "maps/layers/Spawns/Greece.png",
+      "w": 364,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 74,
+      "y": 49,
+      "display_name": "Greece -> Modern Greece",
+      "source": "maps/layers/Spawns/Periods/Greece_Modern_Greece.png",
+      "w": 156,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 101,
+      "y": 46,
+      "display_name": "Harappa",
+      "source": "maps/layers/Spawns/Harappa.png",
+      "w": 104,
+      "h": 104,
+      "category": "Birth"
+    },
+    {
+      "x": 82,
+      "y": 52,
+      "display_name": "Hittites",
+      "source": "maps/layers/Spawns/Hittites.png",
+      "w": 208,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 61,
+      "y": 58,
+      "display_name": "Holy Rome",
+      "source": "maps/layers/Spawns/Holy_Rome.png",
+      "w": 624,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 69,
+      "y": 58,
+      "display_name": "Holy Rome -> Austria",
+      "source": "maps/layers/Spawns/Periods/Holy_Rome_Austria.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 28,
+      "y": 22,
+      "display_name": "Inca",
+      "source": "maps/layers/Spawns/Inca.png",
+      "w": 260,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "display_name": "Inca -> Late Inca",
+      "source": "maps/layers/Spawns/Periods/Inca_Late_Inca.png",
+      "w": 364,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 29,
+      "y": 20,
+      "display_name": "Inca extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Inca.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 364,
+      "h": 312,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Java",
-      "displayName": "Java extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 27,
+      "y": 21,
+      "display_name": "Inca respawn",
+      "source": "maps/layers/Spawns/Respawns/Inca.png",
+      "w": 312,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 105,
+      "y": 43,
+      "display_name": "India",
+      "source": "maps/layers/Spawns/India.png",
+      "w": 416,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 102,
+      "y": 38,
+      "display_name": "India -> Maratha",
+      "source": "maps/layers/Spawns/Periods/India_Maratha.png",
+      "w": 312,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 103,
+      "y": 37,
+      "display_name": "India respawn",
+      "source": "maps/layers/Spawns/Respawns/India.png",
+      "w": 416,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 90,
+      "y": 43,
+      "display_name": "Iran",
+      "source": "maps/layers/Spawns/Iran.png",
+      "w": 468,
+      "h": 676,
+      "category": "Birth"
+    },
+    {
+      "x": 65,
+      "y": 54,
+      "display_name": "Italy",
+      "source": "maps/layers/Spawns/Italy.png",
+      "w": 312,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 65,
+      "y": 53,
+      "display_name": "Italy -> Modern Italy",
+      "source": "maps/layers/Spawns/Periods/Italy_Modern_Italy.png",
+      "w": 312,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 134,
+      "y": 49,
+      "display_name": "Japan",
+      "source": "maps/layers/Spawns/Japan.png",
+      "w": 364,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 134,
+      "y": 49,
+      "display_name": "Japan -> Meiji",
+      "source": "maps/layers/Spawns/Periods/Japan_Meiji.png",
+      "w": 364,
+      "h": 572,
+      "category": "Birth"
+    },
+    {
+      "x": 125,
+      "y": 24,
+      "display_name": "Java",
+      "source": "maps/layers/Spawns/Java.png",
+      "w": 208,
+      "h": 104,
+      "category": "Birth"
+    },
+    {
+      "x": 122,
+      "y": 24,
+      "display_name": "Java extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Java.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 364,
+      "h": 104,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Manchuria",
-      "displayName": "Manchuria extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 120,
+      "y": 36,
+      "display_name": "Khmer",
+      "source": "maps/layers/Spawns/Khmer.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 71,
+      "y": 24,
+      "display_name": "Congo",
+      "source": "maps/layers/Spawns/Congo.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 130,
+      "y": 52,
+      "display_name": "Korea",
+      "source": "maps/layers/Spawns/Korea.png",
+      "w": 208,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 96,
+      "y": 47,
+      "display_name": "Kushans",
+      "source": "maps/layers/Spawns/Kushans.png",
+      "w": 416,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 115,
+      "y": 26,
+      "display_name": "Malaya",
+      "source": "maps/layers/Spawns/Malaya.png",
+      "w": 364,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 57,
+      "y": 34,
+      "display_name": "Mali",
+      "source": "maps/layers/Spawns/Mali.png",
+      "w": 260,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 126,
+      "y": 57,
+      "display_name": "Manchuria",
+      "source": "maps/layers/Spawns/Manchuria.png",
+      "w": 520,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 120,
+      "y": 51,
+      "display_name": "Manchuria -> Qing",
+      "source": "maps/layers/Spawns/Periods/Manchuria_Qing.png",
+      "w": 520,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 115,
+      "y": 55,
+      "display_name": "Manchuria extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Manchuria.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 1092,
+      "h": 624,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Mongolia",
-      "displayName": "Mongolia extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 21,
+      "y": 41,
+      "display_name": "Maya",
+      "source": "maps/layers/Spawns/Maya.png",
+      "w": 156,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 9,
+      "y": 41,
+      "display_name": "Mexico",
+      "source": "maps/layers/Spawns/Mexico.png",
+      "w": 780,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 66,
+      "y": 40,
+      "display_name": "Misr",
+      "source": "maps/layers/Spawns/Misr.png",
+      "w": 832,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 76,
+      "y": 40,
+      "display_name": "Misr respawn",
+      "source": "maps/layers/Spawns/Respawns/Misr.png",
+      "w": 312,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 111,
+      "y": 55,
+      "display_name": "Mongolia",
+      "source": "maps/layers/Spawns/Mongolia.png",
+      "w": 988,
+      "h": 624,
+      "category": "Birth"
+    },
+    {
+      "x": 117,
+      "y": 56,
+      "display_name": "Mongolia -> Yuan",
+      "source": "maps/layers/Spawns/Periods/Mongolia_Yuan.png",
+      "w": 572,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 91,
+      "y": 52,
+      "display_name": "Mongolia extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Mongolia.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 2184,
+      "h": 780,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Turkey",
-      "displayName": "Turkey extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 109,
+      "y": 57,
+      "display_name": "Mongolia respawn",
+      "source": "maps/layers/Spawns/Respawns/Mongolia.png",
+      "w": 936,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 42,
+      "display_name": "Moors",
+      "source": "maps/layers/Spawns/Moors.png",
+      "w": 572,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 56,
+      "y": 43,
+      "display_name": "Moors -> Morocco",
+      "source": "maps/layers/Spawns/Periods/Moors_Morocco.png",
+      "w": 260,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 56,
+      "y": 43,
+      "display_name": "Moors respawn",
+      "source": "maps/layers/Spawns/Respawns/Moors.png",
+      "w": 312,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 99,
+      "y": 42,
+      "display_name": "Mughals",
+      "source": "maps/layers/Spawns/Mughals.png",
+      "w": 572,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 100,
+      "y": 46,
+      "display_name": "Mughals -> Pakistan",
+      "source": "maps/layers/Spawns/Periods/Mughals_Pakistan.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 99,
+      "y": 42,
+      "display_name": "Mughals respawn",
+      "source": "maps/layers/Spawns/Respawns/Mughals.png",
+      "w": 312,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 61,
+      "y": 62,
+      "display_name": "Netherlands",
+      "source": "maps/layers/Spawns/Netherlands.png",
+      "w": 208,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 65,
+      "y": 67,
+      "display_name": "Norse",
+      "source": "maps/layers/Spawns/Norse.png",
+      "w": 208,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 80,
+      "y": 37,
+      "display_name": "Nubia",
+      "source": "maps/layers/Spawns/Nubia.png",
+      "w": 104,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 78,
+      "y": 37,
+      "display_name": "Nubia -> Makuria",
+      "source": "maps/layers/Spawns/Periods/Nubia_Makuria.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 79,
+      "y": 51,
+      "display_name": "Turkey",
+      "source": "maps/layers/Spawns/Turkey.png",
+      "w": 468,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 77,
+      "y": 50,
+      "display_name": "Turkey -> Ottoman Constantinople",
+      "source": "maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.png",
+      "w": 416,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 78,
+      "y": 51,
+      "display_name": "Turkey extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Turkey.png",
-      "x": 0,
-      "y": 0,
-      "w": 7800,
-      "h": 4160
+      "w": 520,
+      "h": 312,
+      "category": "Birth"
     },
     {
-      "id": "spawn_extended_Spain",
-      "displayName": "Spain extended",
-      "category": "Extended Spawn & Respawn",
+      "x": 78,
+      "y": 51,
+      "display_name": "Turkey respawn",
+      "source": "maps/layers/Spawns/Respawns/Turkey.png",
+      "w": 520,
+      "h": 260,
+      "category": "Birth"
+    },
+    {
+      "x": 91,
+      "y": 43,
+      "display_name": "Persia",
+      "source": "maps/layers/Spawns/Persia.png",
+      "w": 416,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 72,
+      "y": 61,
+      "display_name": "Poland",
+      "source": "maps/layers/Spawns/Poland.png",
+      "w": 260,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 3,
+      "y": 20,
+      "display_name": "Polynesia",
+      "source": "maps/layers/Spawns/Polynesia.png",
+      "w": 156,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 49,
+      "display_name": "Portugal",
+      "source": "maps/layers/Spawns/Portugal.png",
+      "w": 104,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 66,
+      "y": 50,
+      "display_name": "Rome",
+      "source": "maps/layers/Spawns/Rome.png",
+      "w": 364,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 78,
+      "y": 61,
+      "display_name": "Ruthenia",
+      "source": "maps/layers/Spawns/Ruthenia.png",
+      "w": 624,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
+      "x": 83,
+      "y": 64,
+      "display_name": "Russia",
+      "source": "maps/layers/Spawns/Russia.png",
+      "w": 416,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 51,
+      "display_name": "Spain",
+      "source": "maps/layers/Spawns/Spain.png",
+      "w": 312,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 48,
+      "display_name": "Spain -> Spain",
+      "source": "maps/layers/Spawns/Periods/Spain_Spain.png",
+      "w": 312,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 51,
+      "display_name": "Spain extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Spain.png",
+      "w": 468,
+      "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 83,
+      "y": 19,
+      "display_name": "Swahili",
+      "source": "maps/layers/Spawns/Swahili.png",
+      "w": 156,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 70,
+      "y": 69,
+      "display_name": "Sweden",
+      "source": "maps/layers/Spawns/Sweden.png",
+      "w": 312,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 118,
+      "y": 34,
+      "display_name": "Thailand",
+      "source": "maps/layers/Spawns/Thailand.png",
+      "w": 156,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 105,
+      "y": 47,
+      "display_name": "Tibet",
+      "source": "maps/layers/Spawns/Tibet.png",
+      "w": 676,
+      "h": 364,
+      "category": "Birth"
+    },
+    {
+      "x": 16,
+      "y": 42,
+      "display_name": "Toltecs",
+      "source": "maps/layers/Spawns/Toltecs.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
+      "x": 96,
+      "y": 52,
+      "display_name": "Turkestan",
+      "source": "maps/layers/Spawns/Turkestan.png",
+      "w": 1040,
+      "h": 468,
+      "category": "Birth"
+    },
+    {
+      "x": 92,
+      "y": 48,
+      "display_name": "Turkestan -> Seljuks",
+      "source": "maps/layers/Spawns/Periods/Turkestan_Seljuks.png",
+      "w": 364,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
+      "x": 92,
+      "y": 48,
+      "display_name": "Turkestan respawn",
+      "source": "maps/layers/Spawns/Respawns/Turkestan.png",
+      "w": 520,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 120,
+      "y": 41,
+      "display_name": "Vietnam",
+      "source": "maps/layers/Spawns/Vietnam.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    }
+  ],
+  "Religion": [
+    {
       "x": 0,
       "y": 0,
+      "display_name": "Judaism",
+      "source": "maps/layers/Religions/Judaism.png",
       "w": 7800,
-      "h": 4160
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Orthodoxy",
+      "source": "maps/layers/Religions/Orthodoxy.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Catholicism",
+      "source": "maps/layers/Religions/Catholicism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Protestantism",
+      "source": "maps/layers/Religions/Protestantism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Islam",
+      "source": "maps/layers/Religions/Islam.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Hinduism",
+      "source": "maps/layers/Religions/Hinduism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Buddhism",
+      "source": "maps/layers/Religions/Buddhism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Confucianism",
+      "source": "maps/layers/Religions/Confucianism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Taoism",
+      "source": "maps/layers/Religions/Taoism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Zoroastrianism",
+      "source": "maps/layers/Religions/Zoroastrianism.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Religion"
     }
   ]
 }
