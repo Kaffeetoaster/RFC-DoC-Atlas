@@ -42,5 +42,8 @@ def draw_religion_map(iReligion, json_config):
 	
 	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{display_name}.png"
 	image.save(image_path)
-	add_layer_config_entry(json_config, display_name, "religion", Path(image_path).relative_to(config.OUTPUT_PATH), image.size)
+	add_layer_config_entry(json_config, display_name, "Religion", Path(image_path).relative_to(config.OUTPUT_PATH), image.size)
 	
+def DrawReligionMaps(json_config):
+    for iReligion in range(iNumReligions):
+        draw_religion_map(iReligion, json_config)
