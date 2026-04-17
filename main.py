@@ -1,12 +1,24 @@
+import importlib
+from python.helper.helper import *
+measure(importlib.import_module, "python.consts")
 from python.consts import *  # all relevant game data
 
-from python.DrawMaps.DrawReligionMap import *
+
+
+from python.outline import create_tile_outline
+from python.DrawMaps.DrawReligionMaps import *
 from python.DrawMaps.DrawMarkers import *
 from python.DrawMaps.DrawStabilityMaps import *
-from python.DrawMaps.DrawBirthMap import *
-import config
+from python.DrawMaps.DrawBirthMaps import *
+from python.DrawMaps.DrawUHVMaps import *
+from python.DrawMaps.DrawGeograpyhMaps import *
 
+from python.helper.helper import *
+import config
 import json
+
+
+
 
 input_path = config.INPUT_PATH
 output_path = config.OUTPUT_PATH
@@ -16,52 +28,50 @@ output_path = config.OUTPUT_PATH
 
 
 if __name__ == "__main__":
+### json config file for map layers ###
     layers_config = {
-        "layers": []
+        "Grid": [],
+        "Stability": [],
+        "Birth": [],
+        "Religion": []
     }
-### generate tooltip infos and json entries for resource spawn ###
+### json config file for map markers ###
     markers_config ={
         "spawns_and_despawns": []  
     }
-# ### Draw Stab Maps ###
-#     for iCiv in dCivNames:
-#         draw_stability_map_for_civ(iCiv)
-        
-#         for iPeriod in dCivPeriods.get(iCiv, []):
-#             if should_draw_for_period(iPeriod):
-#                 draw_stability_map_for_period(iCiv, iPeriod)
-### Draw Religion Maps ###
-    # for iReligion in range(iNumReligions):
-    #     draw_religion_map(iReligion, layers_config)
+    create_tile_outline(
+        image_width=7800,
+        image_height=4160,
+        tiles_x=150,
+        tiles_y=80,
+        output_path="./maps/tile_outline_cropped.png",
+        config = layers_config
+    )
+
+
+### Draw Stab Maps ###
+    measure(DrawStabilityMaps, layers_config)
+
+## Draw Religion Maps ###
+    measure(DrawReligionMaps, layers_config)
 
 ### Draw Birth Maps, extended Birth and Respawn too ### 
-    for iCiv in range(iNumCivs):
-        if iCiv in dBirthArea:
-            draw_birth_map(layers_config, iCiv, dBirthArea[iCiv], dBirthAreaExceptions.get(iCiv, []), "temp/maps/layers/Spawns", line_width=3)
-        else:
-            if iCiv in dCoreArea:
-                draw_birth_map(layers_config, iCiv, dCoreArea[iCiv], dCoreAreaExceptions.get(iCiv, []), "temp/maps/layers/Spawns", line_width=3)
+    measure(DrawBirthMaps, layers_config)
 
-        if iCiv in dExtendedBirthArea:
-            draw_birth_map(layers_config, iCiv, dExtendedBirthArea[iCiv], dExtendedBirthAreaExceptions.get(iCiv, []), "temp/maps/layers/Spawns/Extended", line_width=5)
-        if iCiv in dRespawnArea:
-            draw_birth_map(layers_config, iCiv, dRespawnArea[iCiv], dRespawnAreaExceptions.get(iCiv, []), "temp/maps/layers/Spawns/Respawns", line_width=7)
+### Draw Resource and Feature and Terrain Maps ###
+    measure(draw_tile_markers, markers_config)
 
+### Draw UHV Maps ###
+    measure(DrawUHVMaps, layers_config)
 
-
-    ### Draw Resource and Feature and Terrain Maps ###
-    draw_tile_markers(markers_config)
-
-    ### Draw UHV Maps ###
-
-
-    ### Draw Geography ###
-    # Regions
+### Draw Geography ###
+    measure(DrawGeographyMaps, layers_config)
+    
 
 
 
 
-    with open("json/layers_config.json", "w") as f:           
+    with open("json/layers.json", "w") as f:           
         json.dump(layers_config, f, indent = 2)
         
     with open("json/tooltips.json", "w") as f:
