@@ -41,7 +41,11 @@ def get_tile_outline(rect_coords, exceptions, tile_size, line_strength):
             ((x - 1, y), (p_left + inset, p_top, p_left + inset, p_bottom), "L"),
             ((x + 1, y), (p_right - inset, p_top, p_right - inset, p_bottom), "R"),
             ((x, y - 1), (p_left, p_top + inset, p_right, p_top + inset), "T"),
-            ((x, y + 1), (p_left, p_bottom - inset, p_right, p_bottom - inset), "B")
+            ((x, y + 1), (p_left, p_bottom - inset, p_right, p_bottom - inset), "B"),
+            ((x-1, y-1), (p_left, p_top + inset, p_left + (line_strength-1), p_top + inset), "TL"),
+            ((x+1, y-1), (p_right - (line_strength-1), p_top + inset, p_right, p_top + inset), "TR"),
+            ((x-1, y+1), (p_left, p_bottom - inset, p_left + (line_strength-1), p_bottom - inset), "BL"),
+            ((x+1, y+1), (p_right - (line_strength-1), p_bottom - inset, p_right, p_bottom - inset), "BR"),
         ]
 
         for (nx, ny), (lx1, ly1, lx2, ly2), side in check_configs:
