@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw
+from python.helper.helper import *
 
-def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path):
+def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path, config):
     # Create transparent image
     img = Image.new("RGBA", (image_width, image_height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
@@ -25,12 +26,6 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
 
     # Save image
     img.save(output_path)
+    add_layer_config_entry(config = config, text="Grid", category="Grid", image_path=output_path, image_size=(image_width, image_height))
 
-# Example: 150 tiles wide, 80 tiles high
-create_tile_outline(
-    image_width=7800,
-    image_height=4160,
-    tiles_x=150,
-    tiles_y=80,
-    output_path="./maps/tile_outline_cropped.png"
-)
+
