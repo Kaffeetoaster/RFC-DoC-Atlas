@@ -38,12 +38,15 @@ def draw_religion_map(iReligion, json_config):
 	for (x, y), spread_factor_type in iterate_religion_spread_factors(iReligion):
 		pixels[x, y] = plot_colors[spread_factor_type]
 	
-	image = image.resize((iWorldX * TILE_SIZE, iWorldY * TILE_SIZE), resample=Image.Resampling.NEAREST)
+	image, offset = crop_image_to_content(image)  # Crop to content
+	
+	w,h = image.size
+	image = image.resize((w * TILE_SIZE, h * TILE_SIZE), resample=Image.Resampling.NEAREST)
 	
 	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{display_name}.png"
 	image.save(image_path)
-	add_layer_config_entry(json_config, display_name, "Religion", Path(image_path).relative_to(config.OUTPUT_PATH), image.size)
-	
+	add_layer_config_entry(json_config, display_name, "Religion", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
+
 def DrawReligionMaps(json_config):
     for iReligion in range(iNumReligions):
         draw_religion_map(iReligion, json_config)

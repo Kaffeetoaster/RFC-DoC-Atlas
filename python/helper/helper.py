@@ -66,3 +66,14 @@ def measure(func,*args, **kwargs):
         f.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} | {func.__name__} | {duration:.6f}s\n")
 
     return duration
+
+
+def crop_image_to_content(image):
+    # Get bounding box of non-transparent pixels
+    bbox = image.getbbox()
+    w,h = image.size
+    offset = (bbox[0], h-bbox[3]) if bbox else (0, 0)
+    if bbox:
+        return image.crop(bbox), offset
+    else:
+        return image, offset  # Return original if no content found

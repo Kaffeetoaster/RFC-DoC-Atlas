@@ -125,7 +125,10 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	for (x, y), plot_type in values:
 		pixels[x, y] = plot_colors[plot_type]
 	
-	image = image.resize((iWorldX * 52, iWorldY * 52), resample=Image.Resampling.NEAREST)
+	image, offset = crop_image_to_content(image)  # Crop to content
+	
+	w,h = image.size
+	image = image.resize((w * TILE_SIZE, h * TILE_SIZE), resample=Image.Resampling.NEAREST)
 	
 	if period_name != "":
 		filename = f"Periods/{civ_name}_{period_name}"
@@ -135,7 +138,7 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.png"
 	#print(image_path)
 	image.save(image_path)
-	add_layer_config_entry(json_config, display_name, category="Stability", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size)
+	add_layer_config_entry(json_config, display_name, category="Stability", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size, offset=offset)
 
 
 def draw_stability_map_for_civ(iCiv,json_config):
