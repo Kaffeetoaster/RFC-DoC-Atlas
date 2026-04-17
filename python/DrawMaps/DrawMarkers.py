@@ -1,5 +1,5 @@
 from python.consts import *
-
+from python.helper.helper import *
 import config
 
 from PIL import Image, ImageDraw
@@ -7,16 +7,6 @@ from pathlib import Path
 import json
 
 
-def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpawn):
-    entry = {
-        "x": coords[0],
-        "y": coords[1],
-        "display_name": text,
-        "source": str(path_art),
-        "category": category,
-        "spawn": bSpawn # important for color
-    }
-    config_dict["spawns_and_despawns"].append(entry)
 
 
 
