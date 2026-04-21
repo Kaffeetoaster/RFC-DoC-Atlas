@@ -277,7 +277,7 @@ fetch('json/tooltips.json')
           .setContent(
             `<div class="tooltip-box">
               <img src="${spawnData.source}" class="${tooltipClass}" />
-              <span class="tooltip-text">${spawnData.display_name}</span>
+              <span class="tooltip-text">${spawnData.text}</span>
             </div>`
           );
           layerGroup.addLayer(tooltip);
