@@ -52,6 +52,24 @@ html, body {
     will-change: transform; /* hint for better performance */
 }
 
+#top-right-controls {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  
+  z-index: 1101;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  gap: 5px;
+  padding: 4px 4px;
+  background: var(--civ-blue-bg);
+  border: 2px solid var(--civ-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 #sidebar {
     position: absolute;
     top: 10px;
@@ -86,6 +104,108 @@ html, body {
             padding-bottom: 4px;
             cursor: pointer;
         }
+
+      #about-toggle {
+        background: transparent;
+        border: none;
+        color: var(--civ-white);
+        font: inherit;
+        cursor: pointer;
+        padding: 0;
+        text-decoration: underline;
+      }
+
+      #header-meta {
+        text-align: right;
+        opacity: 0.85;
+        line-height: 1.2;
+        color: var(--civ-white);
+        font-size: 12px;
+      }
+
+      #about-page {
+        position: fixed;
+        top: 70px;
+        right: 24px;
+        width: 30%;
+        max-width: 520px;
+        min-width: 280px;
+        background-color: white;
+        border: solid 3px black;
+        padding: 10px;
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        display: none;
+        z-index: 1101;
+        box-sizing: border-box;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      }
+
+      #about-page.open {
+        display: block;
+      }
+
+      .about-box-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid black;
+      }
+
+      #about-title {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      #about-close {
+        border: 1px solid black;
+        background: white;
+        color: black;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+      }
+
+      #about-content {
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+
+      .about-section {
+        margin-bottom: 12px;
+      }
+
+      .about-section h4,
+      .about-entry h4 {
+        margin: 0 0 6px 0;
+        font-size: 15px;
+      }
+
+      .about-section p,
+      .about-entry p {
+        margin: 0 0 6px 0;
+      }
+
+      .about-section ul,
+      .about-entry ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      #about-content a {
+        color: #0b57d0;
+        text-decoration: underline;
+      }
+
+      #about-content a:hover {
+        color: #063a8c;
+      }
 
 
 /* burger button */

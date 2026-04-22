@@ -1,6 +1,6 @@
-from python.extract_python_data import *
-from python.load_csv import *
-from python.xml_parser import *
+from python.Import.extract_python_data import *
+from python.Import.load_csv import *
+from python.Import.xml_parser import *
 
 import config
 
@@ -48,7 +48,7 @@ dTileMap = defaultdict(dict)
 for key, gen in gens:
     for (x, y), value in gen:
         if value is not None:
-            dTileMap[(x, y)][key] = value 
+            dTileMap[(x, y)][key] = value
 
 
 ### tile infos from csv maps loaded ###
@@ -57,6 +57,11 @@ for key, gen in gens:
 ### load xml infos ###
 
 ## load xml resource infos and convert images to png for web usage
+# version
+LVersionXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/GlobalDefinesVersion.xml")
+print(f"Loaded Version")
+sModVersion = LVersionXML[1]
+print(sModVersion)
 # base Objects
 LBonusXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Terrain/CIV4BonusInfos.xml")
 print(f"Loaded {len(LBonusXML)} Bonus XML entries")

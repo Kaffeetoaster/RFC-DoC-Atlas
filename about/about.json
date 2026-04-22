@@ -1,0 +1,10 @@
+{
+  "title": "About",
+  "version": "Mod version: 1.18.2-192",
+  "last_update": "last Atlas update: 2026-04-22",
+  "about": {
+    "RFC-DoC-Atlas": "Atlas for the RFC Dawn of Civilization mod by Leoreth",
+    "created by:": { "type": "link", "label": "Kaffeetoaster", "url": "https://forums.civfanatics.com/members/kaffeetoaster.350732/" }
+	
+  }
+}

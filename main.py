@@ -28,6 +28,14 @@ output_path = config.OUTPUT_PATH
 
 
 if __name__ == "__main__":
+### json for about and version info ###
+    with open("about/about.json", "r") as f:
+        header_info = json.load(f)
+    header_info["version"] = f"Mod version: {sModVersion}"
+    header_info["last_update"] = f"last Atlas update: {time.strftime('%Y-%m-%d')}"
+    with open("about/about.json", "w") as f:
+        json.dump(header_info, f, indent=2)
+
 ### json config file for map layers ###
     layers_config = {
         "Grid": [],
@@ -50,13 +58,13 @@ if __name__ == "__main__":
 
 
 ### Draw Stab Maps ###
-    measure(DrawStabilityMaps, layers_config)
+   # measure(DrawStabilityMaps, layers_config)
 
 ## Draw Religion Maps ###
-    measure(DrawReligionMaps, layers_config)
+   # measure(DrawReligionMaps, layers_config)
 
 ### Draw Birth Maps, extended Birth and Respawn too ### 
-    measure(DrawBirthMaps, layers_config)
+   # measure(DrawBirthMaps, layers_config)
 
 ### Draw Resource and Feature and Terrain Maps ###
     measure(draw_tile_markers, markers_config)
