@@ -58,13 +58,13 @@ if __name__ == "__main__":
 
 
 ### Draw Stab Maps ###
-   # measure(DrawStabilityMaps, layers_config)
+    measure(DrawStabilityMaps, layers_config)
 
 ## Draw Religion Maps ###
-   # measure(DrawReligionMaps, layers_config)
+    measure(DrawReligionMaps, layers_config)
 
 ### Draw Birth Maps, extended Birth and Respawn too ### 
-   # measure(DrawBirthMaps, layers_config)
+    measure(DrawBirthMaps, layers_config)
 
 ### Draw Resource and Feature and Terrain Maps ###
     measure(draw_tile_markers, markers_config)
