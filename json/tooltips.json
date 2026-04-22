@@ -1849,6 +1849,14 @@
       "spawn": false
     },
     {
+      "x": 89,
+      "y": 54,
+      "text": "1500",
+      "source": "Assets/Art/Interface/Buttons/Deletion.png",
+      "category": "Resource despawns",
+      "spawn": false
+    },
+    {
       "x": 92,
       "y": 60,
       "text": "1600",
