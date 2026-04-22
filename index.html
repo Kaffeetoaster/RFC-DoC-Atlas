@@ -17,7 +17,17 @@
 <body>
 
 <button id="burger">☰</button>
-
+<div id="top-right-controls">
+  <button id="about-toggle" type="button">About</button>
+  <span id="header-meta"></span>
+</div>
+<div id="about-page" aria-hidden="true">
+  <div class="about-box-header">
+    <h3 id="about-title">About</h3>
+    <button id="about-close" type="button" aria-label="Close about box">×</button>
+  </div>
+  <div id="about-content"></div>
+</div>
 <div id="sidebar" class="hidden">
   <h3 id="sidebar-header">Layers</h3>
   <div class="options-container"></div>
