@@ -1,7 +1,7 @@
 {
   "title": "About",
   "version": "Mod version: 1.18.2-192",
-  "last_update": "last Atlas update: 2026-04-22",
+  "last_update": "last Atlas update: 2026-04-23 20:00",
   "about": {
     "RFC-DoC-Atlas": "Atlas for the RFC Dawn of Civilization mod by Leoreth",
     "created by:": {
@@ -23,7 +23,6 @@
       "type": "link",
       "label": "RFC-DoC-Atlas Forum Thread",
       "url": "https://forums.civfanatics.com/threads/doc-website.693549/"
-
     }
   }
 }

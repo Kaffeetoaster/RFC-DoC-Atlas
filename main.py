@@ -32,7 +32,7 @@ if __name__ == "__main__":
     with open("about/about.json", "r") as f:
         header_info = json.load(f)
     header_info["version"] = f"Mod version: {sModVersion}"
-    header_info["last_update"] = f"last Atlas update: {time.strftime('%Y-%m-%d')}"
+    header_info["last_update"] = f"last Atlas update: {time.strftime('%Y-%m-%d %H:%M')}"
     with open("about/about.json", "w") as f:
         json.dump(header_info, f, indent=2)
 
@@ -41,7 +41,9 @@ if __name__ == "__main__":
         "Grid": [],
         "Stability": [],
         "Birth": [],
-        "Religion": []
+        "Religion": [],
+        "Geography": [],
+        "UHV": []
     }
 ### json config file for map markers ###
     markers_config ={
@@ -69,13 +71,11 @@ if __name__ == "__main__":
 ### Draw Resource and Feature and Terrain Maps ###
     measure(draw_tile_markers, markers_config)
 
-### Draw UHV Maps ###
-    measure(DrawUHVMaps, layers_config)
-
 ### Draw Geography ###
     measure(DrawGeographyMaps, layers_config)
     
-
+### Draw UHV Maps ###
+    measure(DrawUHVMaps, layers_config)
 
 
 

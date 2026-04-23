@@ -1833,5 +1833,35 @@
       "h": 1040,
       "category": "Religion"
     }
-  ]
+  ],
+  "Geography": [
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Region map",
+      "source": "maps/layers/Geography/region.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Geography"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Landmass map",
+      "source": "maps/layers/Geography/landmass.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Geography"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "display_name": "Continent map",
+      "source": "maps/layers/Geography/continent.png",
+      "w": 7800,
+      "h": 4160,
+      "category": "Geography"
+    }
+  ],
+  "UHV": []
 }

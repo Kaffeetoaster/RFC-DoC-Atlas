@@ -1,7 +1,7 @@
 from python.consts import *
 
 import time
-
+from PIL import Image, ImageDraw
 
 
 def transform_coordinates(coor, new_width = iWorldX, new_height = iWorldY, offset = (0,0)):
@@ -77,3 +77,31 @@ def crop_image_to_content(image):
         return image.crop(bbox), offset
     else:
         return image, offset  # Return original if no content found
+
+
+# Build a reusable diagonal hatch mask once; 255 = painted pixel, 0 = transparent pixel.
+scale_factor = 1  # Adjust this to make the hatching denser or sparser
+hatching_width = 3  # Distance between hatch lines
+hatching_line_width = 1  # Thickness of hatch lines
+
+HATCH_MASK = Image.new("L", (TILE_SIZE * scale_factor, TILE_SIZE * scale_factor), 0)
+_hatch_draw = ImageDraw.Draw(HATCH_MASK)
+for offset in range(0 + hatching_width*scale_factor, TILE_SIZE * scale_factor * 2, hatching_width*scale_factor +1):
+    _hatch_draw.line(
+        [(offset, 0), (offset - TILE_SIZE * scale_factor, TILE_SIZE * scale_factor)],
+        fill=255, 
+        width=hatching_line_width*scale_factor
+        )
+# scale back down to tile size
+HATCH_MASK = HATCH_MASK.resize((TILE_SIZE, TILE_SIZE), resample=Image.LANCZOS)
+
+
+def fill_in_tile(x, y, color, img, Hatching = False):
+    tile_left = x * TILE_SIZE
+    tile_top = y * TILE_SIZE
+    tile_color = color if len(color) == 4 else (*color, 255)
+    tile = Image.new("RGBA", (TILE_SIZE, TILE_SIZE), tile_color)
+    if Hatching:
+        img.paste(tile, (tile_left, tile_top), HATCH_MASK)
+    else:
+        img.paste(tile, (tile_left, tile_top))
