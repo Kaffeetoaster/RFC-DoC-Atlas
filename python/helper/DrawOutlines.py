@@ -8,7 +8,7 @@ from python.helper.helper import *
 
 
 
-def get_tile_outline(rect_coords, exceptions, tile_size, line_strength):
+def get_area_outline(rect_coords, exceptions, tile_size, line_strength):
     """
     rect_coords: ((x1, y1), (x2, y2)) defining the bounding box of tiles.
     exceptions: list of (x, y) tuples within bounds to exclude.
@@ -24,7 +24,7 @@ def get_tile_outline(rect_coords, exceptions, tile_size, line_strength):
                 active_tiles.add((x, y))
 
     lines = []
-    inset = (line_strength-1) // 2  # Inset to avoid overlap with neighboring tiles
+    inset = (line_strength-1) // 2  # Inset to avoid overlap with neighbouring tiles
     
     for (x, y) in active_tiles:
         # Pixel boundaries of the current tile, but inset to draw inside the tile
@@ -34,10 +34,10 @@ def get_tile_outline(rect_coords, exceptions, tile_size, line_strength):
         p_right = (x + 1) * tile_size - 1
         p_bottom = (y + 1) * tile_size - 1
 
-        # Define neighbors and the corresponding edge lines
-        # Check: Is neighbor (nx, ny) outside rect OR in exceptions list?
+        # Define neighbours and the corresponding edge lines
+        # Check: Is neighbour (nx, ny) outside rect OR in exceptions list?
         check_configs = [
-            # Neighbor, (x1, y1, x2, y2), Side
+            # neighbour, (x1, y1, x2, y2), Side
             ((x - 1, y), (p_left + inset, p_top, p_left + inset, p_bottom), "L"),
             ((x + 1, y), (p_right - inset, p_top, p_right - inset, p_bottom), "R"),
             ((x, y - 1), (p_left, p_top + inset, p_right, p_top + inset), "T"),
@@ -49,7 +49,7 @@ def get_tile_outline(rect_coords, exceptions, tile_size, line_strength):
         ]
 
         for (nx, ny), (lx1, ly1, lx2, ly2), side in check_configs:
-            # If neighbor is outside the rect bounds OR is an explicit exception
+            # If neighbour is outside the rect bounds OR is an explicit exception
             is_outside_bounds = not (x_min <= nx <= x_max and y_min <= ny <= y_max)
             is_exception = (nx, ny) in exceptions
             
@@ -77,7 +77,7 @@ def draw_outlines_for_area( tArea, LExceptions, color, line_strength):
     width_px = (x_max - x_min + 1) * TILE_SIZE
     height_px = (y_max - y_min + 1) * TILE_SIZE
     offset = (-x_min * TILE_SIZE, -y_min * TILE_SIZE)
-    lines = get_tile_outline(tArea, LExceptions, tile_size=TILE_SIZE, line_strength=line_strength)
+    lines = get_area_outline(tArea, LExceptions, tile_size=TILE_SIZE, line_strength=line_strength)
     lines_transformed = []
     for start, end in lines:
         start = transform_coordinates(start, new_width=width_px, new_height=height_px, offset=offset)

@@ -32,6 +32,8 @@ gen_FeatureVariety = iterate_number_map("Earth/FeatureVariety.csv")
 gen_Plot = iterate_string_map("Earth/Plot.csv")
 gen_Terrain = iterate_number_map("Earth/Terrain.csv")
 gen_Region = iterate_number_map("Regions.csv")
+gen_landmass = iterate_number_map("Earth/Landmass.csv")
+gen_Continent = iterate_number_map("Earth/Continent.csv")
 
 gens = [
     ("terrain", gen_Terrain),
@@ -41,6 +43,8 @@ gens = [
     ("feature_variety", gen_FeatureVariety),
     ("plot", gen_Plot),
     ("region", gen_Region),
+    ("landmass", gen_landmass),
+    ("continent", gen_Continent)
 ]
 
 dTileMap = defaultdict(dict)
