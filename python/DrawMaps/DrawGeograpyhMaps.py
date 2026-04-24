@@ -1,6 +1,6 @@
 from python.consts import *
 from python.helper.helper import *
-from python.helper.DrawOutlines import *
+from python.helper.DrawHelper import *
 import config
 import colorsys
 

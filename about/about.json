@@ -1,7 +1,7 @@
 {
   "title": "About",
   "version": "Mod version: 1.18.2-192",
-  "last_update": "last Atlas update: 2026-04-23 20:00",
+  "last_update": "last Atlas update: 2026-04-24 21:03",
   "about": {
     "RFC-DoC-Atlas": "Atlas for the RFC Dawn of Civilization mod by Leoreth",
     "created by:": {
@@ -9,17 +9,17 @@
       "label": "Kaffeetoaster",
       "url": "https://forums.civfanatics.com/members/kaffeetoaster.350732/"
     },
-    "Mod by": {
+    "Mod by:": {
       "type": "link",
       "label": "Leoreth",
       "url": "https://forums.civfanatics.com/members/leoreth.168096/"
     },
-    "DoC Forum": {
+    "DoC Forum:": {
       "type": "link",
       "label": "Dawn of Civilization Forum Thread",
       "url": "https://forums.civfanatics.com/forums/rhyes-and-fall-dawn-of-civilization.452/"
     },
-    "Atlas Thread": {
+    "Atlas Thread:": {
       "type": "link",
       "label": "RFC-DoC-Atlas Forum Thread",
       "url": "https://forums.civfanatics.com/threads/doc-website.693549/"

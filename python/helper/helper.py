@@ -1,7 +1,6 @@
 from python.consts import *
 
 import time
-from PIL import Image, ImageDraw
 
 
 def transform_coordinates(coor, new_width = iWorldX, new_height = iWorldY, offset = (0,0)):
@@ -10,6 +9,12 @@ def transform_coordinates(coor, new_width = iWorldX, new_height = iWorldY, offse
     # transforms to smaller map with new_Width and new_Height
     x, y = coor
     return (x + offset[0], new_height - 1 - y - offset[1])
+
+def transform_area_coordinates(area, new_width = iWorldX, new_height = iWorldY, offset = (0,0)):
+    (x_min,y_min), (x_max, y_max) = area
+    TL_transformed = transform_coordinates((x_min, y_min), new_width, new_height, offset)
+    BR_transformed = transform_coordinates((x_max, y_max), new_width, new_height, offset)
+    return ((TL_transformed[0],TL_transformed[1]-(y_max-y_min)),(BR_transformed[0],BR_transformed[1]+(y_max-y_min)))
 
 def add_layer_config_entry(config, text, category, image_path, image_size, offset = (0,0)):
 
@@ -78,32 +83,3 @@ def crop_image_to_content(image):
     else:
         return image, offset  # Return original if no content found
 
-
-def create_HatchMask(hatching_width, hatching_line_width,tile_size):
-    # Build a reusable diagonal hatch mask once; 255 = painted pixel, 0 = transparent pixel.
-    scale_factor = 1  # Adjust this to make the hatching denser or sparser
-    hatching_width = 3  # Distance between hatch lines
-    hatching_line_width = 1  # Thickness of hatch lines
-
-    HATCH_MASK = Image.new("L", (tile_size * scale_factor, tile_size * scale_factor), 0)
-    _hatch_draw = ImageDraw.Draw(HATCH_MASK)
-    for offset in range(0 + hatching_width*scale_factor, tile_size * scale_factor * 2, hatching_width*scale_factor +1):
-        _hatch_draw.line(
-            [(offset, 0), (offset - tile_size * scale_factor, tile_size * scale_factor)],
-            fill=255, 
-            width=hatching_line_width*scale_factor
-            )
-    # scale back down to tile size
-    HATCH_MASK = HATCH_MASK.resize((TILE_SIZE, TILE_SIZE), resample=Image.LANCZOS)
-    return HATCH_MASK
-
-def fill_in_tile(x, y, color, img, Hatching = False):
-    tile_left = x * TILE_SIZE
-    tile_top = y * TILE_SIZE
-    tile_color = color if len(color) == 4 else (*color, 255)
-    tile = Image.new("RGBA", (TILE_SIZE, TILE_SIZE), tile_color)
-    if Hatching:
-        HATCH_MASK = create_HatchMask(3,1,TILE_SIZE)
-        img.paste(tile, (tile_left, tile_top), HATCH_MASK)
-    else:
-        img.paste(tile, (tile_left, tile_top))
