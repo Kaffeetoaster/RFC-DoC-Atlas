@@ -1863,5 +1863,141 @@
       "category": "Geography"
     }
   ],
-  "UHV": []
+  "UHV": [
+    {
+      "x": 65,
+      "y": 48,
+      "display_name": "Phoenician Italy",
+      "source": "maps/layers/UHV/Phoenician_Italy.png",
+      "w": 416,
+      "h": 416,
+      "category": "UHV"
+    },
+    {
+      "x": 0,
+      "y": 40,
+      "display_name": "Hawaii for Polynesia",
+      "source": "maps/layers/UHV/Hawaii_for_Polynesia.png",
+      "w": 260,
+      "h": 208,
+      "category": "UHV"
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "display_name": "New Zealand east for Polynesia",
+      "source": "maps/layers/UHV/New_Zealand_east_for_Polynesia.png",
+      "w": 156,
+      "h": 364,
+      "category": "UHV"
+    },
+    {
+      "x": 148,
+      "y": 4,
+      "display_name": "New Zealand west for Polynesia",
+      "source": "maps/layers/UHV/New_Zealand_west_for_Polynesia.png",
+      "w": 104,
+      "h": 208,
+      "category": "UHV"
+    },
+    {
+      "x": 13,
+      "y": 27,
+      "display_name": "Marquesas for Polynesia",
+      "source": "maps/layers/UHV/Marquesas_for_Polynesia.png",
+      "w": 52,
+      "h": 52,
+      "category": "UHV"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "display_name": "Easter Island for Polynesia",
+      "source": "maps/layers/UHV/Easter_Island_for_Polynesia.png",
+      "w": 52,
+      "h": 52,
+      "category": "UHV"
+    },
+    {
+      "x": 115,
+      "y": 26,
+      "display_name": "Srivijaya for Dravidia",
+      "source": "maps/layers/UHV/Srivijaya_for_Dravidia.png",
+      "w": 364,
+      "h": 468,
+      "category": "UHV"
+    },
+    {
+      "x": 54,
+      "y": 48,
+      "display_name": "Andalusia for Byzantine",
+      "source": "maps/layers/UHV/Andalusia_for_Byzantine.png",
+      "w": 364,
+      "h": 156,
+      "category": "UHV"
+    },
+    {
+      "x": 119,
+      "y": 30,
+      "display_name": "third Malay goal",
+      "source": "maps/layers/UHV/third_Malay_goal.png",
+      "w": 104,
+      "h": 156,
+      "category": "UHV"
+    },
+    {
+      "x": 54,
+      "y": 31,
+      "display_name": "West Africa for Moors",
+      "source": "maps/layers/UHV/West_Africa_for_Moors.png",
+      "w": 624,
+      "h": 520,
+      "category": "UHV"
+    },
+    {
+      "x": 77,
+      "y": 38,
+      "display_name": "Nile for Misr",
+      "source": "maps/layers/UHV/Nile_for_Misr.png",
+      "w": 260,
+      "h": 416,
+      "category": "UHV"
+    },
+    {
+      "x": 76,
+      "y": 31,
+      "display_name": "Sudan for Misr",
+      "source": "maps/layers/UHV/Sudan_for_Misr.png",
+      "w": 468,
+      "h": 520,
+      "category": "UHV"
+    },
+    {
+      "x": 104,
+      "y": 53,
+      "display_name": "Dzungaria for Manchuria",
+      "source": "maps/layers/UHV/Dzungaria_for_Manchuria.png",
+      "w": 728,
+      "h": 468,
+      "category": "UHV"
+    },
+    {
+      "x": 65,
+      "y": 67,
+      "display_name": "Scandinavia for Germany",
+      "source": "maps/layers/UHV/Scandinavia_for_Germany.png",
+      "w": 468,
+      "h": 572,
+      "category": "UHV"
+    },
+    {
+      "x": 8,
+      "y": 62,
+      "display_name": "Canada",
+      "source": "maps/layers/UHV/Canada.png",
+      "w": 1716,
+      "h": 936,
+      "category": "UHV"
+    }
+  ]
 }

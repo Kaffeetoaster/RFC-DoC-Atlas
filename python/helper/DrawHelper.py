@@ -70,15 +70,8 @@ def draw_outlines(lines, color, line_strength, img):
     return img
 
 def draw_outlines_for_area( tArea, LExceptions, color, line_strength, img):
-    (x_min, y_min), (x_max, y_max) = tArea
-    width_px = (x_max - x_min + 1) * TILE_SIZE
-    height_px = (y_max - y_min + 1) * TILE_SIZE
-    offset = (-x_min * TILE_SIZE, -y_min * TILE_SIZE)
+
     lines = get_area_outline(tArea, LExceptions, tile_size=TILE_SIZE, line_strength=line_strength)
-    #for start, end in lines:
-        # start = transform_coordinates(start, new_width=width_px, new_height=height_px, offset=offset)
-        # end = transform_coordinates(end, new_width=width_px, new_height=height_px, offset=offset)
-        # lines_transformed.append((start, end))
     draw_outlines(lines, color=color, line_strength=line_strength, img=img)
 
 def create_HatchMask(hatching_width, hatching_line_width,tile_size):
