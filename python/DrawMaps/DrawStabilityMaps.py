@@ -117,7 +117,7 @@ def iterate_plot_types(identifier, settler_values, war_values, core_func):
 
 def draw_stability_map(civ_name, period_name, values, json_config):
 	display_name= f"{civ_name} -> {period_name.replace('_', ' ')}" if period_name else civ_name
-	print(display_name)
+	print(f"Drawing stability map for {display_name}")
 
 	image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
 	pixels = image.load()

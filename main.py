@@ -13,7 +13,6 @@ from python.DrawMaps.DrawBirthMaps import *
 from python.DrawMaps.DrawUHVMaps import *
 from python.DrawMaps.DrawGeograpyhMaps import *
 
-from python.helper.helper import *
 import config
 import json
 
