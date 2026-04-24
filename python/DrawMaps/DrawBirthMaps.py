@@ -1,20 +1,19 @@
 from python.consts import *
 from python.helper.helper import *
-from python.helper.DrawOutlines import *
+from python.helper.DrawHelper import *
 import config
 
 
 
 
 def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeriod=None, extendedCore = False, respawn = False):
+    
     add_terrain_exceptions(area, exceptions, dTileMap)
     ## get color from xml and from LCivXML
     color = (round(0), round(0), round(0),round(255))
 
     color = LCivXML[iCiv]["Color"].get("ColorTypePrimary", color)
     
-
-
     name = LCivXML[iCiv].get("ShortDescription")
     if iCiv == 40: # Misir
         name = "Misr"
@@ -29,16 +28,39 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     
     filename = name.replace(" ", "_")
     category = "Birth"
+    Capital_x, Capital_y = dCapitals.get(iCiv, (None, None))
     if iPeriod is not None:
         filename = f"{name}_{dPeriodNames.get(iPeriod, '')}".replace(" ", "_")
         name = f"{name.replace('_', ' ')} -> {dPeriodNames.get(iPeriod, '').replace('_', ' ')}"
+        Capital_x, Capital_y = dPeriodCapitals.get(iPeriod, (Capital_x, Capital_y))
     elif extendedCore:
         name = f"{name} extended (AI only)"
     elif respawn:
         name = f"{name} respawn"
-
+        Capital_x, Capital_y = dRespawnCapitals.get(iCiv, (Capital_x, Capital_y))
     
-    img = draw_outlines_for_area(area, exceptions, color, line_width)
+    print(f"Drawing birth map for {name}... ")
+
+
+
+
+    # draw fill in and outlines
+    img = Image.new("RGBA", (iWorldX * TILE_SIZE, iWorldY * TILE_SIZE), (0, 0, 0, 0))
+
+    area= transform_area_coordinates(area)
+    exceptions = [transform_coordinates(coor) for coor in exceptions]
+    Capital_x, Capital_y = transform_coordinates((Capital_x, Capital_y))
+
+    # draw hatching, Capital location and outline
+    draw_fill_in_area(area, exceptions, color, img, Hatching=True)
+    fill_in_tile(Capital_x, Capital_y, color, img, Hatching=False)
+    draw_outlines_for_area(area, exceptions, color, line_width, img)
+    
+    
+    
+    img, offset = crop_image_to_content(img)  # Crop to content
+    offset = (offset[0] // TILE_SIZE, offset[1] // TILE_SIZE)
+
     image_path = config.OUTPUT_PATH / folder / f"{filename}.png"
     img.save(image_path)
 
@@ -47,8 +69,8 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
                            category = category, 
                            image_path = Path(image_path).relative_to(config.OUTPUT_PATH), 
                            image_size = img.size, 
-                           offset = (area[0][0],area[0][1]))
-                            #offset = (area[0][0],iWorldY-1-area[0][1]))
+                           offset = offset
+                           )
 
 
 def DrawBirthMaps(layers_config):

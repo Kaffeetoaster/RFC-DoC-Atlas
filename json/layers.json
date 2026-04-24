@@ -846,7 +846,7 @@
       "y": 6,
       "display_name": "Australia",
       "source": "maps/layers/Spawns/Australia.png",
-      "w": 988,
+      "w": 936,
       "h": 988,
       "category": "Birth"
     },
@@ -1459,7 +1459,7 @@
       "display_name": "Moors -> Morocco",
       "source": "maps/layers/Spawns/Periods/Moors_Morocco.png",
       "w": 260,
-      "h": 260,
+      "h": 364,
       "category": "Birth"
     },
     {
@@ -1468,7 +1468,7 @@
       "display_name": "Moors respawn",
       "source": "maps/layers/Spawns/Respawns/Moors.png",
       "w": 260,
-      "h": 364,
+      "h": 312,
       "category": "Birth"
     },
     {
@@ -1485,7 +1485,7 @@
       "y": 46,
       "display_name": "Mughals -> Pakistan",
       "source": "maps/layers/Spawns/Periods/Mughals_Pakistan.png",
-      "w": 208,
+      "w": 312,
       "h": 208,
       "category": "Birth"
     },
@@ -1530,7 +1530,7 @@
       "y": 37,
       "display_name": "Nubia -> Makuria",
       "source": "maps/layers/Spawns/Periods/Nubia_Makuria.png",
-      "w": 156,
+      "w": 208,
       "h": 156,
       "category": "Birth"
     },
@@ -1545,11 +1545,11 @@
     },
     {
       "x": 77,
-      "y": 50,
+      "y": 51,
       "display_name": "Turkey -> Ottoman Constantinople",
       "source": "maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.png",
       "w": 416,
-      "h": 312,
+      "h": 260,
       "category": "Birth"
     },
     {
@@ -1719,8 +1719,8 @@
       "y": 48,
       "display_name": "Turkestan -> Seljuks",
       "source": "maps/layers/Spawns/Periods/Turkestan_Seljuks.png",
-      "w": 364,
-      "h": 312,
+      "w": 676,
+      "h": 572,
       "category": "Birth"
     },
     {
