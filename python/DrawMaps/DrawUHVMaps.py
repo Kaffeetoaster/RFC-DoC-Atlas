@@ -78,12 +78,9 @@ lCiv = [
 
 
 def DrawUHVMaps(json_config):
-    print(f"Canada: {lAreas[-1]}, Exceptions: {lExeptions[-1]}")
     for i, area in enumerate(lAreas):
         exceptions = lExeptions[i]
         add_terrain_exceptions(area, exceptions, dTileMap)
-        if i == len(lAreas)-1: # Canada
-            print(f"Canada: {area}, Exceptions: {exceptions}")
         display_text = ldisplayText[i]
         iCiv = lCiv[i]
 
@@ -96,8 +93,7 @@ def DrawUHVMaps(json_config):
         # transform coordinates
         area= transform_area_coordinates(area)
         exceptions = [transform_coordinates(coor) for coor in exceptions]
-        if i == len(lAreas)-1: # Canada
-            print(f"Canada: {area}, Exceptions: {exceptions}")
+        
         # draw hatching, and outline
         draw_fill_in_area(area, exceptions, color, img, Hatching=True)
         draw_outlines_for_area(area, exceptions, color, line_width, img)
