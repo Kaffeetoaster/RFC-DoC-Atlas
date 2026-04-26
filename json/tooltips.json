@@ -1953,6 +1953,14 @@
       "spawn": true
     },
     {
+      "x": 87,
+      "y": 40,
+      "text": "1744 - Arabia spawn",
+      "source": "Assets/Art/Interface/Buttons/Copper_cropped.png",
+      "category": "Civ spawn Resources",
+      "spawn": true
+    },
+    {
       "x": 15,
       "y": 47,
       "text": "1810 - Mexico spawn",

@@ -1634,6 +1634,15 @@
       "category": "Birth"
     },
     {
+      "x": 84,
+      "y": 38,
+      "display_name": "Arabia",
+      "source": "maps/layers/Spawns/Arabia.png",
+      "w": 468,
+      "h": 312,
+      "category": "Birth"
+    },
+    {
       "x": 54,
       "y": 51,
       "display_name": "Spain",
