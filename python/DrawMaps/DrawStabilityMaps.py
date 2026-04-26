@@ -58,7 +58,7 @@ def is_period_core(identifier, tile):
 
 def iterate_civ_map(iCiv):
 	civ_name = dCivNames[iCiv]
-
+	civ_name = civ_name.replace(" ", "_")
 	settler_values = iterate_map(f"Settler/{civ_name}.csv")
 	war_values = iterate_map(f"War/{civ_name}.csv")
 	
@@ -68,7 +68,7 @@ def iterate_civ_map(iCiv):
 def iterate_period_map(iCiv, iPeriod):
 	period_name = dPeriodNames[iPeriod]
 	civ_name = dCivNames[iCiv]
-	
+	civ_name = civ_name.replace(" ", "_")
 	settler_map = f"Settler/Period/{period_name}.csv"
 	war_map = f"War/Period/{period_name}.csv"
 	
@@ -116,7 +116,7 @@ def iterate_plot_types(identifier, settler_values, war_values, core_func):
 
 
 def draw_stability_map(civ_name, period_name, values, json_config):
-	display_name= f"{civ_name} -> {period_name.replace('_', ' ')}" if period_name else civ_name
+	display_name= f"{civ_name.replace('_', ' ')} -> {period_name.replace('_', ' ')}" if period_name else civ_name.replace('_', ' ')
 	print(f"Drawing stability map for {display_name}")
 
 	image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))

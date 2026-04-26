@@ -191,6 +191,7 @@ dCivNames = {
     iRome: "Rome",
     iRus: "Ruthenia",
     iRussia: "Russia",
+    iSaudis: "Saudis",
     iSpain: "Spain",
     iSwahili: "Swahili",
     iSweden: "Sweden",

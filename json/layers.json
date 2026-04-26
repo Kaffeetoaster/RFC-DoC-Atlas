@@ -320,7 +320,7 @@
     {
       "x": 30,
       "y": 14,
-      "display_name": "Holy_Rome",
+      "display_name": "Holy Rome",
       "source": "maps/layers/Stability/Holy_Rome.png",
       "w": 2912,
       "h": 2756,
@@ -329,7 +329,7 @@
     {
       "x": 65,
       "y": 14,
-      "display_name": "Holy_Rome -> Austria",
+      "display_name": "Holy Rome -> Austria",
       "source": "maps/layers/Stability/Periods/Holy_Rome_Austria.png",
       "w": 832,
       "h": 2548,
@@ -693,6 +693,15 @@
       "source": "maps/layers/Stability/Russia.png",
       "w": 7800,
       "h": 1456,
+      "category": "Stability"
+    },
+    {
+      "x": 83,
+      "y": 35,
+      "display_name": "Saudis",
+      "source": "maps/layers/Stability/Saudis.png",
+      "w": 624,
+      "h": 728,
       "category": "Stability"
     },
     {
@@ -1636,8 +1645,8 @@
     {
       "x": 84,
       "y": 38,
-      "display_name": "Arabia",
-      "source": "maps/layers/Spawns/Arabia.png",
+      "display_name": "Saudi Arabia",
+      "source": "maps/layers/Spawns/Saudi_Arabia.png",
       "w": 468,
       "h": 312,
       "category": "Birth"

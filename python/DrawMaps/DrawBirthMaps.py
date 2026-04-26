@@ -17,6 +17,8 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     name = LCivXML[iCiv].get("ShortDescription")
     if iCiv == 40: # Misir
         name = "Misr"
+    if iCiv == 56: # Saudis
+        name = "Saudi Arabia"
     if name.startswith("TXT_KEY_CIV_"):
         name = LCivXML[iCiv].get("Description")
     if name.startswith("The Germans"):
