@@ -24,6 +24,15 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
         y = int(round(i * tile_height)) + offset_y
         draw.line([(0, y), (image_width, y)], fill=(0, 0, 0, 200), width=1)
 
+
+    # Draw tile coordinates    
+    for x in range(tiles_x):
+        for y in range(tiles_y):
+            tile_x = x * tile_width
+            tile_y = (tiles_y-y-1) * tile_height
+            text = f"{x} {y}"
+            text_position = (tile_x + 5, tile_y + 5)  # Adjust position as needed
+            draw.text(text_position, text, fill=(0, 0, 0, 200))
     # Save image
     img.save(output_path)
     add_layer_config_entry(config = config, text="Grid", category="Grid", image_path=output_path, image_size=(image_width, image_height))
