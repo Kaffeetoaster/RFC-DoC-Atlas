@@ -52,6 +52,23 @@ html, body {
     will-change: transform; /* hint for better performance */
 }
 
+#deselect-all {
+    position: absolute;
+    top: 10px;
+    left: 290px;
+    z-index: 1100;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 #top-right-controls {
   position: fixed;
   top: 0px;
@@ -214,7 +231,8 @@ html, body {
   top: 10px;
   left: 10px; /* center over sidebar */
   z-index: 1100;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
   color: var(--civ-white);
   cursor: pointer;
   background: var(--civ-blue-bg);
@@ -248,6 +266,7 @@ details {
     border: 1px solid var(--civ-border);
     border-radius: 6px;
     background: var(--civ-list-bg);
+
     
 }
 

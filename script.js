@@ -7,7 +7,10 @@ const aboutClose = document.getElementById("about-close");
 const aboutTitle = document.getElementById("about-title");
 const aboutContent = document.getElementById("about-content");
 const headerMeta = document.getElementById("header-meta");
+const deselectAllButton = document.getElementById("deselect-all");
 
+
+// About page rendering functions
 function isAboutLinkObject(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   if (value.type !== 'link') return false;
@@ -95,6 +98,7 @@ if (aboutPage) {
   });
 }
 
+// Load about information from JSON and populate the about page
 fetch('about/about.json')
   .then(response => {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -142,13 +146,7 @@ fetch('about/about.json')
     }
   });
 
-console.log('Script loaded. Elements found:', {
-  sidebar: !!sidebar,
-  burger: !!burger,
-  header: !!header,
-  aboutToggle: !!aboutToggle,
-  aboutPage: !!aboutPage
-});
+
 // open on burger click
 burger.addEventListener("click", () => {
   sidebar.classList.remove("hidden");
@@ -161,10 +159,19 @@ header.addEventListener("click", () => {
   burger.classList.remove("hidden");
 });
 
+deselectAllButton.addEventListener("click", () => {
+  const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      checkbox.checked = false;
+      checkbox.dispatchEvent(new Event('change')); // trigger change event to update map
+    }
+  });
+});
 
 
 
-
+// Initialize Leaflet map
 const width = 7800;   // image width in pixels
 const height = 4160;  // image height in pixels
 const TILE_SIZE = 52; // size of each game tile in pixels 
