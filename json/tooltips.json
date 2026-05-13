@@ -289,8 +289,8 @@
       "spawn": true
     },
     {
-      "x": 70,
-      "y": 30,
+      "x": 71,
+      "y": 29,
       "text": "1000",
       "source": "Assets/Art/Interface/Buttons/Banana_cropped.png",
       "category": "Resource spawns",
@@ -1529,6 +1529,22 @@
       "spawn": true
     },
     {
+      "x": 74,
+      "y": 25,
+      "text": "1850",
+      "source": "Assets/Art/Interface/Buttons/Gems_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true
+    },
+    {
+      "x": 75,
+      "y": 27,
+      "text": "1850",
+      "source": "Assets/Art/Interface/Buttons/Gems_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true
+    },
+    {
       "x": 16,
       "y": 54,
       "text": "1860",
@@ -1541,6 +1557,22 @@
       "y": 60,
       "text": "1860",
       "source": "Assets/Art/Interface/Buttons/Silver_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true
+    },
+    {
+      "x": 77,
+      "y": 27,
+      "text": "1880",
+      "source": "Assets/Art/Interface/Buttons/Cocoa_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true
+    },
+    {
+      "x": 77,
+      "y": 29,
+      "text": "1880",
+      "source": "Assets/Art/Interface/Buttons/Coffee_cropped.png",
       "category": "Resource spawns",
       "spawn": true
     },
@@ -1585,8 +1617,8 @@
       "spawn": true
     },
     {
-      "x": 71,
-      "y": 29,
+      "x": 72,
+      "y": 30,
       "text": "1900",
       "source": "Assets/Art/Interface/Buttons/Rubber_cropped.png",
       "category": "Resource spawns",
@@ -1852,7 +1884,7 @@
       "x": 89,
       "y": 54,
       "text": "1500",
-      "source": "Assets/Art/Interface/Buttons/Deletion.png",
+      "source": "Assets/Art/Interface/Buttons/Dye_despawn.png",
       "category": "Resource despawns",
       "spawn": false
     },
@@ -5321,6 +5353,14 @@
       "spawn": true
     },
     {
+      "x": 89,
+      "y": 54,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Dye_cropped.png",
+      "category": "Start resources",
+      "spawn": true
+    },
+    {
       "x": 90,
       "y": 54,
       "text": "",
@@ -5585,14 +5625,6 @@
       "spawn": true
     },
     {
-      "x": 117,
-      "y": 53,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Sheep_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
       "x": 122,
       "y": 53,
       "text": "",
@@ -5805,6 +5837,14 @@
       "y": 52,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Gems_cropped.png",
+      "category": "Start resources",
+      "spawn": true
+    },
+    {
+      "x": 117,
+      "y": 52,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Sheep_cropped.png",
       "category": "Start resources",
       "spawn": true
     },
@@ -6241,7 +6281,7 @@
       "spawn": true
     },
     {
-      "x": 103,
+      "x": 102,
       "y": 50,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Spices_cropped.png",
@@ -6945,7 +6985,7 @@
       "spawn": true
     },
     {
-      "x": 32,
+      "x": 31,
       "y": 46,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Crab_cropped.png",
@@ -8089,7 +8129,7 @@
       "spawn": true
     },
     {
-      "x": 68,
+      "x": 67,
       "y": 40,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Deer_cropped.png",
@@ -10009,14 +10049,6 @@
       "spawn": true
     },
     {
-      "x": 75,
-      "y": 27,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Gems_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
       "x": 79,
       "y": 27,
       "text": "",
@@ -10181,14 +10213,6 @@
       "y": 25,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Cotton_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
-      "x": 74,
-      "y": 25,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Gems_cropped.png",
       "category": "Start resources",
       "spawn": true
     },
@@ -10485,6 +10509,14 @@
       "y": 23,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Copper_cropped.png",
+      "category": "Start resources",
+      "spawn": true
+    },
+    {
+      "x": 77,
+      "y": 23,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Fish_cropped.png",
       "category": "Start resources",
       "spawn": true
     },
@@ -10889,14 +10921,6 @@
       "spawn": true
     },
     {
-      "x": 37,
-      "y": 18,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Corn_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
       "x": 42,
       "y": 18,
       "text": "",
@@ -11185,6 +11209,14 @@
       "spawn": true
     },
     {
+      "x": 31,
+      "y": 13,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Crab_cropped.png",
+      "category": "Start resources",
+      "spawn": true
+    },
+    {
       "x": 41,
       "y": 13,
       "text": "",
@@ -11261,14 +11293,6 @@
       "y": 12,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Amber_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
-      "x": 32,
-      "y": 12,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Crab_cropped.png",
       "category": "Start resources",
       "spawn": true
     },
@@ -11381,14 +11405,6 @@
       "y": 9,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Whale_cropped.png",
-      "category": "Start resources",
-      "spawn": true
-    },
-    {
-      "x": 32,
-      "y": 9,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Deer_cropped.png",
       "category": "Start resources",
       "spawn": true
     },

@@ -878,6 +878,15 @@
       "category": "Birth"
     },
     {
+      "x": 61,
+      "y": 61,
+      "display_name": "Belgium",
+      "source": "maps/layers/Spawns/Belgium.png",
+      "w": 156,
+      "h": 156,
+      "category": "Birth"
+    },
+    {
       "x": 40,
       "y": 16,
       "display_name": "Brazil",
@@ -1067,6 +1076,15 @@
       "category": "Birth"
     },
     {
+      "x": 55,
+      "y": 62,
+      "display_name": "England respawn",
+      "source": "maps/layers/Spawns/Respawns/England.png",
+      "w": 260,
+      "h": 520,
+      "category": "Birth"
+    },
+    {
       "x": 82,
       "y": 33,
       "display_name": "Ethiopia",
@@ -1094,6 +1112,15 @@
       "category": "Birth"
     },
     {
+      "x": 56,
+      "y": 55,
+      "display_name": "France respawn",
+      "source": "maps/layers/Spawns/Respawns/France.png",
+      "w": 468,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
       "x": 64,
       "y": 61,
       "display_name": "Germany",
@@ -1117,6 +1144,15 @@
       "display_name": "Germany extended (AI only)",
       "source": "maps/layers/Spawns/Extended/Germany.png",
       "w": 676,
+      "h": 416,
+      "category": "Birth"
+    },
+    {
+      "x": 64,
+      "y": 59,
+      "display_name": "Germany respawn",
+      "source": "maps/layers/Spawns/Respawns/Germany.png",
+      "w": 364,
       "h": 416,
       "category": "Birth"
     },
@@ -1643,6 +1679,15 @@
       "category": "Birth"
     },
     {
+      "x": 81,
+      "y": 56,
+      "display_name": "Russia respawn",
+      "source": "maps/layers/Spawns/Respawns/Russia.png",
+      "w": 780,
+      "h": 1040,
+      "category": "Birth"
+    },
+    {
       "x": 84,
       "y": 38,
       "display_name": "Saudi Arabia",
@@ -1676,6 +1721,15 @@
       "source": "maps/layers/Spawns/Extended/Spain.png",
       "w": 468,
       "h": 208,
+      "category": "Birth"
+    },
+    {
+      "x": 54,
+      "y": 48,
+      "display_name": "Spain respawn",
+      "source": "maps/layers/Spawns/Respawns/Spain.png",
+      "w": 468,
+      "h": 364,
       "category": "Birth"
     },
     {
@@ -1830,7 +1884,7 @@
       "display_name": "Confucianism",
       "source": "maps/layers/Religions/Confucianism.png",
       "w": 2028,
-      "h": 3172,
+      "h": 3276,
       "category": "Religion"
     },
     {
@@ -1838,8 +1892,8 @@
       "y": 40,
       "display_name": "Taoism",
       "source": "maps/layers/Religions/Taoism.png",
-      "w": 1456,
-      "h": 1404,
+      "w": 1612,
+      "h": 1508,
       "category": "Religion"
     },
     {
