@@ -84,6 +84,15 @@
       "category": "Stability"
     },
     {
+      "x": 23,
+      "y": 22,
+      "display_name": "Belgium",
+      "source": "maps/layers/Stability/Belgium.png",
+      "w": 5356,
+      "h": 2184,
+      "category": "Stability"
+    },
+    {
       "x": 30,
       "y": 14,
       "display_name": "Brazil",

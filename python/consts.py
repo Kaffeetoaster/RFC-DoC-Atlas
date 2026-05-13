@@ -143,6 +143,7 @@ dCivNames = {
     iAustralia: "Australia",
     iAztecs: "Aztecs",
     iBabylonia: "Babylonia",
+    iBelgium: "Belgium",
     iBrazil: "Brazil",
     iBurma: "Burma",
     iByzantium: "Byzantium",
