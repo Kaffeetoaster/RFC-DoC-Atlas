@@ -15,7 +15,7 @@
       "x": 0,
       "y": 21,
       "display_name": "America",
-      "source": "maps/layers/Stability/America.png",
+      "source": "maps/layers/Stability/America.webp",
       "w": 7800,
       "h": 2964,
       "category": "Stability"
@@ -24,7 +24,7 @@
       "x": 54,
       "y": 34,
       "display_name": "Arabia",
-      "source": "maps/layers/Stability/Arabia.png",
+      "source": "maps/layers/Stability/Arabia.webp",
       "w": 2600,
       "h": 1352,
       "category": "Stability"
@@ -33,7 +33,7 @@
       "x": 54,
       "y": 34,
       "display_name": "Arabia -> Saudi",
-      "source": "maps/layers/Stability/Periods/Arabia_Saudi.png",
+      "source": "maps/layers/Stability/Periods/Arabia_Saudi.webp",
       "w": 2600,
       "h": 1352,
       "category": "Stability"
@@ -42,7 +42,7 @@
       "x": 34,
       "y": 3,
       "display_name": "Argentina",
-      "source": "maps/layers/Stability/Argentina.png",
+      "source": "maps/layers/Stability/Argentina.webp",
       "w": 468,
       "h": 1040,
       "category": "Stability"
@@ -51,7 +51,7 @@
       "x": 77,
       "y": 40,
       "display_name": "Assyria",
-      "source": "maps/layers/Stability/Assyria.png",
+      "source": "maps/layers/Stability/Assyria.webp",
       "w": 884,
       "h": 780,
       "category": "Stability"
@@ -60,7 +60,7 @@
       "x": 0,
       "y": 4,
       "display_name": "Australia",
-      "source": "maps/layers/Stability/Australia.png",
+      "source": "maps/layers/Stability/Australia.webp",
       "w": 7800,
       "h": 1404,
       "category": "Stability"
@@ -69,7 +69,7 @@
       "x": 13,
       "y": 40,
       "display_name": "Aztecs",
-      "source": "maps/layers/Stability/Aztecs.png",
+      "source": "maps/layers/Stability/Aztecs.webp",
       "w": 572,
       "h": 468,
       "category": "Stability"
@@ -78,7 +78,7 @@
       "x": 77,
       "y": 40,
       "display_name": "Babylonia",
-      "source": "maps/layers/Stability/Babylonia.png",
+      "source": "maps/layers/Stability/Babylonia.webp",
       "w": 936,
       "h": 780,
       "category": "Stability"
@@ -87,7 +87,7 @@
       "x": 23,
       "y": 22,
       "display_name": "Belgium",
-      "source": "maps/layers/Stability/Belgium.png",
+      "source": "maps/layers/Stability/Belgium.webp",
       "w": 5356,
       "h": 2184,
       "category": "Stability"
@@ -96,7 +96,7 @@
       "x": 30,
       "y": 14,
       "display_name": "Brazil",
-      "source": "maps/layers/Stability/Brazil.png",
+      "source": "maps/layers/Stability/Brazil.webp",
       "w": 1040,
       "h": 1092,
       "category": "Stability"
@@ -105,7 +105,7 @@
       "x": 114,
       "y": 34,
       "display_name": "Burma",
-      "source": "maps/layers/Stability/Burma.png",
+      "source": "maps/layers/Stability/Burma.webp",
       "w": 468,
       "h": 676,
       "category": "Stability"
@@ -114,7 +114,7 @@
       "x": 54,
       "y": 40,
       "display_name": "Byzantium",
-      "source": "maps/layers/Stability/Byzantium.png",
+      "source": "maps/layers/Stability/Byzantium.webp",
       "w": 1872,
       "h": 988,
       "category": "Stability"
@@ -123,7 +123,7 @@
       "x": 54,
       "y": 40,
       "display_name": "Byzantium -> Byzantine Constantinople",
-      "source": "maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.png",
+      "source": "maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.webp",
       "w": 1872,
       "h": 988,
       "category": "Stability"
@@ -132,7 +132,7 @@
       "x": 6,
       "y": 59,
       "display_name": "Canada",
-      "source": "maps/layers/Stability/Canada.png",
+      "source": "maps/layers/Stability/Canada.webp",
       "w": 1820,
       "h": 1092,
       "category": "Stability"
@@ -141,7 +141,7 @@
       "x": 55,
       "y": 42,
       "display_name": "Phoenicia",
-      "source": "maps/layers/Stability/Phoenicia.png",
+      "source": "maps/layers/Stability/Phoenicia.webp",
       "w": 1612,
       "h": 728,
       "category": "Stability"
@@ -150,7 +150,7 @@
       "x": 55,
       "y": 42,
       "display_name": "Phoenicia -> Carthage",
-      "source": "maps/layers/Stability/Periods/Phoenicia_Carthage.png",
+      "source": "maps/layers/Stability/Periods/Phoenicia_Carthage.webp",
       "w": 1612,
       "h": 728,
       "category": "Stability"
@@ -159,7 +159,7 @@
       "x": 52,
       "y": 49,
       "display_name": "Celts",
-      "source": "maps/layers/Stability/Celts.png",
+      "source": "maps/layers/Stability/Celts.webp",
       "w": 1716,
       "h": 1196,
       "category": "Stability"
@@ -168,7 +168,7 @@
       "x": 36,
       "y": 49,
       "display_name": "Celts -> Insular Celts",
-      "source": "maps/layers/Stability/Periods/Celts_Insular_Celts.png",
+      "source": "maps/layers/Stability/Periods/Celts_Insular_Celts.webp",
       "w": 2548,
       "h": 1508,
       "category": "Stability"
@@ -177,7 +177,7 @@
       "x": 105,
       "y": 38,
       "display_name": "China",
-      "source": "maps/layers/Stability/China.png",
+      "source": "maps/layers/Stability/China.webp",
       "w": 1508,
       "h": 1456,
       "category": "Stability"
@@ -186,7 +186,7 @@
       "x": 105,
       "y": 38,
       "display_name": "China -> Ming",
-      "source": "maps/layers/Stability/Periods/China_Ming.png",
+      "source": "maps/layers/Stability/Periods/China_Ming.webp",
       "w": 1508,
       "h": 1456,
       "category": "Stability"
@@ -195,7 +195,7 @@
       "x": 20,
       "y": 3,
       "display_name": "Colombia",
-      "source": "maps/layers/Stability/Colombia.png",
+      "source": "maps/layers/Stability/Colombia.webp",
       "w": 1092,
       "h": 1872,
       "category": "Stability"
@@ -204,7 +204,7 @@
       "x": 103,
       "y": 26,
       "display_name": "Dravidia",
-      "source": "maps/layers/Stability/Dravidia.png",
+      "source": "maps/layers/Stability/Dravidia.webp",
       "w": 988,
       "h": 988,
       "category": "Stability"
@@ -213,7 +213,7 @@
       "x": 74,
       "y": 34,
       "display_name": "Egypt",
-      "source": "maps/layers/Stability/Egypt.png",
+      "source": "maps/layers/Stability/Egypt.webp",
       "w": 676,
       "h": 884,
       "category": "Stability"
@@ -222,7 +222,7 @@
       "x": 0,
       "y": 4,
       "display_name": "England",
-      "source": "maps/layers/Stability/England.png",
+      "source": "maps/layers/Stability/England.webp",
       "w": 7800,
       "h": 3536,
       "category": "Stability"
@@ -231,7 +231,7 @@
       "x": 0,
       "y": 4,
       "display_name": "England -> United Kingdom",
-      "source": "maps/layers/Stability/Periods/England_United_Kingdom.png",
+      "source": "maps/layers/Stability/Periods/England_United_Kingdom.webp",
       "w": 7800,
       "h": 3536,
       "category": "Stability"
@@ -240,7 +240,7 @@
       "x": 0,
       "y": 4,
       "display_name": "England -> Great Britain",
-      "source": "maps/layers/Stability/Periods/England_Great_Britain.png",
+      "source": "maps/layers/Stability/Periods/England_Great_Britain.webp",
       "w": 7800,
       "h": 3536,
       "category": "Stability"
@@ -249,7 +249,7 @@
       "x": 79,
       "y": 30,
       "display_name": "Ethiopia",
-      "source": "maps/layers/Stability/Ethiopia.png",
+      "source": "maps/layers/Stability/Ethiopia.webp",
       "w": 728,
       "h": 572,
       "category": "Stability"
@@ -258,7 +258,7 @@
       "x": 9,
       "y": 15,
       "display_name": "France",
-      "source": "maps/layers/Stability/France.png",
+      "source": "maps/layers/Stability/France.webp",
       "w": 7280,
       "h": 2964,
       "category": "Stability"
@@ -267,7 +267,7 @@
       "x": 9,
       "y": 15,
       "display_name": "France -> National France",
-      "source": "maps/layers/Stability/Periods/France_National_France.png",
+      "source": "maps/layers/Stability/Periods/France_National_France.webp",
       "w": 7280,
       "h": 2964,
       "category": "Stability"
@@ -276,7 +276,7 @@
       "x": 5,
       "y": 14,
       "display_name": "Germany",
-      "source": "maps/layers/Stability/Germany.png",
+      "source": "maps/layers/Stability/Germany.webp",
       "w": 7540,
       "h": 3380,
       "category": "Stability"
@@ -285,7 +285,7 @@
       "x": 5,
       "y": 14,
       "display_name": "Germany -> Modern Germany",
-      "source": "maps/layers/Stability/Periods/Germany_Modern_Germany.png",
+      "source": "maps/layers/Stability/Periods/Germany_Modern_Germany.webp",
       "w": 7540,
       "h": 3380,
       "category": "Stability"
@@ -294,7 +294,7 @@
       "x": 60,
       "y": 40,
       "display_name": "Greece",
-      "source": "maps/layers/Stability/Greece.png",
+      "source": "maps/layers/Stability/Greece.webp",
       "w": 2444,
       "h": 1092,
       "category": "Stability"
@@ -303,7 +303,7 @@
       "x": 60,
       "y": 40,
       "display_name": "Greece -> Modern Greece",
-      "source": "maps/layers/Stability/Periods/Greece_Modern_Greece.png",
+      "source": "maps/layers/Stability/Periods/Greece_Modern_Greece.webp",
       "w": 2444,
       "h": 1092,
       "category": "Stability"
@@ -312,7 +312,7 @@
       "x": 97,
       "y": 40,
       "display_name": "Harappa",
-      "source": "maps/layers/Stability/Harappa.png",
+      "source": "maps/layers/Stability/Harappa.webp",
       "w": 468,
       "h": 676,
       "category": "Stability"
@@ -321,7 +321,7 @@
       "x": 79,
       "y": 44,
       "display_name": "Hittites",
-      "source": "maps/layers/Stability/Hittites.png",
+      "source": "maps/layers/Stability/Hittites.webp",
       "w": 676,
       "h": 624,
       "category": "Stability"
@@ -330,7 +330,7 @@
       "x": 30,
       "y": 14,
       "display_name": "Holy Rome",
-      "source": "maps/layers/Stability/Holy_Rome.png",
+      "source": "maps/layers/Stability/Holy_Rome.webp",
       "w": 2912,
       "h": 2756,
       "category": "Stability"
@@ -339,7 +339,7 @@
       "x": 65,
       "y": 14,
       "display_name": "Holy Rome -> Austria",
-      "source": "maps/layers/Stability/Periods/Holy_Rome_Austria.png",
+      "source": "maps/layers/Stability/Periods/Holy_Rome_Austria.webp",
       "w": 832,
       "h": 2548,
       "category": "Stability"
@@ -348,7 +348,7 @@
       "x": 26,
       "y": 15,
       "display_name": "Inca",
-      "source": "maps/layers/Stability/Inca.png",
+      "source": "maps/layers/Stability/Inca.webp",
       "w": 572,
       "h": 988,
       "category": "Stability"
@@ -357,7 +357,7 @@
       "x": 26,
       "y": 15,
       "display_name": "Inca -> Late Inca",
-      "source": "maps/layers/Stability/Periods/Inca_Late_Inca.png",
+      "source": "maps/layers/Stability/Periods/Inca_Late_Inca.webp",
       "w": 572,
       "h": 988,
       "category": "Stability"
@@ -366,7 +366,7 @@
       "x": 97,
       "y": 29,
       "display_name": "India",
-      "source": "maps/layers/Stability/India.png",
+      "source": "maps/layers/Stability/India.webp",
       "w": 1040,
       "h": 1144,
       "category": "Stability"
@@ -375,7 +375,7 @@
       "x": 97,
       "y": 29,
       "display_name": "India -> Maratha",
-      "source": "maps/layers/Stability/Periods/India_Maratha.png",
+      "source": "maps/layers/Stability/Periods/India_Maratha.webp",
       "w": 1040,
       "h": 1144,
       "category": "Stability"
@@ -384,7 +384,7 @@
       "x": 87,
       "y": 39,
       "display_name": "Iran",
-      "source": "maps/layers/Stability/Iran.png",
+      "source": "maps/layers/Stability/Iran.webp",
       "w": 988,
       "h": 1092,
       "category": "Stability"
@@ -393,7 +393,7 @@
       "x": 64,
       "y": 28,
       "display_name": "Italy",
-      "source": "maps/layers/Stability/Italy.png",
+      "source": "maps/layers/Stability/Italy.webp",
       "w": 1352,
       "h": 1612,
       "category": "Stability"
@@ -402,7 +402,7 @@
       "x": 64,
       "y": 28,
       "display_name": "Italy -> Modern Italy",
-      "source": "maps/layers/Stability/Periods/Italy_Modern_Italy.png",
+      "source": "maps/layers/Stability/Periods/Italy_Modern_Italy.webp",
       "w": 1352,
       "h": 1612,
       "category": "Stability"
@@ -411,7 +411,7 @@
       "x": 126,
       "y": 33,
       "display_name": "Japan",
-      "source": "maps/layers/Stability/Japan.png",
+      "source": "maps/layers/Stability/Japan.webp",
       "w": 988,
       "h": 1820,
       "category": "Stability"
@@ -420,7 +420,7 @@
       "x": 0,
       "y": 20,
       "display_name": "Japan -> Meiji",
-      "source": "maps/layers/Stability/Periods/Japan_Meiji.png",
+      "source": "maps/layers/Stability/Periods/Japan_Meiji.webp",
       "w": 7800,
       "h": 2496,
       "category": "Stability"
@@ -429,7 +429,7 @@
       "x": 115,
       "y": 24,
       "display_name": "Java",
-      "source": "maps/layers/Stability/Java.png",
+      "source": "maps/layers/Stability/Java.webp",
       "w": 1092,
       "h": 520,
       "category": "Stability"
@@ -438,7 +438,7 @@
       "x": 116,
       "y": 30,
       "display_name": "Khmer",
-      "source": "maps/layers/Stability/Khmer.png",
+      "source": "maps/layers/Stability/Khmer.webp",
       "w": 468,
       "h": 728,
       "category": "Stability"
@@ -447,7 +447,7 @@
       "x": 69,
       "y": 21,
       "display_name": "Congo",
-      "source": "maps/layers/Stability/Congo.png",
+      "source": "maps/layers/Stability/Congo.webp",
       "w": 520,
       "h": 572,
       "category": "Stability"
@@ -456,7 +456,7 @@
       "x": 127,
       "y": 52,
       "display_name": "Korea",
-      "source": "maps/layers/Stability/Korea.png",
+      "source": "maps/layers/Stability/Korea.webp",
       "w": 364,
       "h": 520,
       "category": "Stability"
@@ -465,7 +465,7 @@
       "x": 97,
       "y": 43,
       "display_name": "Kushans",
-      "source": "maps/layers/Stability/Kushans.png",
+      "source": "maps/layers/Stability/Kushans.webp",
       "w": 780,
       "h": 832,
       "category": "Stability"
@@ -474,7 +474,7 @@
       "x": 115,
       "y": 24,
       "display_name": "Malaya",
-      "source": "maps/layers/Stability/Malaya.png",
+      "source": "maps/layers/Stability/Malaya.webp",
       "w": 728,
       "h": 572,
       "category": "Stability"
@@ -483,7 +483,7 @@
       "x": 54,
       "y": 34,
       "display_name": "Mali",
-      "source": "maps/layers/Stability/Mali.png",
+      "source": "maps/layers/Stability/Mali.webp",
       "w": 572,
       "h": 312,
       "category": "Stability"
@@ -492,7 +492,7 @@
       "x": 104,
       "y": 38,
       "display_name": "Manchuria",
-      "source": "maps/layers/Stability/Manchuria.png",
+      "source": "maps/layers/Stability/Manchuria.webp",
       "w": 1664,
       "h": 1508,
       "category": "Stability"
@@ -501,7 +501,7 @@
       "x": 104,
       "y": 38,
       "display_name": "Manchuria -> Qing",
-      "source": "maps/layers/Stability/Periods/Manchuria_Qing.png",
+      "source": "maps/layers/Stability/Periods/Manchuria_Qing.webp",
       "w": 1664,
       "h": 1508,
       "category": "Stability"
@@ -510,7 +510,7 @@
       "x": 20,
       "y": 39,
       "display_name": "Maya",
-      "source": "maps/layers/Stability/Maya.png",
+      "source": "maps/layers/Stability/Maya.webp",
       "w": 260,
       "h": 312,
       "category": "Stability"
@@ -519,7 +519,7 @@
       "x": 7,
       "y": 37,
       "display_name": "Mexico",
-      "source": "maps/layers/Stability/Mexico.png",
+      "source": "maps/layers/Stability/Mexico.webp",
       "w": 988,
       "h": 1092,
       "category": "Stability"
@@ -528,7 +528,7 @@
       "x": 66,
       "y": 35,
       "display_name": "Misr",
-      "source": "maps/layers/Stability/Misr.png",
+      "source": "maps/layers/Stability/Misr.webp",
       "w": 1196,
       "h": 884,
       "category": "Stability"
@@ -537,7 +537,7 @@
       "x": 71,
       "y": 24,
       "display_name": "Mongolia",
-      "source": "maps/layers/Stability/Mongolia.png",
+      "source": "maps/layers/Stability/Mongolia.webp",
       "w": 3640,
       "h": 2444,
       "category": "Stability"
@@ -546,7 +546,7 @@
       "x": 71,
       "y": 24,
       "display_name": "Mongolia -> Yuan",
-      "source": "maps/layers/Stability/Periods/Mongolia_Yuan.png",
+      "source": "maps/layers/Stability/Periods/Mongolia_Yuan.webp",
       "w": 3640,
       "h": 2444,
       "category": "Stability"
@@ -555,7 +555,7 @@
       "x": 54,
       "y": 35,
       "display_name": "Moors",
-      "source": "maps/layers/Stability/Moors.png",
+      "source": "maps/layers/Stability/Moors.webp",
       "w": 884,
       "h": 1040,
       "category": "Stability"
@@ -564,7 +564,7 @@
       "x": 54,
       "y": 35,
       "display_name": "Moors -> Morocco",
-      "source": "maps/layers/Stability/Periods/Moors_Morocco.png",
+      "source": "maps/layers/Stability/Periods/Moors_Morocco.webp",
       "w": 884,
       "h": 1040,
       "category": "Stability"
@@ -573,7 +573,7 @@
       "x": 98,
       "y": 35,
       "display_name": "Mughals",
-      "source": "maps/layers/Stability/Mughals.png",
+      "source": "maps/layers/Stability/Mughals.webp",
       "w": 884,
       "h": 884,
       "category": "Stability"
@@ -582,7 +582,7 @@
       "x": 98,
       "y": 35,
       "display_name": "Mughals -> Pakistan",
-      "source": "maps/layers/Stability/Periods/Mughals_Pakistan.png",
+      "source": "maps/layers/Stability/Periods/Mughals_Pakistan.webp",
       "w": 884,
       "h": 884,
       "category": "Stability"
@@ -591,7 +591,7 @@
       "x": 28,
       "y": 11,
       "display_name": "Netherlands",
-      "source": "maps/layers/Stability/Netherlands.png",
+      "source": "maps/layers/Stability/Netherlands.webp",
       "w": 5772,
       "h": 2860,
       "category": "Stability"
@@ -600,7 +600,7 @@
       "x": 35,
       "y": 31,
       "display_name": "Norse",
-      "source": "maps/layers/Stability/Norse.png",
+      "source": "maps/layers/Stability/Norse.webp",
       "w": 4056,
       "h": 2548,
       "category": "Stability"
@@ -609,7 +609,7 @@
       "x": 77,
       "y": 36,
       "display_name": "Nubia",
-      "source": "maps/layers/Stability/Nubia.png",
+      "source": "maps/layers/Stability/Nubia.webp",
       "w": 520,
       "h": 780,
       "category": "Stability"
@@ -618,7 +618,7 @@
       "x": 77,
       "y": 33,
       "display_name": "Nubia -> Makuria",
-      "source": "maps/layers/Stability/Periods/Nubia_Makuria.png",
+      "source": "maps/layers/Stability/Periods/Nubia_Makuria.webp",
       "w": 416,
       "h": 416,
       "category": "Stability"
@@ -627,7 +627,7 @@
       "x": 55,
       "y": 34,
       "display_name": "Turkey",
-      "source": "maps/layers/Stability/Turkey.png",
+      "source": "maps/layers/Stability/Turkey.webp",
       "w": 2184,
       "h": 1404,
       "category": "Stability"
@@ -636,7 +636,7 @@
       "x": 55,
       "y": 34,
       "display_name": "Turkey -> Ottoman Constantinople",
-      "source": "maps/layers/Stability/Periods/Turkey_Ottoman_Constantinople.png",
+      "source": "maps/layers/Stability/Periods/Turkey_Ottoman_Constantinople.webp",
       "w": 2184,
       "h": 1404,
       "category": "Stability"
@@ -645,7 +645,7 @@
       "x": 73,
       "y": 35,
       "display_name": "Persia",
-      "source": "maps/layers/Stability/Persia.png",
+      "source": "maps/layers/Stability/Persia.webp",
       "w": 1612,
       "h": 1300,
       "category": "Stability"
@@ -654,7 +654,7 @@
       "x": 37,
       "y": 35,
       "display_name": "Poland",
-      "source": "maps/layers/Stability/Poland.png",
+      "source": "maps/layers/Stability/Poland.webp",
       "w": 2600,
       "h": 1872,
       "category": "Stability"
@@ -663,7 +663,7 @@
       "x": 0,
       "y": 4,
       "display_name": "Polynesia",
-      "source": "maps/layers/Stability/Polynesia.png",
+      "source": "maps/layers/Stability/Polynesia.webp",
       "w": 7800,
       "h": 2080,
       "category": "Stability"
@@ -672,7 +672,7 @@
       "x": 30,
       "y": 14,
       "display_name": "Portugal",
-      "source": "maps/layers/Stability/Portugal.png",
+      "source": "maps/layers/Stability/Portugal.webp",
       "w": 5408,
       "h": 2704,
       "category": "Stability"
@@ -681,7 +681,7 @@
       "x": 54,
       "y": 37,
       "display_name": "Rome",
-      "source": "maps/layers/Stability/Rome.png",
+      "source": "maps/layers/Stability/Rome.webp",
       "w": 1976,
       "h": 1664,
       "category": "Stability"
@@ -690,7 +690,7 @@
       "x": 77,
       "y": 56,
       "display_name": "Ruthenia",
-      "source": "maps/layers/Stability/Ruthenia.png",
+      "source": "maps/layers/Stability/Ruthenia.webp",
       "w": 832,
       "h": 1040,
       "category": "Stability"
@@ -699,7 +699,7 @@
       "x": 0,
       "y": 52,
       "display_name": "Russia",
-      "source": "maps/layers/Stability/Russia.png",
+      "source": "maps/layers/Stability/Russia.webp",
       "w": 7800,
       "h": 1456,
       "category": "Stability"
@@ -708,7 +708,7 @@
       "x": 83,
       "y": 35,
       "display_name": "Saudis",
-      "source": "maps/layers/Stability/Saudis.png",
+      "source": "maps/layers/Stability/Saudis.webp",
       "w": 624,
       "h": 728,
       "category": "Stability"
@@ -717,7 +717,7 @@
       "x": 7,
       "y": 3,
       "display_name": "Spain",
-      "source": "maps/layers/Stability/Spain.png",
+      "source": "maps/layers/Stability/Spain.webp",
       "w": 7384,
       "h": 3276,
       "category": "Stability"
@@ -726,7 +726,7 @@
       "x": 7,
       "y": 3,
       "display_name": "Spain -> Spain",
-      "source": "maps/layers/Stability/Periods/Spain_Spain.png",
+      "source": "maps/layers/Stability/Periods/Spain_Spain.webp",
       "w": 7384,
       "h": 3276,
       "category": "Stability"
@@ -735,7 +735,7 @@
       "x": 81,
       "y": 15,
       "display_name": "Swahili",
-      "source": "maps/layers/Stability/Swahili.png",
+      "source": "maps/layers/Stability/Swahili.webp",
       "w": 520,
       "h": 780,
       "category": "Stability"
@@ -744,7 +744,7 @@
       "x": 29,
       "y": 31,
       "display_name": "Sweden",
-      "source": "maps/layers/Stability/Sweden.png",
+      "source": "maps/layers/Stability/Sweden.webp",
       "w": 4108,
       "h": 2444,
       "category": "Stability"
@@ -753,7 +753,7 @@
       "x": 118,
       "y": 32,
       "display_name": "Thailand",
-      "source": "maps/layers/Stability/Thailand.png",
+      "source": "maps/layers/Stability/Thailand.webp",
       "w": 312,
       "h": 572,
       "category": "Stability"
@@ -762,7 +762,7 @@
       "x": 102,
       "y": 42,
       "display_name": "Tibet",
-      "source": "maps/layers/Stability/Tibet.png",
+      "source": "maps/layers/Stability/Tibet.webp",
       "w": 1144,
       "h": 884,
       "category": "Stability"
@@ -771,7 +771,7 @@
       "x": 15,
       "y": 39,
       "display_name": "Toltecs",
-      "source": "maps/layers/Stability/Toltecs.png",
+      "source": "maps/layers/Stability/Toltecs.webp",
       "w": 468,
       "h": 364,
       "category": "Stability"
@@ -780,7 +780,7 @@
       "x": 77,
       "y": 39,
       "display_name": "Turkestan",
-      "source": "maps/layers/Stability/Turkestan.png",
+      "source": "maps/layers/Stability/Turkestan.webp",
       "w": 2340,
       "h": 1300,
       "category": "Stability"
@@ -789,7 +789,7 @@
       "x": 77,
       "y": 39,
       "display_name": "Turkestan -> Seljuks",
-      "source": "maps/layers/Stability/Periods/Turkestan_Seljuks.png",
+      "source": "maps/layers/Stability/Periods/Turkestan_Seljuks.webp",
       "w": 2340,
       "h": 1300,
       "category": "Stability"
@@ -798,7 +798,7 @@
       "x": 120,
       "y": 34,
       "display_name": "Vietnam",
-      "source": "maps/layers/Stability/Vietnam.png",
+      "source": "maps/layers/Stability/Vietnam.webp",
       "w": 312,
       "h": 572,
       "category": "Stability"
@@ -809,7 +809,7 @@
       "x": 23,
       "y": 50,
       "display_name": "America",
-      "source": "maps/layers/Spawns/America.png",
+      "source": "maps/layers/Spawns/America.webp",
       "w": 572,
       "h": 572,
       "category": "Birth"
@@ -818,7 +818,7 @@
       "x": 76,
       "y": 35,
       "display_name": "Arabia",
-      "source": "maps/layers/Spawns/Arabia.png",
+      "source": "maps/layers/Spawns/Arabia.webp",
       "w": 1092,
       "h": 832,
       "category": "Birth"
@@ -827,7 +827,7 @@
       "x": 84,
       "y": 38,
       "display_name": "Arabia -> Saudi",
-      "source": "maps/layers/Spawns/Periods/Arabia_Saudi.png",
+      "source": "maps/layers/Spawns/Periods/Arabia_Saudi.webp",
       "w": 364,
       "h": 312,
       "category": "Birth"
@@ -836,7 +836,7 @@
       "x": 34,
       "y": 9,
       "display_name": "Argentina",
-      "source": "maps/layers/Spawns/Argentina.png",
+      "source": "maps/layers/Spawns/Argentina.webp",
       "w": 312,
       "h": 468,
       "category": "Birth"
@@ -845,7 +845,7 @@
       "x": 32,
       "y": 9,
       "display_name": "Argentina extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Argentina.png",
+      "source": "maps/layers/Spawns/Extended/Argentina.webp",
       "w": 416,
       "h": 468,
       "category": "Birth"
@@ -854,7 +854,7 @@
       "x": 88,
       "y": 49,
       "display_name": "Assyria",
-      "source": "maps/layers/Spawns/Assyria.png",
+      "source": "maps/layers/Spawns/Assyria.webp",
       "w": 156,
       "h": 156,
       "category": "Birth"
@@ -863,7 +863,7 @@
       "x": 126,
       "y": 6,
       "display_name": "Australia",
-      "source": "maps/layers/Spawns/Australia.png",
+      "source": "maps/layers/Spawns/Australia.webp",
       "w": 936,
       "h": 988,
       "category": "Birth"
@@ -872,7 +872,7 @@
       "x": 16,
       "y": 41,
       "display_name": "Aztecs",
-      "source": "maps/layers/Spawns/Aztecs.png",
+      "source": "maps/layers/Spawns/Aztecs.webp",
       "w": 208,
       "h": 208,
       "category": "Birth"
@@ -881,7 +881,7 @@
       "x": 88,
       "y": 45,
       "display_name": "Babylonia",
-      "source": "maps/layers/Spawns/Babylonia.png",
+      "source": "maps/layers/Spawns/Babylonia.webp",
       "w": 156,
       "h": 208,
       "category": "Birth"
@@ -890,7 +890,7 @@
       "x": 61,
       "y": 61,
       "display_name": "Belgium",
-      "source": "maps/layers/Spawns/Belgium.png",
+      "source": "maps/layers/Spawns/Belgium.webp",
       "w": 156,
       "h": 156,
       "category": "Birth"
@@ -899,7 +899,7 @@
       "x": 40,
       "y": 16,
       "display_name": "Brazil",
-      "source": "maps/layers/Spawns/Brazil.png",
+      "source": "maps/layers/Spawns/Brazil.webp",
       "w": 520,
       "h": 832,
       "category": "Birth"
@@ -908,7 +908,7 @@
       "x": 115,
       "y": 38,
       "display_name": "Burma",
-      "source": "maps/layers/Spawns/Burma.png",
+      "source": "maps/layers/Spawns/Burma.webp",
       "w": 260,
       "h": 364,
       "category": "Birth"
@@ -917,7 +917,7 @@
       "x": 72,
       "y": 48,
       "display_name": "Byzantium",
-      "source": "maps/layers/Spawns/Byzantium.png",
+      "source": "maps/layers/Spawns/Byzantium.webp",
       "w": 832,
       "h": 520,
       "category": "Birth"
@@ -926,7 +926,7 @@
       "x": 77,
       "y": 54,
       "display_name": "Byzantium -> Byzantine Constantinople",
-      "source": "maps/layers/Spawns/Periods/Byzantium_Byzantine_Constantinople.png",
+      "source": "maps/layers/Spawns/Periods/Byzantium_Byzantine_Constantinople.webp",
       "w": 208,
       "h": 104,
       "category": "Birth"
@@ -935,7 +935,7 @@
       "x": 76,
       "y": 51,
       "display_name": "Byzantium respawn",
-      "source": "maps/layers/Spawns/Respawns/Byzantium.png",
+      "source": "maps/layers/Spawns/Respawns/Byzantium.webp",
       "w": 624,
       "h": 260,
       "category": "Birth"
@@ -944,7 +944,7 @@
       "x": 6,
       "y": 59,
       "display_name": "Canada",
-      "source": "maps/layers/Spawns/Canada.png",
+      "source": "maps/layers/Spawns/Canada.webp",
       "w": 1664,
       "h": 520,
       "category": "Birth"
@@ -953,7 +953,7 @@
       "x": 84,
       "y": 47,
       "display_name": "Phoenicia",
-      "source": "maps/layers/Spawns/Phoenicia.png",
+      "source": "maps/layers/Spawns/Phoenicia.webp",
       "w": 104,
       "h": 156,
       "category": "Birth"
@@ -962,7 +962,7 @@
       "x": 64,
       "y": 45,
       "display_name": "Phoenicia -> Carthage",
-      "source": "maps/layers/Spawns/Periods/Phoenicia_Carthage.png",
+      "source": "maps/layers/Spawns/Periods/Phoenicia_Carthage.webp",
       "w": 364,
       "h": 208,
       "category": "Birth"
@@ -971,7 +971,7 @@
       "x": 59,
       "y": 56,
       "display_name": "Celts",
-      "source": "maps/layers/Spawns/Celts.png",
+      "source": "maps/layers/Spawns/Celts.webp",
       "w": 468,
       "h": 312,
       "category": "Birth"
@@ -980,7 +980,7 @@
       "x": 52,
       "y": 64,
       "display_name": "Celts -> Insular Celts",
-      "source": "maps/layers/Spawns/Periods/Celts_Insular_Celts.png",
+      "source": "maps/layers/Spawns/Periods/Celts_Insular_Celts.webp",
       "w": 260,
       "h": 208,
       "category": "Birth"
@@ -989,7 +989,7 @@
       "x": 52,
       "y": 64,
       "display_name": "Celts respawn",
-      "source": "maps/layers/Spawns/Respawns/Celts.png",
+      "source": "maps/layers/Spawns/Respawns/Celts.webp",
       "w": 260,
       "h": 208,
       "category": "Birth"
@@ -998,7 +998,7 @@
       "x": 120,
       "y": 51,
       "display_name": "China",
-      "source": "maps/layers/Spawns/China.png",
+      "source": "maps/layers/Spawns/China.webp",
       "w": 364,
       "h": 312,
       "category": "Birth"
@@ -1007,7 +1007,7 @@
       "x": 120,
       "y": 49,
       "display_name": "China -> Ming",
-      "source": "maps/layers/Spawns/Periods/China_Ming.png",
+      "source": "maps/layers/Spawns/Periods/China_Ming.webp",
       "w": 520,
       "h": 416,
       "category": "Birth"
@@ -1016,7 +1016,7 @@
       "x": 117,
       "y": 43,
       "display_name": "China respawn",
-      "source": "maps/layers/Spawns/Respawns/China.png",
+      "source": "maps/layers/Spawns/Respawns/China.webp",
       "w": 676,
       "h": 832,
       "category": "Birth"
@@ -1025,7 +1025,7 @@
       "x": 26,
       "y": 31,
       "display_name": "Colombia",
-      "source": "maps/layers/Spawns/Colombia.png",
+      "source": "maps/layers/Spawns/Colombia.webp",
       "w": 572,
       "h": 416,
       "category": "Birth"
@@ -1034,7 +1034,7 @@
       "x": 105,
       "y": 31,
       "display_name": "Dravidia",
-      "source": "maps/layers/Spawns/Dravidia.png",
+      "source": "maps/layers/Spawns/Dravidia.webp",
       "w": 208,
       "h": 260,
       "category": "Birth"
@@ -1043,7 +1043,7 @@
       "x": 78,
       "y": 41,
       "display_name": "Egypt",
-      "source": "maps/layers/Spawns/Egypt.png",
+      "source": "maps/layers/Spawns/Egypt.webp",
       "w": 156,
       "h": 208,
       "category": "Birth"
@@ -1052,7 +1052,7 @@
       "x": 76,
       "y": 39,
       "display_name": "Egypt respawn",
-      "source": "maps/layers/Spawns/Respawns/Egypt.png",
+      "source": "maps/layers/Spawns/Respawns/Egypt.webp",
       "w": 416,
       "h": 364,
       "category": "Birth"
@@ -1061,7 +1061,7 @@
       "x": 56,
       "y": 63,
       "display_name": "England",
-      "source": "maps/layers/Spawns/England.png",
+      "source": "maps/layers/Spawns/England.webp",
       "w": 208,
       "h": 260,
       "category": "Birth"
@@ -1070,7 +1070,7 @@
       "x": 56,
       "y": 63,
       "display_name": "England -> United Kingdom",
-      "source": "maps/layers/Spawns/Periods/England_United_Kingdom.png",
+      "source": "maps/layers/Spawns/Periods/England_United_Kingdom.webp",
       "w": 208,
       "h": 416,
       "category": "Birth"
@@ -1079,7 +1079,7 @@
       "x": 53,
       "y": 62,
       "display_name": "England -> Great Britain",
-      "source": "maps/layers/Spawns/Periods/England_Great_Britain.png",
+      "source": "maps/layers/Spawns/Periods/England_Great_Britain.webp",
       "w": 364,
       "h": 468,
       "category": "Birth"
@@ -1088,7 +1088,7 @@
       "x": 55,
       "y": 62,
       "display_name": "England respawn",
-      "source": "maps/layers/Spawns/Respawns/England.png",
+      "source": "maps/layers/Spawns/Respawns/England.webp",
       "w": 260,
       "h": 520,
       "category": "Birth"
@@ -1097,7 +1097,7 @@
       "x": 82,
       "y": 33,
       "display_name": "Ethiopia",
-      "source": "maps/layers/Spawns/Ethiopia.png",
+      "source": "maps/layers/Spawns/Ethiopia.webp",
       "w": 208,
       "h": 208,
       "category": "Birth"
@@ -1106,7 +1106,7 @@
       "x": 59,
       "y": 55,
       "display_name": "France",
-      "source": "maps/layers/Spawns/France.png",
+      "source": "maps/layers/Spawns/France.webp",
       "w": 312,
       "h": 468,
       "category": "Birth"
@@ -1115,7 +1115,7 @@
       "x": 59,
       "y": 56,
       "display_name": "France -> National France",
-      "source": "maps/layers/Spawns/Periods/France_National_France.png",
+      "source": "maps/layers/Spawns/Periods/France_National_France.webp",
       "w": 260,
       "h": 364,
       "category": "Birth"
@@ -1124,7 +1124,7 @@
       "x": 56,
       "y": 55,
       "display_name": "France respawn",
-      "source": "maps/layers/Spawns/Respawns/France.png",
+      "source": "maps/layers/Spawns/Respawns/France.webp",
       "w": 468,
       "h": 416,
       "category": "Birth"
@@ -1133,7 +1133,7 @@
       "x": 64,
       "y": 61,
       "display_name": "Germany",
-      "source": "maps/layers/Spawns/Germany.png",
+      "source": "maps/layers/Spawns/Germany.webp",
       "w": 676,
       "h": 312,
       "category": "Birth"
@@ -1142,7 +1142,7 @@
       "x": 65,
       "y": 61,
       "display_name": "Germany -> Modern Germany",
-      "source": "maps/layers/Spawns/Periods/Germany_Modern_Germany.png",
+      "source": "maps/layers/Spawns/Periods/Germany_Modern_Germany.webp",
       "w": 260,
       "h": 260,
       "category": "Birth"
@@ -1151,7 +1151,7 @@
       "x": 64,
       "y": 59,
       "display_name": "Germany extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Germany.png",
+      "source": "maps/layers/Spawns/Extended/Germany.webp",
       "w": 676,
       "h": 416,
       "category": "Birth"
@@ -1160,7 +1160,7 @@
       "x": 64,
       "y": 59,
       "display_name": "Germany respawn",
-      "source": "maps/layers/Spawns/Respawns/Germany.png",
+      "source": "maps/layers/Spawns/Respawns/Germany.webp",
       "w": 364,
       "h": 416,
       "category": "Birth"
@@ -1169,7 +1169,7 @@
       "x": 74,
       "y": 49,
       "display_name": "Greece",
-      "source": "maps/layers/Spawns/Greece.png",
+      "source": "maps/layers/Spawns/Greece.webp",
       "w": 364,
       "h": 260,
       "category": "Birth"
@@ -1178,7 +1178,7 @@
       "x": 74,
       "y": 49,
       "display_name": "Greece -> Modern Greece",
-      "source": "maps/layers/Spawns/Periods/Greece_Modern_Greece.png",
+      "source": "maps/layers/Spawns/Periods/Greece_Modern_Greece.webp",
       "w": 156,
       "h": 312,
       "category": "Birth"
@@ -1187,7 +1187,7 @@
       "x": 101,
       "y": 46,
       "display_name": "Harappa",
-      "source": "maps/layers/Spawns/Harappa.png",
+      "source": "maps/layers/Spawns/Harappa.webp",
       "w": 104,
       "h": 104,
       "category": "Birth"
@@ -1196,7 +1196,7 @@
       "x": 82,
       "y": 52,
       "display_name": "Hittites",
-      "source": "maps/layers/Spawns/Hittites.png",
+      "source": "maps/layers/Spawns/Hittites.webp",
       "w": 208,
       "h": 156,
       "category": "Birth"
@@ -1205,7 +1205,7 @@
       "x": 61,
       "y": 58,
       "display_name": "Holy Rome",
-      "source": "maps/layers/Spawns/Holy_Rome.png",
+      "source": "maps/layers/Spawns/Holy_Rome.webp",
       "w": 624,
       "h": 416,
       "category": "Birth"
@@ -1214,7 +1214,7 @@
       "x": 69,
       "y": 58,
       "display_name": "Holy Rome -> Austria",
-      "source": "maps/layers/Spawns/Periods/Holy_Rome_Austria.png",
+      "source": "maps/layers/Spawns/Periods/Holy_Rome_Austria.webp",
       "w": 208,
       "h": 208,
       "category": "Birth"
@@ -1223,7 +1223,7 @@
       "x": 28,
       "y": 22,
       "display_name": "Inca",
-      "source": "maps/layers/Spawns/Inca.png",
+      "source": "maps/layers/Spawns/Inca.webp",
       "w": 260,
       "h": 156,
       "category": "Birth"
@@ -1232,7 +1232,7 @@
       "x": 28,
       "y": 20,
       "display_name": "Inca -> Late Inca",
-      "source": "maps/layers/Spawns/Periods/Inca_Late_Inca.png",
+      "source": "maps/layers/Spawns/Periods/Inca_Late_Inca.webp",
       "w": 364,
       "h": 312,
       "category": "Birth"
@@ -1241,7 +1241,7 @@
       "x": 29,
       "y": 20,
       "display_name": "Inca extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Inca.png",
+      "source": "maps/layers/Spawns/Extended/Inca.webp",
       "w": 364,
       "h": 312,
       "category": "Birth"
@@ -1250,7 +1250,7 @@
       "x": 27,
       "y": 21,
       "display_name": "Inca respawn",
-      "source": "maps/layers/Spawns/Respawns/Inca.png",
+      "source": "maps/layers/Spawns/Respawns/Inca.webp",
       "w": 312,
       "h": 416,
       "category": "Birth"
@@ -1259,7 +1259,7 @@
       "x": 105,
       "y": 43,
       "display_name": "India",
-      "source": "maps/layers/Spawns/India.png",
+      "source": "maps/layers/Spawns/India.webp",
       "w": 416,
       "h": 208,
       "category": "Birth"
@@ -1268,7 +1268,7 @@
       "x": 102,
       "y": 38,
       "display_name": "India -> Maratha",
-      "source": "maps/layers/Spawns/Periods/India_Maratha.png",
+      "source": "maps/layers/Spawns/Periods/India_Maratha.webp",
       "w": 312,
       "h": 520,
       "category": "Birth"
@@ -1277,7 +1277,7 @@
       "x": 103,
       "y": 37,
       "display_name": "India respawn",
-      "source": "maps/layers/Spawns/Respawns/India.png",
+      "source": "maps/layers/Spawns/Respawns/India.webp",
       "w": 416,
       "h": 520,
       "category": "Birth"
@@ -1286,7 +1286,7 @@
       "x": 90,
       "y": 43,
       "display_name": "Iran",
-      "source": "maps/layers/Spawns/Iran.png",
+      "source": "maps/layers/Spawns/Iran.webp",
       "w": 468,
       "h": 676,
       "category": "Birth"
@@ -1295,7 +1295,7 @@
       "x": 65,
       "y": 54,
       "display_name": "Italy",
-      "source": "maps/layers/Spawns/Italy.png",
+      "source": "maps/layers/Spawns/Italy.webp",
       "w": 312,
       "h": 208,
       "category": "Birth"
@@ -1304,7 +1304,7 @@
       "x": 65,
       "y": 53,
       "display_name": "Italy -> Modern Italy",
-      "source": "maps/layers/Spawns/Periods/Italy_Modern_Italy.png",
+      "source": "maps/layers/Spawns/Periods/Italy_Modern_Italy.webp",
       "w": 312,
       "h": 260,
       "category": "Birth"
@@ -1313,7 +1313,7 @@
       "x": 134,
       "y": 49,
       "display_name": "Japan",
-      "source": "maps/layers/Spawns/Japan.png",
+      "source": "maps/layers/Spawns/Japan.webp",
       "w": 364,
       "h": 416,
       "category": "Birth"
@@ -1322,7 +1322,7 @@
       "x": 134,
       "y": 49,
       "display_name": "Japan -> Meiji",
-      "source": "maps/layers/Spawns/Periods/Japan_Meiji.png",
+      "source": "maps/layers/Spawns/Periods/Japan_Meiji.webp",
       "w": 364,
       "h": 572,
       "category": "Birth"
@@ -1331,7 +1331,7 @@
       "x": 125,
       "y": 24,
       "display_name": "Java",
-      "source": "maps/layers/Spawns/Java.png",
+      "source": "maps/layers/Spawns/Java.webp",
       "w": 208,
       "h": 104,
       "category": "Birth"
@@ -1340,7 +1340,7 @@
       "x": 122,
       "y": 24,
       "display_name": "Java extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Java.png",
+      "source": "maps/layers/Spawns/Extended/Java.webp",
       "w": 364,
       "h": 104,
       "category": "Birth"
@@ -1349,7 +1349,7 @@
       "x": 120,
       "y": 36,
       "display_name": "Khmer",
-      "source": "maps/layers/Spawns/Khmer.png",
+      "source": "maps/layers/Spawns/Khmer.webp",
       "w": 156,
       "h": 156,
       "category": "Birth"
@@ -1358,7 +1358,7 @@
       "x": 71,
       "y": 24,
       "display_name": "Congo",
-      "source": "maps/layers/Spawns/Congo.png",
+      "source": "maps/layers/Spawns/Congo.webp",
       "w": 208,
       "h": 208,
       "category": "Birth"
@@ -1367,7 +1367,7 @@
       "x": 130,
       "y": 52,
       "display_name": "Korea",
-      "source": "maps/layers/Spawns/Korea.png",
+      "source": "maps/layers/Spawns/Korea.webp",
       "w": 208,
       "h": 364,
       "category": "Birth"
@@ -1376,7 +1376,7 @@
       "x": 96,
       "y": 47,
       "display_name": "Kushans",
-      "source": "maps/layers/Spawns/Kushans.png",
+      "source": "maps/layers/Spawns/Kushans.webp",
       "w": 416,
       "h": 468,
       "category": "Birth"
@@ -1385,7 +1385,7 @@
       "x": 115,
       "y": 26,
       "display_name": "Malaya",
-      "source": "maps/layers/Spawns/Malaya.png",
+      "source": "maps/layers/Spawns/Malaya.webp",
       "w": 364,
       "h": 416,
       "category": "Birth"
@@ -1394,7 +1394,7 @@
       "x": 57,
       "y": 34,
       "display_name": "Mali",
-      "source": "maps/layers/Spawns/Mali.png",
+      "source": "maps/layers/Spawns/Mali.webp",
       "w": 260,
       "h": 260,
       "category": "Birth"
@@ -1403,7 +1403,7 @@
       "x": 126,
       "y": 57,
       "display_name": "Manchuria",
-      "source": "maps/layers/Spawns/Manchuria.png",
+      "source": "maps/layers/Spawns/Manchuria.webp",
       "w": 520,
       "h": 520,
       "category": "Birth"
@@ -1412,7 +1412,7 @@
       "x": 123,
       "y": 52,
       "display_name": "Manchuria -> Qing",
-      "source": "maps/layers/Spawns/Periods/Manchuria_Qing.png",
+      "source": "maps/layers/Spawns/Periods/Manchuria_Qing.webp",
       "w": 364,
       "h": 416,
       "category": "Birth"
@@ -1421,7 +1421,7 @@
       "x": 115,
       "y": 55,
       "display_name": "Manchuria extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Manchuria.png",
+      "source": "maps/layers/Spawns/Extended/Manchuria.webp",
       "w": 1092,
       "h": 624,
       "category": "Birth"
@@ -1430,7 +1430,7 @@
       "x": 21,
       "y": 41,
       "display_name": "Maya",
-      "source": "maps/layers/Spawns/Maya.png",
+      "source": "maps/layers/Spawns/Maya.webp",
       "w": 156,
       "h": 208,
       "category": "Birth"
@@ -1439,7 +1439,7 @@
       "x": 9,
       "y": 41,
       "display_name": "Mexico",
-      "source": "maps/layers/Spawns/Mexico.png",
+      "source": "maps/layers/Spawns/Mexico.webp",
       "w": 780,
       "h": 468,
       "category": "Birth"
@@ -1448,7 +1448,7 @@
       "x": 66,
       "y": 40,
       "display_name": "Misr",
-      "source": "maps/layers/Spawns/Misr.png",
+      "source": "maps/layers/Spawns/Misr.webp",
       "w": 832,
       "h": 468,
       "category": "Birth"
@@ -1457,7 +1457,7 @@
       "x": 76,
       "y": 40,
       "display_name": "Misr respawn",
-      "source": "maps/layers/Spawns/Respawns/Misr.png",
+      "source": "maps/layers/Spawns/Respawns/Misr.webp",
       "w": 312,
       "h": 312,
       "category": "Birth"
@@ -1466,7 +1466,7 @@
       "x": 111,
       "y": 55,
       "display_name": "Mongolia",
-      "source": "maps/layers/Spawns/Mongolia.png",
+      "source": "maps/layers/Spawns/Mongolia.webp",
       "w": 988,
       "h": 624,
       "category": "Birth"
@@ -1475,7 +1475,7 @@
       "x": 117,
       "y": 56,
       "display_name": "Mongolia -> Yuan",
-      "source": "maps/layers/Spawns/Periods/Mongolia_Yuan.png",
+      "source": "maps/layers/Spawns/Periods/Mongolia_Yuan.webp",
       "w": 572,
       "h": 364,
       "category": "Birth"
@@ -1484,7 +1484,7 @@
       "x": 91,
       "y": 52,
       "display_name": "Mongolia extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Mongolia.png",
+      "source": "maps/layers/Spawns/Extended/Mongolia.webp",
       "w": 2184,
       "h": 780,
       "category": "Birth"
@@ -1493,7 +1493,7 @@
       "x": 109,
       "y": 57,
       "display_name": "Mongolia respawn",
-      "source": "maps/layers/Spawns/Respawns/Mongolia.png",
+      "source": "maps/layers/Spawns/Respawns/Mongolia.webp",
       "w": 936,
       "h": 520,
       "category": "Birth"
@@ -1502,7 +1502,7 @@
       "x": 54,
       "y": 42,
       "display_name": "Moors",
-      "source": "maps/layers/Spawns/Moors.png",
+      "source": "maps/layers/Spawns/Moors.webp",
       "w": 572,
       "h": 520,
       "category": "Birth"
@@ -1511,7 +1511,7 @@
       "x": 56,
       "y": 43,
       "display_name": "Moors -> Morocco",
-      "source": "maps/layers/Spawns/Periods/Moors_Morocco.png",
+      "source": "maps/layers/Spawns/Periods/Moors_Morocco.webp",
       "w": 260,
       "h": 364,
       "category": "Birth"
@@ -1520,7 +1520,7 @@
       "x": 55,
       "y": 41,
       "display_name": "Moors respawn",
-      "source": "maps/layers/Spawns/Respawns/Moors.png",
+      "source": "maps/layers/Spawns/Respawns/Moors.webp",
       "w": 260,
       "h": 312,
       "category": "Birth"
@@ -1529,7 +1529,7 @@
       "x": 99,
       "y": 42,
       "display_name": "Mughals",
-      "source": "maps/layers/Spawns/Mughals.png",
+      "source": "maps/layers/Spawns/Mughals.webp",
       "w": 572,
       "h": 468,
       "category": "Birth"
@@ -1538,7 +1538,7 @@
       "x": 100,
       "y": 46,
       "display_name": "Mughals -> Pakistan",
-      "source": "maps/layers/Spawns/Periods/Mughals_Pakistan.png",
+      "source": "maps/layers/Spawns/Periods/Mughals_Pakistan.webp",
       "w": 312,
       "h": 208,
       "category": "Birth"
@@ -1547,7 +1547,7 @@
       "x": 99,
       "y": 42,
       "display_name": "Mughals respawn",
-      "source": "maps/layers/Spawns/Respawns/Mughals.png",
+      "source": "maps/layers/Spawns/Respawns/Mughals.webp",
       "w": 312,
       "h": 468,
       "category": "Birth"
@@ -1556,7 +1556,7 @@
       "x": 61,
       "y": 62,
       "display_name": "Netherlands",
-      "source": "maps/layers/Spawns/Netherlands.png",
+      "source": "maps/layers/Spawns/Netherlands.webp",
       "w": 208,
       "h": 208,
       "category": "Birth"
@@ -1565,7 +1565,7 @@
       "x": 65,
       "y": 67,
       "display_name": "Norse",
-      "source": "maps/layers/Spawns/Norse.png",
+      "source": "maps/layers/Spawns/Norse.webp",
       "w": 208,
       "h": 468,
       "category": "Birth"
@@ -1574,7 +1574,7 @@
       "x": 80,
       "y": 37,
       "display_name": "Nubia",
-      "source": "maps/layers/Spawns/Nubia.png",
+      "source": "maps/layers/Spawns/Nubia.webp",
       "w": 104,
       "h": 156,
       "category": "Birth"
@@ -1583,7 +1583,7 @@
       "x": 78,
       "y": 37,
       "display_name": "Nubia -> Makuria",
-      "source": "maps/layers/Spawns/Periods/Nubia_Makuria.png",
+      "source": "maps/layers/Spawns/Periods/Nubia_Makuria.webp",
       "w": 208,
       "h": 156,
       "category": "Birth"
@@ -1592,7 +1592,7 @@
       "x": 79,
       "y": 51,
       "display_name": "Turkey",
-      "source": "maps/layers/Spawns/Turkey.png",
+      "source": "maps/layers/Spawns/Turkey.webp",
       "w": 468,
       "h": 260,
       "category": "Birth"
@@ -1601,7 +1601,7 @@
       "x": 77,
       "y": 51,
       "display_name": "Turkey -> Ottoman Constantinople",
-      "source": "maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.png",
+      "source": "maps/layers/Spawns/Periods/Turkey_Ottoman_Constantinople.webp",
       "w": 416,
       "h": 260,
       "category": "Birth"
@@ -1610,7 +1610,7 @@
       "x": 78,
       "y": 51,
       "display_name": "Turkey extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Turkey.png",
+      "source": "maps/layers/Spawns/Extended/Turkey.webp",
       "w": 520,
       "h": 312,
       "category": "Birth"
@@ -1619,7 +1619,7 @@
       "x": 78,
       "y": 51,
       "display_name": "Turkey respawn",
-      "source": "maps/layers/Spawns/Respawns/Turkey.png",
+      "source": "maps/layers/Spawns/Respawns/Turkey.webp",
       "w": 520,
       "h": 260,
       "category": "Birth"
@@ -1628,7 +1628,7 @@
       "x": 91,
       "y": 43,
       "display_name": "Persia",
-      "source": "maps/layers/Spawns/Persia.png",
+      "source": "maps/layers/Spawns/Persia.webp",
       "w": 416,
       "h": 520,
       "category": "Birth"
@@ -1637,7 +1637,7 @@
       "x": 72,
       "y": 61,
       "display_name": "Poland",
-      "source": "maps/layers/Spawns/Poland.png",
+      "source": "maps/layers/Spawns/Poland.webp",
       "w": 260,
       "h": 208,
       "category": "Birth"
@@ -1646,7 +1646,7 @@
       "x": 3,
       "y": 20,
       "display_name": "Polynesia",
-      "source": "maps/layers/Spawns/Polynesia.png",
+      "source": "maps/layers/Spawns/Polynesia.webp",
       "w": 156,
       "h": 208,
       "category": "Birth"
@@ -1655,7 +1655,7 @@
       "x": 54,
       "y": 49,
       "display_name": "Portugal",
-      "source": "maps/layers/Spawns/Portugal.png",
+      "source": "maps/layers/Spawns/Portugal.webp",
       "w": 104,
       "h": 208,
       "category": "Birth"
@@ -1664,7 +1664,7 @@
       "x": 66,
       "y": 50,
       "display_name": "Rome",
-      "source": "maps/layers/Spawns/Rome.png",
+      "source": "maps/layers/Spawns/Rome.webp",
       "w": 364,
       "h": 416,
       "category": "Birth"
@@ -1673,7 +1673,7 @@
       "x": 78,
       "y": 61,
       "display_name": "Ruthenia",
-      "source": "maps/layers/Spawns/Ruthenia.png",
+      "source": "maps/layers/Spawns/Ruthenia.webp",
       "w": 624,
       "h": 520,
       "category": "Birth"
@@ -1682,7 +1682,7 @@
       "x": 83,
       "y": 64,
       "display_name": "Russia",
-      "source": "maps/layers/Spawns/Russia.png",
+      "source": "maps/layers/Spawns/Russia.webp",
       "w": 416,
       "h": 364,
       "category": "Birth"
@@ -1691,7 +1691,7 @@
       "x": 81,
       "y": 56,
       "display_name": "Russia respawn",
-      "source": "maps/layers/Spawns/Respawns/Russia.png",
+      "source": "maps/layers/Spawns/Respawns/Russia.webp",
       "w": 780,
       "h": 1040,
       "category": "Birth"
@@ -1700,7 +1700,7 @@
       "x": 84,
       "y": 38,
       "display_name": "Saudi Arabia",
-      "source": "maps/layers/Spawns/Saudi_Arabia.png",
+      "source": "maps/layers/Spawns/Saudi_Arabia.webp",
       "w": 468,
       "h": 312,
       "category": "Birth"
@@ -1709,7 +1709,7 @@
       "x": 54,
       "y": 51,
       "display_name": "Spain",
-      "source": "maps/layers/Spawns/Spain.png",
+      "source": "maps/layers/Spawns/Spain.webp",
       "w": 312,
       "h": 208,
       "category": "Birth"
@@ -1718,7 +1718,7 @@
       "x": 54,
       "y": 48,
       "display_name": "Spain -> Spain",
-      "source": "maps/layers/Spawns/Periods/Spain_Spain.png",
+      "source": "maps/layers/Spawns/Periods/Spain_Spain.webp",
       "w": 312,
       "h": 364,
       "category": "Birth"
@@ -1727,7 +1727,7 @@
       "x": 54,
       "y": 51,
       "display_name": "Spain extended (AI only)",
-      "source": "maps/layers/Spawns/Extended/Spain.png",
+      "source": "maps/layers/Spawns/Extended/Spain.webp",
       "w": 468,
       "h": 208,
       "category": "Birth"
@@ -1736,7 +1736,7 @@
       "x": 54,
       "y": 48,
       "display_name": "Spain respawn",
-      "source": "maps/layers/Spawns/Respawns/Spain.png",
+      "source": "maps/layers/Spawns/Respawns/Spain.webp",
       "w": 468,
       "h": 364,
       "category": "Birth"
@@ -1745,7 +1745,7 @@
       "x": 83,
       "y": 19,
       "display_name": "Swahili",
-      "source": "maps/layers/Spawns/Swahili.png",
+      "source": "maps/layers/Spawns/Swahili.webp",
       "w": 156,
       "h": 468,
       "category": "Birth"
@@ -1754,7 +1754,7 @@
       "x": 70,
       "y": 69,
       "display_name": "Sweden",
-      "source": "maps/layers/Spawns/Sweden.png",
+      "source": "maps/layers/Spawns/Sweden.webp",
       "w": 312,
       "h": 364,
       "category": "Birth"
@@ -1763,7 +1763,7 @@
       "x": 118,
       "y": 34,
       "display_name": "Thailand",
-      "source": "maps/layers/Spawns/Thailand.png",
+      "source": "maps/layers/Spawns/Thailand.webp",
       "w": 156,
       "h": 364,
       "category": "Birth"
@@ -1772,7 +1772,7 @@
       "x": 105,
       "y": 47,
       "display_name": "Tibet",
-      "source": "maps/layers/Spawns/Tibet.png",
+      "source": "maps/layers/Spawns/Tibet.webp",
       "w": 676,
       "h": 364,
       "category": "Birth"
@@ -1781,7 +1781,7 @@
       "x": 16,
       "y": 42,
       "display_name": "Toltecs",
-      "source": "maps/layers/Spawns/Toltecs.png",
+      "source": "maps/layers/Spawns/Toltecs.webp",
       "w": 156,
       "h": 156,
       "category": "Birth"
@@ -1790,7 +1790,7 @@
       "x": 96,
       "y": 52,
       "display_name": "Turkestan",
-      "source": "maps/layers/Spawns/Turkestan.png",
+      "source": "maps/layers/Spawns/Turkestan.webp",
       "w": 1040,
       "h": 468,
       "category": "Birth"
@@ -1799,7 +1799,7 @@
       "x": 92,
       "y": 48,
       "display_name": "Turkestan -> Seljuks",
-      "source": "maps/layers/Spawns/Periods/Turkestan_Seljuks.png",
+      "source": "maps/layers/Spawns/Periods/Turkestan_Seljuks.webp",
       "w": 676,
       "h": 572,
       "category": "Birth"
@@ -1808,7 +1808,7 @@
       "x": 92,
       "y": 48,
       "display_name": "Turkestan respawn",
-      "source": "maps/layers/Spawns/Respawns/Turkestan.png",
+      "source": "maps/layers/Spawns/Respawns/Turkestan.webp",
       "w": 520,
       "h": 416,
       "category": "Birth"
@@ -1817,7 +1817,7 @@
       "x": 120,
       "y": 41,
       "display_name": "Vietnam",
-      "source": "maps/layers/Spawns/Vietnam.png",
+      "source": "maps/layers/Spawns/Vietnam.webp",
       "w": 156,
       "h": 156,
       "category": "Birth"
@@ -1828,7 +1828,7 @@
       "x": 7,
       "y": 31,
       "display_name": "Judaism",
-      "source": "maps/layers/Religions/Judaism.png",
+      "source": "maps/layers/Religions/Judaism.webp",
       "w": 4732,
       "h": 2132,
       "category": "Religion"
@@ -1837,7 +1837,7 @@
       "x": 0,
       "y": 31,
       "display_name": "Orthodoxy",
-      "source": "maps/layers/Religions/Orthodoxy.png",
+      "source": "maps/layers/Religions/Orthodoxy.webp",
       "w": 7800,
       "h": 2548,
       "category": "Religion"
@@ -1846,7 +1846,7 @@
       "x": 0,
       "y": 3,
       "display_name": "Catholicism",
-      "source": "maps/layers/Religions/Catholicism.png",
+      "source": "maps/layers/Religions/Catholicism.webp",
       "w": 7800,
       "h": 4004,
       "category": "Religion"
@@ -1855,7 +1855,7 @@
       "x": 0,
       "y": 4,
       "display_name": "Protestantism",
-      "source": "maps/layers/Religions/Protestantism.png",
+      "source": "maps/layers/Religions/Protestantism.webp",
       "w": 7800,
       "h": 3952,
       "category": "Religion"
@@ -1864,7 +1864,7 @@
       "x": 48,
       "y": 17,
       "display_name": "Islam",
-      "source": "maps/layers/Religions/Islam.png",
+      "source": "maps/layers/Religions/Islam.webp",
       "w": 5252,
       "h": 3276,
       "category": "Religion"
@@ -1873,7 +1873,7 @@
       "x": 97,
       "y": 24,
       "display_name": "Hinduism",
-      "source": "maps/layers/Religions/Hinduism.png",
+      "source": "maps/layers/Religions/Hinduism.webp",
       "w": 2080,
       "h": 1508,
       "category": "Religion"
@@ -1882,7 +1882,7 @@
       "x": 93,
       "y": 24,
       "display_name": "Buddhism",
-      "source": "maps/layers/Religions/Buddhism.png",
+      "source": "maps/layers/Religions/Buddhism.webp",
       "w": 2496,
       "h": 2236,
       "category": "Religion"
@@ -1891,7 +1891,7 @@
       "x": 105,
       "y": 6,
       "display_name": "Confucianism",
-      "source": "maps/layers/Religions/Confucianism.png",
+      "source": "maps/layers/Religions/Confucianism.webp",
       "w": 2028,
       "h": 3276,
       "category": "Religion"
@@ -1900,7 +1900,7 @@
       "x": 105,
       "y": 40,
       "display_name": "Taoism",
-      "source": "maps/layers/Religions/Taoism.png",
+      "source": "maps/layers/Religions/Taoism.webp",
       "w": 1612,
       "h": 1508,
       "category": "Religion"
@@ -1909,7 +1909,7 @@
       "x": 83,
       "y": 40,
       "display_name": "Zoroastrianism",
-      "source": "maps/layers/Religions/Zoroastrianism.png",
+      "source": "maps/layers/Religions/Zoroastrianism.webp",
       "w": 1196,
       "h": 1040,
       "category": "Religion"
@@ -1920,7 +1920,7 @@
       "x": 0,
       "y": 0,
       "display_name": "Region map",
-      "source": "maps/layers/Geography/region.png",
+      "source": "maps/layers/Geography/region.webp",
       "w": 7800,
       "h": 4160,
       "category": "Geography"
@@ -1929,7 +1929,7 @@
       "x": 0,
       "y": 0,
       "display_name": "Landmass map",
-      "source": "maps/layers/Geography/landmass.png",
+      "source": "maps/layers/Geography/landmass.webp",
       "w": 7800,
       "h": 4160,
       "category": "Geography"
@@ -1938,7 +1938,7 @@
       "x": 0,
       "y": 0,
       "display_name": "Continent map",
-      "source": "maps/layers/Geography/continent.png",
+      "source": "maps/layers/Geography/continent.webp",
       "w": 7800,
       "h": 4160,
       "category": "Geography"
@@ -1949,7 +1949,7 @@
       "x": 65,
       "y": 48,
       "display_name": "Phoenician Italy",
-      "source": "maps/layers/UHV/Phoenician_Italy.png",
+      "source": "maps/layers/UHV/Phoenician_Italy.webp",
       "w": 416,
       "h": 416,
       "category": "UHV"
@@ -1958,7 +1958,7 @@
       "x": 0,
       "y": 40,
       "display_name": "Hawaii for Polynesia",
-      "source": "maps/layers/UHV/Hawaii_for_Polynesia.png",
+      "source": "maps/layers/UHV/Hawaii_for_Polynesia.webp",
       "w": 260,
       "h": 208,
       "category": "UHV"
@@ -1967,7 +1967,7 @@
       "x": 0,
       "y": 6,
       "display_name": "New Zealand east for Polynesia",
-      "source": "maps/layers/UHV/New_Zealand_east_for_Polynesia.png",
+      "source": "maps/layers/UHV/New_Zealand_east_for_Polynesia.webp",
       "w": 156,
       "h": 364,
       "category": "UHV"
@@ -1976,7 +1976,7 @@
       "x": 148,
       "y": 4,
       "display_name": "New Zealand west for Polynesia",
-      "source": "maps/layers/UHV/New_Zealand_west_for_Polynesia.png",
+      "source": "maps/layers/UHV/New_Zealand_west_for_Polynesia.webp",
       "w": 104,
       "h": 208,
       "category": "UHV"
@@ -1985,7 +1985,7 @@
       "x": 13,
       "y": 27,
       "display_name": "Marquesas for Polynesia",
-      "source": "maps/layers/UHV/Marquesas_for_Polynesia.png",
+      "source": "maps/layers/UHV/Marquesas_for_Polynesia.webp",
       "w": 52,
       "h": 52,
       "category": "UHV"
@@ -1994,7 +1994,7 @@
       "x": 20,
       "y": 18,
       "display_name": "Easter Island for Polynesia",
-      "source": "maps/layers/UHV/Easter_Island_for_Polynesia.png",
+      "source": "maps/layers/UHV/Easter_Island_for_Polynesia.webp",
       "w": 52,
       "h": 52,
       "category": "UHV"
@@ -2003,7 +2003,7 @@
       "x": 115,
       "y": 26,
       "display_name": "Srivijaya for Dravidia",
-      "source": "maps/layers/UHV/Srivijaya_for_Dravidia.png",
+      "source": "maps/layers/UHV/Srivijaya_for_Dravidia.webp",
       "w": 364,
       "h": 468,
       "category": "UHV"
@@ -2012,7 +2012,7 @@
       "x": 54,
       "y": 48,
       "display_name": "Andalusia for Byzantine",
-      "source": "maps/layers/UHV/Andalusia_for_Byzantine.png",
+      "source": "maps/layers/UHV/Andalusia_for_Byzantine.webp",
       "w": 364,
       "h": 156,
       "category": "UHV"
@@ -2021,7 +2021,7 @@
       "x": 119,
       "y": 30,
       "display_name": "third Malay goal",
-      "source": "maps/layers/UHV/third_Malay_goal.png",
+      "source": "maps/layers/UHV/third_Malay_goal.webp",
       "w": 104,
       "h": 156,
       "category": "UHV"
@@ -2030,7 +2030,7 @@
       "x": 54,
       "y": 31,
       "display_name": "West Africa for Moors",
-      "source": "maps/layers/UHV/West_Africa_for_Moors.png",
+      "source": "maps/layers/UHV/West_Africa_for_Moors.webp",
       "w": 624,
       "h": 520,
       "category": "UHV"
@@ -2039,7 +2039,7 @@
       "x": 77,
       "y": 38,
       "display_name": "Nile for Misr",
-      "source": "maps/layers/UHV/Nile_for_Misr.png",
+      "source": "maps/layers/UHV/Nile_for_Misr.webp",
       "w": 260,
       "h": 416,
       "category": "UHV"
@@ -2048,7 +2048,7 @@
       "x": 76,
       "y": 31,
       "display_name": "Sudan for Misr",
-      "source": "maps/layers/UHV/Sudan_for_Misr.png",
+      "source": "maps/layers/UHV/Sudan_for_Misr.webp",
       "w": 468,
       "h": 520,
       "category": "UHV"
@@ -2057,7 +2057,7 @@
       "x": 104,
       "y": 53,
       "display_name": "Dzungaria for Manchuria",
-      "source": "maps/layers/UHV/Dzungaria_for_Manchuria.png",
+      "source": "maps/layers/UHV/Dzungaria_for_Manchuria.webp",
       "w": 728,
       "h": 468,
       "category": "UHV"
@@ -2066,7 +2066,7 @@
       "x": 65,
       "y": 67,
       "display_name": "Scandinavia for Germany",
-      "source": "maps/layers/UHV/Scandinavia_for_Germany.png",
+      "source": "maps/layers/UHV/Scandinavia_for_Germany.webp",
       "w": 468,
       "h": 572,
       "category": "UHV"
@@ -2075,7 +2075,7 @@
       "x": 8,
       "y": 62,
       "display_name": "Canada",
-      "source": "maps/layers/UHV/Canada.png",
+      "source": "maps/layers/UHV/Canada.webp",
       "w": 1716,
       "h": 936,
       "category": "UHV"

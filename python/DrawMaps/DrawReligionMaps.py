@@ -42,9 +42,9 @@ def draw_religion_map(iReligion, json_config):
 	
 	w,h = image.size
 	image = image.resize((w * TILE_SIZE, h * TILE_SIZE), resample=Image.Resampling.NEAREST)
-	
-	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{display_name}.png"
+	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{display_name}.webp"
 	image.save(image_path)
+	
 	add_layer_config_entry(json_config, display_name, "Religion", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
 
 def DrawReligionMaps(json_config):

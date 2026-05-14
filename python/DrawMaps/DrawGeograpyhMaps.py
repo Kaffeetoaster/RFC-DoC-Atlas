@@ -130,8 +130,10 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
         for start, end in lines:
             draw.line([start, end], fill=line_color, width=line_strength)
 
-    img_path = config.OUTPUT_PATH / f"maps/layers/Geography/{region_type}.png"
+    img_path = config.OUTPUT_PATH / f"maps/layers/Geography/{region_type}.webp"
     img.save(img_path)
+
+    
     # save img
     # and add entry to layers config
     add_layer_config_entry(

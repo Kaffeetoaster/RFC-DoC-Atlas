@@ -63,7 +63,7 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     img, offset = crop_image_to_content(img)  # Crop to content
     offset = (offset[0] // TILE_SIZE, offset[1] // TILE_SIZE)
 
-    image_path = config.OUTPUT_PATH / folder / f"{filename}.png"
+    image_path = config.OUTPUT_PATH / folder / f"{filename}.webp"
     img.save(image_path)
 
     add_layer_config_entry(config = json_config, 

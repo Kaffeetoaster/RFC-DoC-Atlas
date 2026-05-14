@@ -135,7 +135,7 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	else:
 		filename = civ_name
 	
-	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.png"
+	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.webp"
 	#print(image_path)
 	image.save(image_path)
 	add_layer_config_entry(json_config, display_name, category="Stability", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size, offset=offset)

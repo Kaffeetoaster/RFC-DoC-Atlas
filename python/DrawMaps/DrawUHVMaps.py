@@ -102,7 +102,7 @@ def DrawUHVMaps(json_config):
         offset = (offset[0] // TILE_SIZE, offset[1] // TILE_SIZE)
 
         filename = f"maps/layers/UHV/{display_text.replace(" ", "_")}"
-        image_path = config.OUTPUT_PATH / f"{filename}.png"
+        image_path = config.OUTPUT_PATH / f"{filename}.webp"
         img.save(image_path)
 
         add_layer_config_entry(config = json_config, 
