@@ -1,40 +1,18 @@
 import { initializeAboutPage, loadAboutInformation } from './UI/about.js';
+import {initialiueBurgerMenu} from './UI/burger.js';
+import {initializeDeselectAllButton} from './UI/deselect_all.js';
 
-
-
-
-const sidebar = document.getElementById("sidebar");
-const burger = document.getElementById("burger");
-const header = document.getElementById("sidebar-header");
-const deselectAllButton = document.getElementById("deselect-all");
 
 // loading about information and adding event listeners for about page
 initializeAboutPage();
 loadAboutInformation();
 
 
+// Event listener for Burger menu
+initializeBurgerMenu();
 
-// open on burger click
-burger.addEventListener("click", () => {
-  sidebar.classList.remove("hidden");
-  burger.classList.add("hidden");
-});
-
-// close on header click
-header.addEventListener("click", () => {
-  sidebar.classList.add("hidden");
-  burger.classList.remove("hidden");
-});
-
-deselectAllButton.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
-  checkboxes.forEach(checkbox => {
-    if (checkbox.checked) {
-      checkbox.checked = false;
-      checkbox.dispatchEvent(new Event('change')); // trigger change event to update map
-    }
-  });
-});
+// Event listener for "Deselect All" button
+initializeDeselectAllButton();
 
 
 
