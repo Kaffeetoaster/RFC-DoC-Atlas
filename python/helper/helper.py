@@ -72,6 +72,13 @@ def measure(func,*args, **kwargs):
 
     return duration
 
+def start_new_log(name):
+    with open("time.log", "a", encoding="utf-8") as f:
+        f.write("="*50 + "\n")
+        f.write(f"New log started at {time.strftime('%Y-%m-%d %H:%M:%S')} for {name}\n")
+
+
+
 
 def crop_image_to_content(image):
     # Get bounding box of non-transparent pixels
