@@ -36,7 +36,7 @@ const map = L.map('map', {
 });
 
  // number of tiles horizontally in the world
-const tileLayer = L.tileLayer("maps/tiles/{z}/{x}/{y}.png", {
+const tileLayer = L.tileLayer("maps/tiles/{z}/{x}/{y}.webp", {
         tileSize: MAP_TILE_SIZE, //
         minZoom: -2,
         maxZoom: 2,
@@ -52,7 +52,7 @@ tileLayer.getTileUrl = function(coords) {
           const x = ((coords.x % worldTiles_horizontal) + worldTiles_horizontal) % worldTiles_horizontal;
           const y = coords.y;
           console.log(`Requesting tile at z=${coords.z}, x=${coords.x}, y=${coords.y} (wrapped x=${x})`);
-          return `maps/tiles/${coords.z}/${x}/${y}.png`;
+          return `maps/tiles/${coords.z}/${x}/${y}.webp`;
         }
 tileLayer.addTo(map);
 
