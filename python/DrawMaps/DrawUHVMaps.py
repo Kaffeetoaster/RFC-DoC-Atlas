@@ -89,7 +89,7 @@ def DrawUHVMaps(json_config):
         line_width = 5
         category = "UHV"  
            
-        img = Image.new("RGBA", (iWorldX * TILE_SIZE, iWorldY * TILE_SIZE), (0, 0, 0, 0))
+        img = Image.new("RGBA", (int(iWorldX * TILE_SIZE), int(iWorldY * TILE_SIZE)), (0, 0, 0, 0))
         # transform coordinates
         area= transform_area_coordinates(area)
         exceptions = [transform_coordinates(coor) for coor in exceptions]
