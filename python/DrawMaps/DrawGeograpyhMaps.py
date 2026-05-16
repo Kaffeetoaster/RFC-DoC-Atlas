@@ -131,7 +131,7 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
             draw.line([start, end], fill=line_color, width=line_strength)
 
     img_path = config.OUTPUT_PATH / f"maps/layers/Geography/{region_type}.webp"
-    img.save(img_path)
+    img.save(img_path, "WEBP", quality=80, method=6)  # Save as WebP with good compression
 
     
     # save img
