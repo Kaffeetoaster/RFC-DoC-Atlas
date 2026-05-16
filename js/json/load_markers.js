@@ -1,7 +1,7 @@
 
 
 
-export function loadMarkers(map, TILE_SIZE, width, height) {
+export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
     // Load markers from JSON and create tooltips
     console.log('Starting to fetch tooltips.json...');
     fetch('json/tooltips.json')
@@ -75,8 +75,8 @@ export function loadMarkers(map, TILE_SIZE, width, height) {
         // For each spawn in subcategory - create tooltips
         // also creat a lookuptables for each category for the tooltips by lat,lng
         categories[categoryName].forEach(spawnData => {
-            const lat = TILE_SIZE * (spawnData.y) + TILE_SIZE / 2;
-            const lng = TILE_SIZE * (spawnData.x) + TILE_SIZE / 2;
+            const lat = GAME_TILE_SIZE * (spawnData.y) + GAME_TILE_SIZE / 2 + MAP_OFFSET;
+            const lng = GAME_TILE_SIZE * (spawnData.x) + GAME_TILE_SIZE / 2;
             const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
             const direction1 = spawnData.spawn ? 'top' : 'bottom';
             const direction = spawnData.category.includes('Terrain changes') ? 'bottom' : direction1;
@@ -111,15 +111,23 @@ export function loadMarkers(map, TILE_SIZE, width, height) {
         // Event listener for checkbox - show/hide all tooltips in subcategory
         checkbox.addEventListener('change', function() {
 
-            
+            console.log(`Checkbox for category "${categoryName}" changed: ${this.checked ? 'checked' : 'unchecked'}`);
+            const start = performance.now();
+            let tooltipcount = 0;
+
             Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
             const mapBounds = map.getBounds();
             if (this.checked && mapBounds.contains(tooltip.getLatLng())) { 
                 tooltip.addTo(map);
+                tooltipcount++;
             } else {
                 tooltip.removeFrom(map);
             }
             });
+            const end = performance.now();
+            console.log(`Time taken to add tooltips for category "${categoryName}": ${end - start} ms`);
+            console.log(`Number of tooltips added for category "${categoryName}": ${tooltipcount}`);
+            console.log('Time per tooltip:', (end - start) / tooltipcount, 'ms');
         });        
         });
         

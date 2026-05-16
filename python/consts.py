@@ -259,4 +259,4 @@ plot_colors = {
     MINORITY: (255, 220, 115, 150),
 }
 
-TILE_SIZE = 52
+TILE_SIZE = 32

@@ -47,7 +47,7 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
 
 
     # draw fill in and outlines
-    img = Image.new("RGBA", (iWorldX * TILE_SIZE, iWorldY * TILE_SIZE), (0, 0, 0, 0))
+    img = Image.new("RGBA", (int(iWorldX * TILE_SIZE), int(iWorldY * TILE_SIZE)), (0, 0, 0, 0))
 
     area= transform_area_coordinates(area)
     exceptions = [transform_coordinates(coor) for coor in exceptions]

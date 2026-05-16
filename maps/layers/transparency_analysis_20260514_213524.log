@@ -1,0 +1,1066 @@
+Transparency Analysis Report
+Start Time: 2026-05-14 21:35:24
+Root Folder: maps/layers
+================================================================================
+
+
+Folder: maps/layers/UHV
+--------------------------------------------------------------------------------
+  Andalusia_for_Byzantine.png
+    Size: 364x156 (56,784 pixels)
+    Transparent pixels: 42,142
+    Transparency: 74.21%
+  third_Malay_goal.png
+    Size: 104x156 (16,224 pixels)
+    Transparent pixels: 10,968
+    Transparency: 67.60%
+  West_Africa_for_Moors.png
+    Size: 624x520 (324,480 pixels)
+    Transparent pixels: 243,642
+    Transparency: 75.09%
+  Nile_for_Misr.png
+    Size: 260x416 (108,160 pixels)
+    Transparent pixels: 85,198
+    Transparency: 78.77%
+  Easter_Island_for_Polynesia.png
+    Size: 52x52 (2,704 pixels)
+    Transparent pixels: 1,322
+    Transparency: 48.89%
+  Scandinavia_for_Germany.png
+    Size: 468x572 (267,696 pixels)
+    Transparent pixels: 235,288
+    Transparency: 87.89%
+  Sudan_for_Misr.png
+    Size: 468x520 (243,360 pixels)
+    Transparent pixels: 201,548
+    Transparency: 82.82%
+  New_Zealand_east_for_Polynesia.png
+    Size: 156x364 (56,784 pixels)
+    Transparent pixels: 46,242
+    Transparency: 81.43%
+  Canada.png
+    Size: 1716x936 (1,606,176 pixels)
+    Transparent pixels: 1,291,296
+    Transparency: 80.40%
+  Marquesas_for_Polynesia.png
+    Size: 52x52 (2,704 pixels)
+    Transparent pixels: 1,322
+    Transparency: 48.89%
+  Phoenician_Italy.png
+    Size: 416x416 (173,056 pixels)
+    Transparent pixels: 150,966
+    Transparency: 87.24%
+  Dzungaria_for_Manchuria.png
+    Size: 728x468 (340,704 pixels)
+    Transparent pixels: 269,832
+    Transparency: 79.20%
+  Srivijaya_for_Dravidia.png
+    Size: 364x468 (170,352 pixels)
+    Transparent pixels: 145,410
+    Transparency: 85.36%
+  New_Zealand_west_for_Polynesia.png
+    Size: 104x208 (21,632 pixels)
+    Transparent pixels: 15,310
+    Transparency: 70.77%
+  Hawaii_for_Polynesia.png
+    Size: 260x208 (54,080 pixels)
+    Transparent pixels: 48,868
+    Transparency: 90.36%
+
+  Folder Average Transparency: 80.97%
+  Total Images: 15
+  Combined Pixels: 3,444,896
+  Combined Transparent Pixels: 2,789,354
+
+
+Folder: maps/layers/Spawns
+--------------------------------------------------------------------------------
+  Sweden.png
+    Size: 312x364 (113,568 pixels)
+    Transparent pixels: 90,610
+    Transparency: 79.78%
+  Russia.png
+    Size: 416x364 (151,424 pixels)
+    Transparent pixels: 110,760
+    Transparency: 73.15%
+  Swahili.png
+    Size: 156x468 (73,008 pixels)
+    Transparent pixels: 60,476
+    Transparency: 82.83%
+  Thailand.png
+    Size: 156x364 (56,784 pixels)
+    Transparent pixels: 42,185
+    Transparency: 74.29%
+  Turkestan.png
+    Size: 1040x468 (486,720 pixels)
+    Transparent pixels: 392,126
+    Transparency: 80.57%
+  China.png
+    Size: 364x312 (113,568 pixels)
+    Transparent pixels: 85,306
+    Transparency: 75.11%
+  Portugal.png
+    Size: 104x208 (21,632 pixels)
+    Transparent pixels: 12,935
+    Transparency: 59.80%
+  Toltecs.png
+    Size: 156x156 (24,336 pixels)
+    Transparent pixels: 16,315
+    Transparency: 67.04%
+  Turkey.png
+    Size: 468x260 (121,680 pixels)
+    Transparent pixels: 91,397
+    Transparency: 75.11%
+  Burma.png
+    Size: 260x364 (94,640 pixels)
+    Transparent pixels: 71,344
+    Transparency: 75.38%
+  Aztecs.png
+    Size: 208x208 (43,264 pixels)
+    Transparent pixels: 30,602
+    Transparency: 70.73%
+  Argentina.png
+    Size: 312x468 (146,016 pixels)
+    Transparent pixels: 117,169
+    Transparency: 80.24%
+  Canada_big.png
+    Size: 4160x1300 (5,408,000 pixels)
+    Transparent pixels: 2,618,018
+    Transparency: 48.41%
+  Tibet.png
+    Size: 676x364 (246,064 pixels)
+    Transparent pixels: 194,487
+    Transparency: 79.04%
+  Egypt.png
+    Size: 156x208 (32,448 pixels)
+    Transparent pixels: 22,165
+    Transparency: 68.31%
+  Germany.png
+    Size: 676x312 (210,912 pixels)
+    Transparent pixels: 174,694
+    Transparency: 82.83%
+  Maya.png
+    Size: 156x208 (32,448 pixels)
+    Transparent pixels: 22,951
+    Transparency: 70.73%
+  France.png
+    Size: 312x468 (146,016 pixels)
+    Transparent pixels: 106,704
+    Transparency: 73.08%
+  Moors.png
+    Size: 572x520 (297,440 pixels)
+    Transparent pixels: 254,670
+    Transparency: 85.62%
+  Dravidia.png
+    Size: 208x260 (54,080 pixels)
+    Transparent pixels: 42,335
+    Transparency: 78.28%
+  Persia.png
+    Size: 416x520 (216,320 pixels)
+    Transparent pixels: 160,524
+    Transparency: 74.21%
+  Netherlands.png
+    Size: 208x208 (43,264 pixels)
+    Transparent pixels: 32,857
+    Transparency: 75.95%
+  Inca.png
+    Size: 260x156 (40,560 pixels)
+    Transparent pixels: 28,691
+    Transparency: 70.74%
+  Brazil.png
+    Size: 520x832 (432,640 pixels)
+    Transparent pixels: 350,421
+    Transparency: 81.00%
+  Mughals.png
+    Size: 572x468 (267,696 pixels)
+    Transparent pixels: 215,722
+    Transparency: 80.58%
+  Celts.png
+    Size: 468x312 (146,016 pixels)
+    Transparent pixels: 114,140
+    Transparency: 78.17%
+  Spain.png
+    Size: 312x208 (64,896 pixels)
+    Transparent pixels: 47,034
+    Transparency: 72.48%
+  Phoenicia.png
+    Size: 104x156 (16,224 pixels)
+    Transparent pixels: 11,492
+    Transparency: 70.83%
+  Japan.png
+    Size: 364x416 (151,424 pixels)
+    Transparent pixels: 130,046
+    Transparency: 85.88%
+  Ruthenia.png
+    Size: 624x520 (324,480 pixels)
+    Transparent pixels: 243,152
+    Transparency: 74.94%
+  America.png
+    Size: 572x572 (327,184 pixels)
+    Transparent pixels: 274,391
+    Transparency: 83.86%
+  Iran.png
+    Size: 468x676 (316,368 pixels)
+    Transparent pixels: 256,464
+    Transparency: 81.07%
+  Mali.png
+    Size: 260x260 (67,600 pixels)
+    Transparent pixels: 49,069
+    Transparency: 72.59%
+  Australia.png
+    Size: 936x988 (924,768 pixels)
+    Transparent pixels: 786,825
+    Transparency: 85.08%
+  Congo.png
+    Size: 208x208 (43,264 pixels)
+    Transparent pixels: 30,829
+    Transparency: 71.26%
+  India.png
+    Size: 416x208 (86,528 pixels)
+    Transparent pixels: 65,500
+    Transparency: 75.70%
+  Colombia.png
+    Size: 572x416 (237,952 pixels)
+    Transparent pixels: 195,234
+    Transparency: 82.05%
+  Hittites.png
+    Size: 208x156 (32,448 pixels)
+    Transparent pixels: 20,813
+    Transparency: 64.14%
+  Assyria.png
+    Size: 156x156 (24,336 pixels)
+    Transparent pixels: 15,528
+    Transparency: 63.81%
+  Mexico.png
+    Size: 780x468 (365,040 pixels)
+    Transparent pixels: 314,808
+    Transparency: 86.24%
+  England.png
+    Size: 208x260 (54,080 pixels)
+    Transparent pixels: 39,839
+    Transparency: 73.67%
+  Harappa.png
+    Size: 104x104 (10,816 pixels)
+    Transparent pixels: 6,188
+    Transparency: 57.21%
+  Khmer.png
+    Size: 156x156 (24,336 pixels)
+    Transparent pixels: 16,315
+    Transparency: 67.04%
+  Canada.png
+    Size: 1664x520 (865,280 pixels)
+    Transparent pixels: 714,168
+    Transparency: 82.54%
+  Ethiopia.png
+    Size: 208x208 (43,264 pixels)
+    Transparent pixels: 29,444
+    Transparency: 68.06%
+  Polynesia.png
+    Size: 156x208 (32,448 pixels)
+    Transparent pixels: 26,390
+    Transparency: 81.33%
+  Mongolia.png
+    Size: 988x624 (616,512 pixels)
+    Transparent pixels: 489,450
+    Transparency: 79.39%
+  Italy.png
+    Size: 312x208 (64,896 pixels)
+    Transparent pixels: 49,179
+    Transparency: 75.78%
+  Arabia.png
+    Size: 1092x832 (908,544 pixels)
+    Transparent pixels: 799,142
+    Transparency: 87.96%
+  Misr.png
+    Size: 832x468 (389,376 pixels)
+    Transparent pixels: 344,318
+    Transparency: 88.43%
+  Rome.png
+    Size: 364x416 (151,424 pixels)
+    Transparent pixels: 130,592
+    Transparency: 86.24%
+  Greece.png
+    Size: 364x260 (94,640 pixels)
+    Transparent pixels: 81,614
+    Transparency: 86.24%
+  Norse.png
+    Size: 208x468 (97,344 pixels)
+    Transparent pixels: 77,682
+    Transparency: 79.80%
+  Kushans.png
+    Size: 416x468 (194,688 pixels)
+    Transparent pixels: 149,500
+    Transparency: 76.79%
+  Babylonia.png
+    Size: 156x208 (32,448 pixels)
+    Transparent pixels: 21,372
+    Transparency: 65.87%
+  Nubia.png
+    Size: 104x156 (16,224 pixels)
+    Transparent pixels: 9,223
+    Transparency: 56.85%
+  Java.png
+    Size: 208x104 (21,632 pixels)
+    Transparent pixels: 14,398
+    Transparency: 66.56%
+  Holy_Rome.png
+    Size: 624x416 (259,584 pixels)
+    Transparent pixels: 206,934
+    Transparency: 79.72%
+  Korea.png
+    Size: 208x364 (75,712 pixels)
+    Transparent pixels: 59,527
+    Transparency: 78.62%
+  Vietnam.png
+    Size: 156x156 (24,336 pixels)
+    Transparent pixels: 15,529
+    Transparency: 63.81%
+  Byzantium.png
+    Size: 832x520 (432,640 pixels)
+    Transparent pixels: 381,160
+    Transparency: 88.10%
+  Malaya.png
+    Size: 364x416 (151,424 pixels)
+    Transparent pixels: 128,550
+    Transparency: 84.89%
+  Saudi_Arabia.png
+    Size: 468x312 (146,016 pixels)
+    Transparent pixels: 114,140
+    Transparency: 78.17%
+  Manchuria.png
+    Size: 520x520 (270,400 pixels)
+    Transparent pixels: 216,587
+    Transparency: 80.10%
+  Belgium.png
+    Size: 156x156 (24,336 pixels)
+    Transparent pixels: 17,784
+    Transparency: 73.08%
+  Poland.png
+    Size: 260x208 (54,080 pixels)
+    Transparent pixels: 37,245
+    Transparency: 68.87%
+
+  Folder Average Transparency: 70.79%
+  Total Images: 66
+  Combined Pixels: 17,059,536
+  Combined Transparent Pixels: 12,077,059
+
+
+Folder: maps/layers/Spawns/Extended
+--------------------------------------------------------------------------------
+  Turkey.png
+    Size: 520x312 (162,240 pixels)
+    Transparent pixels: 126,319
+    Transparency: 77.86%
+  Argentina.png
+    Size: 416x468 (194,688 pixels)
+    Transparent pixels: 151,043
+    Transparency: 77.58%
+  Germany.png
+    Size: 676x416 (281,216 pixels)
+    Transparent pixels: 234,074
+    Transparency: 83.24%
+  Inca.png
+    Size: 364x312 (113,568 pixels)
+    Transparent pixels: 83,382
+    Transparency: 73.42%
+  Spain.png
+    Size: 468x208 (97,344 pixels)
+    Transparent pixels: 68,012
+    Transparency: 69.87%
+  Mongolia.png
+    Size: 2184x780 (1,703,520 pixels)
+    Transparent pixels: 1,330,252
+    Transparency: 78.09%
+  Java.png
+    Size: 364x104 (37,856 pixels)
+    Transparent pixels: 25,328
+    Transparency: 66.91%
+  Manchuria.png
+    Size: 1092x624 (681,408 pixels)
+    Transparent pixels: 545,919
+    Transparency: 80.12%
+
+  Folder Average Transparency: 78.38%
+  Total Images: 8
+  Combined Pixels: 3,271,840
+  Combined Transparent Pixels: 2,564,329
+
+
+Folder: maps/layers/Spawns/Periods
+--------------------------------------------------------------------------------
+  Italy_Modern_Italy.png
+    Size: 312x260 (81,120 pixels)
+    Transparent pixels: 62,907
+    Transparency: 77.55%
+  France_National_France.png
+    Size: 260x364 (94,640 pixels)
+    Transparent pixels: 70,226
+    Transparency: 74.20%
+  China_Ming.png
+    Size: 520x416 (216,320 pixels)
+    Transparent pixels: 174,636
+    Transparency: 80.73%
+  Byzantium_Byzantine_Constantinople.png
+    Size: 208x104 (21,632 pixels)
+    Transparent pixels: 14,976
+    Transparency: 69.23%
+  Manchuria_Qing.png
+    Size: 364x416 (151,424 pixels)
+    Transparent pixels: 116,825
+    Transparency: 77.15%
+  Japan_Meiji.png
+    Size: 364x572 (208,208 pixels)
+    Transparent pixels: 182,748
+    Transparency: 87.77%
+  Spain_Spain.png
+    Size: 312x364 (113,568 pixels)
+    Transparent pixels: 87,568
+    Transparency: 77.11%
+  Turkestan_Seljuks.png
+    Size: 676x572 (386,672 pixels)
+    Transparent pixels: 353,912
+    Transparency: 91.53%
+  England_United_Kingdom.png
+    Size: 208x416 (86,528 pixels)
+    Transparent pixels: 67,295
+    Transparency: 77.77%
+  Moors_Morocco.png
+    Size: 260x364 (94,640 pixels)
+    Transparent pixels: 76,778
+    Transparency: 81.13%
+  India_Maratha.png
+    Size: 312x520 (162,240 pixels)
+    Transparent pixels: 128,778
+    Transparency: 79.38%
+  Arabia_Saudi.png
+    Size: 364x312 (113,568 pixels)
+    Transparent pixels: 85,546
+    Transparency: 75.33%
+  England_Great_Britain.png
+    Size: 364x468 (170,352 pixels)
+    Transparent pixels: 145,945
+    Transparency: 85.67%
+  Greece_Modern_Greece.png
+    Size: 156x312 (48,672 pixels)
+    Transparent pixels: 36,998
+    Transparency: 76.01%
+  Nubia_Makuria.png
+    Size: 208x156 (32,448 pixels)
+    Transparent pixels: 22,958
+    Transparency: 70.75%
+  Mongolia_Yuan.png
+    Size: 572x364 (208,208 pixels)
+    Transparent pixels: 150,618
+    Transparency: 72.34%
+  Inca_Late_Inca.png
+    Size: 364x312 (113,568 pixels)
+    Transparent pixels: 89,778
+    Transparency: 79.05%
+  Mughals_Pakistan.png
+    Size: 312x208 (64,896 pixels)
+    Transparent pixels: 49,530
+    Transparency: 76.32%
+  Celts_Insular_Celts.png
+    Size: 260x208 (54,080 pixels)
+    Transparent pixels: 42,321
+    Transparency: 78.26%
+  Holy_Rome_Austria.png
+    Size: 208x208 (43,264 pixels)
+    Transparent pixels: 28,574
+    Transparency: 66.05%
+  Turkey_Ottoman_Constantinople.png
+    Size: 416x260 (108,160 pixels)
+    Transparent pixels: 84,871
+    Transparency: 78.47%
+  Germany_Modern_Germany.png
+    Size: 260x260 (67,600 pixels)
+    Transparent pixels: 47,151
+    Transparency: 69.75%
+  Phoenicia_Carthage.png
+    Size: 364x208 (75,712 pixels)
+    Transparent pixels: 61,224
+    Transparency: 80.86%
+
+  Folder Average Transparency: 80.30%
+  Total Images: 23
+  Combined Pixels: 2,717,520
+  Combined Transparent Pixels: 2,182,163
+
+
+Folder: maps/layers/Spawns/Respawns
+--------------------------------------------------------------------------------
+  Russia.png
+    Size: 780x1040 (811,200 pixels)
+    Transparent pixels: 657,384
+    Transparency: 81.04%
+  Turkestan.png
+    Size: 520x416 (216,320 pixels)
+    Transparent pixels: 160,670
+    Transparency: 74.27%
+  China.png
+    Size: 676x832 (562,432 pixels)
+    Transparent pixels: 430,977
+    Transparency: 76.63%
+  Turkey.png
+    Size: 520x260 (135,200 pixels)
+    Transparent pixels: 98,564
+    Transparency: 72.90%
+  Egypt.png
+    Size: 416x364 (151,424 pixels)
+    Transparent pixels: 111,738
+    Transparency: 73.79%
+  Germany.png
+    Size: 364x416 (151,424 pixels)
+    Transparent pixels: 114,312
+    Transparency: 75.49%
+  France.png
+    Size: 468x416 (194,688 pixels)
+    Transparent pixels: 151,752
+    Transparency: 77.95%
+  Moors.png
+    Size: 260x312 (81,120 pixels)
+    Transparent pixels: 57,045
+    Transparency: 70.32%
+  Inca.png
+    Size: 312x416 (129,792 pixels)
+    Transparent pixels: 96,203
+    Transparency: 74.12%
+  Mughals.png
+    Size: 312x468 (146,016 pixels)
+    Transparent pixels: 108,738
+    Transparency: 74.47%
+  Celts.png
+    Size: 260x208 (54,080 pixels)
+    Transparent pixels: 39,411
+    Transparency: 72.88%
+  Spain.png
+    Size: 468x364 (170,352 pixels)
+    Transparent pixels: 132,694
+    Transparency: 77.89%
+  India.png
+    Size: 416x520 (216,320 pixels)
+    Transparent pixels: 156,447
+    Transparency: 72.32%
+  England.png
+    Size: 260x520 (135,200 pixels)
+    Transparent pixels: 107,995
+    Transparency: 79.88%
+  Mongolia.png
+    Size: 936x520 (486,720 pixels)
+    Transparent pixels: 374,712
+    Transparency: 76.99%
+  Misr.png
+    Size: 312x312 (97,344 pixels)
+    Transparent pixels: 67,278
+    Transparency: 69.11%
+  Byzantium.png
+    Size: 624x260 (162,240 pixels)
+    Transparent pixels: 125,318
+    Transparency: 77.24%
+
+  Folder Average Transparency: 76.66%
+  Total Images: 17
+  Combined Pixels: 3,901,872
+  Combined Transparent Pixels: 2,991,238
+
+
+Folder: maps/layers/Religions
+--------------------------------------------------------------------------------
+  Islam.png
+    Size: 5252x3276 (17,205,552 pixels)
+    Transparent pixels: 12,065,248
+    Transparency: 70.12%
+  Catholicism.png
+    Size: 1500x770 (1,155,000 pixels)
+    Transparent pixels: 931,500
+    Transparency: 80.65%
+  Protestantism.png
+    Size: 7800x3952 (30,825,600 pixels)
+    Transparent pixels: 26,780,416
+    Transparency: 86.88%
+  Buddhism.png
+    Size: 2496x2236 (5,581,056 pixels)
+    Transparent pixels: 3,293,472
+    Transparency: 59.01%
+  Confucianism.png
+    Size: 2028x3276 (6,643,728 pixels)
+    Transparent pixels: 4,458,896
+    Transparency: 67.11%
+  Taoism.png
+    Size: 1612x1508 (2,430,896 pixels)
+    Transparent pixels: 1,295,216
+    Transparency: 53.28%
+  Judaism.png
+    Size: 4732x2132 (10,088,624 pixels)
+    Transparent pixels: 7,736,144
+    Transparency: 76.68%
+  Hinduism.png
+    Size: 2080x1508 (3,136,640 pixels)
+    Transparent pixels: 2,282,176
+    Transparency: 72.76%
+  Zoroastrianism.png
+    Size: 1196x1040 (1,243,840 pixels)
+    Transparent pixels: 681,408
+    Transparency: 54.78%
+  Orthodoxy.png
+    Size: 7800x2548 (19,874,400 pixels)
+    Transparent pixels: 14,780,064
+    Transparency: 74.37%
+
+  Folder Average Transparency: 75.68%
+  Total Images: 10
+  Combined Pixels: 98,185,336
+  Combined Transparent Pixels: 74,304,540
+
+
+Folder: maps/layers/Stability
+--------------------------------------------------------------------------------
+  Sweden.png
+    Size: 4108x2444 (10,039,952 pixels)
+    Transparent pixels: 9,612,720
+    Transparency: 95.74%
+  Russia.png
+    Size: 7800x1456 (11,356,800 pixels)
+    Transparent pixels: 8,041,696
+    Transparency: 70.81%
+  Swahili.png
+    Size: 520x780 (405,600 pixels)
+    Transparent pixels: 340,704
+    Transparency: 84.00%
+  Thailand.png
+    Size: 312x572 (178,464 pixels)
+    Transparent pixels: 83,824
+    Transparency: 46.97%
+  Turkestan.png
+    Size: 2340x1300 (3,042,000 pixels)
+    Transparent pixels: 1,857,648
+    Transparency: 61.07%
+  China.png
+    Size: 1508x1456 (2,195,648 pixels)
+    Transparent pixels: 1,054,560
+    Transparency: 48.03%
+  Portugal.png
+    Size: 5408x2704 (14,623,232 pixels)
+    Transparent pixels: 13,698,464
+    Transparency: 93.68%
+  Toltecs.png
+    Size: 468x364 (170,352 pixels)
+    Transparent pixels: 94,640
+    Transparency: 55.56%
+  Turkey.png
+    Size: 2184x1404 (3,066,336 pixels)
+    Transparent pixels: 2,195,648
+    Transparency: 71.60%
+  Burma.png
+    Size: 468x676 (316,368 pixels)
+    Transparent pixels: 170,352
+    Transparency: 53.85%
+  Aztecs.png
+    Size: 572x468 (267,696 pixels)
+    Transparent pixels: 137,904
+    Transparency: 51.52%
+  Argentina.png
+    Size: 468x1040 (486,720 pixels)
+    Transparent pixels: 232,544
+    Transparency: 47.78%
+  Tibet.png
+    Size: 1144x884 (1,011,296 pixels)
+    Transparent pixels: 381,264
+    Transparency: 37.70%
+  Egypt.png
+    Size: 676x884 (597,584 pixels)
+    Transparent pixels: 373,152
+    Transparency: 62.44%
+  Germany.png
+    Size: 7540x3380 (25,485,200 pixels)
+    Transparent pixels: 24,022,336
+    Transparency: 94.26%
+  Maya.png
+    Size: 260x312 (81,120 pixels)
+    Transparent pixels: 35,152
+    Transparency: 43.33%
+  France.png
+    Size: 7280x2964 (21,577,920 pixels)
+    Transparent pixels: 19,836,544
+    Transparency: 91.93%
+  Moors.png
+    Size: 884x1040 (919,360 pixels)
+    Transparent pixels: 592,176
+    Transparency: 64.41%
+  Dravidia.png
+    Size: 988x988 (976,144 pixels)
+    Transparent pixels: 743,600
+    Transparency: 76.18%
+  Persia.png
+    Size: 1612x1300 (2,095,600 pixels)
+    Transparent pixels: 1,254,656
+    Transparency: 59.87%
+  Netherlands.png
+    Size: 5772x2860 (16,507,920 pixels)
+    Transparent pixels: 15,899,520
+    Transparency: 96.31%
+  Inca.png
+    Size: 572x988 (565,136 pixels)
+    Transparent pixels: 373,152
+    Transparency: 66.03%
+  Brazil.png
+    Size: 1040x1092 (1,135,680 pixels)
+    Transparent pixels: 521,872
+    Transparency: 45.95%
+  Mughals.png
+    Size: 884x884 (781,456 pixels)
+    Transparent pixels: 338,000
+    Transparency: 43.25%
+  Celts.png
+    Size: 1716x1196 (2,052,336 pixels)
+    Transparent pixels: 1,489,904
+    Transparency: 72.60%
+  Spain.png
+    Size: 7384x3276 (24,189,984 pixels)
+    Transparent pixels: 22,705,488
+    Transparency: 93.86%
+  Phoenicia.png
+    Size: 1612x728 (1,173,536 pixels)
+    Transparent pixels: 892,320
+    Transparency: 76.04%
+  Japan.png
+    Size: 988x1820 (1,798,160 pixels)
+    Transparent pixels: 1,487,200
+    Transparency: 82.71%
+  Ruthenia.png
+    Size: 832x1040 (865,280 pixels)
+    Transparent pixels: 440,752
+    Transparency: 50.94%
+  America.png
+    Size: 7800x2964 (23,119,200 pixels)
+    Transparent pixels: 21,851,024
+    Transparency: 94.51%
+  Iran.png
+    Size: 988x1092 (1,078,896 pixels)
+    Transparent pixels: 505,648
+    Transparency: 46.87%
+  Mali.png
+    Size: 572x312 (178,464 pixels)
+    Transparent pixels: 43,264
+    Transparency: 24.24%
+  Australia.png
+    Size: 7800x1404 (10,951,200 pixels)
+    Transparent pixels: 10,375,248
+    Transparency: 94.74%
+  Congo.png
+    Size: 520x572 (297,440 pixels)
+    Transparent pixels: 89,232
+    Transparency: 30.00%
+  India.png
+    Size: 1040x1144 (1,189,760 pixels)
+    Transparent pixels: 694,928
+    Transparency: 58.41%
+  Colombia.png
+    Size: 1092x1872 (2,044,224 pixels)
+    Transparent pixels: 1,360,112
+    Transparency: 66.53%
+  Hittites.png
+    Size: 676x624 (421,824 pixels)
+    Transparent pixels: 162,240
+    Transparency: 38.46%
+  Saudis.png
+    Size: 624x728 (454,272 pixels)
+    Transparent pixels: 237,952
+    Transparency: 52.38%
+  Assyria.png
+    Size: 884x780 (689,520 pixels)
+    Transparent pixels: 365,040
+    Transparency: 52.94%
+  Mexico.png
+    Size: 988x1092 (1,078,896 pixels)
+    Transparent pixels: 624,624
+    Transparency: 57.89%
+  England.png
+    Size: 3000x1360 (4,080,000 pixels)
+    Transparent pixels: 3,646,400
+    Transparency: 89.37%
+  Harappa.png
+    Size: 468x676 (316,368 pixels)
+    Transparent pixels: 191,984
+    Transparency: 60.68%
+  Khmer.png
+    Size: 468x728 (340,704 pixels)
+    Transparent pixels: 191,984
+    Transparency: 56.35%
+  Canada.png
+    Size: 1820x1092 (1,987,440 pixels)
+    Transparent pixels: 892,320
+    Transparency: 44.90%
+  Ethiopia.png
+    Size: 728x572 (416,416 pixels)
+    Transparent pixels: 229,840
+    Transparency: 55.19%
+  Polynesia.png
+    Size: 7800x2080 (16,224,000 pixels)
+    Transparent pixels: 16,140,176
+    Transparency: 99.48%
+  Mongolia.png
+    Size: 3640x2444 (8,896,160 pixels)
+    Transparent pixels: 5,700,032
+    Transparency: 64.07%
+  Italy.png
+    Size: 1352x1612 (2,179,424 pixels)
+    Transparent pixels: 1,706,224
+    Transparency: 78.29%
+  Arabia.png
+    Size: 2600x1352 (3,515,200 pixels)
+    Transparent pixels: 2,217,280
+    Transparency: 63.08%
+  Misr.png
+    Size: 1196x884 (1,057,264 pixels)
+    Transparent pixels: 743,600
+    Transparency: 70.33%
+  Rome.png
+    Size: 1976x1664 (3,288,064 pixels)
+    Transparent pixels: 2,057,744
+    Transparency: 62.58%
+  Greece.png
+    Size: 2444x1092 (2,668,848 pixels)
+    Transparent pixels: 1,776,528
+    Transparency: 66.57%
+  Norse.png
+    Size: 4056x2548 (10,334,688 pixels)
+    Transparent pixels: 9,664,096
+    Transparency: 93.51%
+  Kushans.png
+    Size: 780x832 (648,960 pixels)
+    Transparent pixels: 283,920
+    Transparency: 43.75%
+  Babylonia.png
+    Size: 936x780 (730,080 pixels)
+    Transparent pixels: 381,264
+    Transparency: 52.22%
+  Nubia.png
+    Size: 520x780 (405,600 pixels)
+    Transparent pixels: 219,024
+    Transparency: 54.00%
+  Java.png
+    Size: 1092x520 (567,840 pixels)
+    Transparent pixels: 411,008
+    Transparency: 72.38%
+  Holy_Rome.png
+    Size: 2912x2756 (8,025,472 pixels)
+    Transparent pixels: 7,506,304
+    Transparency: 93.53%
+  Korea.png
+    Size: 364x520 (189,280 pixels)
+    Transparent pixels: 91,936
+    Transparency: 48.57%
+  Vietnam.png
+    Size: 312x572 (178,464 pixels)
+    Transparent pixels: 83,824
+    Transparency: 46.97%
+  Byzantium.png
+    Size: 1872x988 (1,849,536 pixels)
+    Transparent pixels: 1,254,656
+    Transparency: 67.84%
+  Malaya.png
+    Size: 728x572 (416,416 pixels)
+    Transparent pixels: 305,552
+    Transparency: 73.38%
+  Manchuria.png
+    Size: 1664x1508 (2,509,312 pixels)
+    Transparent pixels: 1,208,688
+    Transparency: 48.17%
+  Belgium.png
+    Size: 5356x2184 (11,697,504 pixels)
+    Transparent pixels: 11,551,488
+    Transparency: 98.75%
+  Poland.png
+    Size: 2600x1872 (4,867,200 pixels)
+    Transparent pixels: 4,537,312
+    Transparency: 93.22%
+
+  Folder Average Transparency: 86.04%
+  Total Images: 65
+  Combined Pixels: 276,856,816
+  Combined Transparent Pixels: 238,210,288
+
+
+Folder: maps/layers/Stability/Periods
+--------------------------------------------------------------------------------
+  Italy_Modern_Italy.png
+    Size: 1352x1612 (2,179,424 pixels)
+    Transparent pixels: 1,706,224
+    Transparency: 78.29%
+  France_National_France.png
+    Size: 7280x2964 (21,577,920 pixels)
+    Transparent pixels: 19,476,912
+    Transparency: 90.26%
+  China_Ming.png
+    Size: 1508x1456 (2,195,648 pixels)
+    Transparent pixels: 1,054,560
+    Transparency: 48.03%
+  Byzantium_Byzantine_Constantinople.png
+    Size: 1872x988 (1,849,536 pixels)
+    Transparent pixels: 1,254,656
+    Transparency: 67.84%
+  Manchuria_Qing.png
+    Size: 1664x1508 (2,509,312 pixels)
+    Transparent pixels: 1,208,688
+    Transparency: 48.17%
+  Japan_Meiji.png
+    Size: 7800x2496 (19,468,800 pixels)
+    Transparent pixels: 18,206,032
+    Transparency: 93.51%
+  Spain_Spain.png
+    Size: 7384x3276 (24,189,984 pixels)
+    Transparent pixels: 22,705,488
+    Transparency: 93.86%
+  Turkestan_Seljuks.png
+    Size: 2340x1300 (3,042,000 pixels)
+    Transparent pixels: 1,879,280
+    Transparency: 61.78%
+  England_United_Kingdom.png
+    Size: 7800x3536 (27,580,800 pixels)
+    Transparent pixels: 24,649,664
+    Transparency: 89.37%
+  Moors_Morocco.png
+    Size: 884x1040 (919,360 pixels)
+    Transparent pixels: 589,472
+    Transparency: 64.12%
+  India_Maratha.png
+    Size: 1040x1144 (1,189,760 pixels)
+    Transparent pixels: 697,632
+    Transparency: 58.64%
+  Arabia_Saudi.png
+    Size: 2600x1352 (3,515,200 pixels)
+    Transparent pixels: 2,217,280
+    Transparency: 63.08%
+  England_Great_Britain.png
+    Size: 7800x3536 (27,580,800 pixels)
+    Transparent pixels: 24,649,664
+    Transparency: 89.37%
+  Greece_Modern_Greece.png
+    Size: 2444x1092 (2,668,848 pixels)
+    Transparent pixels: 1,776,528
+    Transparency: 66.57%
+  Nubia_Makuria.png
+    Size: 416x416 (173,056 pixels)
+    Transparent pixels: 64,896
+    Transparency: 37.50%
+  Mongolia_Yuan.png
+    Size: 3640x2444 (8,896,160 pixels)
+    Transparent pixels: 5,700,032
+    Transparency: 64.07%
+  Inca_Late_Inca.png
+    Size: 572x988 (565,136 pixels)
+    Transparent pixels: 373,152
+    Transparency: 66.03%
+  Mughals_Pakistan.png
+    Size: 884x884 (781,456 pixels)
+    Transparent pixels: 340,704
+    Transparency: 43.60%
+  Celts_Insular_Celts.png
+    Size: 2548x1508 (3,842,384 pixels)
+    Transparent pixels: 3,477,344
+    Transparency: 90.50%
+  Holy_Rome_Austria.png
+    Size: 832x2548 (2,119,936 pixels)
+    Transparent pixels: 1,854,944
+    Transparency: 87.50%
+  Turkey_Ottoman_Constantinople.png
+    Size: 2184x1404 (3,066,336 pixels)
+    Transparent pixels: 2,195,648
+    Transparency: 71.60%
+  Germany_Modern_Germany.png
+    Size: 7540x3380 (25,485,200 pixels)
+    Transparent pixels: 24,022,336
+    Transparency: 94.26%
+  Phoenicia_Carthage.png
+    Size: 1612x728 (1,173,536 pixels)
+    Transparent pixels: 886,912
+    Transparency: 75.58%
+
+  Folder Average Transparency: 86.29%
+  Total Images: 23
+  Combined Pixels: 186,570,592
+  Combined Transparent Pixels: 160,988,048
+
+
+Folder: maps/layers/Resources
+--------------------------------------------------------------------------------
+  resource_spawns_and_despawns.png
+    Size: 7800x4160 (32,448,000 pixels)
+    Transparent pixels: 32,299,282
+    Transparency: 99.54%
+
+  Folder Average Transparency: 99.54%
+  Total Images: 1
+  Combined Pixels: 32,448,000
+  Combined Transparent Pixels: 32,299,282
+
+
+Folder: maps/layers/Geography
+--------------------------------------------------------------------------------
+  continent.png
+    Size: 7800x4160 (32,448,000 pixels)
+    Transparent pixels: 0
+    Transparency: 0.00%
+  region.png
+    Size: 7800x4160 (32,448,000 pixels)
+    Transparent pixels: 0
+    Transparency: 0.00%
+  landmass.png
+    Size: 7800x4160 (32,448,000 pixels)
+    Transparent pixels: 0
+    Transparency: 0.00%
+
+  Folder Average Transparency: 0.00%
+  Total Images: 3
+  Combined Pixels: 97,344,000
+  Combined Transparent Pixels: 0
+
+
+================================================================================
+SUMMARY BY FOLDER
+================================================================================
+
+maps/layers/Geography
+  Images: 3
+  Average Transparency: 0.00%
+
+maps/layers/Religions
+  Images: 10
+  Average Transparency: 75.68%
+
+maps/layers/Resources
+  Images: 1
+  Average Transparency: 99.54%
+
+maps/layers/Spawns
+  Images: 66
+  Average Transparency: 70.79%
+
+maps/layers/Spawns/Extended
+  Images: 8
+  Average Transparency: 78.38%
+
+maps/layers/Spawns/Periods
+  Images: 23
+  Average Transparency: 80.30%
+
+maps/layers/Spawns/Respawns
+  Images: 17
+  Average Transparency: 76.66%
+
+maps/layers/Stability
+  Images: 65
+  Average Transparency: 86.04%
+
+maps/layers/Stability/Periods
+  Images: 23
+  Average Transparency: 86.29%
+
+maps/layers/UHV
+  Images: 15
+  Average Transparency: 80.97%
+
+
+End Time: 2026-05-14 21:36:23

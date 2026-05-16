@@ -1,7 +1,7 @@
 
 
 
-export function loadLayers(TILE_SIZE, map, width, height) {
+export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
     // Load layers from JSON and create categories
     console.log('Starting to fetch layers.json...');
     fetch('json/layers.json')
@@ -48,8 +48,8 @@ export function loadLayers(TILE_SIZE, map, width, height) {
             
             // Create the image overlay
             // this should be its own function maybe.
-            const lat = TILE_SIZE * (layerData.y);
-            const lng = TILE_SIZE * (layerData.x);
+            const lat = GAME_TILE_SIZE * (layerData.y) + MAP_OFFSET;
+            const lng = GAME_TILE_SIZE * (layerData.x);
             const bounds = [[lat, lng], [lat + layerData.h, lng + layerData.w]];
             const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
             const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];

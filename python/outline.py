@@ -1,7 +1,8 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from python.helper.helper import *
 
 def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path, config):
+    
     # Create transparent image
     img = Image.new("RGBA", (image_width, image_height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
@@ -31,8 +32,9 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
             tile_x = x * tile_width
             tile_y = (tiles_y-y-1) * tile_height
             text = f"{x} {y}"
-            text_position = (tile_x + 5, tile_y + 5)  # Adjust position as needed
-            draw.text(text_position, text, fill=(0, 0, 0, 200))
+            text_position = (tile_x + 1, tile_y + 1)  # Adjust position as needed
+            font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 8)
+            draw.text(text_position, text, fill=(0, 0, 0, 200), font=font_small)
     # Save image
     img.save(output_path)
     add_layer_config_entry(config = config, text="Grid", category="Grid", image_path=output_path, image_size=(image_width, image_height))

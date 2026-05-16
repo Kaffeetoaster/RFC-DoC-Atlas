@@ -128,7 +128,7 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	image, offset = crop_image_to_content(image)  # Crop to content
 	
 	w,h = image.size
-	image = image.resize((w * TILE_SIZE, h * TILE_SIZE), resample=Image.Resampling.NEAREST)
+	image = image.resize((int(w * TILE_SIZE), int(h * TILE_SIZE)), resample=Image.Resampling.NEAREST)
 	
 	if period_name != "":
 		filename = f"Periods/{civ_name}_{period_name}"

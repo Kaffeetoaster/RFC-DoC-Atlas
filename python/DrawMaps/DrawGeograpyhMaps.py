@@ -112,7 +112,7 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
     
         
     # create image and draw
-    img = Image.new("RGBA", (iWorldX * tile_size, iWorldY * tile_size), (0, 0, 0, 0))
+    img = Image.new("RGBA", (int(iWorldX * tile_size), int(iWorldY * tile_size)), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     # fill tiles with respective region color
     for (x, y), tile_info in dTileMap.items():
