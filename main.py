@@ -27,6 +27,11 @@ output_path = config.OUTPUT_PATH
 
 
 if __name__ == "__main__":
+
+    start_new_log("Main Process")
+
+
+
 ### json for about and version info ###
     with open("about/about.json", "r") as f:
         header_info = json.load(f)
@@ -49,8 +54,8 @@ if __name__ == "__main__":
         "spawns_and_despawns": []  
     }
     create_tile_outline(
-        image_width=7800,
-        image_height=4160,
+        image_width=4800,
+        image_height=2560,
         tiles_x=150,
         tiles_y=80,
         output_path="./maps/tile_outline_cropped.png",
@@ -77,7 +82,7 @@ if __name__ == "__main__":
     measure(DrawUHVMaps, layers_config)
 
 
-
+### save json config files for layers and markers ###
     with open("json/layers.json", "w") as f:           
         json.dump(layers_config, f, indent = 2)
         
