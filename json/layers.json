@@ -750,6 +750,15 @@
       "category": "Stability"
     },
     {
+      "x": 77,
+      "y": 43,
+      "display_name": "Tartary",
+      "source": "maps/layers/Stability/Tartary.webp",
+      "w": 992,
+      "h": 896,
+      "category": "Stability"
+    },
+    {
       "x": 118,
       "y": 32,
       "display_name": "Thailand",
@@ -1756,6 +1765,15 @@
       "display_name": "Sweden",
       "source": "maps/layers/Spawns/Sweden.webp",
       "w": 192,
+      "h": 224,
+      "category": "Birth"
+    },
+    {
+      "x": 83,
+      "y": 58,
+      "display_name": "Tartary",
+      "source": "maps/layers/Spawns/Tartary.webp",
+      "w": 448,
       "h": 224,
       "category": "Birth"
     },

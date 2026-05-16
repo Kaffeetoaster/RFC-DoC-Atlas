@@ -2201,6 +2201,14 @@
       "spawn": false
     },
     {
+      "x": 90,
+      "y": 59,
+      "text": "1500 - Marsh",
+      "source": "Assets/Art/Interface/Buttons/Deletion.png",
+      "category": "Feature spawns and despawns",
+      "spawn": false
+    },
+    {
       "x": 99,
       "y": 59,
       "text": "1600 - Flood Plains",
