@@ -196,6 +196,7 @@ dCivNames = {
     iSpain: "Spain",
     iSwahili: "Swahili",
     iSweden: "Sweden",
+    iTatars: "Tartary",
     iThailand: "Thailand",
     iTibet: "Tibet",
     iToltecs: "Toltecs",
