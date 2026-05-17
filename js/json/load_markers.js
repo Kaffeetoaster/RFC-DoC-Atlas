@@ -3,8 +3,8 @@
 
 export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
     // Load markers from JSON and create tooltips
-    console.log('Starting to fetch tooltips.json...');
-    fetch('json/tooltips.json')
+    console.log('Starting to fetch markers.json...');
+    fetch('json/markers.json')
     .then(response => {
         console.log('Response received:', response.status);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,15 +40,15 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         summary.textContent = 'Map markers';
         details.appendChild(summary);
         
-        // Store tooltips by subcategory
-        const tooltipsBySubcategory = {};
+        // Store markers by subcategory
+        const markersBySubcategory = {};
         const categoryLayerGroups = {};
         // For each subcategory
         Object.keys(categories).forEach(categoryName => {
 
         console.log('Creating subcategory:', categoryName, 'with', categories[categoryName].length, 'spawns/despawns');
         
-        tooltipsBySubcategory[categoryName] = {};
+        markersBySubcategory[categoryName] = {};
         const layerGroup = L.layerGroup();
         categoryLayerGroups[categoryName] = layerGroup;
         // Create checkbox for subcategory
@@ -72,81 +72,77 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         label.appendChild(text);
         details.appendChild(label);
         
-        // For each spawn in subcategory - create tooltips
-        // also creat a lookuptables for each category for the tooltips by lat,lng
+        // For each spawn in subcategory - create markers with divIcon
+        // also create lookup tables for each category for the markers by lat,lng
         categories[categoryName].forEach(spawnData => {
             const lat = GAME_TILE_SIZE * (spawnData.y) + GAME_TILE_SIZE / 2 + MAP_OFFSET;
             const lng = GAME_TILE_SIZE * (spawnData.x) + GAME_TILE_SIZE / 2;
-            const tooltipClass = spawnData.spawn ? 'tooltip-spawn' : 'tooltip-despawn';
-            const direction1 = spawnData.spawn ? 'top' : 'bottom';
-            const direction = spawnData.category.includes('Terrain changes') ? 'bottom' : direction1;
-            // Create tooltips for center, left wrap (-7800), and right wrap (+7800)
+            const markerClass = spawnData.spawn ? 'marker-spawn' : 'marker-despawn';
+            // Create markers for center, left wrap (-7800), and right wrap (+7800)
             const positionsToCreate = [
             { lat: lat, lng: lng },
             { lat: lat, lng: lng + width },
             { lat: lat, lng: lng - width }
             ];
-            
+            const Anchor = spawnData.text=='' ? [38, 83] : [38, 101];
             positionsToCreate.forEach(position => {
-            const tooltip = L.tooltip({
-                permanent: true,
-                direction: direction,
-                className: 'custom-tooltip',
-                offset: [0, 0]
-            })
-            .setLatLng([position.lat, position.lng])
-            .setContent(
-                `<div class="tooltip-box">
-                <img src="${spawnData.source}" class="${tooltipClass}" />
-                <span class="tooltip-text">${spawnData.text}</span>
-                </div>`
-            );
-            layerGroup.addLayer(tooltip);
-            tooltipsBySubcategory[categoryName][`${position.lat},${position.lng}`] = tooltip;
+            const divIcon = L.divIcon({
+                className: 'custom-marker',
+                html: `<div class="marker-box">
+                <img src="${spawnData.source}" class="${markerClass}" />
+                <span class="marker-text">${spawnData.text}</span>
+                <div class="marker-arrow"></div>
+                </div>`,
+                iconSize: [76, 108],
+                iconAnchor: Anchor
+            });
+            const marker = L.marker([position.lat, position.lng], { icon: divIcon });
+            layerGroup.addLayer(marker);
+            markersBySubcategory[categoryName][`${position.lat},${position.lng}`] = marker;
             });
         });
         
 
 
-        // Event listener for checkbox - show/hide all tooltips in subcategory
+        // Event listener for checkbox - show/hide all markers in subcategory
         checkbox.addEventListener('change', function() {
 
             console.log(`Checkbox for category "${categoryName}" changed: ${this.checked ? 'checked' : 'unchecked'}`);
             const start = performance.now();
-            let tooltipcount = 0;
+            let markercount = 0;
 
-            Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
+            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
             const mapBounds = map.getBounds();
-            if (this.checked && mapBounds.contains(tooltip.getLatLng())) { 
-                tooltip.addTo(map);
-                tooltipcount++;
+            if (this.checked && mapBounds.contains(marker.getLatLng())) { 
+                marker.addTo(map);
+                markercount++;
             } else {
-                tooltip.removeFrom(map);
+                marker.removeFrom(map);
             }
             });
             const end = performance.now();
-            console.log(`Time taken to add tooltips for category "${categoryName}": ${end - start} ms`);
-            console.log(`Number of tooltips added for category "${categoryName}": ${tooltipcount}`);
-            console.log('Time per tooltip:', (end - start) / tooltipcount, 'ms');
+            console.log(`Time taken to add markers for category "${categoryName}": ${end - start} ms`);
+            console.log(`Number of markers added for category "${categoryName}": ${markercount}`);
+            console.log('Time per marker:', (end - start) / markercount, 'ms');
         });        
         });
         
         container.appendChild(details);
         
-        // Update tooltips when map moves or zooms
+        // Update markers when map moves or zooms
         map.on('moveend', () => {
         const mapBounds = map.getBounds();
-        Object.keys(tooltipsBySubcategory).forEach(categoryName => {
-            Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
+        Object.keys(markersBySubcategory).forEach(categoryName => {
+            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
             const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
             const isEnabled = checkbox && checkbox.checked;
-            const isInBounds = mapBounds.contains(tooltip.getLatLng());
+            const isInBounds = mapBounds.contains(marker.getLatLng());
             
             if (isEnabled && isInBounds) {
-                tooltip.addTo(map);
+                marker.addTo(map);
                 
             } else {
-                tooltip.removeFrom(map);
+                marker.removeFrom(map);
                 
             }
             });
@@ -155,23 +151,23 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         
         map.on('zoomend', () => {
         const mapBounds = map.getBounds();
-        Object.keys(tooltipsBySubcategory).forEach(categoryName => {
-            Object.values(tooltipsBySubcategory[categoryName]).forEach(tooltip => {
+        Object.keys(markersBySubcategory).forEach(categoryName => {
+            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
             const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
             const isEnabled = checkbox && checkbox.checked;
-            const isInBounds = mapBounds.contains(tooltip.getLatLng());
+            const isInBounds = mapBounds.contains(marker.getLatLng());
             
             if (isEnabled && isInBounds) {
-                tooltip.addTo(map);
+                marker.addTo(map);
                 
             } else {
-                tooltip.removeFrom(map);
+                marker.removeFrom(map);
             }
             });
         });
         });
         
-        console.log('All tooltips loaded and UI created successfully!');
+        console.log('All markers loaded and UI created successfully!');
     })
     .catch(error => {
         console.error('Error loading tooltips:', error);

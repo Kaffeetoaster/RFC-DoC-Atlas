@@ -111,5 +111,6 @@ map.options.fadeAnimation = false;
 // load Layers, create checkboxes, and add event listeners for checkboxes to toggle layers
 loadLayers(GAME_TILE_SIZE, map, width, height, MAP_OFFSET);
 
-// load markers and create checkboxes to toggle them
+// load markers, create checkboxes to toggle them and create a cache canvas for the markers
 loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+
