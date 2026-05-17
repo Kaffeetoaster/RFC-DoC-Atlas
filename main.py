@@ -86,7 +86,7 @@ if __name__ == "__main__":
     with open("json/layers.json", "w") as f:           
         json.dump(layers_config, f, indent = 2)
         
-    with open("json/tooltips.json", "w") as f:
+    with open("json/markers.json", "w") as f:
         json.dump(markers_config, f, indent=2)
 
 
