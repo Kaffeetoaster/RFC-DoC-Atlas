@@ -1065,8 +1065,8 @@
       "spawn": true
     },
     {
-      "x": 74,
-      "y": 12,
+      "x": 73,
+      "y": 11,
       "text": "1750",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "Resource spawns",
@@ -1611,6 +1611,14 @@
     {
       "x": 83,
       "y": 29,
+      "text": "1900",
+      "source": "Assets/Art/Interface/Buttons/Tea_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true
+    },
+    {
+      "x": 74,
+      "y": 12,
       "text": "1900",
       "source": "Assets/Art/Interface/Buttons/Tea_cropped.png",
       "category": "Resource spawns",

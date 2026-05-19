@@ -256,11 +256,11 @@
     },
     {
       "x": 9,
-      "y": 15,
+      "y": 18,
       "display_name": "France",
       "source": "maps/layers/Stability/France.webp",
       "w": 4480,
-      "h": 1824,
+      "h": 1728,
       "category": "Stability"
     },
     {
