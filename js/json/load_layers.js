@@ -1,4 +1,4 @@
-
+import { addLegendToggle } from "../UI/legend.js";
 
 
 export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
@@ -81,6 +81,9 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
                 imageOverlayRight.removeFrom(map);
             }
             });
+            if (category === "Religion") {
+                addLegendToggle(checkbox);
+            }
         };
         
         container.appendChild(details);
