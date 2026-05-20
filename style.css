@@ -52,22 +52,7 @@ html, body {
     will-change: transform; /* hint for better performance */
 }
 
-#deselect-all {
-    position: absolute;
-    top: 10px;
-    left: 290px;
-    z-index: 1100;
-    font-size: 15px;
-    font-weight: bold;
-    color: var(--civ-white);
-    cursor: pointer;
-    background: var(--civ-blue-bg);
-    border: 2px solid var(--civ-border);
-    border-radius: 8px;
-    
-    padding: 6px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
+
 
 #top-right-controls {
   position: fixed;
@@ -246,6 +231,73 @@ html, body {
   display: none;
 }
 
+/* Deselect All button */
+#deselect-all {
+    position: absolute;
+    top: 10px;
+    left: 290px;
+    z-index: 1100;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Legend box */
+#legend {
+  position: absolute;
+  top: 10px;
+  left: 380px;
+  z-index: 1100;
+  font-size: 15px;
+  color: var(--civ-white);
+  background: var(--civ-blue-bg);
+  border: 2px solid var(--civ-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#legend.hidden {
+  display: none;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+}
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--civ-border);
+}
+.CORE {
+  background-color: rgba(41, 249, 255, 1.0);
+}
+.HISTORICAL {
+  background-color: rgba(8, 179, 69, 1.0);
+}
+.CONQUEST {
+  background-color: rgba(250, 184, 56, 1.0);
+}
+.PERIPHERY {
+  background-color: rgba(250, 184, 56, 1.0);
+}
+.MINORITY {
+  background-color: rgba(255, 220, 115, 1.0);
+}
+
+
+
 /* Scrollable options container */
 .options-container {
     flex: 1;
@@ -355,8 +407,6 @@ details[open] summary {
 
 /* marker styling */
 
-
-
 .custom-marker {
   background: transparent; /* No background for the marker itself */
   border: none;           /* No border for the marker itself */
@@ -418,4 +468,9 @@ details[open] summary {
   border-top: 6px solid rgba(255, 255, 255, 1);
   margin-top: 3px;
 }
+
+
+
+
+
 
