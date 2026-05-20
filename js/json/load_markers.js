@@ -1,5 +1,50 @@
 
+function setIconSize(spawnData) {
+    if (spawnData.text.includes(' - ')) {
+        return [170, 126]; // create two lines
+    } else if (spawnData.text =='') {
+        return [170, 90]; // no text
+    } else {
+        return [170, 108]; // default size for all markers
+    }
+}
+function setIconAnchor(iconSize, direction) {
+    if (direction === 'arrow-top') {
+        return [iconSize[0]/2, -7]; // anchor at top center of the icon
+    }
+    return [iconSize[0]/2, iconSize[1]-7]; // anchor at bottom center of the icon
+}
 
+function createDivIcon(spawnData) {
+    const direction = (spawnData.spawn === false || spawnData.category === "Terrain changes") ? 'arrow-top' : 'arrow-bottom';
+    const iconSize = setIconSize(spawnData);
+    const anchor = setIconAnchor(iconSize, direction);
+    const markerClass = spawnData.spawn ? 'marker-spawn' : 'marker-despawn';
+
+    if (direction === 'arrow-top') {
+         return L.divIcon({
+                className: 'custom-marker',
+                html: `<div class="marker-box">
+                <div class="marker-arrow-top"></div>
+                <img src="${spawnData.source}" class="${markerClass}" />
+                <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
+                </div>`,
+                iconSize: iconSize,
+                iconAnchor: anchor
+            });
+    } else {
+        return L.divIcon({
+                    className: 'custom-marker',
+                    html: `<div class="marker-box">
+                    <img src="${spawnData.source}" class="${markerClass}" />
+                    <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
+                    <div class="marker-arrow-bottom"></div>
+                    </div>`,
+                    iconSize: iconSize,
+                    iconAnchor: anchor
+                });
+    }
+}
 
 export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
     // Load markers from JSON and create tooltips
@@ -77,25 +122,16 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         categories[categoryName].forEach(spawnData => {
             const lat = GAME_TILE_SIZE * (spawnData.y) + GAME_TILE_SIZE / 2 + MAP_OFFSET;
             const lng = GAME_TILE_SIZE * (spawnData.x) + GAME_TILE_SIZE / 2;
-            const markerClass = spawnData.spawn ? 'marker-spawn' : 'marker-despawn';
             // Create markers for center, left wrap (-7800), and right wrap (+7800)
             const positionsToCreate = [
             { lat: lat, lng: lng },
             { lat: lat, lng: lng + width },
             { lat: lat, lng: lng - width }
             ];
-            const Anchor = spawnData.text=='' ? [38, 83] : [38, 101];
+
             positionsToCreate.forEach(position => {
-            const divIcon = L.divIcon({
-                className: 'custom-marker',
-                html: `<div class="marker-box">
-                <img src="${spawnData.source}" class="${markerClass}" />
-                <span class="marker-text">${spawnData.text}</span>
-                <div class="marker-arrow"></div>
-                </div>`,
-                iconSize: [76, 108],
-                iconAnchor: Anchor
-            });
+            const divIcon = createDivIcon(spawnData);
+
             const marker = L.marker([position.lat, position.lng], { icon: divIcon });
             layerGroup.addLayer(marker);
             markersBySubcategory[categoryName][`${position.lat},${position.lng}`] = marker;

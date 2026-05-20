@@ -457,10 +457,11 @@ details[open] summary {
   font-family: monospace;
   font-size: 12px;
   border-radius: 2px;
+  white-space: pre-line; /* allow line breaks */
 }
 
 /* Arrow pointing to the lat/lng position */
-.custom-marker .marker-arrow {
+.custom-marker .marker-arrow-bottom {
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
@@ -468,7 +469,14 @@ details[open] summary {
   border-top: 6px solid rgba(255, 255, 255, 1);
   margin-top: 3px;
 }
-
+.custom-marker .marker-arrow-top {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid rgba(255, 255, 255, 1);
+  margin-bottom: 3px;
+}
 
 
 
