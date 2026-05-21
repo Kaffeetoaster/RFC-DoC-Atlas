@@ -44,7 +44,7 @@ if __name__ == "__main__":
 ### json config file for map layers ###
     layers_config = {
         "Grid": [],
-        "Stability and Birth": [],
+        "Birth and Stability": [],
         "Religion": [],
         "Geography": [],
         "UHV": [],

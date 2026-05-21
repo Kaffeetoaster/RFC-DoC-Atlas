@@ -21,8 +21,14 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
         }
         for (const [category, items] of Object.entries(data)) {
         console.log("Category:", category, "with", items.length, "items");
-        const details = document.createElement('details');
+
+        if (category === "Birth and Stability") {
+            items.sort((a, b) => a.display_name.localeCompare(b.display_name));
+        }
+    
         
+
+        const details = document.createElement('details');
         const summary = document.createElement('summary');
         summary.textContent = category;
         details.appendChild(summary);
