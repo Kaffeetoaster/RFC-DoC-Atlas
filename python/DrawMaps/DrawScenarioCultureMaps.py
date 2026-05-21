@@ -18,7 +18,7 @@ def DrawCultureMap(layers_config, scenario_name):
 		if iCiv is not None:
 			#print(f"Owner for tile {(x, y)}: {iCiv}")
 			color = LCivXML[iCiv]["Color"].get("ColorTypePrimary", (0, 0, 0, 255))
-			tile_color = color[:3] + (110,) 
+			tile_color = color[:3] + (150,) 
 			pixels[x, y] = tile_color
             
 	
@@ -29,7 +29,7 @@ def DrawCultureMap(layers_config, scenario_name):
 	image_path = config.OUTPUT_PATH / "maps/layers/Culture" / f"{scenario_name}.webp"
 	image.save(image_path, "WEBP", quality=80, method=6)  # Save as WebP with good compression
 	
-	add_layer_config_entry(layers_config, display_name, "Culture", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
+	add_layer_config_entry(layers_config, display_name, "Scenario Culture", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
 
 def DrawScenarioCultureMaps(layers_config):
     for file in Path(config.INPUT_PATH / "Assets/Maps/Scenario").glob("*.csv"):
