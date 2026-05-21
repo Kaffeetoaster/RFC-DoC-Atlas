@@ -41,7 +41,7 @@ def draw_religion_map(iReligion, json_config):
 	image, offset = crop_image_to_content(image)  # Crop to content
 	
 	w,h = image.size
-	image = image.resize((int(w * TILE_SIZE), int(h * TILE_SIZE)), resample=Image.Resampling.NEAREST)
+	image = image.resize((w * TILE_SIZE, h * TILE_SIZE), resample=Image.Resampling.NEAREST)
 	image_path = config.OUTPUT_PATH / "maps/layers/Religions" / f"{display_name}.webp"
 	image.save(image_path, "WEBP", quality=80, method=6)  # Save as WebP with good compression
 	
