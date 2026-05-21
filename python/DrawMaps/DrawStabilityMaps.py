@@ -117,6 +117,7 @@ def iterate_plot_types(identifier, settler_values, war_values, core_func):
 
 def draw_stability_map(civ_name, period_name, values, json_config):
 	display_name= f"{civ_name.replace('_', ' ')} -> {period_name.replace('_', ' ')}" if period_name else civ_name.replace('_', ' ')
+	display_name = display_name + " (stability)"
 	print(f"Drawing stability map for {display_name}")
 
 	image = Image.new("RGBA", (iWorldX, iWorldY), (0, 0, 0, 0))
@@ -138,7 +139,7 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.webp"
 	#print(image_path)
 	image.save(image_path)
-	add_layer_config_entry(json_config, display_name, category="Stability", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size, offset=offset)
+	add_layer_config_entry(json_config, display_name, category="Stability and Birth", image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size, offset=offset)
 
 
 def draw_stability_map_for_civ(iCiv,json_config):

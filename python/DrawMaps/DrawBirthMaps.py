@@ -29,7 +29,7 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
         name = "Netherlands"
     
     filename = name.replace(" ", "_")
-    category = "Birth"
+    category = "Stability and Birth"
     Capital_x, Capital_y = dCapitals.get(iCiv, (None, None))
     if iPeriod is not None:
         filename = f"{name}_{dPeriodNames.get(iPeriod, '')}".replace(" ", "_")
