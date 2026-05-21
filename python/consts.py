@@ -7,6 +7,7 @@ import config
 from collections import defaultdict
 from pathlib import Path
 import time
+import os
 
 
 ### load and resolve consts from Python files ###
@@ -46,6 +47,17 @@ gens = [
     ("landmass", gen_landmass),
     ("continent", gen_Continent)
 ]
+
+
+
+for file in Path(config.INPUT_PATH / "Assets/Maps/Scenario").glob("*.csv"):
+    scenario_name = file.stem
+    print(f"Loading culture map for scenario {scenario_name}")
+    gen_func = iterate_number_map(f"Scenario/{file.name}")
+    gens.append((f"culture_{scenario_name}", gen_func))
+    
+
+
 
 dTileMap = defaultdict(dict)
 
