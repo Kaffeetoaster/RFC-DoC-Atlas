@@ -2098,5 +2098,43 @@
       "h": 576,
       "category": "UHV"
     }
+  ],
+  "Culture": [
+    {
+      "x": 7,
+      "y": 7,
+      "display_name": "1815AD",
+      "source": "maps/layers/Culture/RFC_1815AD.webp",
+      "w": 4384,
+      "h": 2272,
+      "category": "Culture"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "display_name": "1500AD",
+      "source": "maps/layers/Culture/RFC_1500AD.webp",
+      "w": 4096,
+      "h": 2048,
+      "category": "Culture"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "display_name": "1700AD",
+      "source": "maps/layers/Culture/RFC_1700AD.webp",
+      "w": 4128,
+      "h": 2112,
+      "category": "Culture"
+    },
+    {
+      "x": 15,
+      "y": 24,
+      "display_name": "600AD",
+      "source": "maps/layers/Culture/RFC_600AD.webp",
+      "w": 4032,
+      "h": 1664,
+      "category": "Culture"
+    }
   ]
 }

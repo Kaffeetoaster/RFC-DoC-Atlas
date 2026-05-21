@@ -12,6 +12,7 @@ from python.DrawMaps.DrawStabilityMaps import *
 from python.DrawMaps.DrawBirthMaps import *
 from python.DrawMaps.DrawUHVMaps import *
 from python.DrawMaps.DrawGeograpyhMaps import *
+from python.DrawMaps.DrawScenarioCultureMaps import *
 
 import config
 import json
@@ -47,7 +48,8 @@ if __name__ == "__main__":
         "Birth": [],
         "Religion": [],
         "Geography": [],
-        "UHV": []
+        "UHV": [],
+        "Scenario Culture": []
     }
 ### json config file for map markers ###
     markers_config ={
@@ -80,6 +82,9 @@ if __name__ == "__main__":
     
 ### Draw UHV Maps ###
     measure(DrawUHVMaps, layers_config)
+
+### Draw Scenario Culture Maps ###
+    measure(DrawScenarioCultureMaps, layers_config)
 
 
 ### save json config files for layers and markers ###
