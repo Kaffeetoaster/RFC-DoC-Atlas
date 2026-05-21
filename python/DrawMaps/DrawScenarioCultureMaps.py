@@ -17,6 +17,7 @@ def DrawCultureMap(layers_config, scenario_name):
 		iCiv = tile_info.get(f"culture_{scenario_name}")
 		if iCiv is not None:
 			#print(f"Owner for tile {(x, y)}: {iCiv}")
+			
 			color = LCivXML[iCiv]["Color"].get("ColorTypePrimary", (0, 0, 0, 255))
 			tile_color = color[:3] + (150,) 
 			pixels[x, y] = tile_color
@@ -32,6 +33,6 @@ def DrawCultureMap(layers_config, scenario_name):
 	add_layer_config_entry(layers_config, display_name, "Scenario Culture", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
 
 def DrawScenarioCultureMaps(layers_config):
-    for file in Path(config.INPUT_PATH / "Assets/Maps/Scenario").glob("*.csv"):
-        scenario_name = file.stem
+    for iyear in lScenarioStartYears:
+        scenario_name = f"RFC_{str(-iyear)}BC" if iyear < 0 else f"RFC_{iyear}AD"
         DrawCultureMap(layers_config, scenario_name)
