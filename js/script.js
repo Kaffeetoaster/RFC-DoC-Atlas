@@ -4,6 +4,8 @@ import {initializeDeselectAllButton} from './UI/deselect_all.js';
 
 import { loadLayers } from './json/load_layers.js';
 import { loadMarkers} from './json/load_markers.js';
+import { loadTooltips} from './json/load_tooltips.js';
+
 
 // loading about information and adding event listeners for about page
 initializeAboutPage();
@@ -114,3 +116,5 @@ loadLayers(GAME_TILE_SIZE, map, width, height, MAP_OFFSET);
 // load markers, create checkboxes to toggle them and create a cache canvas for the markers
 loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
 
+// load tooltips, create hover event listener to update tooltip content
+loadTooltips(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
