@@ -2099,15 +2099,6 @@
   ],
   "Scenario Culture": [
     {
-      "x": 0,
-      "y": 0,
-      "display_name": "3000_ BC",
-      "source": "maps/layers/Culture/RFC_3000_BC.webp",
-      "w": 4800,
-      "h": 2560,
-      "category": "Scenario Culture"
-    },
-    {
       "x": 15,
       "y": 24,
       "display_name": "600 AD",
