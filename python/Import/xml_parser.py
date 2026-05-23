@@ -182,7 +182,7 @@ def convert_button_image(button_info, new_filename):
 # and the infos as dicts. to keep it consisten with the other xmls?
 ## dArtXML, should be a dict of ART defines, that uses the "Type" tag as a key, and the infos as a dict.
 ## dTxtXML should be a dict of text defines, that uses the "tag" tag as a key, and the infos as a dict
-## preping the results of parse_xml should happen in xml_parser.py
+## prepping the results of parse_xml should happen in xml_parser.py
 
 ### resolving xml tags ###
 def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML, dPlayerColorXML, dColorXML):

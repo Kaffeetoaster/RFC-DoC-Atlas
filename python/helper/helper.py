@@ -30,14 +30,15 @@ def add_layer_config_entry(config, text, category, image_path, image_size, offse
     config[category].append(entry)
 
 
-def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpawn):
+def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpawn, bonusType = None):
     entry = {
         "x": coords[0],
         "y": coords[1],
         "text": text,
         "source": str(path_art),
         "category": category,
-        "spawn": bSpawn # important for color
+        "spawn": bSpawn, # important for color
+        "bonusType": bonusType
     }
     config_dict["spawns_and_despawns"].append(entry)
 

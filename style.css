@@ -209,6 +209,27 @@ html, body {
         color: #063a8c;
       }
 
+/* resource filter dropdown */
+
+
+#bonus-select {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 1100;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#bonus-select.hidden {
+    display: none;
+}
 
 /* burger button */
 #burger {
