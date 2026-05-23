@@ -210,12 +210,54 @@ html, body {
       }
 
 /* resource filter dropdown */
+#city-planner-container {
+    position: absolute;
+    top: 200px;
+    right: 5px;
+    width: auto;
+    z-index: 1100;
+    font-size: 10px;
+
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#city-planner-toggle, #city-planner-clear, #city-planner-show {
+    font: inherit;
+    color: var(--civ-white);
+    cursor: pointer;
+    border: 1px solid var(--civ-border);
+    border-radius: 6px;
+    background: var(--civ-list-bg);
+}
+
+
+
+#city-planner-toggle.active {
+  color: var(--civ-gold);
+  text-shadow: 0 0 6px rgba(255, 204, 102, 0.55);
+}
+#city-planner-show.active {
+  color: var(--civ-gold);
+  text-shadow: 0 0 6px rgba(255, 204, 102, 0.55);
+}
+
 
 
 #bonus-select {
     position: absolute;
     top: 100px;
-    right: 10px;
+    right: 5px;
     z-index: 1100;
     font-size: 15px;
     font-weight: bold;
