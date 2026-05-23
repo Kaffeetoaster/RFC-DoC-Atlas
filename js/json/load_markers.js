@@ -1,3 +1,50 @@
+const bonusSelect = document.getElementById("bonus-select");
+
+
+function setBonusSelectVisibility(categoryCheckboxes) {
+    const anyCategoryEnabled = Object.values(categoryCheckboxes).some(checkbox => checkbox.checked);
+    bonusSelect.classList.toggle("hidden", !anyCategoryEnabled);
+}
+
+function updateMarkerVisibility(marker, shouldShow, map, mapBounds) {
+    const isInBounds = mapBounds.contains(marker.getLatLng());
+
+    if (shouldShow && isInBounds) {
+        marker.addTo(map);
+    } else {
+        marker.removeFrom(map);
+    }
+}
+
+function refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map) {
+    const selectedBonusType = bonusSelect.value;
+    const mapBounds = map.getBounds();
+
+    Object.entries(markersByCategory).forEach(([categoryName, markers]) => {
+        const categoryCheckbox = categoryCheckboxes[categoryName];
+        const categoryEnabled = Boolean(categoryCheckbox && categoryCheckbox.checked);
+
+        if (!categoryEnabled) {
+            markers.forEach(marker => marker.removeFrom(map));
+            return;
+        }
+
+        if (selectedBonusType === "all") {
+            markers.forEach(marker => updateMarkerVisibility(marker, true, map, mapBounds));
+            return;
+        }
+
+        const markersByBonusType = markersByCategoryAndBonusType[categoryName] || {};
+        const allowedMarkers = new Set(markersByBonusType[selectedBonusType] || []);
+
+        markers.forEach(marker => {
+            updateMarkerVisibility(marker, allowedMarkers.has(marker), map, mapBounds);
+        });
+    });
+
+    setBonusSelectVisibility(categoryCheckboxes);
+}
+
 
 function setIconSize(spawnData) {
     if (spawnData.text.includes(' - ')) {
@@ -85,17 +132,17 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         summary.textContent = 'Map markers';
         details.appendChild(summary);
         
-        // Store markers by subcategory
-        const markersBySubcategory = {};
-        const categoryLayerGroups = {};
+        // Store markers by category and bonus type, plus their checkboxes.
+        const markersByCategory = {};
+        const categoryCheckboxes = {};
+        const markersByCategoryAndBonusType = {};
         // For each subcategory
         Object.keys(categories).forEach(categoryName => {
 
         console.log('Creating subcategory:', categoryName, 'with', categories[categoryName].length, 'spawns/despawns');
         
-        markersBySubcategory[categoryName] = {};
-        const layerGroup = L.layerGroup();
-        categoryLayerGroups[categoryName] = layerGroup;
+        markersByCategory[categoryName] = [];
+        markersByCategoryAndBonusType[categoryName] = {};
         // Create checkbox for subcategory
         const label = document.createElement('label');
         label.className = 'checkbox-container';
@@ -104,6 +151,7 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         checkbox.type = 'checkbox';
         checkbox.dataset.category = categoryName;
         checkbox.checked = false;
+        categoryCheckboxes[categoryName] = checkbox;
         
         const checkmark = document.createElement('span');
         checkmark.className = 'checkmark';
@@ -133,75 +181,33 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
             const divIcon = createDivIcon(spawnData);
 
             const marker = L.marker([position.lat, position.lng], { icon: divIcon });
-            layerGroup.addLayer(marker);
-            markersBySubcategory[categoryName][`${position.lat},${position.lng}`] = marker;
+            markersByCategory[categoryName].push(marker);
+
+            if (spawnData.bonusType) { 
+                markersByCategoryAndBonusType[categoryName][spawnData.bonusType] = markersByCategoryAndBonusType[categoryName][spawnData.bonusType] || [];
+                markersByCategoryAndBonusType[categoryName][spawnData.bonusType].push(marker);
+            }
+
             });
         });
         
-
-
-        // Event listener for checkbox - show/hide all markers in subcategory
         checkbox.addEventListener('change', function() {
-
-            console.log(`Checkbox for category "${categoryName}" changed: ${this.checked ? 'checked' : 'unchecked'}`);
-            const start = performance.now();
-            let markercount = 0;
-
-            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
-            const mapBounds = map.getBounds();
-            if (this.checked && mapBounds.contains(marker.getLatLng())) { 
-                marker.addTo(map);
-                markercount++;
-            } else {
-                marker.removeFrom(map);
-            }
-            });
-            const end = performance.now();
-            console.log(`Time taken to add markers for category "${categoryName}": ${end - start} ms`);
-            console.log(`Number of markers added for category "${categoryName}": ${markercount}`);
-            console.log('Time per marker:', (end - start) / markercount, 'ms');
-        });        
+            refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
         });
-        
+        });
+
         container.appendChild(details);
+
+        bonusSelect.addEventListener("change", () => refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map));
         
-        // Update markers when map moves or zooms
-        map.on('moveend', () => {
-        const mapBounds = map.getBounds();
-        Object.keys(markersBySubcategory).forEach(categoryName => {
-            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
-            const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
-            const isEnabled = checkbox && checkbox.checked;
-            const isInBounds = mapBounds.contains(marker.getLatLng());
-            
-            if (isEnabled && isInBounds) {
-                marker.addTo(map);
-                
-            } else {
-                marker.removeFrom(map);
-                
-            }
-            });
+
+        map.on('moveend zoomend', () => {
+            refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
         });
-        });
+
+        refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
         
-        map.on('zoomend', () => {
-        const mapBounds = map.getBounds();
-        Object.keys(markersBySubcategory).forEach(categoryName => {
-            Object.values(markersBySubcategory[categoryName]).forEach(marker => {
-            const checkbox = document.querySelector(`input[data-category="${categoryName}"]`);
-            const isEnabled = checkbox && checkbox.checked;
-            const isInBounds = mapBounds.contains(marker.getLatLng());
-            
-            if (isEnabled && isInBounds) {
-                marker.addTo(map);
-                
-            } else {
-                marker.removeFrom(map);
-            }
-            });
-        });
-        });
+    
         
         console.log('All markers loaded and UI created successfully!');
     })

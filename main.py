@@ -13,6 +13,7 @@ from python.DrawMaps.DrawBirthMaps import *
 from python.DrawMaps.DrawUHVMaps import *
 from python.DrawMaps.DrawGeograpyhMaps import *
 from python.DrawMaps.DrawScenarioCultureMaps import *
+from python.DrawMaps.CreateTooltipInfo import *
 
 import config
 import json
@@ -84,6 +85,10 @@ if __name__ == "__main__":
 
 ### Draw Scenario Culture Maps ###
     measure(DrawScenarioCultureMaps, layers_config)
+
+### dump tooltip info for map interactivity ###
+    measure(create_tooltip_info)
+
 
 
 ### save json config files for layers and markers ###

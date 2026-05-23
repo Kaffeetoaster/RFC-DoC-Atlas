@@ -77,7 +77,7 @@ html, body {
     top: 10px;
     left: 10px;
     width: 250px;
-    height: 85vh;
+    height: 75vh;
     background: var(--civ-blue-bg);
     border: 2px solid var(--civ-border);
     border-radius: 8px;
@@ -209,6 +209,69 @@ html, body {
         color: #063a8c;
       }
 
+/* resource filter dropdown */
+#city-planner-container {
+    position: absolute;
+    top: 200px;
+    right: 5px;
+    width: auto;
+    z-index: 1100;
+    font-size: 10px;
+
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#city-planner-toggle, #city-planner-clear, #city-planner-show {
+    font: inherit;
+    color: var(--civ-white);
+    cursor: pointer;
+    border: 1px solid var(--civ-border);
+    border-radius: 6px;
+    background: var(--civ-list-bg);
+}
+
+
+
+#city-planner-toggle.active {
+  color: var(--civ-gold);
+  text-shadow: 0 0 6px rgba(255, 204, 102, 0.55);
+}
+#city-planner-show.active {
+  color: var(--civ-gold);
+  text-shadow: 0 0 6px rgba(255, 204, 102, 0.55);
+}
+
+
+
+#bonus-select {
+    position: absolute;
+    top: 100px;
+    right: 5px;
+    z-index: 1100;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--civ-white);
+    cursor: pointer;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#bonus-select.hidden {
+    display: none;
+}
 
 /* burger button */
 #burger {
@@ -479,6 +542,21 @@ details[open] summary {
 }
 
 
+
+#tooltip-box {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 250px;
+    pointer-events: none; /* allow clicks to pass through */
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    max-width: 200px;
+    z-index: 1200;
+}
 
 
 

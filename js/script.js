@@ -1,20 +1,11 @@
 import { initializeAboutPage, loadAboutInformation } from './UI/about.js';
 import {initializeBurgerMenu} from './UI/burger.js';
 import {initializeDeselectAllButton} from './UI/deselect_all.js';
+import { initCityPlanner } from './UI/city_planner.js';
 
 import { loadLayers } from './json/load_layers.js';
 import { loadMarkers} from './json/load_markers.js';
-
-// loading about information and adding event listeners for about page
-initializeAboutPage();
-loadAboutInformation();
-
-
-// Event listener for Burger menu
-initializeBurgerMenu();
-
-// Event listener for "Deselect All" button
-initializeDeselectAllButton();
+import { loadTooltips} from './json/load_tooltips.js';
 
 
 
@@ -113,4 +104,22 @@ loadLayers(GAME_TILE_SIZE, map, width, height, MAP_OFFSET);
 
 // load markers, create checkboxes to toggle them and create a cache canvas for the markers
 loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+
+// load tooltips, create hover event listener to update tooltip content
+loadTooltips(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+
+
+// initialize city planner mode and interactions
+initCityPlanner(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+
+// loading about information and adding event listeners for about page
+initializeAboutPage();
+loadAboutInformation();
+
+
+// Event listener for Burger menu
+initializeBurgerMenu();
+
+// Event listener for "Deselect All" button
+initializeDeselectAllButton();
 
