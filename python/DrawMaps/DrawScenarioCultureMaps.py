@@ -5,19 +5,6 @@ from python.helper.helper import *
 
 import config
 
-def fix_outdated_culture_data():
-	for (x, y), tile_info in dTileMap.items():
-		for iyear in lScenarioStartYears:
-			scenario_name = f"RFC_{str(-iyear)}BC" if iyear < 0 else f"RFC_{iyear}AD"
-			culture_key = f"culture_{scenario_name}"
-			
-			for iCiv in range(62, iNumCivs, -1):
-				if tile_info.get(culture_key) == iCiv:
-					dTileMap[(x, y)][culture_key] = iCiv + 1
-					
-
-
-
 def DrawCultureMap(layers_config, scenario_name):
 	print(scenario_name)
 	display_name = scenario_name.replace("RFC_", "")
@@ -27,10 +14,6 @@ def DrawCultureMap(layers_config, scenario_name):
 	
 	for (x, y), tile_info in dTileMap.items():
 		culture_key = f"culture_{scenario_name}"
-		## 
-		for iCiv in range(iNumCivs - 1, 61, -1):
-				if tile_info.get(culture_key) == iCiv:
-					tile_info[culture_key] = iCiv + 1
      
 		iCiv = tile_info.get(culture_key)
 		if iCiv is not None:
