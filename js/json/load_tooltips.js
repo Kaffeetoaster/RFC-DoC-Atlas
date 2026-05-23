@@ -15,7 +15,7 @@ function updateTooltip(latlng, Tooltip_lookup, GAME_TILE_SIZE, width, height, MA
     const lines = [];
 
     lines.push(tooltipData.region);
-
+    lines.push(tooltipData.city_name);
     const details = [
         tooltipData.plot,
         tooltipData.feature,
