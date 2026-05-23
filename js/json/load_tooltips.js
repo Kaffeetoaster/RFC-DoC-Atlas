@@ -7,13 +7,15 @@ function updateTooltip(latlng, Tooltip_lookup, GAME_TILE_SIZE, width, height, MA
     // allow wrapping:
     const width_in_tiles = width / GAME_TILE_SIZE;
     x = ((x % width_in_tiles) + width_in_tiles) % width_in_tiles;
-    
+    if (y < 0 || y >= height / GAME_TILE_SIZE) {
+        return;
+    }
     // Find the tooltip for this tile
     const tooltipData = Tooltip_lookup[`${x}_${y}`];
     const lines = [];
 
     lines.push(tooltipData.region);
-
+    lines.push(tooltipData.city_name);
     const details = [
         tooltipData.plot,
         tooltipData.feature,
