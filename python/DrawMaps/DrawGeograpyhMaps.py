@@ -35,25 +35,30 @@ def generate_color_scheme(num_colors):
 
     return hsl_colors, rgba_colors
 
-
-
-
-COLORSCHEME = generate_color_scheme(180)[1]  #
-
-## TODO: regions with close ids should have diffeernt colors.
-
-
+def filter_regions(dRegionOutlines, dRegionTiles, dRegionNeigbours, min_size=2):
+    # removes regions that are smaller than min_size
+    dRegionTiles = {region: tiles for region, tiles in dRegionTiles.items() if len(tiles) >= min_size}
+    dRegionOutlines = {region: outlines for region, outlines in dRegionOutlines.items() if region in dRegionTiles}
+    dRegionNeigbours = {region: neighbours for region, neighbours in dRegionNeigbours.items() if region in dRegionTiles}
+    return dRegionOutlines, dRegionTiles, dRegionNeigbours
+    
+    
+    
 ### TODO: needs a refactor, splitting up into smaller functions.
 def DrawRegionMap(json_config, region_type, tile_size, line_strength):
     dRegionOutlines = {}
     dRegionNeigbours = {}
     dRegionColors = {}
+    dRegionTiles = {}
 
     
 
     ## 1. get Region outline and Region neighbours
     for (x, y), tile_info in dTileMap.items():
         region = tile_info.get(region_type)
+        if region not in dRegionTiles:
+            dRegionTiles[region] = []
+        dRegionTiles[region].append((x, y))
         
         lines = []
         inset = (line_strength-1) // 2  # Inset to avoid overlap with neighbouring tiles
@@ -91,23 +96,17 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
                         dRegionNeigbours[region] = set()
                     if neighbor_region is not None:
                         dRegionNeigbours[region].add(neighbor_region)
-                    # set color for region, ensuring it's different from neighbors
 
     
+    dRegionOutlines, dRegionTiles, dRegionNeigbours = filter_regions(dRegionOutlines, dRegionTiles, dRegionNeigbours, min_size=5)
+    print(f"Region type: {region_type}, Number of regions: {len(dRegionTiles)}, Average size: {sum(len(tiles) for tiles in dRegionTiles.values())/len(dRegionTiles) if dRegionTiles else 0}")
     # 2. Draw Region outlines in differnt colors
     # set colors for regions, ensuring neighboring regions have different colors
-   
-        
-    if len(COLORSCHEME) >= len(dRegionOutlines):
-            for i, region in enumerate(dRegionOutlines):
-                dRegionColors[region] = COLORSCHEME[i]
-    else:
-        for region in dRegionOutlines:
-            used_colors = {dRegionColors.get(neigh) for neigh in dRegionNeigbours[region] if neigh in dRegionColors}
-            for color in COLORSCHEME:
-                if color not in used_colors:
-                    dRegionColors[region] = color
-                    break
+    COLORSCHEME = generate_color_scheme(len(dRegionTiles))[1]  # Generate a color scheme 
+    
+    for i, region in enumerate(dRegionTiles):
+        dRegionColors[region] = COLORSCHEME[i]
+    
 
     
         
@@ -115,12 +114,12 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
     img = Image.new("RGBA", (int(iWorldX * tile_size), int(iWorldY * tile_size)), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     # fill tiles with respective region color
-    for (x, y), tile_info in dTileMap.items():
-        region = tile_info.get(region_type)
-        if region is not None:
-            r,g,b,_ = dRegionColors[region]
-            color = (r, g, b, 130)  # Use RGB from color scheme and set alpha to 130 for transparency
-            fill_in_tile(x, y, color, img, Hatching=False) 
+    for region, tiles in dRegionTiles.items():
+        for tile in tiles:
+                x, y = tile
+                r,g,b,_ = dRegionColors[region]
+                color = (r, g, b, 130)  # Use RGB from color scheme and set alpha to 130 for transparency
+                fill_in_tile(x, y, color, img, Hatching=False) 
             
 
 
