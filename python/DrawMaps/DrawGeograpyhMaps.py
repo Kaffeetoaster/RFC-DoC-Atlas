@@ -45,7 +45,7 @@ def filter_regions(dRegionOutlines, dRegionTiles, dRegionNeigbours, min_size=2):
     
     
 ### TODO: needs a refactor, splitting up into smaller functions.
-def DrawRegionMap(json_config, region_type, tile_size, line_strength):
+def DrawRegionMap(json_config, region_type, bOnlyLand, tile_size, line_strength):
     dRegionOutlines = {}
     dRegionNeigbours = {}
     dRegionColors = {}
@@ -56,9 +56,13 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
     ## 1. get Region outline and Region neighbours
     for (x, y), tile_info in dTileMap.items():
         region = tile_info.get(region_type)
+        filter = region >= 100 if bOnlyLand else region<100
+        if region_type == "region" and filter:
+            continue
         if region not in dRegionTiles:
             dRegionTiles[region] = []
         dRegionTiles[region].append((x, y))
+        
         
         lines = []
         inset = (line_strength-1) // 2  # Inset to avoid overlap with neighbouring tiles
@@ -103,9 +107,15 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
     # 2. Draw Region outlines in differnt colors
     # set colors for regions, ensuring neighboring regions have different colors
     COLORSCHEME = generate_color_scheme(len(dRegionTiles))[1]  # Generate a color scheme 
-    
     for i, region in enumerate(dRegionTiles):
         dRegionColors[region] = COLORSCHEME[i]
+        
+    if region_type == "region":
+        num_colors = 20 if bOnlyLand else 10
+        COLORSCHEME = generate_color_scheme(num_colors)[1]
+        for i, region in enumerate(dRegionTiles):
+            dRegionColors[region] = COLORSCHEME[i % num_colors]
+    
     
 
     
@@ -128,16 +138,29 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
         line_color = dRegionColors[region]
         for start, end in lines:
             draw.line([start, end], fill=line_color, width=line_strength)
-
-    img_path = config.OUTPUT_PATH / f"maps/layers/Geography/{region_type}.webp"
+    filename = f"{region_type}.webp"
+    if region_type == "region":
+        if bOnlyLand:
+            filename = "region_land.webp"
+        else:
+            filename = "region_water.webp"
+    img_path = config.OUTPUT_PATH / f"maps/layers/Geography/{filename}"
     img.save(img_path, "WEBP", quality=80, method=6)  # Save as WebP with good compression
 
     
     # save img
     # and add entry to layers config
+    display_name = f"{region_type.capitalize()} Map"
+    if region_type == "landmass":
+        display_name = "Landmass Map (>4 tiles)"
+    if region_type =="region":
+        if bOnlyLand:
+            display_name = "Region Map - Land"
+        else:
+            display_name = "Region Map - Water"
     add_layer_config_entry(
                             config = json_config,
-                            text = f"{region_type.capitalize()} map",
+                            text = display_name,
                             category="Geography",
                             image_path = Path(img_path).relative_to(config.OUTPUT_PATH),
                             image_size = img.size
@@ -148,7 +171,8 @@ def DrawRegionMap(json_config, region_type, tile_size, line_strength):
 
 
 def DrawGeographyMaps(json_config):
-    DrawRegionMap(json_config, region_type="region", tile_size=TILE_SIZE, line_strength=3)
-    DrawRegionMap(json_config, region_type="landmass", tile_size=TILE_SIZE, line_strength=3)
-    DrawRegionMap(json_config, region_type="continent", tile_size=TILE_SIZE, line_strength=5)
+    DrawRegionMap(json_config, region_type="region", bOnlyLand=True, tile_size=TILE_SIZE, line_strength=3)
+    DrawRegionMap(json_config, region_type="region", bOnlyLand=False, tile_size=TILE_SIZE, line_strength=3)
+    DrawRegionMap(json_config, region_type="landmass",bOnlyLand=True, tile_size=TILE_SIZE, line_strength=3)
+    DrawRegionMap(json_config, region_type="continent", bOnlyLand=True, tile_size=TILE_SIZE, line_strength=5)
     
