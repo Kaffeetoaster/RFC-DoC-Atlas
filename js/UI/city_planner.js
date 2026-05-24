@@ -26,6 +26,9 @@ export function initCityPlanner(map, GAME_TILE_SIZE, WORLD_WIDTH, WORLD_HEIGHT, 
 	map.getPane("CityPlannerPane").style.zIndex = 560;
 
 	const previewOverlay = L.imageOverlay(city_planner_source, [0, 0], {pane: "CityPlannerPane"});
+	const previewOverlayLeft = L.imageOverlay(city_planner_source, [0, 0], {pane: "CityPlannerPane"});
+	const previewOverlayRight = L.imageOverlay(city_planner_source, [0, 0], {pane: "CityPlannerPane"});
+	
 	const placedOverlaysByTile = new Map();
 
 	let showPlane = true;
@@ -43,6 +46,8 @@ export function initCityPlanner(map, GAME_TILE_SIZE, WORLD_WIDTH, WORLD_HEIGHT, 
 	}
 	function clearPreview() {
 		previewOverlay.removeFrom(map);
+		previewOverlayLeft.removeFrom(map);
+		previewOverlayRight.removeFrom(map);
 		currentPreviewTileKey = null;
 	}
 	function refreshPreview(latlng) {
@@ -56,11 +61,21 @@ export function initCityPlanner(map, GAME_TILE_SIZE, WORLD_WIDTH, WORLD_HEIGHT, 
 		let bounds = getBoundsForTile(tile);
 		previewOverlay.setBounds(bounds);
 		previewOverlay.addTo(map);
+		previewOverlayLeft.setBounds([[bounds[0][0], bounds[0][1] - WORLD_WIDTH], [bounds[1][0], bounds[1][1] - WORLD_WIDTH]]);
+		previewOverlayLeft.addTo(map);
+		previewOverlayRight.setBounds([[bounds[0][0], bounds[0][1] + WORLD_WIDTH], [bounds[1][0], bounds[1][1] + WORLD_WIDTH]]);
+		previewOverlayRight.addTo(map);
 	}
 
 	function placeOverlayAtCurrentTile(latlng) {
 		const tile = getTileFromLatLng(latlng);
 		const tileKey = `${tile.x}_${tile.y}`;
+		
+		const tileLeft = { x: tile.x - WORLD_WIDTH / GAME_TILE_SIZE, y: tile.y };
+		const tileKeyLeft = `${tileLeft.x}_${tileLeft.y}`;
+			
+		const tileRight = { x: tile.x + WORLD_WIDTH / GAME_TILE_SIZE, y: tile.y };
+		const tileKeyRight = `${tileRight.x}_${tileRight.y}`;
 
 		const overlay = placedOverlaysByTile.get(tileKey);
 		if (overlay) {
@@ -70,6 +85,15 @@ export function initCityPlanner(map, GAME_TILE_SIZE, WORLD_WIDTH, WORLD_HEIGHT, 
 		const newOverlay = createOverlayForTile(tile);
 		newOverlay.addTo(map);
 		placedOverlaysByTile.set(tileKey, newOverlay);
+
+		const newOverlayLeft = createOverlayForTile(tileLeft);
+		newOverlayLeft.addTo(map);
+		placedOverlaysByTile.set(tileKeyLeft, newOverlayLeft);
+
+		const newOverlayRight = createOverlayForTile(tileRight);
+		newOverlayRight.addTo(map);
+		placedOverlaysByTile.set(tileKeyRight, newOverlayRight);
+		
 		
 	}
 
@@ -77,10 +101,26 @@ export function initCityPlanner(map, GAME_TILE_SIZE, WORLD_WIDTH, WORLD_HEIGHT, 
 		const tile = getTileFromLatLng(latlng);
 		const tileKey = `${tile.x}_${tile.y}`;
 		const overlay = placedOverlaysByTile.get(tileKey);
+
+		const tileLeft = { x: tile.x - WORLD_WIDTH / GAME_TILE_SIZE, y: tile.y };
+		const tileKeyLeft = `${tileLeft.x}_${tileLeft.y}`;
+		const overlayLeft = placedOverlaysByTile.get(tileKeyLeft);
+
+		const tileRight = { x: tile.x + WORLD_WIDTH / GAME_TILE_SIZE, y: tile.y };
+		const tileKeyRight = `${tileRight.x}_${tileRight.y}`;
+		const overlayRight = placedOverlaysByTile.get(tileKeyRight);
 	
 		if (overlay) {
 			overlay.removeFrom(map);
 			placedOverlaysByTile.delete(tileKey);
+		}
+		if (overlayLeft) {
+			overlayLeft.removeFrom(map);
+			placedOverlaysByTile.delete(tileKeyLeft);
+		}
+		if (overlayRight) {
+			overlayRight.removeFrom(map);
+			placedOverlaysByTile.delete(tileKeyRight);
 		}
 	}
 
