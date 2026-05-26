@@ -233,7 +233,6 @@ dCivPeriods = {
     iFrance: [iPeriodNationalFrance],
     iJapan: [iPeriodMeiji],
     iNorse: [iPeriodDenmark, iPeriodNorway],
-    iArabia: [iPeriodSaudi],
     iMoors: [iPeriodMorocco],
     iSpain: [iPeriodSpain],
     iHolyRome: [iPeriodAustria],
