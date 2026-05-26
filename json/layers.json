@@ -30,15 +30,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 54,
-      "y": 34,
-      "display_name": "Arabia -> Saudi (stability)",
-      "source": "maps/layers/Stability/Periods/Arabia_Saudi.webp",
-      "w": 1600,
-      "h": 832,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 34,
       "y": 3,
       "display_name": "Argentina (stability)",
@@ -828,15 +819,6 @@
       "source": "maps/layers/Spawns/Arabia.webp",
       "w": 672,
       "h": 512,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 84,
-      "y": 38,
-      "display_name": "Arabia -> Saudi",
-      "source": "maps/layers/Spawns/Periods/Arabia_Saudi.webp",
-      "w": 224,
-      "h": 192,
       "category": "Birth and Stability"
     },
     {
