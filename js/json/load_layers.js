@@ -25,7 +25,7 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
         if (category === "Birth and Stability") {
             items.sort((a, b) => a.display_name.localeCompare(b.display_name));
         }
-    
+        const ReligionsList = []
         
 
         const details = document.createElement('details');
@@ -74,7 +74,7 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
 
 
 
-
+            
             // Toggle overlay on checkbox change
             checkbox.addEventListener('change', function() {
             if (this.checked) {
@@ -88,10 +88,14 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
             }
             });
             if (category === "Religion") {
-                addLegendToggle(checkbox);
+                ReligionsList.push(checkbox);
             }
         };
         
+        for (const checkbox of ReligionsList) {
+             addLegendToggle(checkbox, ReligionsList);
+        }
+
         container.appendChild(details);
         };
         
