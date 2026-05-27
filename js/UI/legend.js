@@ -2,12 +2,20 @@
 const legend = document.getElementById("legend");
 
 
-export function addLegendToggle(checkbox) {
+function checkReligionMaps(ReligionsList) {
+    const AllUnchecked = ReligionsList.every(checkbox => !checkbox.checked);
+    return AllUnchecked;
+}    
+
+
+export function addLegendToggle(checkbox, ReligionsList) {
     checkbox.addEventListener("change", () => {
         if (checkbox.checked) {
             legend.classList.remove("hidden");
         } else {
-            legend.classList.add("hidden");
+            if (checkReligionMaps(ReligionsList)) {
+                legend.classList.add("hidden");
+            }
         }
     });
 }   
