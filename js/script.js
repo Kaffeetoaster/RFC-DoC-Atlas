@@ -73,11 +73,7 @@ map.setMaxBounds([[-height/10, -width], [height+ height/10, width*2]]);
 // Fit map to image
 map.fitBounds(bounds, { padding: [0, 0] });
 
-console.log('Map zoom level after fitBounds:', map.getZoom());
-map.setZoom(-1.5); // set zoom to -2 to show the whole image at once
-
-console.log('Map zoom level after setting zoom:', map.getZoom());
-//map.setView([height/2, width/2], -1);
+map.setView([height/2, width/2], -1.5);
 
 // for better cylindrcal map performance, disable inertia and fade animation
 // i dont know, this cylindriacl map stuff is weird.
