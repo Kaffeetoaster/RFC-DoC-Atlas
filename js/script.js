@@ -20,6 +20,9 @@ const map = L.map('map', {
   crs: L.CRS.Simple,
   minZoom: -2,
   maxZoom: 2,
+  zoomSnap: 0.5,      // disables snapping to integers
+  zoomDelta: 0.2,   
+  wheelPxPerZoomLevel: 120, 
   zoomControl: false,
   scrollWheelZoom: true,   // zoom only
   dragging: true,           // drag to pan
@@ -50,10 +53,13 @@ tileLayer.addTo(map);
 map.createPane("OutlinePane");
 map.getPane("OutlinePane").style.zIndex = 500; // above overlays but below tooltips
 
+map.on('zoomend', () => {
+    console.log('Zoom level changed to:', map.getZoom());
+});
 
 
 // Define bounds using image dimensions
-const bounds = [[0, 0], [height, width]];
+const bounds = [[160, 0], [height-160, width]];
 
 map.setMaxBounds([[-height/10, -width], [height+ height/10, width*2]]);
 // //left copy
@@ -66,12 +72,11 @@ map.setMaxBounds([[-height/10, -width], [height+ height/10, width*2]]);
 
 // Fit map to image
 map.fitBounds(bounds, { padding: [0, 0] });
-map.setZoom(-2); // set zoom to -2 to show the whole image at once
 
-map.setView([height/2, width/2], -2);
+map.setView([height/2, width/2], -1.5);
 
 // for better cylindrcal map performance, disable inertia and fade animation
-// i dont know this cylindriacl map stuff is weird.
+// i dont know, this cylindriacl map stuff is weird.
 map.options.inertia = false;
 map.options.fadeAnimation = false;
 
