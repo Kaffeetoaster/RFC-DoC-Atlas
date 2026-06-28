@@ -23,6 +23,7 @@ def map_exists(file_path):
 	return True
 
 
+
 					
 					
 def is_area(rectangle, exceptions, identifier, tile):
