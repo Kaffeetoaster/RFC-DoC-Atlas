@@ -11,7 +11,7 @@ def iterate_number_map(file_path):
 		for y, line in enumerate(csv.reader(file)):
 			for x, value in enumerate(line):
 				if not value:
-					yield (x, y), 0
+					yield (x, y), None
 				else:
 					yield (x, y), int(value)
 					
@@ -22,7 +22,7 @@ def iterate_string_map(file_path):
 		for y, line in enumerate(csv.reader(file)):
 			for x, value in enumerate(line):
 				if not value:
-					yield (x, y), ""
+					yield (x, y), None
 				else:
 					yield (x, y), str(value)
 
