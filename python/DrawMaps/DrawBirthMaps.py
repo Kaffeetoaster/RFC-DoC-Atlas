@@ -14,19 +14,22 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
 
     color = LCivXML[iCiv]["Color"].get("ColorTypePrimary", color)
     
-    name = LCivXML[iCiv].get("ShortDescription")
-    if iCiv == 41: # Misir
-        name = "Misr"
-    if iCiv == 57: # Saudis
-        name = "Saudi Arabia"
-    if name.startswith("TXT_KEY_CIV_"):
-        name = LCivXML[iCiv].get("Description")
-    if name.startswith("The Germans"):
-        name = "Holy Rome"
-    elif name.startswith("The Khmer"):
-        name = "Khmer"
-    elif name.startswith("The Dutch"):
-        name = "Netherlands"
+    # name = LCivXML[iCiv].get("ShortDescription")
+    # if iCiv == 41: # Misir
+    #     name = "Misr"
+    # if iCiv == 57: # Saudis
+    #     name = "Saudi Arabia"
+    # if name.startswith("TXT_KEY_CIV_"):
+    #     name = LCivXML[iCiv].get("Description")
+    # if name.startswith("The Germans"):
+    #     name = "Holy Rome"
+    # elif name.startswith("The Khmer"):
+    #     name = "Khmer"
+    # elif name.startswith("The Dutch"):
+    #     name = "Netherlands"
+        
+    name = dCivNames.get(iCiv, "Unknown Civilization")    
+        
     
     filename = name.replace(" ", "_")
     category = "Birth and Stability"

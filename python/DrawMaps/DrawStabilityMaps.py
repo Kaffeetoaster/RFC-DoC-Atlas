@@ -1,5 +1,6 @@
 from python.consts import *
 from python.helper.helper import *
+from python.Import.load_csv import *
 import config
 
 
@@ -22,16 +23,6 @@ def map_exists(file_path):
 	return True
 
 
-def iterate_map(file_path):
-	full_file_path = get_full_path(file_path)
-	
-	with open(full_file_path) as file:
-		for y, line in enumerate(csv.reader(file)):
-			for x, value in enumerate(line):
-				if not value:
-					yield (x, y), 0
-				else:
-					yield (x, y), int(value)
 					
 					
 def is_area(rectangle, exceptions, identifier, tile):
@@ -59,8 +50,8 @@ def is_period_core(identifier, tile):
 def iterate_civ_map(iCiv):
 	civ_name = dCivNames[iCiv]
 	civ_name = civ_name.replace(" ", "_")
-	settler_values = iterate_map(f"Settler/{civ_name}.csv")
-	war_values = iterate_map(f"War/{civ_name}.csv")
+	settler_values = iterate_number_map(f"Settler/{civ_name}.csv")
+	war_values = iterate_number_map(f"War/{civ_name}.csv")
 	
 	return iterate_plot_types(iCiv, settler_values, war_values, is_core)
 
@@ -73,14 +64,14 @@ def iterate_period_map(iCiv, iPeriod):
 	war_map = f"War/Period/{period_name}.csv"
 	
 	if map_exists(settler_map):
-		settler_values = iterate_map(settler_map)
+		settler_values = iterate_number_map(settler_map)
 	else:
-		settler_values = iterate_map(f"Settler/{civ_name}.csv")
+		settler_values = iterate_number_map(f"Settler/{civ_name}.csv")
 	
 	if map_exists(war_map):
-		war_values = iterate_map(war_map)
+		war_values = iterate_number_map(war_map)
 	else:
-		war_values = iterate_map(f"War/{civ_name}.csv")
+		war_values = iterate_number_map(f"War/{civ_name}.csv")
 	
 	if iPeriod in dPeriodCoreArea:
 		core_func = is_period_core
@@ -93,13 +84,13 @@ def iterate_period_map(iCiv, iPeriod):
 
 
 def iterate_plot_types(identifier, settler_values, war_values, core_func):
-	terrain_values = iterate_map("Export/BaseTerrain.csv")
+	terrain_values = iterate_string_map("Earth/Plot.csv")
 	
 	for ((x, y), iSettlerValue), (_, iWarValue), (_, iTerrainValue) in zip(settler_values, war_values, terrain_values):
 		##if iTerrainValue == 2:
 		##	yield (x, y), PEAK
 			
-		if iTerrainValue != 0 and core_func(identifier, (x, iWorldY-1-y)):
+		if iTerrainValue != "PLOT_OCEAN" and core_func(identifier, (x, iWorldY-1-y)):
 			yield (x, y), CORE
 		
 		elif iSettlerValue > 0:

@@ -1193,7 +1193,7 @@
     {
       "x": 61,
       "y": 58,
-      "display_name": "Holy Rome",
+      "display_name": "Holy_Rome",
       "source": "maps/layers/Spawns/Holy_Rome.webp",
       "w": 384,
       "h": 256,
@@ -1483,8 +1483,8 @@
       "y": 57,
       "display_name": "Mongolia respawn",
       "source": "maps/layers/Spawns/Respawns/Mongolia.webp",
-      "w": 576,
-      "h": 320,
+      "w": 544,
+      "h": 288,
       "category": "Birth and Stability"
     },
     {
@@ -1688,8 +1688,8 @@
     {
       "x": 84,
       "y": 38,
-      "display_name": "Saudi Arabia",
-      "source": "maps/layers/Spawns/Saudi_Arabia.webp",
+      "display_name": "Saudis",
+      "source": "maps/layers/Spawns/Saudis.webp",
       "w": 288,
       "h": 192,
       "category": "Birth and Stability"
@@ -2090,39 +2090,39 @@
   ],
   "Scenario Culture": [
     {
-      "x": 15,
-      "y": 24,
+      "x": 0,
+      "y": 0,
       "display_name": "600 AD",
       "source": "maps/layers/Culture/RFC_600AD.webp",
-      "w": 4032,
-      "h": 1664,
+      "w": 4800,
+      "h": 2560,
       "category": "Scenario Culture"
     },
     {
-      "x": 13,
-      "y": 13,
+      "x": 0,
+      "y": 0,
       "display_name": "1500 AD",
       "source": "maps/layers/Culture/RFC_1500AD.webp",
-      "w": 4096,
-      "h": 2048,
+      "w": 4800,
+      "h": 2560,
       "category": "Scenario Culture"
     },
     {
-      "x": 12,
-      "y": 11,
+      "x": 0,
+      "y": 0,
       "display_name": "1700 AD",
       "source": "maps/layers/Culture/RFC_1700AD.webp",
-      "w": 4128,
-      "h": 2112,
+      "w": 4800,
+      "h": 2560,
       "category": "Scenario Culture"
     },
     {
-      "x": 7,
-      "y": 7,
+      "x": 0,
+      "y": 0,
       "display_name": "1815 AD",
       "source": "maps/layers/Culture/RFC_1815AD.webp",
-      "w": 4384,
-      "h": 2272,
+      "w": 4800,
+      "h": 2560,
       "category": "Scenario Culture"
     }
   ]

@@ -55,8 +55,12 @@ def convert_tuple_assignment(node, context):
             size = len(node.targets[0].elts)
             results = [i for i in range(size)]
             if ast.unparse(node.value) == "tuple((Civ(i) for i in range(iNumCivs)))":
-
+                civnames = [var_name[1:] for var_name in target_names]
+                ## uses the variable names directly as civ names, which is really hacky.
+                context["dCivNamesFromVars"] = dict(zip(results, civnames))
+                
                 return dict(zip(target_names, results))
+                
             else:
                 return None
 
