@@ -29,26 +29,6 @@ def xml_to_dict(element):
     else:
         return element.text.strip() if element.text else ""
 
-def xml_to_dict(element):
-    result = {}
-    children = list(element)
-
-    if children:
-        child_dict = {}
-        for child in children:
-            tag = strip_namespace(child.tag)
-            child_result = xml_to_dict(child)
-
-            if tag not in child_dict:
-                child_dict[tag] = child_result
-            else:
-                if not isinstance(child_dict[tag], list):
-                    child_dict[tag] = [child_dict[tag]]
-                child_dict[tag].append(child_result)
-
-        return child_dict
-    else:
-        return element.text.strip() if element.text else ""
 
 def parse_xml_file(file_path):
     # takes an xml file and returns a parsed representation depending on the root tag
