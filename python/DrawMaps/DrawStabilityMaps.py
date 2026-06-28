@@ -94,10 +94,10 @@ def iterate_plot_types(identifier, settler_values, war_values, core_func):
 		if iTerrainValue != "PLOT_OCEAN" and core_func(identifier, (x, iWorldY-1-y)):
 			yield (x, y), CORE
 		
-		elif iSettlerValue > 0:
+		elif iSettlerValue  is not None and iSettlerValue  > 0:
 			yield (x, y), HISTORICAL
 		
-		elif iWarValue > 1:
+		elif iWarValue is not None and iWarValue > 1:
 			yield (x, y), CONQUEST
 		
 		##elif iTerrainValue == 0:
