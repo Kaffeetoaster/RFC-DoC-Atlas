@@ -84,6 +84,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 104,
+      "y": 39,
+      "display_name": "Bengal (stability)",
+      "source": "maps/layers/Stability/Bengal.webp",
+      "w": 416,
+      "h": 288,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 30,
       "y": 14,
       "display_name": "Brazil (stability)",
@@ -189,15 +198,6 @@
       "source": "maps/layers/Stability/Colombia.webp",
       "w": 672,
       "h": 1152,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 103,
-      "y": 26,
-      "display_name": "Dravidia (stability)",
-      "source": "maps/layers/Stability/Dravidia.webp",
-      "w": 608,
-      "h": 608,
       "category": "Birth and Stability"
     },
     {
@@ -365,6 +365,15 @@
     {
       "x": 97,
       "y": 29,
+      "display_name": "India -> Late Gupta (stability)",
+      "source": "maps/layers/Stability/Periods/India_Late_Gupta.webp",
+      "w": 640,
+      "h": 704,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 97,
+      "y": 29,
       "display_name": "India -> Maratha (stability)",
       "source": "maps/layers/Stability/Periods/India_Maratha.webp",
       "w": 640,
@@ -423,6 +432,15 @@
       "source": "maps/layers/Stability/Java.webp",
       "w": 672,
       "h": 320,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 101,
+      "y": 34,
+      "display_name": "Karnataka (stability)",
+      "source": "maps/layers/Stability/Karnataka.webp",
+      "w": 352,
+      "h": 448,
       "category": "Birth and Stability"
     },
     {
@@ -669,6 +687,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 101,
+      "y": 39,
+      "display_name": "Rajputana (stability)",
+      "source": "maps/layers/Stability/Rajputana.webp",
+      "w": 416,
+      "h": 352,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 54,
       "y": 37,
       "display_name": "Rome (stability)",
@@ -738,6 +765,15 @@
       "source": "maps/layers/Stability/Sweden.webp",
       "w": 2528,
       "h": 1504,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 103,
+      "y": 26,
+      "display_name": "Tamilakam (stability)",
+      "source": "maps/layers/Stability/Tamilakam.webp",
+      "w": 608,
+      "h": 544,
       "category": "Birth and Stability"
     },
     {
@@ -885,6 +921,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 111,
+      "y": 42,
+      "display_name": "Bengal",
+      "source": "maps/layers/Spawns/Bengal.webp",
+      "w": 128,
+      "h": 128,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 40,
       "y": 16,
       "display_name": "Brazil",
@@ -894,11 +939,11 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 115,
+      "x": 116,
       "y": 38,
       "display_name": "Burma",
       "source": "maps/layers/Spawns/Burma.webp",
-      "w": 160,
+      "w": 128,
       "h": 224,
       "category": "Birth and Stability"
     },
@@ -1017,15 +1062,6 @@
       "source": "maps/layers/Spawns/Colombia.webp",
       "w": 352,
       "h": 256,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 105,
-      "y": 31,
-      "display_name": "Dravidia",
-      "source": "maps/layers/Spawns/Dravidia.webp",
-      "w": 128,
-      "h": 160,
       "category": "Birth and Stability"
     },
     {
@@ -1254,6 +1290,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 107,
+      "y": 44,
+      "display_name": "India -> Late Gupta",
+      "source": "maps/layers/Spawns/Periods/India_Late_Gupta.webp",
+      "w": 160,
+      "h": 96,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 102,
       "y": 38,
       "display_name": "India -> Maratha",
@@ -1332,6 +1377,15 @@
       "source": "maps/layers/Spawns/Extended/Java.webp",
       "w": 224,
       "h": 64,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 103,
+      "y": 35,
+      "display_name": "Karnataka",
+      "source": "maps/layers/Spawns/Karnataka.webp",
+      "w": 128,
+      "h": 128,
       "category": "Birth and Stability"
     },
     {
@@ -1650,6 +1704,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 101,
+      "y": 39,
+      "display_name": "Rajputana",
+      "source": "maps/layers/Spawns/Rajputana.webp",
+      "w": 160,
+      "h": 224,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 66,
       "y": 50,
       "display_name": "Rome",
@@ -1746,6 +1809,15 @@
       "source": "maps/layers/Spawns/Sweden.webp",
       "w": 192,
       "h": 224,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 105,
+      "y": 31,
+      "display_name": "Tamilakam",
+      "source": "maps/layers/Spawns/Tamilakam.webp",
+      "w": 128,
+      "h": 160,
       "category": "Birth and Stability"
     },
     {
@@ -1874,6 +1946,15 @@
       "source": "maps/layers/Religions/Hinduism.webp",
       "w": 1280,
       "h": 928,
+      "category": "Religion"
+    },
+    {
+      "x": 100,
+      "y": 29,
+      "display_name": "Jainism",
+      "source": "maps/layers/Religions/Jainism.webp",
+      "w": 544,
+      "h": 768,
       "category": "Religion"
     },
     {
@@ -2009,8 +2090,8 @@
     {
       "x": 115,
       "y": 26,
-      "display_name": "Srivijaya for Dravidia",
-      "source": "maps/layers/UHV/Srivijaya_for_Dravidia.webp",
+      "display_name": "Srivijaya for Tamils",
+      "source": "maps/layers/UHV/Srivijaya_for_Tamils.webp",
       "w": 224,
       "h": 288,
       "category": "UHV"

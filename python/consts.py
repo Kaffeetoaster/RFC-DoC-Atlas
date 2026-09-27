@@ -150,6 +150,8 @@ update_all_infos(LReligionXML, dArtXML, dTextXML)
 
 
 ### set some variables ###
+## Civ Names need to coincide with the Names for the Settler and War Maps! ##
+## Maybe use the Short desc instead? ##
 dCivNames = {
     iAmerica: "America",
     iArabia: "Arabia",
@@ -159,6 +161,7 @@ dCivNames = {
     iAztecs: "Aztecs",
     iBabylonia: "Babylonia",
     iBelgium: "Belgium",
+    iBengal: "Bengal",
     iBrazil: "Brazil",
     iBurma: "Burma",
     iByzantium: "Byzantium",
@@ -167,7 +170,6 @@ dCivNames = {
     iCelts: "Celts",
     iChina: "China",
     iColombia: "Colombia",
-    iDravidia: "Dravidia",
     iEgypt: "Egypt",
     iEngland: "England",
     iEthiopia: "Ethiopia",
@@ -183,6 +185,7 @@ dCivNames = {
     iItaly: "Italy",
     iJapan: "Japan",
     iJava: "Java",
+    iKarnataka: "Karnataka",
     iKhmer: "Khmer",
     iCongo: "Congo",
     iKorea: "Korea",
@@ -204,6 +207,7 @@ dCivNames = {
     iPoland: "Poland",
     iPolynesia: "Polynesia",
     iPortugal: "Portugal",
+    iRajputs: "Rajputana",
     iRome: "Rome",
     iRus: "Ruthenia",
     iRussia: "Russia",
@@ -211,6 +215,7 @@ dCivNames = {
     iSpain: "Spain",
     iSwahili: "Swahili",
     iSweden: "Sweden",
+    iTamils: "Tamilakam",
     iTatars: "Tartary",
     iThailand: "Thailand",
     iTibet: "Tibet",
@@ -219,33 +224,7 @@ dCivNames = {
     iVietnam: "Vietnam",
 }
 
-dCivPeriods = {
-    iEgypt: [iPeriodPtolemaicEgypt],
-    iNubia: [iPeriodMakuria],
-    iChina: [iPeriodMing],
-    iIndia: [iPeriodMaratha],
-    iGreece: [iPeriodModernGreece],
-    iCarthage: [iPeriodCarthage],
-    iCelts: [iPeriodInsularCelts],
-    iDravidia: [iPeriodVijayanagara],
-    iByzantium: [iPeriodByzantineConstantinople],
-    iTurks: [iPeriodSeljuks, iPeriodUzbeks],
-    iFrance: [iPeriodNationalFrance],
-    iJapan: [iPeriodMeiji],
-    iNorse: [iPeriodDenmark, iPeriodNorway],
-    iMoors: [iPeriodMorocco],
-    iSpain: [iPeriodSpain],
-    iHolyRome: [iPeriodAustria],
-    iEngland: [iPeriodUnitedKingdom, iPeriodGreatBritain],
-    iMongols: [iPeriodYuan],
-    iInca: [iPeriodPeru, iPeriodLateInca],
-    iItaly: [iPeriodModernItaly],
-    iMughals: [iPeriodPakistan],
-    iOttomans: [iPeriodOttomanConstantinople],
-    iGermany: [iPeriodModernGermany],
-    iManchuria: [iPeriodQing],
-}
-
+## Religion Names need to coincide with the Names for the Religion Maps! ##
 dReligionNames = {
     iJudaism: "Judaism",
     iOrthodoxy: "Orthodoxy",
@@ -253,6 +232,7 @@ dReligionNames = {
     iProtestantism: "Protestantism",
     iIslam: "Islam",
     iHinduism: "Hinduism",
+    iJainism: "Jainism",
     iBuddhism: "Buddhism",
     iConfucianism: "Confucianism",
     iTaoism: "Taoism",
