@@ -10,6 +10,15 @@
       "bonusType": "general"
     },
     {
+      "x": 90,
+      "y": 54,
+      "text": "-800",
+      "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true,
+      "bonusType": "general"
+    },
+    {
       "x": 78,
       "y": 44,
       "text": "-600",
@@ -449,6 +458,15 @@
       "category": "Resource spawns",
       "spawn": true,
       "bonusType": "health"
+    },
+    {
+      "x": 114,
+      "y": 43,
+      "text": "1400",
+      "source": "Assets/Art/Interface/Buttons/Cotton_cropped.png",
+      "category": "Resource spawns",
+      "spawn": true,
+      "bonusType": "happiness"
     },
     {
       "x": 63,
@@ -1594,8 +1612,8 @@
       "bonusType": "happiness"
     },
     {
-      "x": 61,
-      "y": 32,
+      "x": 62,
+      "y": 31,
       "text": "1850",
       "source": "Assets/Art/Interface/Buttons/Cocoa_cropped.png",
       "category": "Resource spawns",
@@ -1999,6 +2017,15 @@
       "bonusType": "general"
     },
     {
+      "x": 59,
+      "y": 50,
+      "text": "200",
+      "source": "Assets/Art/Interface/Buttons/Copper_despawn.png",
+      "category": "Resource despawns",
+      "spawn": false,
+      "bonusType": "general"
+    },
+    {
       "x": 55,
       "y": 53,
       "text": "400",
@@ -2179,6 +2206,15 @@
       "bonusType": "happiness"
     },
     {
+      "x": 110,
+      "y": 42,
+      "text": "1500",
+      "source": "Assets/Art/Interface/Buttons/Deletion.png",
+      "category": "Resource despawns",
+      "spawn": false,
+      "bonusType": "happiness"
+    },
+    {
       "x": 92,
       "y": 60,
       "text": "1600",
@@ -2216,9 +2252,36 @@
     },
     {
       "x": 83,
-      "y": 58,
+      "y": 55,
+      "text": "1850",
+      "source": "Assets/Art/Interface/Buttons/Spices_despawn.png",
+      "category": "Resource despawns",
+      "spawn": false,
+      "bonusType": "happiness"
+    },
+    {
+      "x": 84,
+      "y": 55,
       "text": "1850",
       "source": "Assets/Art/Interface/Buttons/Deletion.png",
+      "category": "Resource despawns",
+      "spawn": false,
+      "bonusType": "happiness"
+    },
+    {
+      "x": 105,
+      "y": 47,
+      "text": "1850",
+      "source": "Assets/Art/Interface/Buttons/Ivory_despawn.png",
+      "category": "Resource despawns",
+      "spawn": false,
+      "bonusType": "happiness"
+    },
+    {
+      "x": 108,
+      "y": 43,
+      "text": "1850",
+      "source": "Assets/Art/Interface/Buttons/Ivory_despawn.png",
       "category": "Resource despawns",
       "spawn": false,
       "bonusType": "happiness"
@@ -2240,6 +2303,15 @@
       "category": "Civ spawn Resources",
       "spawn": true,
       "bonusType": "general"
+    },
+    {
+      "x": 110,
+      "y": 42,
+      "text": "554 - Bengal spawn",
+      "source": "Assets/Art/Interface/Buttons/Ivory_cropped.png",
+      "category": "Civ spawn Resources",
+      "spawn": true,
+      "bonusType": "happiness"
     },
     {
       "x": 113,
@@ -2372,6 +2444,15 @@
       "y": 55,
       "text": "1100 - Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 114,
+      "y": 43,
+      "text": "1200 - Rainforest",
+      "source": "Assets/Art/Interface/Buttons/Rainforest_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
       "bonusType": null
@@ -2624,6 +2705,15 @@
       "y": 45,
       "text": "900 - Semidesert",
       "source": "Assets/Art/Interface/Buttons/Semidesert_cropped.png",
+      "category": "Terrain changes",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 114,
+      "y": 43,
+      "text": "1200 - Grassland",
+      "source": "Assets/Art/Interface/Buttons/Grassland_cropped.png",
       "category": "Terrain changes",
       "spawn": true,
       "bonusType": null
@@ -6103,15 +6193,6 @@
       "bonusType": "happiness"
     },
     {
-      "x": 90,
-      "y": 54,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "general"
-    },
-    {
       "x": 92,
       "y": 54,
       "text": "",
@@ -7066,6 +7147,15 @@
       "bonusType": "general"
     },
     {
+      "x": 59,
+      "y": 50,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Copper_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "general"
+    },
+    {
       "x": 70,
       "y": 50,
       "text": "",
@@ -7138,7 +7228,7 @@
       "bonusType": "happiness"
     },
     {
-      "x": 102,
+      "x": 103,
       "y": 50,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Spices_cropped.png",
@@ -9289,6 +9379,15 @@
       "bonusType": "health"
     },
     {
+      "x": 114,
+      "y": 40,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Clam_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "health"
+    },
+    {
       "x": 116,
       "y": 40,
       "text": "",
@@ -9460,6 +9559,15 @@
       "bonusType": "health"
     },
     {
+      "x": 101,
+      "y": 39,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Clam_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "health"
+    },
+    {
       "x": 105,
       "y": 39,
       "text": "",
@@ -9476,6 +9584,15 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "happiness"
+    },
+    {
+      "x": 109,
+      "y": 39,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "general"
     },
     {
       "x": 110,
@@ -9625,10 +9742,10 @@
       "x": 105,
       "y": 38,
       "text": "",
-      "source": "Assets/Art/Interface/Buttons/Ivory_cropped.png",
+      "source": "Assets/Art/Interface/Buttons/Stone_cropped.png",
       "category": "Start resources",
       "spawn": true,
-      "bonusType": "happiness"
+      "bonusType": "general"
     },
     {
       "x": 107,
@@ -9638,15 +9755,6 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "health"
-    },
-    {
-      "x": 108,
-      "y": 38,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "general"
     },
     {
       "x": 115,
@@ -10027,15 +10135,6 @@
       "bonusType": "happiness"
     },
     {
-      "x": 105,
-      "y": 36,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Millet_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "health"
-    },
-    {
       "x": 106,
       "y": 36,
       "text": "",
@@ -10196,6 +10295,15 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "happiness"
+    },
+    {
+      "x": 105,
+      "y": 35,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Millet_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "health"
     },
     {
       "x": 106,
@@ -10679,6 +10787,15 @@
       "y": 32,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Incense_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "happiness"
+    },
+    {
+      "x": 106,
+      "y": 32,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Ivory_cropped.png",
       "category": "Start resources",
       "spawn": true,
       "bonusType": "happiness"

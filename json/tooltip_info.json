@@ -15080,7 +15080,7 @@
     "feature": "Forest",
     "plot": "Land",
     "region": "Poland",
-    "city_name": "L\u00f3dz"
+    "city_name": "Sieradz"
   },
   "76_63": {
     "terrain": "Plains",
@@ -16897,7 +16897,7 @@
     "terrain": "Grassland",
     "plot": "Land",
     "region": "Central Europe",
-    "city_name": "Katowice"
+    "city_name": "Racib\u00f3rz"
   },
   "74_61": {
     "terrain": "Grassland",
@@ -17822,7 +17822,7 @@
     "feature": "Forest",
     "plot": "Hills",
     "region": "Central Europe",
-    "city_name": "Kosice"
+    "city_name": "Koshice"
   },
   "75_60": {
     "terrain": "Grassland",
@@ -23255,7 +23255,6 @@
   },
   "90_54": {
     "terrain": "Plains",
-    "bonus": "Iron",
     "plot": "Hills",
     "region": "Caucasus",
     "city_name": "Qabala"
@@ -26647,6 +26646,7 @@
   },
   "59_50": {
     "terrain": "Semidesert",
+    "bonus": "Copper",
     "feature": "Forest",
     "plot": "Hills",
     "region": "Iberia",
@@ -26903,14 +26903,14 @@
   },
   "102_50": {
     "terrain": "Grassland",
-    "bonus": "Spices",
     "feature": "Forest",
     "plot": "Hills",
     "region": "Punjab",
-    "city_name": "Ranigat"
+    "city_name": "Takshashila"
   },
   "103_50": {
     "terrain": "Grassland",
+    "bonus": "Spices",
     "feature": "Forest",
     "plot": "Hills",
     "region": "Punjab",
@@ -33113,7 +33113,7 @@
   "115_43": {
     "terrain": "Grassland",
     "plot": "Peak",
-    "region": "Indochina",
+    "region": "Bengal",
     "city_name": "^"
   },
   "116_43": {
@@ -34013,7 +34013,7 @@
     "terrain": "Grassland",
     "feature": "Rainforest",
     "plot": "Land",
-    "region": "Indochina",
+    "region": "Bengal",
     "city_name": "Chattogram"
   },
   "116_42": {
@@ -34824,7 +34824,7 @@
   "108_41": {
     "terrain": "Savanna",
     "bonus": "Citrus",
-    "feature": "Rainforest",
+    "feature": "Jungle",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Raipur"
@@ -35721,6 +35721,7 @@
   },
   "114_40": {
     "terrain": "Coast",
+    "bonus": "Clam",
     "plot": "Ocean",
     "region": "Bay of Bengal"
   },
@@ -36500,6 +36501,7 @@
   },
   "101_39": {
     "terrain": "Coast",
+    "bonus": "Clam",
     "plot": "Ocean",
     "region": "Arabian Sea"
   },
@@ -36551,6 +36553,7 @@
   },
   "109_39": {
     "terrain": "Savanna",
+    "bonus": "Iron",
     "feature": "Savanna",
     "plot": "Hills",
     "region": "Deccan",
@@ -37383,7 +37386,7 @@
   },
   "105_38": {
     "terrain": "Grassland",
-    "bonus": "Ivory",
+    "bonus": "Stone",
     "feature": "Rainforest",
     "plot": "Land",
     "region": "Deccan",
@@ -37404,7 +37407,6 @@
   },
   "108_38": {
     "terrain": "Grassland",
-    "bonus": "Iron",
     "feature": "Savanna",
     "plot": "Hills",
     "region": "Deccan",
@@ -38240,7 +38242,7 @@
   "103_37": {
     "terrain": "Grassland",
     "bonus": "Banana",
-    "feature": "Rainforest",
+    "feature": "Jungle",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Chandrapura"
@@ -38248,7 +38250,7 @@
   "104_37": {
     "terrain": "Plains",
     "bonus": "Incense",
-    "feature": "Rainforest",
+    "feature": "Jungle",
     "plot": "Hills",
     "region": "Deccan",
     "city_name": "Sugandavarti"
@@ -38257,7 +38259,7 @@
     "terrain": "Grassland",
     "plot": "Land",
     "region": "Deccan",
-    "city_name": "Vijayanagara"
+    "city_name": "Vatapi"
   },
   "106_37": {
     "terrain": "Plains",
@@ -39121,8 +39123,7 @@
   },
   "105_36": {
     "terrain": "Plains",
-    "bonus": "Millet",
-    "plot": "Land",
+    "plot": "Hills",
     "region": "Tamilakam",
     "city_name": "Chitradurga"
   },
@@ -39977,7 +39978,8 @@
   },
   "105_35": {
     "terrain": "Plains",
-    "plot": "Hills",
+    "bonus": "Millet",
+    "plot": "Land",
     "region": "Tamilakam",
     "city_name": "Srirangapatna"
   },
@@ -42587,6 +42589,7 @@
   },
   "106_32": {
     "terrain": "Grassland",
+    "bonus": "Ivory",
     "feature": "Rainforest",
     "plot": "Hills",
     "region": "Tamilakam",
