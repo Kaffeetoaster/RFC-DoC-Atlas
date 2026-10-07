@@ -17,7 +17,10 @@ from python.DrawMaps.CreateTooltipInfo import *
 
 import config
 import json
+import logging
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, filename="logs/main.log", filemode="w", format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 
