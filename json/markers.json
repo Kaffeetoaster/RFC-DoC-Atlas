@@ -2458,6 +2458,15 @@
       "bonusType": null
     },
     {
+      "x": 38,
+      "y": 65,
+      "text": "1400 - Strait",
+      "source": "Assets/Art/Interface/Buttons/Deletion_cropped.png",
+      "category": "Feature spawns and despawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
       "x": 120,
       "y": 40,
       "text": "1700 - Rainforest",
