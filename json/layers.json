@@ -1002,6 +1002,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 60,
+      "y": 45,
+      "display_name": "Phoenicia respawn",
+      "source": "maps/layers/Spawns/Respawns/Phoenicia.webp",
+      "w": 800,
+      "h": 128,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 59,
       "y": 56,
       "display_name": "Celts",
@@ -1209,6 +1218,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 74,
+      "y": 48,
+      "display_name": "Greece respawn",
+      "source": "maps/layers/Spawns/Respawns/Greece.webp",
+      "w": 160,
+      "h": 224,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 101,
       "y": 46,
       "display_name": "Harappa",
@@ -1330,7 +1348,7 @@
       "y": 54,
       "display_name": "Italy",
       "source": "maps/layers/Spawns/Italy.webp",
-      "w": 192,
+      "w": 128,
       "h": 128,
       "category": "Birth and Stability"
     },
@@ -1339,8 +1357,17 @@
       "y": 53,
       "display_name": "Italy -> Modern Italy",
       "source": "maps/layers/Spawns/Periods/Italy_Modern_Italy.webp",
-      "w": 192,
+      "w": 128,
       "h": 160,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 65,
+      "y": 48,
+      "display_name": "Italy respawn",
+      "source": "maps/layers/Spawns/Respawns/Italy.webp",
+      "w": 256,
+      "h": 320,
       "category": "Birth and Stability"
     },
     {
@@ -1359,6 +1386,15 @@
       "source": "maps/layers/Spawns/Periods/Japan_Meiji.webp",
       "w": 224,
       "h": 352,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 134,
+      "y": 49,
+      "display_name": "Japan respawn",
+      "source": "maps/layers/Spawns/Respawns/Japan.webp",
+      "w": 224,
+      "h": 448,
       "category": "Birth and Stability"
     },
     {

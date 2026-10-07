@@ -6,6 +6,12 @@ from PIL import Image, ImageDraw
 from pathlib import Path
 import json
 
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+
 def get_BonusType(iresource):
     resource_info = LBonusXML[iresource]
     

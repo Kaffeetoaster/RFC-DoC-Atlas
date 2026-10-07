@@ -4,6 +4,12 @@ import config
 
 from PIL import Image
 from pathlib import Path
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+
 
 def strip_namespace(tag):
     return tag.split('}', 1)[-1] if '}' in tag else tag
@@ -128,8 +134,8 @@ def load_from_atlas(atlas_info):
 def convert_button_image(button_info, new_filename):
     # fix file path, save it on config.OUTPUT_PATH and return the new path
     if button_info == "" or button_info is None:
-        #print(f"No button info for {new_filename}, skipping image conversion.")
-        return None
+        logger.warning(f"No button info for {new_filename}, skipping image conversion.")
+        return config.OUTPUT_PATH / "Assets/Art/Interface/Buttons" / "Deletion.png"
     #print(f"Converting button image for {new_filename} with button info {button_info}")
     if type(button_info) is list:
             img = load_from_atlas(button_info)
@@ -193,8 +199,10 @@ def update_GameObject_infos(iObject, LGameObjectXML, dArtXML, dTextXML, dPlayerC
         art_info = dArtXML[art_define_tag]
         value = art_info["Button"].split(',')
         button_info = value[2:] if len(value) > 1 else value[0]
-    else: # case Religion
+    elif "Button" in LGameObjectXML[iObject]: # case Religion
         button_info = LGameObjectXML[iObject].get("Button", "")
+    else:
+        button_info = ""
     new_path = convert_button_image(button_info, text)
     LGameObjectXML[iObject]["ArtDefineTag"] = new_path
 
