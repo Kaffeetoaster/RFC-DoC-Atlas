@@ -210,6 +210,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 74,
+      "y": 34,
+      "display_name": "Egypt -> Ptolemaic Egypt (stability)",
+      "source": "maps/layers/Stability/Periods/Egypt_Ptolemaic_Egypt.webp",
+      "w": 416,
+      "h": 544,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 0,
       "y": 4,
       "display_name": "England (stability)",
@@ -1083,6 +1092,15 @@
       "category": "Birth and Stability"
     },
     {
+      "x": 77,
+      "y": 43,
+      "display_name": "Egypt -> Ptolemaic Egypt",
+      "source": "maps/layers/Spawns/Periods/Egypt_Ptolemaic_Egypt.webp",
+      "w": 96,
+      "h": 64,
+      "category": "Birth and Stability"
+    },
+    {
       "x": 76,
       "y": 39,
       "display_name": "Egypt respawn",
@@ -1348,7 +1366,7 @@
       "y": 54,
       "display_name": "Italy",
       "source": "maps/layers/Spawns/Italy.webp",
-      "w": 128,
+      "w": 192,
       "h": 128,
       "category": "Birth and Stability"
     },
@@ -1926,6 +1944,15 @@
       "source": "maps/layers/Spawns/Vietnam.webp",
       "w": 96,
       "h": 96,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 120,
+      "y": 38,
+      "display_name": "Vietnam extended (AI only)",
+      "source": "maps/layers/Spawns/Extended/Vietnam.webp",
+      "w": 160,
+      "h": 192,
       "category": "Birth and Stability"
     }
   ],

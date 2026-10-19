@@ -9172,6 +9172,15 @@
       "bonusType": "happiness"
     },
     {
+      "x": 105,
+      "y": 41,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Cow_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "health"
+    },
+    {
       "x": 107,
       "y": 41,
       "text": "",
@@ -9350,15 +9359,6 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "general"
-    },
-    {
-      "x": 104,
-      "y": 40,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Cow_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "health"
     },
     {
       "x": 106,
@@ -9739,6 +9739,15 @@
       "bonusType": "happiness"
     },
     {
+      "x": 103,
+      "y": 38,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Banana_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "health"
+    },
+    {
       "x": 104,
       "y": 38,
       "text": "",
@@ -9896,15 +9905,6 @@
       "y": 37,
       "text": "",
       "source": "Assets/Art/Interface/Buttons/Crab_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "health"
-    },
-    {
-      "x": 103,
-      "y": 37,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Banana_cropped.png",
       "category": "Start resources",
       "spawn": true,
       "bonusType": "health"

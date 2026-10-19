@@ -12968,7 +12968,6 @@
   },
   "38_65": {
     "terrain": "Arctic Coast",
-    "feature": "Strait",
     "plot": "Ocean",
     "region": "Atlantic Ocean"
   },
@@ -34802,6 +34801,7 @@
   },
   "105_41": {
     "terrain": "Grassland",
+    "bonus": "Cow",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Mahishmati"
@@ -35653,7 +35653,6 @@
   },
   "104_40": {
     "terrain": "Grassland",
-    "bonus": "Cow",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Nashik"
@@ -37372,6 +37371,8 @@
   },
   "103_38": {
     "terrain": "Grassland",
+    "bonus": "Banana",
+    "feature": "Jungle",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Rairi"
@@ -38241,8 +38242,7 @@
   },
   "103_37": {
     "terrain": "Grassland",
-    "bonus": "Banana",
-    "feature": "Jungle",
+    "feature": "Rainforest",
     "plot": "Land",
     "region": "Deccan",
     "city_name": "Chandrapura"
