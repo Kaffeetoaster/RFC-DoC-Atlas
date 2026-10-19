@@ -2,6 +2,8 @@
 .venv
 .vscode
 Notes/
+howtomerge.md
+
 config.py
 __pycache__/
 *.py[cod]
@@ -9,5 +11,6 @@ Maps/
 
 time.log
 testing/
+test.py
 
 logs/
