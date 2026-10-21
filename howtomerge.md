@@ -29,6 +29,7 @@ git push origin main
 
 # or open pr in github and merge there
 after this the dev branch will be behind main, so we will merge main back to dev in the terminal
+But this only works if dev is no commits ahead of main, because then a fast forward can be used
 git fetch origin
 git switch dev
 git merge origin/main
