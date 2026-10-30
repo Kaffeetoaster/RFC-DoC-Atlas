@@ -49,7 +49,7 @@ def is_period_core(identifier, tile):
 
 
 def iterate_civ_map(iCiv):
-	civ_name = dCivNames[iCiv]
+	civ_name = LCivXML[iCiv].get("ShortDescription")
 	civ_name = civ_name.replace(" ", "_")
 	settler_values = iterate_number_map(f"Settler/{civ_name}.csv")
 	war_values = iterate_number_map(f"War/{civ_name}.csv")
@@ -59,7 +59,7 @@ def iterate_civ_map(iCiv):
 
 def iterate_period_map(iCiv, iPeriod):
 	period_name = dPeriodNames[iPeriod]
-	civ_name = dCivNames[iCiv]
+	civ_name = LCivXML[iCiv].get("ShortDescription")
 	civ_name = civ_name.replace(" ", "_")
 	settler_map = f"Settler/Period/{period_name}.csv"
 	war_map = f"War/Period/{period_name}.csv"
@@ -124,9 +124,9 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 	image = image.resize((int(w * TILE_SIZE), int(h * TILE_SIZE)), resample=Image.Resampling.NEAREST)
 	
 	if period_name != "":
-		filename = f"Periods/{civ_name}_{period_name}"
+		filename = f"Periods/{civ_name.replace(' ', '_')}_{period_name}"
 	else:
-		filename = civ_name
+		filename = civ_name.replace(' ', '_')
 	
 	image_path = config.OUTPUT_PATH / "maps/layers/Stability" / f"{filename}.webp"
 	#print(image_path)
@@ -135,14 +135,14 @@ def draw_stability_map(civ_name, period_name, values, json_config):
 
 
 def draw_stability_map_for_civ(iCiv,json_config):
-	civ_name = dCivNames[iCiv]
+	civ_name = LCivXML[iCiv].get("ShortDescription")
 	values = iterate_civ_map(iCiv)
 	period_name = ""
 	draw_stability_map(civ_name, period_name, values,json_config)
 
 
 def draw_stability_map_for_period(iCiv, iPeriod, json_config):
-	civ_name = dCivNames[iCiv]
+	civ_name = LCivXML[iCiv].get("ShortDescription")
 	period_name = dPeriodNames[iPeriod]
 	values = iterate_period_map(iCiv, iPeriod)
 	
