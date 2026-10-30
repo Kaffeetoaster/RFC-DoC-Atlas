@@ -224,20 +224,6 @@ dCivNames = {
     iVietnam: "Vietnam",
 }
 
-## Religion Names need to coincide with the Names for the Religion Maps! ##
-dReligionNames = {
-    iJudaism: "Judaism",
-    iOrthodoxy: "Orthodoxy",
-    iCatholicism: "Catholicism",
-    iProtestantism: "Protestantism",
-    iIslam: "Islam",
-    iHinduism: "Hinduism",
-    iJainism: "Jainism",
-    iBuddhism: "Buddhism",
-    iConfucianism: "Confucianism",
-    iTaoism: "Taoism",
-    iZoroastrianism: "Zoroastrianism",
-}
 
 
 (LAND, WATER, PEAK, CORE, HISTORICAL, CONQUEST, FOREIGN, MINORITY, PERIPHERY) = range(9)
