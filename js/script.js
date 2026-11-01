@@ -2,6 +2,8 @@ import { initializeAboutPage, loadAboutInformation } from './UI/about.js';
 import {initializeBurgerMenu} from './UI/burger.js';
 import {initializeDeselectAllButton} from './UI/deselect_all.js';
 import { initCityPlanner } from './UI/city_planner.js';
+import { initializeSearch } from './UI/search.js';
+
 
 import { loadLayers } from './json/load_layers.js';
 import { loadMarkers} from './json/load_markers.js';
@@ -128,3 +130,6 @@ initializeBurgerMenu();
 // Event listener for "Deselect All" button
 initializeDeselectAllButton();
 
+
+// Initialize search functionality
+initializeSearch();

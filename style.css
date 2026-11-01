@@ -375,6 +375,18 @@ html, body {
     transition: background-color 0.3s ease;
 }
 
+/* search bar styling */
+#options-search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid var(--civ-border);
+    border-radius: 6px;
+    background: var(--civ-list-bg);
+    color: var(--civ-white);
+    font-size: 14px;
+}
+
 
 /* Dropdowns */
 details {
@@ -384,6 +396,10 @@ details {
 
     
 }
+detauls[hidden] {
+    display: none;
+}
+
 
 summary {
     padding: 8px;
@@ -417,6 +433,11 @@ details[open] summary {
     padding-bottom: 5px;
     border-bottom: 1px solid var(--civ-border);
 }
+
+.checkbox-container[hidden] {
+    display: none;
+}
+
 .checkbox-container input {
     position: absolute;
     opacity: 0;
@@ -557,6 +578,5 @@ details[open] summary {
     max-width: 200px;
     z-index: 1200;
 }
-
 
 
