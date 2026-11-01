@@ -1,4 +1,4 @@
-import { initializeAboutPage, loadAboutInformation } from './UI/about.js';
+import {loadAboutInformation } from './UI/about.js';
 import {initializeBurgerMenu} from './UI/burger.js';
 import {initializeDeselectAllButton} from './UI/deselect_all.js';
 import { initCityPlanner } from './UI/city_planner.js';
@@ -119,8 +119,7 @@ loadTooltips(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
 // initialize city planner mode and interactions
 initCityPlanner(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
 
-// loading about information and adding event listeners for about page
-initializeAboutPage();
+// loading about information
 loadAboutInformation();
 
 

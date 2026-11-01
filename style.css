@@ -52,169 +52,42 @@ html, body {
     will-change: transform; /* hint for better performance */
 }
 
+/* About header styling */
 
-
-#top-right-controls {
+#about-header {
   position: fixed;
   top: 0px;
-  right: 0px;
+  right: 5px;
   
-  z-index: 1101;
+  z-index: 1090;
   display: flex;
   align-items: center;
   font-size: 0.75rem;
   line-height: 1.5;
   gap: 5px;
-  padding: 4px 4px;
+  padding: 2px 2px;
   background: var(--civ-blue-bg);
-  border: 2px solid var(--civ-border);
+  border: 1px solid var(--civ-border);
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
-#sidebar {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 250px;
-    height: 75vh;
-    background: var(--civ-blue-bg);
-    border: 2px solid var(--civ-border);
-    border-radius: 8px;
-    z-index: 1000;
-    padding: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out, background-color 0.3s ease;
-    cursor: default;
+#header-meta {
+  text-align: right;
+  opacity: 0.85;
+  color: var(--civ-white);
 }
 
-#sidebar.hidden {
-    transform: translateY(-110%);
-}
 
-#sidebar h3 {
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 20px;
-            font-weight: bold;
-            color: var(--civ-white);
-            margin: 0 0 12px 0; 
-            letter-spacing: 1.5px;
-            border-bottom: 1px solid var(--civ-border);
-            padding-bottom: 4px;
-            cursor: pointer;
-        }
 
-      #about-toggle {
-        background: transparent;
-        border: none;
-        color: var(--civ-white);
-        font: inherit;
-        cursor: pointer;
-        padding: 0;
-        text-decoration: underline;
-      }
 
-      #header-meta {
-        text-align: right;
-        opacity: 0.85;
-        line-height: 1.2;
-        color: var(--civ-white);
-        font-size: 12px;
-      }
-
-      #about-page {
-        position: fixed;
-        top: 70px;
-        right: 24px;
-        width: 30%;
-        max-width: 520px;
-        min-width: 280px;
-        background-color: white;
-        border: solid 3px black;
-        padding: 10px;
-        opacity: 0.85;
-        filter: alpha(opacity=85);
-        display: none;
-        z-index: 1101;
-        box-sizing: border-box;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      }
-
-      #about-page.open {
-        display: block;
-      }
-
-      .about-box-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 10px;
-        padding-bottom: 6px;
-        border-bottom: 1px solid black;
-      }
-
-      #about-title {
-        margin: 0;
-        font-size: 18px;
-      }
-
-      #about-close {
-        border: 1px solid black;
-        background: white;
-        color: black;
-        cursor: pointer;
-        font-size: 18px;
-        line-height: 1;
-        width: 28px;
-        height: 28px;
-        padding: 0;
-      }
-
-      #about-content {
-        max-height: 70vh;
-        overflow-y: auto;
-      }
-
-      .about-section {
-        margin-bottom: 12px;
-      }
-
-      .about-section h4,
-      .about-entry h4 {
-        margin: 0 0 6px 0;
-        font-size: 15px;
-      }
-
-      .about-section p,
-      .about-entry p {
-        margin: 0 0 6px 0;
-      }
-
-      .about-section ul,
-      .about-entry ul {
-        margin: 0;
-        padding-left: 20px;
-      }
-
-      #about-content a {
-        color: #0b57d0;
-        text-decoration: underline;
-      }
-
-      #about-content a:hover {
-        color: #063a8c;
-      }
 
 /* resource filter dropdown */
 #city-planner-container {
     position: absolute;
     top: 200px;
     right: 5px;
-    width: auto;
+    width: 60px;
+    box-sizing: border-box;
     z-index: 1100;
     font-size: 10px;
 
@@ -235,6 +108,7 @@ html, body {
 #city-planner-toggle, #city-planner-clear, #city-planner-show {
     font: inherit;
     color: var(--civ-white);
+    width: auto;
     cursor: pointer;
     border: 1px solid var(--civ-border);
     border-radius: 6px;
@@ -300,14 +174,13 @@ html, body {
     top: 10px;
     left: 290px;
     z-index: 1100;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: bold;
     color: var(--civ-white);
     cursor: pointer;
     background: var(--civ-blue-bg);
     border: 2px solid var(--civ-border);
     border-radius: 8px;
-    
     padding: 6px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -359,6 +232,44 @@ html, body {
   background-color: rgba(255, 220, 115, 1.0);
 }
 
+
+/* Sidebar styling */
+
+#sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    /* height: auto; */
+    max-height: 75vh;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    z-index: 1100;
+    padding: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out, background-color 0.3s ease;
+    cursor: default;
+}
+
+#sidebar.hidden {
+    transform: translateY(-110%);
+}
+
+#sidebar h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--civ-white);
+            margin: 0 0 12px 0; 
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid var(--civ-border);
+            padding-bottom: 4px;
+            cursor: pointer;
+        }
 
 
 /* Scrollable options container */
@@ -579,4 +490,61 @@ details[open] summary {
     z-index: 1200;
 }
 
+@media (orientation: portrait) {
+    #burger {
+        position: absolute;
+        left: auto;
+        top: 25px;
+        right: 5px;
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+    }
+    #sidebar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        height: auto;
+        max-height: 90vh;
+    }
+    #deselect-all {
+        position: absolute;
+        top: 50vh;
+        left: auto;
+        right: 5px;
+        font-size: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    #legend {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 8px;
+        max-height: 20px;
+    }
+    #about-header {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        top: auto;
+        right: auto;
+        font-size: 0.5rem;
+    }
+    #tooltip-box {
+        position: absolute;
+        bottom: 25px;
+        left: 5px;
+    }
+  #city-planner-container {
+        position: absolute;
+        left: auto;
+        right: 5px;
+        width: 60px;
+        box-sizing: border-box;
+    }
+}
 
