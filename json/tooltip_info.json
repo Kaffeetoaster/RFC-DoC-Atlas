@@ -20576,7 +20576,7 @@
     "feature": "Forest",
     "plot": "Hills",
     "region": "Caucasus",
-    "city_name": "Ordzhonikidze"
+    "city_name": "Vladikavkaz"
   },
   "90_57": {
     "terrain": "Steppe",
@@ -21471,7 +21471,7 @@
     "terrain": "Steppe",
     "plot": "Hills",
     "region": "Caucasus",
-    "city_name": "Derbent"
+    "city_name": "Balanjar"
   },
   "91_56": {
     "terrain": "Coast",
@@ -22366,7 +22366,7 @@
     "terrain": "Plains",
     "plot": "Land",
     "region": "Caucasus",
-    "city_name": "Quba"
+    "city_name": "Derbent"
   },
   "92_55": {
     "terrain": "Coast",
@@ -32933,13 +32933,13 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Ha'il"
+    "city_name": "Jabal Tayy"
   },
   "88_43": {
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Uyun Al-Jiwa"
+    "city_name": "Fayd"
   },
   "89_43": {
     "terrain": "Desert",
@@ -32951,7 +32951,7 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Al Jubayl"
+    "city_name": "Aynayn"
   },
   "91_43": {
     "terrain": "Coast",
@@ -33832,13 +33832,13 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Ar-Rass"
+    "city_name": "Al-Rabadha"
   },
   "88_42": {
     "terrain": "Semidesert",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Buraydah"
+    "city_name": "Unaizah"
   },
   "89_42": {
     "terrain": "Semidesert",
@@ -33846,14 +33846,14 @@
     "feature": "Oasis",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Az Zulfi"
+    "city_name": "Az-Zulfi"
   },
   "90_42": {
     "terrain": "Desert",
     "bonus": "Oil",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Rumah"
+    "city_name": "Thaj"
   },
   "91_42": {
     "terrain": "Semidesert",
@@ -34701,7 +34701,7 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Al-Quway'iyah"
+    "city_name": "Al-Dawadmi"
   },
   "89_41": {
     "terrain": "Semidesert",
@@ -35555,13 +35555,13 @@
     "terrain": "Semidesert",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Zalim"
+    "city_name": "Al-Khurmah"
   },
   "88_40": {
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Halaban"
+    "city_name": "Al-Quway'iyah"
   },
   "89_40": {
     "terrain": "Desert",
@@ -35579,13 +35579,13 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Yabrin"
+    "city_name": "Al-Ubaylah"
   },
   "92_40": {
     "terrain": "Semidesert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Murwab"
+    "city_name": "Dilmun"
   },
   "93_40": {
     "terrain": "Salt Flat",
@@ -36440,7 +36440,7 @@
     "feature": "Oasis",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Al-Yamama"
+    "city_name": "Al-Ubaylah"
   },
   "92_39": {
     "terrain": "Desert",
@@ -36453,7 +36453,7 @@
     "bonus": "Oil",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Liwa"
+    "city_name": "Mezairaa"
   },
   "94_39": {
     "terrain": "Desert",
@@ -36461,7 +36461,7 @@
     "feature": "Oasis",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Ibri"
+    "city_name": "Qalat Bahla"
   },
   "95_39": {
     "terrain": "Desert",
@@ -36475,7 +36475,7 @@
     "feature": "Forest",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Sur"
+    "city_name": "Qalhat"
   },
   "97_39": {
     "terrain": "Coast",
@@ -37284,7 +37284,7 @@
     "feature": "Forest",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Hubasha"
+    "city_name": "Bariq"
   },
   "88_38": {
     "terrain": "Semidesert",
@@ -37314,7 +37314,7 @@
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Tarim"
+    "city_name": "Al-Kharkir"
   },
   "93_38": {
     "terrain": "Desert",
@@ -37326,13 +37326,13 @@
     "terrain": "Salt Flat",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Haima"
+    "city_name": "Hayma"
   },
   "95_38": {
     "terrain": "Desert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Duqm"
+    "city_name": "Muhut"
   },
   "96_38": {
     "terrain": "Coast",
@@ -38153,7 +38153,7 @@
     "feature": "Forest",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Jazan"
+    "city_name": "Jizan"
   },
   "88_37": {
     "terrain": "Plains",
@@ -38165,7 +38165,7 @@
     "terrain": "Plains",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Sanaa"
+    "city_name": "San'a"
   },
   "90_37": {
     "terrain": "Semidesert",
@@ -38178,7 +38178,7 @@
     "terrain": "Desert",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Seiyun"
+    "city_name": "Shibam"
   },
   "92_37": {
     "terrain": "Desert",
@@ -39031,7 +39031,7 @@
     "bonus": "Sheep",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Zafar"
+    "city_name": "Zabid"
   },
   "89_36": {
     "terrain": "Plains",
@@ -39044,7 +39044,7 @@
     "bonus": "Millet",
     "plot": "Hills",
     "region": "Arabia",
-    "city_name": "Qana"
+    "city_name": "Zinjibar"
   },
   "91_36": {
     "terrain": "Semidesert",
@@ -39056,7 +39056,7 @@
     "terrain": "Semidesert",
     "plot": "Land",
     "region": "Arabia",
-    "city_name": "Ash-Shihr"
+    "city_name": "Al-As'a"
   },
   "93_36": {
     "terrain": "Coast",

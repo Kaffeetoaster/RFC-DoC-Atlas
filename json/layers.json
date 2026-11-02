@@ -282,15 +282,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 5,
-      "y": 14,
-      "display_name": "Germany -> Modern Germany (stability)",
-      "source": "maps/layers/Stability/Periods/Germany_Modern_Germany.webp",
-      "w": 4640,
-      "h": 2080,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 60,
       "y": 40,
       "display_name": "Greece (stability)",
@@ -1183,20 +1174,11 @@
     },
     {
       "x": 64,
-      "y": 61,
+      "y": 59,
       "display_name": "Germany",
       "source": "maps/layers/Spawns/Germany.webp",
       "w": 416,
-      "h": 192,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 65,
-      "y": 61,
-      "display_name": "Germany -> Modern Germany",
-      "source": "maps/layers/Spawns/Periods/Germany_Modern_Germany.webp",
-      "w": 160,
-      "h": 160,
+      "h": 256,
       "category": "Birth and Stability"
     },
     {
