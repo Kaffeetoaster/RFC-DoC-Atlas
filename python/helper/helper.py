@@ -60,6 +60,27 @@ def add_terrain_exceptions(tArea, LExceptions, dTileMap):
                 LExceptions.append((x, y))
     
 
+def convert_list_to_area_and_exceptions(lCoords):
+    if not lCoords:
+        return ((0, 0), (0, 0)), []
+    
+    x_values = [coor[0] for coor in lCoords]
+    y_values = [coor[1] for coor in lCoords]
+    
+    x_min, x_max = min(x_values), max(x_values)
+    y_min, y_max = min(y_values), max(y_values)
+    
+    area = ((x_min, y_min), (x_max, y_max))
+    exceptions = []
+    for x in range(x_min, x_max + 1):
+        for y in range(y_min, y_max + 1):
+            if (x, y) not in lCoords:
+                exceptions.append((x, y))
+    
+    return area, exceptions
+
+
+
 def measure(func,*args, **kwargs):
     start = time.perf_counter()
     print(f"Starting {func.__name__}... ")

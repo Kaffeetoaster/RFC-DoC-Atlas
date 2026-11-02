@@ -51,7 +51,7 @@ if __name__ == "__main__":
         "Birth and Stability": [],
         "Religion": [],
         "Geography": [],
-        "UHV": [],
+        "Locations": [],
         "Scenario Culture": []
     }
 ### json config file for map markers ###
