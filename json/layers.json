@@ -2095,141 +2095,213 @@
       "category": "Geography"
     }
   ],
-  "UHV": [
+  "Locations": [
+    {
+      "x": 7,
+      "y": 48,
+      "display_name": "American Congress Claims",
+      "source": "maps/layers/Locations/American_Congress_Claims.webp",
+      "w": 608,
+      "h": 480,
+      "category": "Locations"
+    },
+    {
+      "x": 38,
+      "y": 62,
+      "display_name": "Newfoundland (Congress)",
+      "source": "maps/layers/Locations/Newfoundland_(Congress).webp",
+      "w": 96,
+      "h": 96,
+      "category": "Locations"
+    },
+    {
+      "x": 11,
+      "y": 36,
+      "display_name": "Mesoamerican Contact Zone",
+      "source": "maps/layers/Locations/Mesoamerican_Contact_Zone.webp",
+      "w": 896,
+      "h": 448,
+      "category": "Locations"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "display_name": "Andean Contact Zone",
+      "source": "maps/layers/Locations/Andean_Contact_Zone.webp",
+      "w": 448,
+      "h": 672,
+      "category": "Locations"
+    },
+    {
+      "x": 80,
+      "y": 50,
+      "display_name": "Macedonian Road",
+      "source": "maps/layers/Locations/Macedonian_Road.webp",
+      "w": 192,
+      "h": 160,
+      "category": "Locations"
+    },
+    {
+      "x": 102,
+      "y": 54,
+      "display_name": "Silk Route",
+      "source": "maps/layers/Locations/Silk_Route.webp",
+      "w": 544,
+      "h": 128,
+      "category": "Locations"
+    },
+    {
+      "x": 99,
+      "y": 49,
+      "display_name": "Kushan Road",
+      "source": "maps/layers/Locations/Kushan_Road.webp",
+      "w": 96,
+      "h": 96,
+      "category": "Locations"
+    },
+    {
+      "x": 84,
+      "y": 40,
+      "display_name": "Hejaz Road",
+      "source": "maps/layers/Locations/Hejaz_Road.webp",
+      "w": 96,
+      "h": 160,
+      "category": "Locations"
+    },
     {
       "x": 65,
       "y": 48,
       "display_name": "Phoenician Italy",
-      "source": "maps/layers/UHV/Phoenician_Italy.webp",
+      "source": "maps/layers/Locations/Phoenician_Italy.webp",
       "w": 256,
       "h": 256,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 0,
       "y": 40,
       "display_name": "Hawaii for Polynesia",
-      "source": "maps/layers/UHV/Hawaii_for_Polynesia.webp",
+      "source": "maps/layers/Locations/Hawaii_for_Polynesia.webp",
       "w": 160,
       "h": 128,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 0,
       "y": 6,
       "display_name": "New Zealand east for Polynesia",
-      "source": "maps/layers/UHV/New_Zealand_east_for_Polynesia.webp",
+      "source": "maps/layers/Locations/New_Zealand_east_for_Polynesia.webp",
       "w": 96,
       "h": 224,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 148,
       "y": 4,
       "display_name": "New Zealand west for Polynesia",
-      "source": "maps/layers/UHV/New_Zealand_west_for_Polynesia.webp",
+      "source": "maps/layers/Locations/New_Zealand_west_for_Polynesia.webp",
       "w": 64,
       "h": 128,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 13,
       "y": 27,
       "display_name": "Marquesas for Polynesia",
-      "source": "maps/layers/UHV/Marquesas_for_Polynesia.webp",
+      "source": "maps/layers/Locations/Marquesas_for_Polynesia.webp",
       "w": 32,
       "h": 32,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 20,
       "y": 18,
       "display_name": "Easter Island for Polynesia",
-      "source": "maps/layers/UHV/Easter_Island_for_Polynesia.webp",
+      "source": "maps/layers/Locations/Easter_Island_for_Polynesia.webp",
       "w": 32,
       "h": 32,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 115,
       "y": 26,
       "display_name": "Srivijaya for Tamils",
-      "source": "maps/layers/UHV/Srivijaya_for_Tamils.webp",
+      "source": "maps/layers/Locations/Srivijaya_for_Tamils.webp",
       "w": 224,
       "h": 288,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 54,
       "y": 48,
       "display_name": "Andalusia for Byzantine",
-      "source": "maps/layers/UHV/Andalusia_for_Byzantine.webp",
+      "source": "maps/layers/Locations/Andalusia_for_Byzantine.webp",
       "w": 224,
       "h": 96,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 119,
       "y": 30,
-      "display_name": "third Malay goal",
-      "source": "maps/layers/UHV/third_Malay_goal.webp",
+      "display_name": "Malaya for Malays",
+      "source": "maps/layers/Locations/Malaya_for_Malays.webp",
       "w": 64,
       "h": 96,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 54,
       "y": 31,
       "display_name": "West Africa for Moors",
-      "source": "maps/layers/UHV/West_Africa_for_Moors.webp",
+      "source": "maps/layers/Locations/West_Africa_for_Moors.webp",
       "w": 384,
       "h": 320,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 77,
       "y": 38,
       "display_name": "Nile for Misr",
-      "source": "maps/layers/UHV/Nile_for_Misr.webp",
+      "source": "maps/layers/Locations/Nile_for_Misr.webp",
       "w": 160,
       "h": 256,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 76,
       "y": 31,
       "display_name": "Sudan for Misr",
-      "source": "maps/layers/UHV/Sudan_for_Misr.webp",
+      "source": "maps/layers/Locations/Sudan_for_Misr.webp",
       "w": 288,
       "h": 320,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 104,
       "y": 53,
       "display_name": "Dzungaria for Manchuria",
-      "source": "maps/layers/UHV/Dzungaria_for_Manchuria.webp",
+      "source": "maps/layers/Locations/Dzungaria_for_Manchuria.webp",
       "w": 448,
       "h": 288,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 65,
       "y": 67,
       "display_name": "Scandinavia for Germany",
-      "source": "maps/layers/UHV/Scandinavia_for_Germany.webp",
+      "source": "maps/layers/Locations/Scandinavia_for_Germany.webp",
       "w": 288,
       "h": 352,
-      "category": "UHV"
+      "category": "Locations"
     },
     {
       "x": 8,
       "y": 62,
       "display_name": "Canada",
-      "source": "maps/layers/UHV/Canada.webp",
+      "source": "maps/layers/Locations/Canada.webp",
       "w": 1056,
       "h": 576,
-      "category": "UHV"
+      "category": "Locations"
     }
   ],
   "Scenario Culture": [
