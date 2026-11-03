@@ -8,6 +8,7 @@ from python.consts import *  # all relevant game data
 from python.outline import create_tile_outline
 from python.DrawMaps.DrawReligionMaps import *
 from python.DrawMaps.DrawMarkers import *
+from python.DrawMaps.DrawCitySpawns import *
 from python.DrawMaps.DrawStabilityMaps import *
 from python.DrawMaps.DrawBirthMaps import *
 from python.DrawMaps.DrawUHVMaps import *
@@ -79,6 +80,9 @@ if __name__ == "__main__":
 
 ### Draw Resource and Feature and Terrain Maps ###
     measure(draw_tile_markers, markers_config)
+
+### Draw City Spawns ###
+    measure(drawCitySpawns, markers_config)
 
 ### Draw Geography ###
     measure(DrawGeographyMaps, layers_config)
