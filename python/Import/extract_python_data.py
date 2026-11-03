@@ -9,6 +9,7 @@ def convert_value(value, context):
     elif isinstance(value, ast.Name):
         
         return context.get(value.id, value.id)
+    
     elif isinstance(value, ast.UnaryOp) and isinstance(value.op, ast.USub):
         # negative number
         return -convert_value(value.operand, context)
@@ -28,9 +29,26 @@ def convert_value(value, context):
             result[key] = val
         return result
     
+    elif isinstance(value, ast.keyword):
+        return {value.arg: convert_value(value.value, context)}
+    
+    
     elif isinstance(value, ast.Call):
         if isinstance(value.func, ast.Name ) and value.func.id in ("CivDict", "appenddict"):
             return convert_value(value.args[0], context)
+        
+        elif isinstance(value.func, ast.Name) and value.func.id in ("MinorCity", "Barbarians"):
+            func_call = {}
+            func_call["id"] = value.func.id
+            
+            func_call["args"] = [convert_value(arg,context) for arg in value.args]
+            func_call["kwargs"] = [convert_value(kwarg, context) for kwarg in value.keywords]
+            
+            # print(f"calling function: {func_call}")
+            
+            return func_call
+        
+        
         elif isinstance(value.func, ast.Attribute):
             # e.g., module.appenddict(...)
             print("function is an attribute:", value.func.attr)

@@ -19,6 +19,8 @@ extract_variables(config.INPUT_PATH /'Assets/Python/Resources.py', global_contex
 extract_variables(config.INPUT_PATH /'Assets/Python/RegionMap.py', global_context)
 extract_variables(config.INPUT_PATH /'Assets/Python/Locations.py', global_context)
 extract_variables(config.INPUT_PATH /'Assets/Python/Periods.py', global_context)
+extract_variables(config.INPUT_PATH /'Assets/Python/Minors.py', global_context)
+
 
 globals().update(global_context)
 
