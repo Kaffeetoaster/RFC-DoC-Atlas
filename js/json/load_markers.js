@@ -47,8 +47,9 @@ function refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCat
 
 
 function setIconSize(spawnData) {
-    if (spawnData.text.includes(' - ')) {
-        return [170, 126]; // create two lines
+    let countlinebreaks = (spawnData.text.match(/\n/g) || []).length;
+    if (spawnData.text.includes('\n')) {
+        return [170, 108 + (countlinebreaks * 18)]; // create multiple lines
     } else if (spawnData.text =='') {
         return [170, 90]; // no text
     } else {

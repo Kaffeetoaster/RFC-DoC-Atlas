@@ -56,7 +56,7 @@ def update_Spawnresources():
         iresource = event[1]
         iCiv = event[0]
         desc = LCivXML[iCiv]['Description'] if LCivXML[iCiv]['ShortDescription'].startswith("TXT_KEY_CIV_") else LCivXML[iCiv]['ShortDescription']
-        new_event = f"{dBirth[iCiv]} - {desc} spawn" 
+        new_event = f"{dBirth[iCiv]} \n {desc} spawn" 
         dSpawnResourcesDictExtended[(x,y)] = (new_event, iresource)
     return dSpawnResourcesDictExtended
 
@@ -125,7 +125,7 @@ def draw_feature_spawns(json_config):
         ifeature = event[1]
         year = str(event[0])
         feature_info = LFeatureXML[ifeature]
-        text = f"{year} - {feature_info['Description']}"
+        text = f"{year} \n {feature_info['Description']}"
         path_art = feature_info["ArtDefineTag"]
         old_img = Image.open(path_art)
         new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
@@ -144,7 +144,7 @@ def draw_feature_despawns(json_config):
             ifeature = event[1]
             feature_info = LFeatureXML[ifeature]
             path_art = feature_info["ArtDefineTag"]
-            text = f"{year} - {feature_info['Description']}"
+            text = f"{year} \n {feature_info['Description']}"
             new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_despawn.png"
             old_img = Image.open(path_art)
             deletion_img = Image.open("Assets/Art/Interface/Buttons/Deletion.png")
@@ -161,7 +161,7 @@ def draw_terrain_changes(json_config):
         iterrain = event[1]
         year = str(event[0])
         terrain_info = LTerrainXML[iterrain]
-        text = f"{year} - {terrain_info['Description']}"
+        text = f"{year} \n {terrain_info['Description']}"
         path_art = terrain_info["ArtDefineTag"]
         old_img = Image.open(path_art)
         new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
@@ -189,7 +189,7 @@ def draw_region_based_resource_spawns(json_config):
     for (x,y), event in dCivGroupResourcesDict.items():
         tCivs = event[0]
         iResource = event[1]
-        text = f"{event[2]} - {', '.join([LCivXML[iCiv]['ShortDescription'] for iCiv in tCivs])}"
+        text = f"{event[2]} \n {', '.join([LCivXML[iCiv]['ShortDescription'] for iCiv in tCivs])}"
         resource_info = LBonusXML[iResource]
         resource_type = get_BonusType(iResource)
         path_art = resource_info["ArtDefineTag"]
