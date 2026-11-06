@@ -21,10 +21,7 @@ def map_exists(file_path):
 		return False
 	
 	return True
-
-
-
-					
+				
 					
 def is_area(rectangle, exceptions, identifier, tile):
 	x, y = tile
@@ -157,8 +154,11 @@ def should_draw_for_period(iPeriod):
 
 
 def DrawStabilityMaps(json_config):
-	for iCiv in dCivNames:
-		draw_stability_map_for_civ(iCiv, json_config)
+	for iCiv in range(iNumCivs):
+		civ_name = LCivXML[iCiv].get("ShortDescription")
+		civ_name = civ_name.replace(" ", "_")
+		if map_exists(f"Settler/{civ_name}.csv") and map_exists(f"War/{civ_name}.csv"):
+			draw_stability_map_for_civ(iCiv, json_config)
 		
 		for iPeriod in dCivPeriods.get(iCiv, []):
 			if should_draw_for_period(iPeriod):
