@@ -8,11 +8,15 @@ from pathlib import Path
 
 
 def drawCityspawn(city, json_config):
-
-    spawn_year = str(city.get("args")[0])
-    location = city.get("args")[2]
-    City_name = city.get("args")[3]
-    text = f"{spawn_year} - {City_name}"
+    # args
+    spawn_year, iCiv, location, City_name = city.get("args")
+    # kwargs
+    iPopulation = city.get("kwargs").get("iPopulation", 1)
+    iUnits = sum([v for k,v in city.get("kwargs").get("units", {}).items()]) 
+    conditional = "(conditional!)" if city.get("kwargs").get("condition", False) == None else ""
+    civ_name = LCivXML[iCiv].get("ShortDescription")
+    
+    text = f"{spawn_year}{conditional} \n {City_name} \n {iPopulation} pop, {iUnits} unit(s)"
     
     path_art = config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets/Art/Interface/Buttons/Actions/Foundcity.dds"
     old_img = Image.open(path_art)

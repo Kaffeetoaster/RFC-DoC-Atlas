@@ -42,9 +42,9 @@ def convert_value(value, context):
             func_call["id"] = value.func.id
             
             func_call["args"] = [convert_value(arg,context) for arg in value.args]
-            func_call["kwargs"] = [convert_value(kwarg, context) for kwarg in value.keywords]
+            func_call["kwargs"] = {kwarg.arg: convert_value(kwarg.value, context) for kwarg in value.keywords}
             
-            # print(f"calling function: {func_call}")
+            print(f"calling function: {func_call}")
             
             return func_call
         
