@@ -120,15 +120,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 54,
-      "y": 40,
-      "display_name": "Byzantium -> Byzantine Constantinople (stability)",
-      "source": "maps/layers/Stability/Periods/Byzantium_Byzantine_Constantinople.webp",
-      "w": 1152,
-      "h": 608,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 6,
       "y": 59,
       "display_name": "Canada (stability)",
@@ -142,15 +133,6 @@
       "y": 42,
       "display_name": "Phoenicia (stability)",
       "source": "maps/layers/Stability/Phoenicia.webp",
-      "w": 992,
-      "h": 448,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 55,
-      "y": 42,
-      "display_name": "Phoenicia -> Carthage (stability)",
-      "source": "maps/layers/Stability/Periods/Phoenicia_Carthage.webp",
       "w": 992,
       "h": 448,
       "category": "Birth and Stability"
@@ -210,37 +192,10 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 74,
-      "y": 34,
-      "display_name": "Egypt -> Ptolemaic Egypt (stability)",
-      "source": "maps/layers/Stability/Periods/Egypt_Ptolemaic_Egypt.webp",
-      "w": 416,
-      "h": 544,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 0,
       "y": 4,
       "display_name": "England (stability)",
       "source": "maps/layers/Stability/England.webp",
-      "w": 4800,
-      "h": 2176,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "display_name": "England -> United Kingdom (stability)",
-      "source": "maps/layers/Stability/Periods/England_United_Kingdom.webp",
-      "w": 4800,
-      "h": 2176,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "display_name": "England -> Great Britain (stability)",
-      "source": "maps/layers/Stability/Periods/England_Great_Britain.webp",
       "w": 4800,
       "h": 2176,
       "category": "Birth and Stability"
@@ -291,15 +246,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 60,
-      "y": 40,
-      "display_name": "Greece -> Modern Greece (stability)",
-      "source": "maps/layers/Stability/Periods/Greece_Modern_Greece.webp",
-      "w": 1504,
-      "h": 672,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 97,
       "y": 40,
       "display_name": "Harappa (stability)",
@@ -345,37 +291,10 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 26,
-      "y": 15,
-      "display_name": "Inca -> Late Inca (stability)",
-      "source": "maps/layers/Stability/Periods/Inca_Late_Inca.webp",
-      "w": 352,
-      "h": 608,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 97,
       "y": 29,
       "display_name": "India (stability)",
       "source": "maps/layers/Stability/India.webp",
-      "w": 640,
-      "h": 704,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 97,
-      "y": 29,
-      "display_name": "India -> Late Gupta (stability)",
-      "source": "maps/layers/Stability/Periods/India_Late_Gupta.webp",
-      "w": 640,
-      "h": 704,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 97,
-      "y": 29,
-      "display_name": "India -> Maratha (stability)",
-      "source": "maps/layers/Stability/Periods/India_Maratha.webp",
       "w": 640,
       "h": 704,
       "category": "Birth and Stability"
@@ -394,15 +313,6 @@
       "y": 28,
       "display_name": "Italy (stability)",
       "source": "maps/layers/Stability/Italy.webp",
-      "w": 832,
-      "h": 992,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 64,
-      "y": 28,
-      "display_name": "Italy -> Modern Italy (stability)",
-      "source": "maps/layers/Stability/Periods/Italy_Modern_Italy.webp",
       "w": 832,
       "h": 992,
       "category": "Birth and Stability"
@@ -552,15 +462,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 71,
-      "y": 24,
-      "display_name": "Mongolia -> Yuan (stability)",
-      "source": "maps/layers/Stability/Periods/Mongolia_Yuan.webp",
-      "w": 2240,
-      "h": 1504,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 54,
       "y": 35,
       "display_name": "Moors (stability)",
@@ -570,28 +471,10 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 54,
-      "y": 35,
-      "display_name": "Moors -> Morocco (stability)",
-      "source": "maps/layers/Stability/Periods/Moors_Morocco.webp",
-      "w": 544,
-      "h": 640,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 98,
       "y": 35,
       "display_name": "Mughals (stability)",
       "source": "maps/layers/Stability/Mughals.webp",
-      "w": 544,
-      "h": 544,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 98,
-      "y": 35,
-      "display_name": "Mughals -> Pakistan (stability)",
-      "source": "maps/layers/Stability/Periods/Mughals_Pakistan.webp",
       "w": 544,
       "h": 544,
       "category": "Birth and Stability"
@@ -637,15 +520,6 @@
       "y": 34,
       "display_name": "Turkey (stability)",
       "source": "maps/layers/Stability/Turkey.webp",
-      "w": 1344,
-      "h": 864,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 55,
-      "y": 34,
-      "display_name": "Turkey -> Ottoman Constantinople (stability)",
-      "source": "maps/layers/Stability/Periods/Turkey_Ottoman_Constantinople.webp",
       "w": 1344,
       "h": 864,
       "category": "Birth and Stability"
@@ -741,15 +615,6 @@
       "category": "Birth and Stability"
     },
     {
-      "x": 7,
-      "y": 3,
-      "display_name": "Spain -> Spain (stability)",
-      "source": "maps/layers/Stability/Periods/Spain_Spain.webp",
-      "w": 4544,
-      "h": 2016,
-      "category": "Birth and Stability"
-    },
-    {
       "x": 81,
       "y": 15,
       "display_name": "Swahili (stability)",
@@ -817,15 +682,6 @@
       "y": 39,
       "display_name": "Turkestan (stability)",
       "source": "maps/layers/Stability/Turkestan.webp",
-      "w": 1440,
-      "h": 800,
-      "category": "Birth and Stability"
-    },
-    {
-      "x": 77,
-      "y": 39,
-      "display_name": "Turkestan -> Seljuks (stability)",
-      "source": "maps/layers/Stability/Periods/Turkestan_Seljuks.webp",
       "w": 1440,
       "h": 800,
       "category": "Birth and Stability"
@@ -1763,15 +1619,33 @@
       "display_name": "Ruthenia",
       "source": "maps/layers/Spawns/Ruthenia.webp",
       "w": 384,
-      "h": 320,
+      "h": 288,
       "category": "Birth and Stability"
     },
     {
-      "x": 83,
+      "x": 78,
+      "y": 58,
+      "display_name": "Ruthenia respawn",
+      "source": "maps/layers/Spawns/Respawns/Ruthenia.webp",
+      "w": 256,
+      "h": 288,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 80,
       "y": 64,
       "display_name": "Russia",
       "source": "maps/layers/Spawns/Russia.webp",
-      "w": 256,
+      "w": 352,
+      "h": 224,
+      "category": "Birth and Stability"
+    },
+    {
+      "x": 80,
+      "y": 64,
+      "display_name": "Russia extended (AI only)",
+      "source": "maps/layers/Spawns/Extended/Russia.webp",
+      "w": 352,
       "h": 224,
       "category": "Birth and Stability"
     },

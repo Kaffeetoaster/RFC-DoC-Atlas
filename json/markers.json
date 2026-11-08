@@ -1063,8 +1063,8 @@
       "bonusType": "health"
     },
     {
-      "x": 21,
-      "y": 41,
+      "x": 20,
+      "y": 42,
       "text": "1700",
       "source": "Assets/Art/Interface/Buttons/Banana_cropped.png",
       "category": "Resource spawns",
@@ -1469,7 +1469,7 @@
     },
     {
       "x": 8,
-      "y": 55,
+      "y": 54,
       "text": "1850",
       "source": "Assets/Art/Interface/Buttons/Rice_cropped.png",
       "category": "Resource spawns",
@@ -1493,15 +1493,6 @@
       "category": "Resource spawns",
       "spawn": true,
       "bonusType": "general"
-    },
-    {
-      "x": 8,
-      "y": 53,
-      "text": "1850",
-      "source": "Assets/Art/Interface/Buttons/Cow_cropped.png",
-      "category": "Resource spawns",
-      "spawn": true,
-      "bonusType": "health"
     },
     {
       "x": 142,
@@ -1532,7 +1523,7 @@
     },
     {
       "x": 8,
-      "y": 54,
+      "y": 53,
       "text": "1850",
       "source": "Assets/Art/Interface/Buttons/Citrus_cropped.png",
       "category": "Resource spawns",
@@ -2245,7 +2236,7 @@
       "x": 110,
       "y": 49,
       "text": "1750",
-      "source": "Assets/Art/Interface/Buttons/Gold_despawn.png",
+      "source": "Assets/Art/Interface/Buttons/Silver_despawn.png",
       "category": "Resource despawns",
       "spawn": false,
       "bonusType": "happiness"
@@ -2289,7 +2280,7 @@
     {
       "x": 82,
       "y": 54,
-      "text": "-1800 - Hittites spawn",
+      "text": "-1800 \n Hittites spawn",
       "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2298,7 +2289,7 @@
     {
       "x": 107,
       "y": 61,
-      "text": "552 - Turkestan spawn",
+      "text": "552 \n Turkestan spawn",
       "source": "Assets/Art/Interface/Buttons/Horse_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2307,7 +2298,7 @@
     {
       "x": 110,
       "y": 42,
-      "text": "554 - Bengal spawn",
+      "text": "554 \n Bengal spawn",
       "source": "Assets/Art/Interface/Buttons/Ivory_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2316,7 +2307,7 @@
     {
       "x": 113,
       "y": 47,
-      "text": "630 - Tibet spawn",
+      "text": "630 \n Tibet spawn",
       "source": "Assets/Art/Interface/Buttons/Wheat_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2325,7 +2316,7 @@
     {
       "x": 55,
       "y": 52,
-      "text": "1130 - Portugal spawn",
+      "text": "1130 \n Portugal spawn",
       "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2334,7 +2325,7 @@
     {
       "x": 85,
       "y": 64,
-      "text": "1263 - Russia spawn",
+      "text": "1389 \n Russia spawn",
       "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2343,7 +2334,7 @@
     {
       "x": 86,
       "y": 65,
-      "text": "1263 - Russia spawn",
+      "text": "1389 \n Russia spawn",
       "source": "Assets/Art/Interface/Buttons/Wheat_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2352,7 +2343,7 @@
     {
       "x": 61,
       "y": 66,
-      "text": "1580 - Netherlands spawn",
+      "text": "1580 \n Netherlands spawn",
       "source": "Assets/Art/Interface/Buttons/Fish_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2361,7 +2352,7 @@
     {
       "x": 128,
       "y": 57,
-      "text": "1586 - Manchuria spawn",
+      "text": "1586 \n Manchuria spawn",
       "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2370,7 +2361,7 @@
     {
       "x": 87,
       "y": 40,
-      "text": "1744 - Saudis spawn",
+      "text": "1744 \n Saudis spawn",
       "source": "Assets/Art/Interface/Buttons/Copper_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2379,7 +2370,7 @@
     {
       "x": 15,
       "y": 47,
-      "text": "1810 - Mexico spawn",
+      "text": "1810 \n Mexico spawn",
       "source": "Assets/Art/Interface/Buttons/Iron_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2388,7 +2379,7 @@
     {
       "x": 48,
       "y": 21,
-      "text": "1822 - Brazil spawn",
+      "text": "1822 \n Brazil spawn",
       "source": "Assets/Art/Interface/Buttons/Fish_cropped.png",
       "category": "Civ spawn Resources",
       "spawn": true,
@@ -2397,7 +2388,7 @@
     {
       "x": 78,
       "y": 45,
-      "text": "900 - Flood Plains",
+      "text": "900 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2406,7 +2397,7 @@
     {
       "x": 79,
       "y": 45,
-      "text": "900 - Flood Plains",
+      "text": "900 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2415,7 +2406,7 @@
     {
       "x": 80,
       "y": 44,
-      "text": "900 - Flood Plains",
+      "text": "900 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2424,7 +2415,7 @@
     {
       "x": 66,
       "y": 57,
-      "text": "1100 - Flood Plains",
+      "text": "1100 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2433,7 +2424,7 @@
     {
       "x": 68,
       "y": 57,
-      "text": "1100 - Flood Plains",
+      "text": "1100 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2442,7 +2433,7 @@
     {
       "x": 67,
       "y": 55,
-      "text": "1100 - Flood Plains",
+      "text": "1100 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2451,7 +2442,7 @@
     {
       "x": 114,
       "y": 43,
-      "text": "1200 - Rainforest",
+      "text": "1200 \n Rainforest",
       "source": "Assets/Art/Interface/Buttons/Rainforest_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2460,7 +2451,7 @@
     {
       "x": 38,
       "y": 65,
-      "text": "1400 - Strait",
+      "text": "1400 \n Strait",
       "source": "Assets/Art/Interface/Buttons/Deletion_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2469,7 +2460,7 @@
     {
       "x": 120,
       "y": 40,
-      "text": "1700 - Rainforest",
+      "text": "1700 \n Rainforest",
       "source": "Assets/Art/Interface/Buttons/Rainforest_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2477,26 +2468,8 @@
     },
     {
       "x": 8,
-      "y": 55,
-      "text": "1850 - Flood Plains",
-      "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
-      "category": "Feature spawns and despawns",
-      "spawn": true,
-      "bonusType": null
-    },
-    {
-      "x": 8,
-      "y": 54,
-      "text": "1850 - Flood Plains",
-      "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
-      "category": "Feature spawns and despawns",
-      "spawn": true,
-      "bonusType": null
-    },
-    {
-      "x": 8,
       "y": 53,
-      "text": "1850 - Flood Plains",
+      "text": "1850 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2505,7 +2478,7 @@
     {
       "x": 9,
       "y": 52,
-      "text": "1850 - Flood Plains",
+      "text": "1850 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_cropped.png",
       "category": "Feature spawns and despawns",
       "spawn": true,
@@ -2514,7 +2487,7 @@
     {
       "x": 69,
       "y": 56,
-      "text": "400 - Marsh",
+      "text": "400 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2523,7 +2496,7 @@
     {
       "x": 80,
       "y": 37,
-      "text": "550 - Flood Plains",
+      "text": "550 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2532,7 +2505,7 @@
     {
       "x": 81,
       "y": 39,
-      "text": "550 - Flood Plains",
+      "text": "550 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2541,7 +2514,7 @@
     {
       "x": 81,
       "y": 38,
-      "text": "550 - Flood Plains",
+      "text": "550 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2550,7 +2523,7 @@
     {
       "x": 129,
       "y": 50,
-      "text": "800 - Marsh",
+      "text": "800 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2559,7 +2532,7 @@
     {
       "x": 87,
       "y": 48,
-      "text": "1050 - Flood Plains",
+      "text": "1050 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2568,7 +2541,7 @@
     {
       "x": 89,
       "y": 45,
-      "text": "1050 - Flood Plains",
+      "text": "1050 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2577,7 +2550,7 @@
     {
       "x": 91,
       "y": 45,
-      "text": "1050 - Flood Plains",
+      "text": "1050 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2586,7 +2559,7 @@
     {
       "x": 88,
       "y": 46,
-      "text": "1050 - Flood Plains",
+      "text": "1050 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2595,7 +2568,7 @@
     {
       "x": 79,
       "y": 38,
-      "text": "1200 - Flood Plains",
+      "text": "1200 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2604,7 +2577,7 @@
     {
       "x": 80,
       "y": 38,
-      "text": "1200 - Flood Plains",
+      "text": "1200 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2613,7 +2586,7 @@
     {
       "x": 63,
       "y": 65,
-      "text": "1500 - Marsh",
+      "text": "1500 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2622,7 +2595,7 @@
     {
       "x": 62,
       "y": 64,
-      "text": "1500 - Marsh",
+      "text": "1500 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2631,7 +2604,7 @@
     {
       "x": 90,
       "y": 59,
-      "text": "1500 - Flood Plains",
+      "text": "1500 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2640,7 +2613,7 @@
     {
       "x": 99,
       "y": 59,
-      "text": "1600 - Flood Plains",
+      "text": "1600 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2649,7 +2622,7 @@
     {
       "x": 98,
       "y": 58,
-      "text": "1600 - Flood Plains",
+      "text": "1600 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2658,7 +2631,7 @@
     {
       "x": 96,
       "y": 56,
-      "text": "1600 - Flood Plains",
+      "text": "1600 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2667,7 +2640,7 @@
     {
       "x": 97,
       "y": 57,
-      "text": "1600 - Flood Plains",
+      "text": "1600 \n Flood Plains",
       "source": "Assets/Art/Interface/Buttons/Flood Plains_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2676,7 +2649,7 @@
     {
       "x": 81,
       "y": 70,
-      "text": "1700 - Marsh",
+      "text": "1700 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2685,7 +2658,7 @@
     {
       "x": 80,
       "y": 69,
-      "text": "1700 - Marsh",
+      "text": "1700 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2694,7 +2667,7 @@
     {
       "x": 59,
       "y": 65,
-      "text": "1750 - Marsh",
+      "text": "1750 \n Marsh",
       "source": "Assets/Art/Interface/Buttons/Marsh_despawn.png",
       "category": "Feature spawns and despawns",
       "spawn": false,
@@ -2703,7 +2676,7 @@
     {
       "x": 78,
       "y": 45,
-      "text": "900 - Semidesert",
+      "text": "900 \n Semidesert",
       "source": "Assets/Art/Interface/Buttons/Semidesert_cropped.png",
       "category": "Terrain changes",
       "spawn": true,
@@ -2712,7 +2685,7 @@
     {
       "x": 79,
       "y": 45,
-      "text": "900 - Semidesert",
+      "text": "900 \n Semidesert",
       "source": "Assets/Art/Interface/Buttons/Semidesert_cropped.png",
       "category": "Terrain changes",
       "spawn": true,
@@ -2721,7 +2694,7 @@
     {
       "x": 114,
       "y": 43,
-      "text": "1200 - Grassland",
+      "text": "1200 \n Grassland",
       "source": "Assets/Art/Interface/Buttons/Grassland_cropped.png",
       "category": "Terrain changes",
       "spawn": true,
@@ -2766,7 +2739,7 @@
     {
       "x": 63,
       "y": 56,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Olives_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -2775,7 +2748,7 @@
     {
       "x": 63,
       "y": 55,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -2784,7 +2757,7 @@
     {
       "x": 60,
       "y": 56,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -2793,7 +2766,7 @@
     {
       "x": 63,
       "y": 59,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -2802,7 +2775,7 @@
     {
       "x": 65,
       "y": 60,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -2811,7 +2784,7 @@
     {
       "x": 72,
       "y": 59,
-      "text": "490 - Greece, Rome, France",
+      "text": "490 \n Greece, Rome, France",
       "source": "Assets/Art/Interface/Buttons/Wine_cropped.png",
       "category": "City in same region",
       "spawn": true,
@@ -5788,15 +5761,6 @@
       "bonusType": "general"
     },
     {
-      "x": 6,
-      "y": 55,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Fish_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "health"
-    },
-    {
       "x": 12,
       "y": 55,
       "text": "",
@@ -7120,15 +7084,6 @@
       "bonusType": "health"
     },
     {
-      "x": 28,
-      "y": 50,
-      "text": "",
-      "source": "Assets/Art/Interface/Buttons/Crab_cropped.png",
-      "category": "Start resources",
-      "spawn": true,
-      "bonusType": "health"
-    },
-    {
       "x": 52,
       "y": 50,
       "text": "",
@@ -7501,7 +7456,7 @@
       "x": 110,
       "y": 49,
       "text": "",
-      "source": "Assets/Art/Interface/Buttons/Gold_cropped.png",
+      "source": "Assets/Art/Interface/Buttons/Silver_cropped.png",
       "category": "Start resources",
       "spawn": true,
       "bonusType": "happiness"
@@ -9611,6 +9566,15 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "health"
+    },
+    {
+      "x": 118,
+      "y": 39,
+      "text": "",
+      "source": "Assets/Art/Interface/Buttons/Copper_cropped.png",
+      "category": "Start resources",
+      "spawn": true,
+      "bonusType": "general"
     },
     {
       "x": 119,
@@ -13184,6 +13148,402 @@
       "category": "Start resources",
       "spawn": true,
       "bonusType": "health"
+    },
+    {
+      "x": 92,
+      "y": 46,
+      "text": "-3000 \n Shushan \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 86,
+      "y": 50,
+      "text": "-2600 \n Halab \n 1 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 118,
+      "y": 49,
+      "text": "-2000 \n Sanxingdui \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 84,
+      "y": 45,
+      "text": "-1600 \n Yerushalayim \n 2 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 105,
+      "y": 46,
+      "text": "-1300(conditional!) \n Indraprastha \n 1 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 81,
+      "y": 53,
+      "text": "-1200(conditional!) \n Sfard \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 89,
+      "y": 53,
+      "text": "-900 \n Tushpa \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 92,
+      "y": 50,
+      "text": "-900 \n Hagmatana \n 2 pop, 4 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 100,
+      "y": 54,
+      "text": "-800 \n Sm\u00e1rkath \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 97,
+      "y": 53,
+      "text": "-600 \n Margu \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 66,
+      "y": 57,
+      "text": "-580 \n Melpum \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 19,
+      "y": 41,
+      "text": "-500 \n Danibaan \n 2 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 121,
+      "y": 42,
+      "text": "-260 \n Co Loa \n 3 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 125,
+      "y": 43,
+      "text": "-200 \n Panyu \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 112,
+      "y": 57,
+      "text": "-150 \n Jiaohe \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 105,
+      "y": 55,
+      "text": "-75 \n Kash \n 2 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 123,
+      "y": 39,
+      "text": "190 \n Indrapura \n 3 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 89,
+      "y": 37,
+      "text": "300 \n Sana'a \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 118,
+      "y": 45,
+      "text": "400 \n Dali \n 4 pop, 4 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 123,
+      "y": 25,
+      "text": "500 \n Sunda Kelapa \n 3 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 69,
+      "y": 56,
+      "text": "500 \n Venexia \n 5 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 34,
+      "y": 22,
+      "text": "700 \n Tiwanaku \n 1 pop, 0 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 71,
+      "y": 36,
+      "text": "700 \n Njimi \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 30,
+      "y": 34,
+      "text": "800 \n Bacat\u00e1 \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 57,
+      "y": 69,
+      "text": "800 \n Sg\u00e0in \n 2 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 71,
+      "y": 59,
+      "text": "820 \n Vindobona \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 54,
+      "y": 65,
+      "text": "840 \n \u00c1th Cliath \n 1 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 82,
+      "y": 68,
+      "text": "880(conditional!) \n Novgorod \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 27,
+      "y": 28,
+      "text": "900 \n T\u00facume \n 1 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 28,
+      "y": 25,
+      "text": "900 \n Chan Chan \n 2 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 87,
+      "y": 29,
+      "text": "900 \n Muqdisho \n 3 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 79,
+      "y": 18,
+      "text": "900 \n Zimbabwe \n 2 pop, 1 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 74,
+      "y": 59,
+      "text": "1000 \n Buda \n 3 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 92,
+      "y": 66,
+      "text": "1000 \n Qazan \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 67,
+      "y": 35,
+      "text": "1000 \n Kano \n 2 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 144,
+      "y": 33,
+      "text": "1100 \n Nan Madol \n 1 pop, 0 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 15,
+      "y": 44,
+      "text": "1150 \n Ts'intsuntsani \n 3 pop, 5 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 66,
+      "y": 32,
+      "text": "1180 \n Edo \n 3 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 81,
+      "y": 32,
+      "text": "1350 \n Bonga \n 3 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 89,
+      "y": 18,
+      "text": "1610 \n Antananarivo \n 1 pop, 2 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 75,
+      "y": 26,
+      "text": "1625(conditional!) \n Nsheng \n 2 pop, 3 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 109,
+      "y": 58,
+      "text": "1635(conditional!) \n Ghulja \n 3 pop, 5 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 76,
+      "y": 22,
+      "text": "1856 \n Bunkeya \n 3 pop, 4 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
+    },
+    {
+      "x": 77,
+      "y": 25,
+      "text": "1860 \n Kasongo \n 3 pop, 5 unit(s)",
+      "source": "Assets/Art/Interface/Buttons/Foundcity_cropped.png",
+      "category": "City spawns",
+      "spawn": true,
+      "bonusType": null
     }
   ]
 }
