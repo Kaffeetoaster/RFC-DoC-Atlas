@@ -30,8 +30,8 @@ def DrawCultureMap(layers_config, scenario_name):
 	image_path = config.OUTPUT_PATH / "maps/layers/Culture" / f"{scenario_name}.webp"
 	image.save(image_path, "WEBP", quality=80, method=6)  # Save as WebP with good compression
 	
-	add_layer_config_entry(layers_config, display_name, "Scenario Culture", Path(image_path).relative_to(config.OUTPUT_PATH), image.size, offset)
-
+	add_layer_to_MapObject_config(layers_config, category="Scenario Culture", subcategory=display_name, image_path=Path(image_path).relative_to(config.OUTPUT_PATH), image_size=image.size, offset=offset)
+ 
 def DrawScenarioCultureMaps(layers_config):
 	for iyear in lScenarioStartYears:
 		if iyear != -3000:  # Skip the -3000 scenario

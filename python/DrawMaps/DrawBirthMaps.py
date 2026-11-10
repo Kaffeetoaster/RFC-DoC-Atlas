@@ -32,9 +32,6 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     
     print(f"Drawing birth map for {name}... ")
 
-
-
-
     # draw fill in and outlines
     img = Image.new("RGBA", (iWorldX * TILE_SIZE, iWorldY * TILE_SIZE), (0, 0, 0, 0))
 
@@ -55,13 +52,13 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     image_path = config.OUTPUT_PATH / folder / f"{filename}.webp"
     img.save(image_path)
 
-    add_layer_config_entry(config = json_config, 
-                           text = name, 
-                           category = category, 
-                           image_path = Path(image_path).relative_to(config.OUTPUT_PATH), 
-                           image_size = img.size, 
-                           offset = offset
-                           )
+    add_layer_to_MapObject_config(config_list = json_config,
+                            category = category,
+                            subcategory = name,
+                            image_path = Path(image_path).relative_to(config.OUTPUT_PATH),
+                            image_size = img.size,
+                            offset = offset
+                            )
 
 
 def DrawBirthMaps(layers_config):

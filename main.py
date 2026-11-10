@@ -58,40 +58,44 @@ if __name__ == "__main__":
 ### json config file for map markers ###
     markers_config ={
         "spawns_and_despawns": []  
-    }
+    }    
+#### json file for Map Objects (layers and markers alike) ###
+    MapObjects_config = []
+    
+
     create_tile_outline(
         image_width=4800,
         image_height=2560,
         tiles_x=150,
         tiles_y=80,
         output_path="./maps/tile_outline_cropped.png",
-        config = layers_config
+        config = MapObjects_config
     )
 
 
 ### Draw Stab Maps ###
-    measure(DrawStabilityMaps, layers_config)
+    measure(DrawStabilityMaps, MapObjects_config)
 
 ## Draw Religion Maps ###
-    measure(DrawReligionMaps, layers_config)
+    measure(DrawReligionMaps, MapObjects_config)
 
 ### Draw Birth Maps, extended Birth and Respawn too ### 
-    measure(DrawBirthMaps, layers_config)
+    measure(DrawBirthMaps, MapObjects_config)
 
-### Draw Resource and Feature and Terrain Maps ###
-    measure(draw_tile_markers, markers_config)
+### Draw Resource and Feature and Terrain spawns and despawns ###
+    measure(draw_tile_markers, MapObjects_config)
 
 ### Draw City Spawns ###
-    measure(drawCitySpawns, markers_config)
+    measure(drawCitySpawns, MapObjects_config)
 
 ### Draw Geography ###
-    measure(DrawGeographyMaps, layers_config)
+    measure(DrawGeographyMaps, MapObjects_config)
     
 ### Draw UHV Maps ###
-    measure(DrawUHVMaps, layers_config)
+    measure(DrawUHVMaps, MapObjects_config)
 
 ### Draw Scenario Culture Maps ###
-    measure(DrawScenarioCultureMaps, layers_config)
+    measure(DrawScenarioCultureMaps, MapObjects_config)
 
 ### dump tooltip info for map interactivity ###
     measure(create_tooltip_info)
@@ -104,6 +108,9 @@ if __name__ == "__main__":
         
     with open("json/markers.json", "w") as f:
         json.dump(markers_config, f, indent=2)
+    
+    with open("json/MapObjects.json", "w") as f:
+        json.dump(MapObjects_config, f, indent=2)
 
 
 

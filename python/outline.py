@@ -37,6 +37,5 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
             draw.text(text_position, text, fill=(0, 0, 0, 200), font=font_small)
     # Save image
     img.save(output_path)
-    add_layer_config_entry(config = config, text="Grid", category="Grid", image_path=output_path, image_size=(image_width, image_height))
-
+    add_layer_to_MapObject_config(config_list = config, category = "Grid", subcategory = "Grid", image_path=Path(output_path).relative_to(config.OUTPUT_PATH), image_size=(image_width, image_height))
 

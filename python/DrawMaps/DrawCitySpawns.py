@@ -25,8 +25,7 @@ def drawCityspawn(city, json_config):
         img = old_img.crop((3,3,60,60))
         img.save(new_path)
     
-    add_marker_config_entry(json_config, location, text, Path(new_path).relative_to(config.OUTPUT_PATH), "City spawns", True)
-
+    add_marker_to_MapObject_config(json_config, location, text, Path(new_path).relative_to(config.OUTPUT_PATH), category="Markers", subcategory="City spawns", bSpawn=True)
 
 
 

@@ -158,10 +158,11 @@ def DrawRegionMap(json_config, region_type, bOnlyLand, tile_size, line_strength)
             display_name = "Region Map - Land"
         else:
             display_name = "Region Map - Water"
-    add_layer_config_entry(
-                            config = json_config,
-                            text = display_name,
-                            category="Geography",
+
+    add_layer_to_MapObject_config(
+                            config_list = json_config,
+                            category = "Geography",
+                            subcategory = display_name,
                             image_path = Path(img_path).relative_to(config.OUTPUT_PATH),
                             image_size = img.size
                             )

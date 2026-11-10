@@ -78,11 +78,11 @@ def DrawUHVMaps(json_config):
         image_path = config.OUTPUT_PATH / f"{filename}.webp"
         img.save(image_path)
 
-        add_layer_config_entry(config = json_config, 
-                            text = display_text, 
-                            category = category, 
-                            image_path = Path(image_path).relative_to(config.OUTPUT_PATH), 
-                            image_size = img.size, 
+        add_layer_to_MapObject_config(config_list = json_config,
+                            category = category,
+                            subcategory = display_text,
+                            image_path = Path(image_path).relative_to(config.OUTPUT_PATH),
+                            image_size = img.size,
                             offset = offset
                             )
 

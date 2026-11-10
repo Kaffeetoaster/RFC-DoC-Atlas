@@ -75,8 +75,8 @@ def draw_resource_spawns(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_config_entry(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Resource spawns", bSpawn=True, bonusType=resource_type)
-        
+        add_marker_to_MapObject_config(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Resource spawns", bSpawn=True, bonusType=resource_type)
+
 ### resource despawns ###
 def draw_resource_despawns(json_config):
     dRemovedResourcesDictExtended = update_resource_despawn()
@@ -99,7 +99,7 @@ def draw_resource_despawns(json_config):
                 old_img = old_img.crop((3,3,60,60))
             old_img.paste(deletion_img, (0,0), deletion_img)
             old_img.save(new_path)
-        add_marker_config_entry(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Resource despawns", bSpawn=False, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Resource despawns", bSpawn=False, bonusType=resource_type)
 
 ## civ spawn resources
 def draw_civ_spawn_resources(json_config):
@@ -115,7 +115,7 @@ def draw_civ_spawn_resources(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_config_entry(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Civ spawn Resources", bSpawn=True, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Civ spawn Resources", bSpawn=True, bonusType=resource_type)
 
 
 
@@ -132,7 +132,7 @@ def draw_feature_spawns(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_config_entry(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=True)
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Feature spawns and despawns", bSpawn=True)
 
 def draw_feature_despawns(json_config):
     dRemovedFeaturesDictExtended = update_feature_despawn()
@@ -153,7 +153,7 @@ def draw_feature_despawns(json_config):
                 old_img = old_img.crop((3,3,60,60))
             old_img.paste(deletion_img, (0,0), deletion_img)
             old_img.save(new_path)
-        add_marker_config_entry(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Feature spawns and despawns", bSpawn=False)
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Feature spawns and despawns", bSpawn=False)
 
 ### Terrain changes ###
 def draw_terrain_changes(json_config):
@@ -168,7 +168,7 @@ def draw_terrain_changes(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((4,4,59,59))
             img.save(new_path)
-        add_marker_config_entry(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Terrain changes", bSpawn=True)
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Terrain changes", bSpawn=True)
 
 ### Plot changes ###
 def draw_plot_changes(json_config):
@@ -182,7 +182,7 @@ def draw_plot_changes(json_config):
             img = old_img.crop((4,4,59,59))
             img.save(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png")
 
-        add_marker_config_entry(json_config, (x,y), text, Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), category = "Plot changes", bSpawn=True)    
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Plot changes", bSpawn=True)    
 
 ### Region based resource spawns ###
 def draw_region_based_resource_spawns(json_config):
@@ -198,7 +198,7 @@ def draw_region_based_resource_spawns(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_config_entry(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "City in same region", bSpawn=True, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "City in same region", bSpawn=True, bonusType=resource_type)
 
 
 ### start resources ###
@@ -215,7 +215,7 @@ def draw_start_resources(json_config):
                 img = old_img.crop((3,3,60,60))
                 img.save(new_path)
             text = ""
-            add_marker_config_entry(json_config, (x,iWorldY-1-y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Start resources", bSpawn=True, bonusType=resource_type)
+            add_marker_to_MapObject_config(json_config, (x,iWorldY-1-y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Start resources", bSpawn=True, bonusType=resource_type)
 
 
 def draw_tile_markers(json_config):
