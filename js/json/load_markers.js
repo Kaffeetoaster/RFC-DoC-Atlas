@@ -185,7 +185,9 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
             markersByCategory[categoryName].push(marker);
 
             if (spawnData.bonusType) { 
-                markersByCategoryAndBonusType[categoryName][spawnData.bonusType] = markersByCategoryAndBonusType[categoryName][spawnData.bonusType] || [];
+                if (!markersByCategoryAndBonusType[categoryName][spawnData.bonusType]) {
+                    markersByCategoryAndBonusType[categoryName][spawnData.bonusType] = [];
+                }
                 markersByCategoryAndBonusType[categoryName][spawnData.bonusType].push(marker);
             }
 
@@ -206,7 +208,7 @@ export function loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
             refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
         });
 
-        refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
+        //refreshBonusMarkers(categoryCheckboxes, markersByCategory, markersByCategoryAndBonusType, map);
         
     
         

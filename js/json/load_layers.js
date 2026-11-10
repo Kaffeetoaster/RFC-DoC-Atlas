@@ -1,6 +1,45 @@
 import { addLegendToggle } from "../UI/legend.js";
 
 
+
+
+function createMapLayer(layerData, category, GAME_TILE_SIZE, width, MAP_OFFSET) {
+    // Create the image overlay
+    const lat = GAME_TILE_SIZE * (layerData.y) + MAP_OFFSET;
+    const lng = GAME_TILE_SIZE * (layerData.x);
+    const bounds = [[lat, lng], [lat + layerData.h, lng + layerData.w]];
+    const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
+    const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];
+    
+    let imageOverlay, imageOverlayLeft, imageOverlayRight;
+    if (category === "Birth") {
+    imageOverlay = L.imageOverlay(layerData.source, bounds, {pane: "OutlinePane"});
+    imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, {pane: "OutlinePane"});
+    imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, {pane: "OutlinePane"});
+    
+    } else {
+    imageOverlay = L.imageOverlay(layerData.source, bounds);
+    imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft);
+    imageOverlayRight = L.imageOverlay(layerData.source, boundsRight);
+    }
+    return { imageOverlay, imageOverlayLeft, imageOverlayRight };
+
+}
+
+function addLayerToggle(checkbox, imageOverlay, imageOverlayLeft, imageOverlayRight) {
+    checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                imageOverlay.addTo(map);
+                imageOverlayLeft.addTo(map);
+                imageOverlayRight.addTo(map);
+            } else {
+                imageOverlay.removeFrom(map);
+                imageOverlayLeft.removeFrom(map);
+                imageOverlayRight.removeFrom(map);
+            }
+            });
+}
+
 export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
     // Load layers from JSON and create categories
     console.log('Starting to fetch layers.json...');
@@ -13,12 +52,7 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
     .then(data => {
         console.log('JSON loaded successfully.');
         const container = document.querySelector('.options-container');
-        console.log('Container found:', container);
         
-        if (!container) {
-        console.error('ERROR: .options-container not found in HTML!');
-        return;
-        }
         for (const [category, items] of Object.entries(data)) {
         console.log("Category:", category, "with", items.length, "items");
 
@@ -52,41 +86,11 @@ export function loadLayers(GAME_TILE_SIZE, map, width, height,MAP_OFFSET) {
             label.appendChild(text);
             details.appendChild(label);
             
-            // Create the image overlay
-            // this should be its own function maybe.
-            const lat = GAME_TILE_SIZE * (layerData.y) + MAP_OFFSET;
-            const lng = GAME_TILE_SIZE * (layerData.x);
-            const bounds = [[lat, lng], [lat + layerData.h, lng + layerData.w]];
-            const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
-            const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];
-            
-            let imageOverlay, imageOverlayLeft, imageOverlayRight;
-            if (category === "Birth") {
-            imageOverlay = L.imageOverlay(layerData.source, bounds, {pane: "OutlinePane"});
-            imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, {pane: "OutlinePane"});
-            imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, {pane: "OutlinePane"});
-            
-            } else {
-            imageOverlay = L.imageOverlay(layerData.source, bounds);
-            imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft);
-            imageOverlayRight = L.imageOverlay(layerData.source, boundsRight);
-            }
-
-
-
+            let imageOverlay, imageOverlayLeft, imageOverlayRight = createMapLayer(layerData,category, GAME_TILE_SIZE, width, MAP_OFFSET);
             
             // Toggle overlay on checkbox change
-            checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                imageOverlay.addTo(map);
-                imageOverlayLeft.addTo(map);
-                imageOverlayRight.addTo(map);
-            } else {
-                imageOverlay.removeFrom(map);
-                imageOverlayLeft.removeFrom(map);
-                imageOverlayRight.removeFrom(map);
-            }
-            });
+            addLayerToggle(checkbox, imageOverlay, imageOverlayLeft, imageOverlayRight);
+
             if (category === "Religion") {
                 ReligionsList.push(checkbox);
             }

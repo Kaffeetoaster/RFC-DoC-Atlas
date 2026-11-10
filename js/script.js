@@ -7,6 +7,7 @@ import { initializeSearch } from './UI/search.js';
 
 import { loadLayers } from './json/load_layers.js';
 import { loadMarkers} from './json/load_markers.js';
+import {loadMapObjects} from './json/load_MapObjects.js';
 import { loadTooltips} from './json/load_tooltips.js';
 
 
@@ -107,10 +108,14 @@ map.options.fadeAnimation = false;
 // });
 
 // load Layers, create checkboxes, and add event listeners for checkboxes to toggle layers
-loadLayers(GAME_TILE_SIZE, map, width, height, MAP_OFFSET);
+// loadLayers(GAME_TILE_SIZE, map, width, height, MAP_OFFSET);
 
-// load markers, create checkboxes to toggle them and create a cache canvas for the markers
-loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+// load markers, create checkboxes to toggle them 
+// loadMarkers(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
+
+// load MapObjects, create checkboxes to toggle them 
+loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET)
+    
 
 // load tooltips, create hover event listener to update tooltip content
 loadTooltips(map, GAME_TILE_SIZE, width, height, MAP_OFFSET);
