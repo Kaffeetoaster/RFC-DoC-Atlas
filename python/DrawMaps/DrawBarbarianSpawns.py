@@ -7,33 +7,6 @@ import config
 from PIL import Image
 from pathlib import Path
 
-# Notes:
-# Viel zu viele Überschneidungen.
-# es wäre angenehmn und sinnvoll, die Terrain exceptions rauszunehmen,
-# aber dafür müsste man die Units nach Typ filtern, den es gibt auch schiffe.
-
-# twl sind die Regionen enorm groß.
-
-# ggf. die Spawns nach Zeit gruppierne und dann mehrere subcategories haben.
-# maybe i could only show a marker and on hover the spawn area is shown?
-# viell die Angabe von 2 Jahreszahlen erlauben und dann werden alle Spawns in diesem Zeitraum gezeigt?
-
-
-
-
-def preprocess_barbarian_spawns(barbarians):
-    processed_spawns = barbarians.copy()
-    # merge spawns with the same area
-    
-    # calculate distinct colors
-    # num_colors = 10
-    # COLORSCHEME = generate_color_scheme(num_colors)[1]
-    # for i, spawn in enumerate(processed_spawns):
-    #     r,g,b,_ = COLORSCHEME[i % num_colors]
-    #     spawn["color"] = (r, g, b, 130)  # Use RGB from color scheme and set alpha to 130 for transparency
-    
-    return processed_spawns
-
 
 def drawBarbarianSpawn(BarbarianSpawn, json_config, spawn_id):
     
@@ -71,39 +44,37 @@ def drawBarbarianSpawn(BarbarianSpawn, json_config, spawn_id):
     # marker img
     marker_path = ""
 
-    unit_count = sum([v for k,v in units.items()])
-    marker_text = f"{start_year} to {end_year}{conditional}\n{unit_count} Unit(s) \n with Interval: {interval}"
+    unit_text = ", ".join([f"{v}x {LUnitXML[k]['Description']}" for k,v in units.items()])
+    promotion_text = ""
+    if promotions:
+        promotion_text = "\n with "
+        promotion_text += ", ".join([f"{LPromotionXML[k]['Description']}" for k in promotions])
+
+    marker_text = f"{start_year} to {end_year}{conditional}\n{unit_text}{promotion_text}\n with Interval: {interval}"
     marker_location = calculate_center_of_area(spawn_area)
     
-    era_borders = [-3000,-1200, -1000, -500, 300, 600, 1000, 1200, 1500, 1700, 1800, 2025]
-    eras = [(year, era_borders[i+1]) for i, year in enumerate(era_borders[:-1])]
-    subcategories = [f"Unit spawns from {start} to {end}" for start, end in eras if (start <= start_year < end) or (start < end_year <= end) or (start_year <= start and end_year >= end)]
     
-    subcategories = ["Barbarian Spawns"]
-    for subcategory in subcategories:
-        add_layer_to_MapObject_config(config_list = json_config,
-                            category = "Barbarian Spawns",
-                            subcategory = subcategory,
-                            time_frame = (start_year, end_year),
-                            image_path = Path(image_path).relative_to(config.OUTPUT_PATH),
-                            image_size = layer_img.size,
-                            offset = offset,
-                            id = spawn_id
-                            )
-        add_marker_to_MapObject_config(config_list = json_config,
-                            coords = marker_location,
-                            text = marker_text,             
-                            path_art = marker_path,
-                            category = "Barbarian Spawns",
-                            subcategory = subcategory,
-                            time_frame = (start_year, end_year),
-                            bSpawn = True,
-                            id = spawn_id
-                            )
+    add_layer_to_MapObject_config(config_list = json_config,
+                        category = "Barbarian spawns and City spawns",
+                        subcategory = "Barbarian Spawns",
+                        time_frame = (start_year, end_year),
+                        image_path = Path(image_path).relative_to(config.OUTPUT_PATH),
+                        image_size = layer_img.size,
+                        offset = offset,
+                        id = spawn_id
+                        )
+    add_marker_to_MapObject_config(config_list = json_config,
+                        coords = marker_location,
+                        text = marker_text,             
+                        path_art = marker_path,
+                        category = "Barbarian spawns and City spawns",
+                        subcategory = "Barbarian Spawns",
+                        time_frame = (start_year, end_year),
+                        bSpawn = True,
+                        id = spawn_id
+                        )
 
 
 def drawBarbarianSpawns(json_config):
-    
     for i,BarbarianSpawn in enumerate(barbarians):
-        # print(f"Drawing Barbarian Spawn: {BarbarianSpawn}")
         drawBarbarianSpawn(BarbarianSpawn,json_config, spawn_id = f"barbarian_spawn_{i}")

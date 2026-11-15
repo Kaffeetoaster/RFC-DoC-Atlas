@@ -16,6 +16,7 @@ def drawCityspawn(city, json_config):
     conditional = "(conditional!)" if city.get("kwargs").get("condition", False) == None else ""
     civ_name = LCivXML[iCiv].get("ShortDescription")
     
+    
     text = f"{spawn_year}{conditional} \n {City_name} \n {iPopulation} pop, {iUnits} unit(s)"
     
     path_art = config.INPUT_PATH.parent.parent.parent.parent/ "Art Assets/Art/Interface/Buttons/Actions/Foundcity.dds"
@@ -29,8 +30,9 @@ def drawCityspawn(city, json_config):
                                    location, 
                                    text, 
                                    Path(new_path).relative_to(config.OUTPUT_PATH), 
-                                   category="Markers", 
+                                   category="Barbarian spawns and City spawns", 
                                    subcategory="City spawns", 
+                                   time_frame=(spawn_year, spawn_year),
                                    bSpawn=True)
 
 
