@@ -1,56 +1,9 @@
 import { addLegendToggle } from "../UI/legend.js";
+import { addBonusFilter, initializeBonusSelect } from "../UI/bonus_filter.js";
+import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey } from "../map_state.js";
 
-const bonusSelect = document.getElementById("bonus-select");
 
 
-function setBonusSelectVisibility(categoryCheckboxes) {
-    const anyCategoryEnabled = Object.values(categoryCheckboxes).some(checkbox => checkbox.checked);
-    bonusSelect.classList.toggle("hidden", !anyCategoryEnabled);
-}
-
-function updateMarkerVisibility(marker, shouldShow, map, mapBounds) {
-    const isInBounds = mapBounds.contains(marker.getLatLng());
-
-    if (shouldShow && isInBounds) {
-        marker.addTo(map);
-    } else {
-        marker.removeFrom(map);
-    }
-}
-
-function refreshBonusMarkers(categoryCheckboxes, markersBySubcategory, markersBySubcategoryAndBonusType, map) {
-    const selectedBonusType = bonusSelect.value;
-    const mapBounds = map.getBounds();
-
-    Object.entries(markersBySubcategory).forEach(([categoryName, markers]) => {
-        const categoryCheckbox = categoryCheckboxes[categoryName];
-        const categoryEnabled = Boolean(categoryCheckbox && categoryCheckbox.checked);
-
-        if (!categoryEnabled) {
-            markers.forEach(marker => marker.removeFrom(map));
-            return;
-        }
-
-        if (selectedBonusType === "all") {
-            markers.forEach(marker => updateMarkerVisibility(marker, true, map, mapBounds));
-            return;
-        }
-
-        const markersByBonusType = markersBySubcategoryAndBonusType[categoryName] || {};
-        const allowedMarkers = new Set(markersByBonusType[selectedBonusType] || []);
-
-        markers.forEach(marker => {
-            updateMarkerVisibility(marker, allowedMarkers.has(marker), map, mapBounds);
-        });
-    });
-
-    setBonusSelectVisibility(categoryCheckboxes);
-}
-
-// The marker is positioned purely with CSS (see .marker-anchor-top / .marker-anchor-bottom in style.css):
-// Leaflet's icon element is a 0x0 dot on the lat/lng, and the inner .marker-box is shifted with
-// transform: translate() so the arrow tip sits on that dot, whatever size the content has.
-const ZERO_SIZE = [0, 0];
 
 function createDivIcon(spawnData) {
     const direction = (spawnData.spawn === false || spawnData.category === "Terrain changes") ? 'arrow-top' : 'arrow-bottom';
@@ -67,8 +20,8 @@ function createDivIcon(spawnData) {
                 ${imghtml}
                 <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
                 </div>`,
-                iconSize: ZERO_SIZE,
-                iconAnchor: ZERO_SIZE
+                iconSize: [0, 0],
+                iconAnchor: [0, 0]
             });
     } else {
         return L.divIcon({
@@ -78,8 +31,8 @@ function createDivIcon(spawnData) {
                     <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
                     <div class="marker-arrow-bottom"></div>
                     </div>`,
-                    iconSize: ZERO_SIZE,
-                    iconAnchor: ZERO_SIZE
+                    iconSize: [0, 0],
+                    iconAnchor: [0, 0]
                 });
     }
 }
@@ -107,170 +60,117 @@ function createMapLayer(layerData, GAME_TILE_SIZE, width, MAP_OFFSET) {
 
 }
 
-function addLayerToggle(checkbox, imageOverlay, imageOverlayLeft, imageOverlayRight, map) {
-    checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                imageOverlay.addTo(map);
-                imageOverlayLeft.addTo(map);
-                imageOverlayRight.addTo(map);
-            } else {
-                imageOverlay.removeFrom(map);
-                imageOverlayLeft.removeFrom(map);
-                imageOverlayRight.removeFrom(map);
-            }
-            });
+// Leaflet objects of one map object. Everything in the array is added/removed together.
+function createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
+    const lat = GAME_TILE_SIZE * mapObject.y + GAME_TILE_SIZE / 2 + MAP_OFFSET;
+    const lng = GAME_TILE_SIZE * mapObject.x + GAME_TILE_SIZE / 2;
+    // centre, left wrap and right wrap copy
+    return [lng, lng + width, lng - width].map(
+        wrappedLng => L.marker([lat, wrappedLng], { icon: createDivIcon(mapObject) })
+    );
 }
 
+function createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
+    const { imageOverlay, imageOverlayLeft, imageOverlayRight } =
+        createMapLayer(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
+    return [imageOverlay, imageOverlayLeft, imageOverlayRight];
+}
 
+// category -> subcategory -> [mapObjects]  (keeps the order of the json)
+function groupByCategory(data) {
+    const categories = {};
+    for (const mapObject of data) {
+        categories[mapObject.category] ??= {};
+        categories[mapObject.category][mapObject.subcategory] ??= [];
+        categories[mapObject.category][mapObject.subcategory].push(mapObject);
+    }
+    return categories;
+}
 
+// one checkbox per subcategory; it only tells the state to enable/disable that subcategory
+function createSubcategoryCheckbox(subcategory, key) {
+    const label = document.createElement('label');
+    label.className = 'checkbox-container';
 
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = false;
 
+    const checkmark = document.createElement('span');
+    checkmark.className = 'checkmark';
 
+    const text = document.createElement('span');
+    text.className = 'label-text';
+    text.textContent = subcategory;
+
+    label.append(checkbox, checkmark, text);
+
+    checkbox.addEventListener('change', () => setSubcategoryEnabled(key, checkbox.checked));
+    return { label, checkbox };
+}
 
 export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
-    // Load markers from JSON and create tooltips
-    console.log('Starting to fetch MapObjects.json...');
+    initMapState(map);
+
     fetch('json/MapObjects.json')
     .then(response => {
-        console.log('Response received:', response.status);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
     })
     .then(data => {
-        console.log('JSON loaded successfully. Total number of MapObjects:', data.length);
+        console.log('MapObjects loaded:', data.length);
         const container = document.querySelector('.options-container');
+        const checkboxesByCategory = {};
 
-        // create a nested structure of categories and subcategories
-        const categories = {};
+        // all bonus types / categories that can be selected in the bonus select
+        const bonusTypes = new Set();
         for (const mapObject of data) {
-            if (!categories[mapObject.category]) {
-                categories[mapObject.category] = {};
-            }
-            if (!categories[mapObject.category][mapObject.subcategory]) {
-                categories[mapObject.category][mapObject.subcategory] = [];
-            }
-            categories[mapObject.category][mapObject.subcategory].push(mapObject);
+            if (mapObject.bonusType) bonusTypes.add(mapObject.bonusType);
+            if (mapObject.bonusCategory) bonusTypes.add(mapObject.bonusCategory);
         }
-        console.log('Categories created:', Object.keys(categories));
-        // sort the categories and subcategories alphabetically (optional)
-        const sortCategories = false;
+        initializeBonusSelect(bonusTypes);
 
-        let sortedCategories = {};
-
-        if (sortCategories){
-            for (const category of Object.keys(categories).sort()) {
-                sortedCategories[category] = {};
-
-                for (const subcategory of Object.keys(categories[category]).sort()) {
-                    sortedCategories[category][subcategory] =
-                        categories[category][subcategory];
-                }
-            }
-        }
-        else{
-            sortedCategories = categories;
-        }
-
-        // Store markers by category and bonus type, plus their checkboxes for use in filtering and toggling visibility
-        const markersBySubcategory = {};
-        const subcategoryCheckboxes = {};
-        const markersBySubcategoryAndBonusType = {};
-        const possibleBonusTypes = new Set();
-
-        // create the HTML structure for the categories and subcategories
-        for (const [category, subcategories] of Object.entries(sortedCategories)) {
+        for (const [category, subcategories] of Object.entries(groupByCategory(data))) {
             const details = document.createElement('details');
             const summary = document.createElement('summary');
             summary.textContent = category;
             details.appendChild(summary);
-
-            // Religions get a Legend
-            let ReligionsList = [];
-            if (category === "Religion") {
-                ReligionsList.push(checkbox);
-            }
+            checkboxesByCategory[category] = [];
 
             for (const [subcategory, mapObjects] of Object.entries(subcategories)) {
-                //create checkbox for subcategory
-                const label = document.createElement('label');
-                label.className = 'checkbox-container';
-
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.checked = false;
-
-                const checkmark = document.createElement('span');
-                checkmark.className = 'checkmark';
-
-                const text = document.createElement('span');
-                text.className = 'label-text';
-                text.textContent = subcategory;
-
-                label.appendChild(checkbox);
-                label.appendChild(checkmark);
-                label.appendChild(text);
-                details.appendChild(label);
-
-                // Store the checkbox for later use in filtering and toggling visibility
-                subcategoryCheckboxes[subcategory] = checkbox;
-                markersBySubcategory[subcategory] = [];
-                markersBySubcategoryAndBonusType[subcategory] = {};
-
+                // build the map objects of this subcategory and put them into the registry
                 for (const mapObject of mapObjects) {
-                    if (mapObject.type == "marker") {
-                        // create marker
-                        const lat = GAME_TILE_SIZE * (mapObject.y) + GAME_TILE_SIZE / 2 + MAP_OFFSET;
-                        const lng = GAME_TILE_SIZE * (mapObject.x) + GAME_TILE_SIZE / 2;
-                        // Create markers for center, left wrap (-7800), and right wrap (+7800)
-                        const positionsToCreate = [
-                            { lat: lat, lng: lng },
-                            { lat: lat, lng: lng + width },
-                            { lat: lat, lng: lng - width }
-                        ];
-
-                        positionsToCreate.forEach(position => {
-                            const divIcon = createDivIcon(mapObject);
-
-                            const marker = L.marker([position.lat, position.lng], { icon: divIcon });
-                            markersBySubcategory[subcategory].push(marker);
-                            if (mapObject.bonusType) {
-                                possibleBonusTypes.add(mapObject.bonusType);
-                                if (!markersBySubcategoryAndBonusType[subcategory][mapObject.bonusType]) {
-                                    markersBySubcategoryAndBonusType[subcategory][mapObject.bonusType] = [];
-                                }
-                                markersBySubcategoryAndBonusType[subcategory][mapObject.bonusType].push(marker);
-                            }
-
-                        });
-
-                    }
-                    else if (mapObject.type == "layer") {
-                        // create layer
-                        const {
-                            imageOverlay,
-                            imageOverlayLeft,
-                            imageOverlayRight
-                        } = createMapLayer(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
-                        // Toggle overlay on checkbox change
-                        addLayerToggle(checkbox, imageOverlay, imageOverlayLeft, imageOverlayRight, map);
+                    if (mapObject.type === "marker") {
+                        registerEntry(mapObject, createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET));
+                    } else if (mapObject.type === "layer") {
+                        registerEntry(mapObject, createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET));
                     }
                 }
-                // Add event listener to checkbox to toggle visibility of markers
-                checkbox.addEventListener('change', function() {
-                    refreshBonusMarkers(subcategoryCheckboxes, markersBySubcategory, markersBySubcategoryAndBonusType, map);
-                });
+
+                const { label, checkbox } = createSubcategoryCheckbox(subcategory, subcategoryKey(mapObjects[0]));
+                details.appendChild(label);
+                checkboxesByCategory[category].push(checkbox);
             }
 
-            for (const checkbox of ReligionsList) {
-                addLegendToggle(checkbox, ReligionsList);
+            // category specific UI that only needs to know about the checkboxes
+            if (category === "Religion") {
+                for (const checkbox of checkboxesByCategory[category]) {
+                    addLegendToggle(checkbox, checkboxesByCategory[category]);
+                }
             }
-            bonusSelect.addEventListener("change", () => refreshBonusMarkers(subcategoryCheckboxes, markersBySubcategory, markersBySubcategoryAndBonusType, map));
-            map.on('moveend zoomend', () => {
-                refreshBonusMarkers(subcategoryCheckboxes, markersBySubcategory, markersBySubcategoryAndBonusType, map);
-            });
-            
+            if (category === "Resource spawns and despawns") {
+                for (const checkbox of checkboxesByCategory[category]) {
+                    addBonusFilter(checkbox, checkboxesByCategory[category]);
+                }
+            }
+            if (category === "Barbarian spawns") {
+                for (const checkbox of checkboxesByCategory[category]) {
+                    addYearFilter(checkbox, checkboxesByCategory[category]);
+                }
+            }
+
+
             container.appendChild(details);
         }
     });
-    
 }
