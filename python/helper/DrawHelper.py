@@ -2,6 +2,7 @@
 from python.consts import *
 from python.helper.helper import *
 
+import colorsys
 from PIL import Image, ImageDraw
 
 
@@ -115,7 +116,33 @@ def draw_fill_in_area(area, exceptions, color, img, Hatching = False):
 
 
     
+def generate_color_scheme(num_colors):
+    # generates a HSL color scheme with num_colors distinct colors
+    # goal is to have strong contrast
+    if num_colors <= 0:
+        return [], []
 
+    hsl_colors = []
+    rgba_colors = []
+
+    # Golden-ratio spacing gives good perceptual separation, even for larger palettes.
+    golden_ratio_conjugate = 0.618033988749895
+    hue = 0.0
+
+    for i in range(num_colors):
+        hue = (hue + golden_ratio_conjugate) % 1.0
+        saturation = 0.4 + 0.15 * ((i % 3) / 2.0)  
+        lightness = 0.4 + 0.12 * ((i % 2))         
+
+        r, g, b = colorsys.hls_to_rgb(hue, lightness, saturation)
+
+        hsl = (int(round(hue * 360)) % 360, int(round(saturation * 100)), int(round(lightness * 100)))
+        rgba = (int(round(r * 255)), int(round(g * 255)), int(round(b * 255)), 255)
+
+        hsl_colors.append(hsl)
+        rgba_colors.append(rgba)
+
+    return hsl_colors, rgba_colors
 
 
 
