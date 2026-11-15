@@ -8,7 +8,7 @@ import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey, lin
 
 // Only the markers of this category are spread out when several of them are shown on exactly the same spot,
 // see spreadOffsets() in marker_spread.js and render() in map_state.js
-const SPREAD_CATEGORY = "Barbarian Spawns";
+const SPREAD_CATEGORY = "Barbarian spawns and City spawns";
 
 function createDivIcon(spawnData) {
     const direction = (spawnData.spawn === false || spawnData.category === "Terrain changes") ? 'arrow-top' : 'arrow-bottom';
