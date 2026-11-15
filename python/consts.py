@@ -94,6 +94,10 @@ LCivXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Civilizations/CIV4Civil
 print(f"Loaded {len(LCivXML)} Civilization XML entries")
 LReligionXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/GameInfo/CIV4ReligionInfo.xml")
 print(f"Loaded {len(LReligionXML)} Religion XML entries")
+LUnitXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Units/CIV4UnitInfos.xml")
+print(f"Loaded {len(LUnitXML)} Unit XML entries")
+LPromotionXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Units/CIV4PromotionInfos.xml")
+print(f"Loaded {len(LPromotionXML)} Promotion XML entries")
 
 # Art
 dArtXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Art/CIV4ArtDefines_Bonus.xml")
@@ -110,29 +114,28 @@ dColorXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Interface/CIV4ColorVa
 dPlayerColorXML = parse_xml_file(config.INPUT_PATH / "Assets/XML/Interface/CIV4PlayerColorInfos.xml")
 
 # Text
-dTextXML = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Assets/XML/Text/CIV4GameTextInfos_Objects.xml")
-print(f"Loaded {len(dTextXML)} GameText Object XML entries")
-dTextXML_temp = parse_xml_file(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text/CIV4GameText_Warlords.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Warlords Text XML entries")
-
-dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Resources.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Resource Text XML entries")
-dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Features.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Feature Text XML entries")
-dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Terrain.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Terrain Text XML entries")
-dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Regions.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Regions Text XML entries")
-dTextXML_temp = parse_xml_file(config.INPUT_PATH / "Assets/XML/Text/Religions.xml")
-dTextXML |= dTextXML_temp
-print(f"Loaded {len(dTextXML_temp)} Religions Text XML entries")
+dTextXML = {}
+for file in Path(config.INPUT_PATH.parent.parent.parent / "Assets/XML/Text").glob("*.xml"):
+    dTextXML_temp= parse_xml_file(file)
+    dTextXML |= dTextXML_temp
+    print(f"Loaded {len(dTextXML_temp)} Text XML entries from {file.name}")
 
 
+for file in Path(config.INPUT_PATH.parent.parent.parent / "Warlords/Assets/XML/Text").glob("*.xml"):
+    dTextXML_temp= parse_xml_file(file)
+    dTextXML |= dTextXML_temp
+    print(f"Loaded {len(dTextXML_temp)} Warlords Text XML entries from {file.name}")
+    
+for file in Path(config.INPUT_PATH.parent.parent.parent / "Beyond the Sword/Assets/XML/Text").glob("*.xml"):   
+    dTextXML_temp= parse_xml_file(file)
+    dTextXML |= dTextXML_temp
+    print(f"Loaded {len(dTextXML_temp)} Beyond the Sword Text XML entries from {file.name}") 
+
+for file in Path(config.INPUT_PATH / "Assets/XML/Text").glob("*.xml"):
+    dTextXML_temp= parse_xml_file(file)
+    dTextXML |= dTextXML_temp
+    print(f"Loaded {len(dTextXML_temp)} Text XML entries from {file.name}")
+    
 
 for file in Path(config.INPUT_PATH / "Assets/XML/Text/DynamicNames").glob("*.xml"):
     dTextXML_temp= parse_xml_file(file)
@@ -144,6 +147,8 @@ update_all_infos(LBonusXML, dArtXML, dTextXML)
 update_all_infos(LFeatureXML, dArtXML, dTextXML)
 update_all_infos(LTerrainXML, dArtXML, dTextXML)
 update_all_infos(LCivXML, dArtXML, dTextXML,dPlayerColorXML, dColorXML)
+update_all_infos(LUnitXML, dArtXML, dTextXML)
+update_all_infos(LPromotionXML, dArtXML, dTextXML)
 
 # Religions dont have an ARTDefineTag, the Path to the Button is in the ReligionXML itself.
 update_all_infos(LReligionXML, dArtXML, dTextXML)
