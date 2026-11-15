@@ -52,7 +52,7 @@ def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpaw
     }
     config_dict["spawns_and_despawns"].append(entry)
 
-def add_layer_to_MapObject_config(config_list, category, subcategory, image_path, image_size, time_frame = None, offset = (0,0)):
+def add_layer_to_MapObject_config(config_list, category, subcategory, image_path, image_size, time_frame = None, offset = (0,0), id = None):
     entry = {
         "x": offset[0], # offset if needed
         "y": offset[1],
@@ -63,12 +63,14 @@ def add_layer_to_MapObject_config(config_list, category, subcategory, image_path
         "type": "layer",
         "w": image_size[0],
         "h": image_size[1],
+        "id": id
     }
     config_list.append(entry)
 
 
 
-def add_marker_to_MapObject_config(config_list, coords, text, path_art, category, subcategory, bSpawn,time_frame = None, bonusType = None, bonusCategory = None):
+
+def add_marker_to_MapObject_config(config_list, coords, text, path_art, category, subcategory, bSpawn,time_frame = None, bonusType = None, bonusCategory = None, id = None):
     entry = {
         "x": coords[0],
         "y": coords[1],
@@ -80,10 +82,10 @@ def add_marker_to_MapObject_config(config_list, coords, text, path_art, category
         "text": text,
         "spawn": bSpawn, # important for color
         "bonusType": bonusType,
-        "bonusCategory": bonusCategory
+        "bonusCategory": bonusCategory,
+        "id": id
     }
     config_list.append(entry)
-
 
 
 def is_in_area(rectangle, exceptions, tile):

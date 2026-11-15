@@ -35,7 +35,7 @@ def preprocess_barbarian_spawns(barbarians):
     return processed_spawns
 
 
-def drawBarbarianSpawn(BarbarianSpawn, json_config):
+def drawBarbarianSpawn(BarbarianSpawn, json_config, spawn_id):
     
     start_year, end_year, units, spawn_area, interval, pattern = BarbarianSpawn.get("args")
     iOwner = BarbarianSpawn.get("kwargs").get("iOwner", iBarbarian)
@@ -87,7 +87,8 @@ def drawBarbarianSpawn(BarbarianSpawn, json_config):
                             time_frame = (start_year, end_year),
                             image_path = Path(image_path).relative_to(config.OUTPUT_PATH),
                             image_size = layer_img.size,
-                            offset = offset
+                            offset = offset,
+                            id = spawn_id
                             )
         add_marker_to_MapObject_config(config_list = json_config,
                             coords = marker_location,
@@ -96,12 +97,13 @@ def drawBarbarianSpawn(BarbarianSpawn, json_config):
                             category = "Barbarian Spawns",
                             subcategory = subcategory,
                             time_frame = (start_year, end_year),
-                            bSpawn = True
+                            bSpawn = True,
+                            id = spawn_id
                             )
 
 
 def drawBarbarianSpawns(json_config):
     
-    for BarbarianSpawn in barbarians:
+    for i,BarbarianSpawn in enumerate(barbarians):
         # print(f"Drawing Barbarian Spawn: {BarbarianSpawn}")
-        drawBarbarianSpawn(BarbarianSpawn, json_config)
+        drawBarbarianSpawn(BarbarianSpawn,json_config, spawn_id = f"barbarian_spawn_{i}")
