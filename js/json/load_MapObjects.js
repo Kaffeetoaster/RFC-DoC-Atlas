@@ -1,5 +1,6 @@
 import { addLegendToggle } from "../UI/legend.js";
 import { addBonusFilter, initializeBonusFilter } from "../UI/bonus_filter.js";
+import { addYearFilter, initializeYearFilter } from "../UI/year_filter.js";
 import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey } from "../map_state.js";
 
 
@@ -130,6 +131,16 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         }
         initializeBonusFilter(bonusTypes);
 
+        // year range that can be selected in the year filter
+        const years = data.flatMap(mapObject => mapObject.time_frame ?? []).filter(year => year != null);
+        const hasYears = years.length > 0;
+        if (hasYears) initializeYearFilter(Math.min(...years), Math.max(...years));
+
+        // A filter belongs to every subcategory checkbox that contains objects the filter works on.
+        // The filter UI is shown while one of these checkboxes is ticked.
+        const bonusCheckboxes = [];
+        const yearCheckboxes = [];
+
         for (const [category, subcategories] of Object.entries(groupByCategory(data))) {
             const details = document.createElement('details');
             const summary = document.createElement('summary');
@@ -150,6 +161,13 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
                 const { label, checkbox } = createSubcategoryCheckbox(subcategory, subcategoryKey(mapObjects[0]));
                 details.appendChild(label);
                 checkboxesByCategory[category].push(checkbox);
+
+                if (mapObjects.some(mapObject => mapObject.bonusType || mapObject.bonusCategory)) {
+                    bonusCheckboxes.push(checkbox);
+                }
+                if (mapObjects.some(mapObject => mapObject.time_frame)) {
+                    yearCheckboxes.push(checkbox);
+                }
             }
 
             // category specific UI that only needs to know about the checkboxes
@@ -158,19 +176,14 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
                     addLegendToggle(checkbox, checkboxesByCategory[category]);
                 }
             }
-            if (category === "Resource spawns and despawns") {
-                for (const checkbox of checkboxesByCategory[category]) {
-                    addBonusFilter(checkbox, checkboxesByCategory[category]);
-                }
-            }
-            if (category === "Barbarian spawns") {
-                for (const checkbox of checkboxesByCategory[category]) {
-                    addYearFilter(checkbox, checkboxesByCategory[category]);
-                }
-            }
 
 
             container.appendChild(details);
+        }
+
+        for (const checkbox of bonusCheckboxes) addBonusFilter(checkbox, bonusCheckboxes);
+        if (hasYears) {
+            for (const checkbox of yearCheckboxes) addYearFilter(checkbox, yearCheckboxes);
         }
     });
 }

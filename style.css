@@ -211,6 +211,121 @@ html, body {
     display: none;
 }
 
+/* Year filter: number input - bar with two handles - number input */
+#year-filter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66vw;
+    box-sizing: border-box;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    color: var(--civ-white);
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    --thumb: 18px;
+}
+#year-filter.hidden {
+    display: none;
+}
+#year-filter input[type="number"] {
+    box-sizing: border-box;
+    width: 72px;
+    padding: 4px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--civ-white);
+    background: var(--civ-list-bg);
+    border: 1px solid var(--civ-border);
+    border-radius: 6px;
+    -moz-appearance: textfield;
+}
+#year-filter input[type="number"]::-webkit-outer-spin-button,
+#year-filter input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#year-slider {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+#year-slider-inner {
+    position: relative;
+    height: 28px;
+}
+/* the bar; inset by half a handle so that the handle centres line up with the percentages */
+#year-track {
+    position: absolute;
+    left: calc(var(--thumb) / 2);
+    right: calc(var(--thumb) / 2);
+    top: 50%;
+    height: 8px;
+    transform: translateY(-50%);
+    background: var(--civ-list-bg);
+    border: 1px solid var(--civ-border);
+    border-radius: 5px;
+}
+#year-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: var(--civ-gold);
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(255, 204, 102, 0.55);
+}
+/* two range inputs on top of each other: only the handles take mouse/touch input */
+#year-slider-inner input[type="range"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+#year-range-start { z-index: 1; }
+#year-range-end { z-index: 2; }
+#year-slider-inner input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+}
+#year-slider-inner input[type="range"]::-moz-range-track {
+    background: transparent;
+}
+#year-slider-inner input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: auto;
+    width: var(--thumb);
+    height: var(--thumb);
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: grab;
+    background: var(--civ-list-bg);
+    border: 2px solid var(--civ-glow-blue);
+    box-shadow: 0 0 6px var(--civ-glow-blue);
+}
+#year-slider-inner input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: var(--thumb);
+    height: var(--thumb);
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: grab;
+    background: var(--civ-list-bg);
+    border: 2px solid var(--civ-glow-blue);
+    box-shadow: 0 0 6px var(--civ-glow-blue);
+}
+
 /* burger button */
 #burger {
   position: absolute;
@@ -622,6 +737,40 @@ details[open] summary {
         right: 5px;
         width: 60px;
         box-sizing: border-box;
+    }
+
+    /* year filter: smaller vertical bar on the left side of the screen (top 2/3), earliest year at the top.
+       The horizontal bar is rotated by 90 degrees; container query units give it the swapped size. */
+    #year-filter {
+        top: 35px;                  /* below the legend */
+        bottom: auto;
+        height: calc(66vh - 35px);  /* ends at 2/3 of the screen */
+        left: 5px;
+        transform: none;
+        width: 54px;
+        gap: 8px;
+        flex-direction: column;
+        padding: 6px 3px;
+        --thumb: 24px;
+    }
+    #year-filter input[type="number"] {
+        width: 100%;
+        padding: 3px 0;
+        font-size: 12px;
+    }
+    #year-slider {
+        align-self: stretch;
+        min-height: 0;
+        container-type: size;
+    }
+    #year-slider-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100cqh;
+        height: 100cqw;
+        transform-origin: top left;
+        transform: translateX(100cqw) rotate(90deg);
     }
 
     /* bonus filter: funnel button under the burger, options slide in from the right over the whole screen */
