@@ -47,50 +47,39 @@ function refreshBonusMarkers(categoryCheckboxes, markersBySubcategory, markersBy
     setBonusSelectVisibility(categoryCheckboxes);
 }
 
-function setIconSize(spawnData) {
-    let countlinebreaks = (spawnData.text.match(/\n/g) || []).length;
-    if (spawnData.text.includes('\n')) {
-        return [170, 108 + (countlinebreaks * 18)]; // create multiple lines
-    } else if (spawnData.text =='') {
-        return [170, 90]; // no text
-    } else {
-        return [170, 108]; // default size for all markers
-    }
-}
-function setIconAnchor(iconSize, direction) {
-    if (direction === 'arrow-top') {
-        return [iconSize[0]/2, -7]; // anchor at top center of the icon
-    }
-    return [iconSize[0]/2, iconSize[1]-7]; // anchor at bottom center of the icon
-}
+// The marker is positioned purely with CSS (see .marker-anchor-top / .marker-anchor-bottom in style.css):
+// Leaflet's icon element is a 0x0 dot on the lat/lng, and the inner .marker-box is shifted with
+// transform: translate() so the arrow tip sits on that dot, whatever size the content has.
+const ZERO_SIZE = [0, 0];
 
 function createDivIcon(spawnData) {
     const direction = (spawnData.spawn === false || spawnData.category === "Terrain changes") ? 'arrow-top' : 'arrow-bottom';
-    const iconSize = setIconSize(spawnData);
-    const anchor = setIconAnchor(iconSize, direction);
     const markerClass = spawnData.spawn ? 'marker-spawn' : 'marker-despawn';
+    const onlyText = spawnData.source=="" ? true : false;
+
+    const imghtml = onlyText ? "" : `<img src="${spawnData.source}" class="${markerClass}" />`;
 
     if (direction === 'arrow-top') {
          return L.divIcon({
-                className: 'custom-marker',
+                className: 'custom-marker marker-anchor-top',
                 html: `<div class="marker-box">
                 <div class="marker-arrow-top"></div>
-                <img src="${spawnData.source}" class="${markerClass}" />
+                ${imghtml}
                 <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
                 </div>`,
-                iconSize: iconSize,
-                iconAnchor: anchor
+                iconSize: ZERO_SIZE,
+                iconAnchor: ZERO_SIZE
             });
     } else {
         return L.divIcon({
-                    className: 'custom-marker',
+                    className: 'custom-marker marker-anchor-bottom',
                     html: `<div class="marker-box">
-                    <img src="${spawnData.source}" class="${markerClass}" />
+                    ${imghtml}
                     <span class="marker-text">${spawnData.text.replace(' - ', '\n')}</span>
                     <div class="marker-arrow-bottom"></div>
                     </div>`,
-                    iconSize: iconSize,
-                    iconAnchor: anchor
+                    iconSize: ZERO_SIZE,
+                    iconAnchor: ZERO_SIZE
                 });
     }
 }
@@ -163,15 +152,23 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
             categories[mapObject.category][mapObject.subcategory].push(mapObject);
         }
         console.log('Categories created:', Object.keys(categories));
-        // sort the categories and subcategories alphabetically
-        const sortedCategories = {};
-        for (const category of Object.keys(categories).sort()) {
-            sortedCategories[category] = {};
+        // sort the categories and subcategories alphabetically (optional)
+        const sortCategories = false;
 
-            for (const subcategory of Object.keys(categories[category]).sort()) {
-                sortedCategories[category][subcategory] =
-                    categories[category][subcategory];
+        let sortedCategories = {};
+
+        if (sortCategories){
+            for (const category of Object.keys(categories).sort()) {
+                sortedCategories[category] = {};
+
+                for (const subcategory of Object.keys(categories[category]).sort()) {
+                    sortedCategories[category][subcategory] =
+                        categories[category][subcategory];
+                }
             }
+        }
+        else{
+            sortedCategories = categories;
         }
 
         // Store markers by category and bonus type, plus their checkboxes for use in filtering and toggling visibility

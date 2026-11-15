@@ -414,12 +414,25 @@ details[open] summary {
 
 /* whole marker box */
 .custom-marker .marker-box {
-  padding: 4px 4px; 
+  position: absolute;     /* Leaflet's icon element is a 0x0 dot on the lat/lng */
+  left: 0;
+  top: 0;
+  width: max-content;
+  max-width: 170px;
+  padding: 4px 4px;
   /* border-radius: 6px; */
   text-align: center;     /* centers image and text */
   display: flex;
   flex-direction: column; /* stack children vertically */
   align-items: center;    /* center horizontally */
+}
+
+/* put the arrow tip exactly on the lat/lng (the 4px is the box padding) */
+.custom-marker.marker-anchor-bottom .marker-box {
+  transform: translate(-50%, calc(-100% + 4px));
+}
+.custom-marker.marker-anchor-top .marker-box {
+  transform: translate(-50%, -4px);
 }
 
 /* the image */
