@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 
-def get_BonusType(iresource):
+def getBonusCategory(iresource):
     resource_info = LBonusXML[iresource]
     
     if int(resource_info.get("iHappiness", 0)) > 0:
@@ -22,7 +22,8 @@ def get_BonusType(iresource):
     else:
         return "general"
 
-
+def getBonusType(iresource):
+    return LBonusXML[iresource].get("Description", "UnknownType")
 
 
 def update_resource_despawn():
@@ -68,14 +69,23 @@ def draw_resource_spawns(json_config):
         year = str(event[0])
         iresource = event[1]
         resource_info = LBonusXML[iresource]
-        resource_type = get_BonusType(iresource)
+        bonus_type = getBonusType(iresource)
+        bonus_category = getBonusCategory(iresource)
         path_art = resource_info["ArtDefineTag"]
         old_img = Image.open(path_art)
         new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_to_MapObject_config(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Resource spawns", bSpawn=True, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, 
+                                       coords, 
+                                       year, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Resource spawns and despawns", 
+                                       subcategory = "Resource spawns", 
+                                       bSpawn=True, 
+                                       bonusType=bonus_type,
+                                       bonusCategory=bonus_category)
 
 ### resource despawns ###
 def draw_resource_despawns(json_config):
@@ -88,7 +98,8 @@ def draw_resource_despawns(json_config):
         else:
             iresource = event[1]
             resource_info = LBonusXML[iresource]
-            resource_type = get_BonusType(iresource)
+            bonus_type = getBonusType(iresource)
+            bonus_category = getBonusCategory(iresource)
             path_art = resource_info["ArtDefineTag"]
 
             new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_despawn.png"
@@ -99,7 +110,15 @@ def draw_resource_despawns(json_config):
                 old_img = old_img.crop((3,3,60,60))
             old_img.paste(deletion_img, (0,0), deletion_img)
             old_img.save(new_path)
-        add_marker_to_MapObject_config(json_config, coords, year, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Resource despawns", bSpawn=False, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, 
+                                       coords, 
+                                       year, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Resource spawns and despawns", 
+                                       subcategory = "Resource despawns", 
+                                       bSpawn=False, 
+                                       bonusType=bonus_type,
+                                       bonusCategory=bonus_category)
 
 ## civ spawn resources
 def draw_civ_spawn_resources(json_config):
@@ -108,14 +127,23 @@ def draw_civ_spawn_resources(json_config):
         iresource = event[1]
         text = event[0]
         resource_info = LBonusXML[iresource]
-        resource_type = get_BonusType(iresource)
+        bonus_type = getBonusType(iresource)
+        bonus_category = getBonusCategory(iresource)
         path_art = resource_info["ArtDefineTag"]
         old_img = Image.open(path_art)
         new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Civ spawn Resources", bSpawn=True, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Resource spawns and despawns", 
+                                       subcategory = "Civ spawn Resources", 
+                                       bSpawn=True, 
+                                       bonusType=bonus_type,
+                                       bonusCategory=bonus_category)
 
 
 
@@ -132,7 +160,13 @@ def draw_feature_spawns(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Feature spawns and despawns", bSpawn=True)
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Markers", 
+                                       subcategory = "Feature spawns and despawns", 
+                                       bSpawn=True)
 
 def draw_feature_despawns(json_config):
     dRemovedFeaturesDictExtended = update_feature_despawn()
@@ -153,7 +187,13 @@ def draw_feature_despawns(json_config):
                 old_img = old_img.crop((3,3,60,60))
             old_img.paste(deletion_img, (0,0), deletion_img)
             old_img.save(new_path)
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Feature spawns and despawns", bSpawn=False)
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Markers", 
+                                       subcategory = "Feature spawns and despawns", 
+                                       bSpawn=False)
 
 ### Terrain changes ###
 def draw_terrain_changes(json_config):
@@ -168,7 +208,13 @@ def draw_terrain_changes(json_config):
         if old_img.size == (64,64):
             img = old_img.crop((4,4,59,59))
             img.save(new_path)
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Terrain changes", bSpawn=True)
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Markers", 
+                                       subcategory = "Terrain changes", 
+                                       bSpawn=True)
 
 ### Plot changes ###
 def draw_plot_changes(json_config):
@@ -182,7 +228,13 @@ def draw_plot_changes(json_config):
             img = old_img.crop((4,4,59,59))
             img.save(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png")
 
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Plot changes", bSpawn=True)    
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Hill_spawn.png").relative_to(config.OUTPUT_PATH), 
+                                       category = "Markers", 
+                                       subcategory = "Plot changes", 
+                                       bSpawn=True)    
 
 ### Region based resource spawns ###
 def draw_region_based_resource_spawns(json_config):
@@ -191,14 +243,23 @@ def draw_region_based_resource_spawns(json_config):
         iResource = event[1]
         text = f"{event[2]} \n {', '.join([LCivXML[iCiv]['ShortDescription'] for iCiv in tCivs])}"
         resource_info = LBonusXML[iResource]
-        resource_type = get_BonusType(iResource)
+        bonus_type = getBonusType(iResource)
+        bonus_category = getBonusCategory(iResource)
         path_art = resource_info["ArtDefineTag"]
         old_img = Image.open(path_art)
         new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
         if old_img.size == (64,64):
             img = old_img.crop((3,3,60,60))
             img.save(new_path)
-        add_marker_to_MapObject_config(json_config, (x,y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "City in same region", bSpawn=True, bonusType=resource_type)
+        add_marker_to_MapObject_config(json_config, 
+                                       (x,y), 
+                                       text, 
+                                       Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                       category = "Resource spawns and despawns", 
+                                       subcategory = "City in same region", 
+                                       bSpawn=True, 
+                                       bonusType=bonus_type,
+                                       bonusCategory=bonus_category)
 
 
 ### start resources ###
@@ -207,7 +268,8 @@ def draw_start_resources(json_config):
         if "bonus" in Tile:
             iResource = Tile["bonus"]
             resource_info = LBonusXML[iResource]
-            resource_type = get_BonusType(iResource)
+            bonus_type = getBonusType(iResource)
+            bonus_category = getBonusCategory(iResource)
             path_art = resource_info["ArtDefineTag"]
             old_img = Image.open(path_art)
             new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/" / f"{Path(path_art).stem}_cropped.png"
@@ -215,7 +277,15 @@ def draw_start_resources(json_config):
                 img = old_img.crop((3,3,60,60))
                 img.save(new_path)
             text = ""
-            add_marker_to_MapObject_config(json_config, (x,iWorldY-1-y), text, Path(new_path).relative_to(config.OUTPUT_PATH), category = "Markers", subcategory = "Start resources", bSpawn=True, bonusType=resource_type)
+            add_marker_to_MapObject_config(json_config, 
+                                           (x,iWorldY-1-y), 
+                                           text, 
+                                           Path(new_path).relative_to(config.OUTPUT_PATH), 
+                                           category = "Resource spawns and despawns", 
+                                           subcategory = "Start resources", 
+                                           bSpawn=True, 
+                                           bonusType=bonus_type,
+                                           bonusCategory=bonus_category)
 
 
 def draw_tile_markers(json_config):
