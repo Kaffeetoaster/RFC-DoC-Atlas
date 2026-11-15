@@ -1,10 +1,14 @@
 import { addLegendToggle } from "../UI/legend.js";
 import { addBonusFilter, initializeBonusFilter } from "../UI/bonus_filter.js";
 import { addYearFilter, initializeYearFilter } from "../UI/year_filter.js";
-import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey } from "../map_state.js";
+import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey, linkRelatedEntries, LINK_FIELD } from "../map_state.js";
 
 
 
+
+// Only the markers of this category are spread out when several of them are shown on exactly the same spot,
+// see spreadOffsets() in marker_spread.js and render() in map_state.js
+const SPREAD_CATEGORY = "Barbarian Spawns";
 
 function createDivIcon(spawnData) {
     const direction = (spawnData.spawn === false || spawnData.category === "Terrain changes") ? 'arrow-top' : 'arrow-bottom';
@@ -46,35 +50,48 @@ function createMapLayer(layerData, GAME_TILE_SIZE, width, MAP_OFFSET) {
     const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
     const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];
     
-    let imageOverlay, imageOverlayLeft, imageOverlayRight;
-    if (layerData.subcategory === "Birth") {
-    imageOverlay = L.imageOverlay(layerData.source, bounds, {pane: "OutlinePane"});
-    imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, {pane: "OutlinePane"});
-    imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, {pane: "OutlinePane"});
-    
-    } else {
-    imageOverlay = L.imageOverlay(layerData.source, bounds);
-    imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft);
-    imageOverlayRight = L.imageOverlay(layerData.source, boundsRight);
-    }
-    return { imageOverlay, imageOverlayLeft, imageOverlayRight };
+    // Layers that belong to a marker (they have an id) get the class "area-layer": the hovered marker highlights
+    // its area and dims all other area layers, see style.css
+    const options = {};
+    if (layerData.subcategory === "Birth") options.pane = "OutlinePane";
+    if (layerData[LINK_FIELD] != null) options.className = "area-layer";
 
+    const imageOverlay = L.imageOverlay(layerData.source, bounds, options);
+    const imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, options);
+    const imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, options);
+
+    // gold outline around the whole area, shown while the marker of the layer is hovered (see setHighlight in map_state.js)
+    let outline = [];
+    if (layerData[LINK_FIELD] != null) {
+        outline = [bounds, boundsLeft, boundsRight].map(areaBounds => L.rectangle(areaBounds, {
+            pane: "OutlinePane",    // above the image overlays
+            className: "area-outline",
+            color: "#ffcc66",
+            weight: 3,
+            fill: false,
+            interactive: false,
+        }));
+    }
+    return { imageOverlay, imageOverlayLeft, imageOverlayRight, outline };
 }
 
 // Leaflet objects of one map object. Everything in the array is added/removed together.
+// place(dx, dy) moves all copies by dx / dy game tiles from the real position (dy > 0 = up).
 function createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
     const lat = GAME_TILE_SIZE * mapObject.y + GAME_TILE_SIZE / 2 + MAP_OFFSET;
     const lng = GAME_TILE_SIZE * mapObject.x + GAME_TILE_SIZE / 2;
     // centre, left wrap and right wrap copy
-    return [lng, lng + width, lng - width].map(
-        wrappedLng => L.marker([lat, wrappedLng], { icon: createDivIcon(mapObject) })
-    );
+    const lngs = [lng, lng + width, lng - width];
+    const items = lngs.map(wrappedLng => L.marker([lat, wrappedLng], { icon: createDivIcon(mapObject) }));
+    const place = (dx, dy) => items.forEach((item, index) =>
+        item.setLatLng([lat + dy * GAME_TILE_SIZE, lngs[index] + dx * GAME_TILE_SIZE]));
+    return { items, place };
 }
 
 function createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
-    const { imageOverlay, imageOverlayLeft, imageOverlayRight } =
+    const { imageOverlay, imageOverlayLeft, imageOverlayRight, outline } =
         createMapLayer(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
-    return [imageOverlay, imageOverlayLeft, imageOverlayRight];
+    return { items: [imageOverlay, imageOverlayLeft, imageOverlayRight], outline };
 }
 
 // category -> subcategory -> [mapObjects]  (keeps the order of the json)
@@ -152,9 +169,14 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
                 // build the map objects of this subcategory and put them into the registry
                 for (const mapObject of mapObjects) {
                     if (mapObject.type === "marker") {
-                        registerEntry(mapObject, createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET));
+                        const { items, place } = createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
+                        const spread = mapObject.category === SPREAD_CATEGORY
+                            ? { spotKey: `${mapObject.x},${mapObject.y}`, place }
+                            : null;
+                        registerEntry(mapObject, items, { spread });
                     } else if (mapObject.type === "layer") {
-                        registerEntry(mapObject, createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET));
+                        const { items, outline } = createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
+                        registerEntry(mapObject, items, { outline });
                     }
                 }
 
@@ -180,6 +202,9 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
 
             container.appendChild(details);
         }
+
+        // markers and layers with the same id belong together (hovering the marker highlights the layer)
+        linkRelatedEntries();
 
         for (const checkbox of bonusCheckboxes) addBonusFilter(checkbox, bonusCheckboxes);
         if (hasYears) {

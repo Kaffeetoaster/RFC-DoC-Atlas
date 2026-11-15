@@ -10,7 +10,12 @@
 //                register a predicate with setFilter(); an entry is visible only if its
 //                subcategory is enabled AND every predicate returns true.
 
+import { spreadOffsets } from "./json/marker_spread.js";
+
 export const registry = [];
+
+// Marker and layer of the same spawn carry the same value in this field of MapObjects.json (set by the python export).
+export const LINK_FIELD = "id";
 
 export const state = {
     enabled: new Set(),
@@ -29,10 +34,53 @@ export function subcategoryKey(data) {
     return `${data.category}/${data.subcategory}`;
 }
 
-export function registerEntry(data, items) {
-    const entry = { data, items, key: subcategoryKey(data) };
+// options (all optional):
+//   spread:  { spotKey, place } for markers that must not hide each other. All shown entries with the
+//            same spotKey are moved apart with place(dx, dy), see render().
+//   outline: leaflet objects that are only shown while a related marker is hovered, see setHighlight()
+export function registerEntry(data, items, { spread = null, outline = [] } = {}) {
+    const entry = { data, items, key: subcategoryKey(data), spread, outline, offset: null, related: [] };
     registry.push(entry);
     return entry;
+}
+
+// Links every marker with the layers that have the same id and makes hovering the marker highlight them.
+// Call once after all entries are registered.
+export function linkRelatedEntries() {
+    const byId = new Map();
+    for (const entry of registry) {
+        const id = entry.data[LINK_FIELD];
+        if (id == null) continue;
+        if (!byId.has(id)) byId.set(id, []);
+        byId.get(id).push(entry);
+    }
+
+    for (const group of byId.values()) {
+        const layers = group.filter(entry => entry.data.type === "layer");
+        for (const marker of group.filter(entry => entry.data.type === "marker")) {
+            marker.related = layers;
+            for (const item of marker.items) {
+                item.on("mouseover", () => setHighlight(marker, true));
+                item.on("mouseout", () => setHighlight(marker, false));
+            }
+        }
+    }
+}
+
+// Gold outline around the related layers of the marker, and all other area layers are dimmed (classes in style.css).
+// A layer that is not on the map has no element yet and is skipped.
+function setHighlight(markerEntry, on) {
+    for (const layer of markerEntry.related) {
+        for (const item of layer.items) {
+            item.getElement()?.classList.toggle("area-highlight", on);
+        }
+        const layerShown = layer.items.some(item => map.hasLayer(item));
+        for (const outline of layer.outline) {
+            if (on && layerShown) outline.addTo(map);
+            else outline.removeFrom(map);
+        }
+    }
+    map.getContainer().classList.toggle("area-dim", on);
 }
 
 // called by the checkbox of a subcategory
@@ -65,13 +113,36 @@ function isAllowed(entry) {
     return true;
 }
 
+// Entries that are allowed (checkbox + filters) and share a spotKey are moved apart. This depends only on what is
+// allowed, not on what is in the view, so the markers move when the filters change but not when panning.
+function spreadEntries(allowedEntries) {
+    const bySpot = new Map();
+    for (const entry of allowedEntries) {
+        if (!entry.spread) continue;
+        if (!bySpot.has(entry.spread.spotKey)) bySpot.set(entry.spread.spotKey, []);
+        bySpot.get(entry.spread.spotKey).push(entry);
+    }
+    for (const group of bySpot.values()) {
+        const offsets = spreadOffsets(group.length);
+        group.forEach((entry, index) => {
+            const [dx, dy] = offsets[index];
+            if (entry.offset && entry.offset[0] === dx && entry.offset[1] === dy) return;
+            entry.offset = [dx, dy];
+            entry.spread.place(dx, dy);
+        });
+    }
+}
+
 // the one place that touches the map: add/remove whatever changed.
 // Markers are only added while they are (almost) inside the view; the padding keeps markers
 // whose box reaches into the view from popping in late. Layers (image overlays) are not checked.
 export function render() {
     const viewBounds = map.getBounds().pad(0.25);
+    const allowedEntries = new Set(registry.filter(isAllowed));
+    spreadEntries(allowedEntries);
+
     for (const entry of registry) {
-        const allowed = isAllowed(entry);
+        const allowed = allowedEntries.has(entry);
         for (const item of entry.items) {
             const inView = !item.getLatLng || viewBounds.contains(item.getLatLng());
             const show = allowed && inView;

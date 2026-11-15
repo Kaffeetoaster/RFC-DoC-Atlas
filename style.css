@@ -614,6 +614,18 @@ details[open] summary {
   transform: translate(-50%, -4px);
 }
 
+/* Area layers of markers: hovering a marker puts a gold glowing outline around its area, keeps its own area on top and
+   dims all the other areas. Leaflet sets opacity and z-index of an image overlay inline, hence !important. */
+.area-layer.area-highlight {
+  z-index: 10 !important;
+}
+.area-outline {
+  filter: drop-shadow(0 0 3px var(--civ-gold)) drop-shadow(0 0 6px var(--civ-gold));
+}
+.area-dim .area-layer:not(.area-highlight) {
+  opacity: 0.25 !important;
+}
+
 /* the image */
 .custom-marker .marker-spawn {
   overflow: hidden;
