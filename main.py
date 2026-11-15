@@ -9,6 +9,7 @@ from python.outline import create_tile_outline
 from python.DrawMaps.DrawReligionMaps import *
 from python.DrawMaps.DrawMarkers import *
 from python.DrawMaps.DrawCitySpawns import *
+from python.DrawMaps.DrawBarbarianSpawns import *
 from python.DrawMaps.DrawStabilityMaps import *
 from python.DrawMaps.DrawBirthMaps import *
 from python.DrawMaps.DrawUHVMaps import *
@@ -68,8 +69,8 @@ if __name__ == "__main__":
         image_height=2560,
         tiles_x=150,
         tiles_y=80,
-        output_path="./maps/tile_outline_cropped.png",
-        config = MapObjects_config
+        output_path=config.OUTPUT_PATH / "maps/tile_outline_cropped.png",
+        json_config = MapObjects_config
     )
 
 
@@ -82,11 +83,14 @@ if __name__ == "__main__":
 ### Draw Birth Maps, extended Birth and Respawn too ### 
     measure(DrawBirthMaps, MapObjects_config)
 
-### Draw Resource and Feature and Terrain spawns and despawns ###
+## Draw Resource and Feature and Terrain spawns and despawns ###
     measure(draw_tile_markers, MapObjects_config)
 
 ### Draw City Spawns ###
     measure(drawCitySpawns, MapObjects_config)
+    
+## Draw Barbarian Spawns ###
+    measure(drawBarbarianSpawns, MapObjects_config)    
 
 ### Draw Geography ###
     measure(DrawGeographyMaps, MapObjects_config)

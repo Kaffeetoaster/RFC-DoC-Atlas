@@ -16,6 +16,16 @@ def transform_area_coordinates(area, new_width = iWorldX, new_height = iWorldY, 
     BR_transformed = transform_coordinates((x_max, y_max), new_width, new_height, offset)
     return ((TL_transformed[0],TL_transformed[1]-(y_max-y_min)),(BR_transformed[0],BR_transformed[1]+(y_max-y_min)))
 
+def calculate_center_of_area(area):
+    (x_min,y_min), (x_max, y_max) = area
+    center_x = (x_min + x_max) / 2
+    center_y = (y_min + y_max) / 2
+    return (center_x, center_y)
+
+
+
+
+
 def add_layer_config_entry(config, text, category, image_path, image_size, offset = (0,0)):
 
     entry = {
@@ -42,13 +52,14 @@ def add_marker_config_entry(config_dict, coords, text, path_art, category, bSpaw
     }
     config_dict["spawns_and_despawns"].append(entry)
 
-def add_layer_to_MapObject_config(config_list, category, subcategory, image_path, image_size, offset = (0,0)):
+def add_layer_to_MapObject_config(config_list, category, subcategory, image_path, image_size, time_frame = None, offset = (0,0)):
     entry = {
         "x": offset[0], # offset if needed
         "y": offset[1],
         "source": str(image_path),
         "category": category,
         "subcategory": subcategory,
+        "time_frame": time_frame,
         "type": "layer",
         "w": image_size[0],
         "h": image_size[1],
@@ -56,17 +67,20 @@ def add_layer_to_MapObject_config(config_list, category, subcategory, image_path
     config_list.append(entry)
 
 
-def add_marker_to_MapObject_config(config_list, coords, text, path_art, category, subcategory, bSpawn, bonusType = None):
+
+def add_marker_to_MapObject_config(config_list, coords, text, path_art, category, subcategory, bSpawn,time_frame = None, bonusType = None, bonusCategory = None):
     entry = {
         "x": coords[0],
         "y": coords[1],
         "source": str(path_art),
         "category": category,
         "subcategory": subcategory,
+        "time_frame": time_frame,
         "type": "marker",
         "text": text,
         "spawn": bSpawn, # important for color
-        "bonusType": bonusType
+        "bonusType": bonusType,
+        "bonusCategory": bonusCategory
     }
     config_list.append(entry)
 
