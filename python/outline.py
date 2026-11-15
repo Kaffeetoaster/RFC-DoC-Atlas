@@ -1,7 +1,10 @@
 from PIL import Image, ImageDraw, ImageFont
 from python.helper.helper import *
+from pathlib import Path
+import config
 
-def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path, config):
+
+def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path, json_config):
     
     # Create transparent image
     img = Image.new("RGBA", (image_width, image_height), (0, 0, 0, 0))
@@ -37,5 +40,5 @@ def create_tile_outline(image_width, image_height, tiles_x, tiles_y, output_path
             draw.text(text_position, text, fill=(0, 0, 0, 200), font=font_small)
     # Save image
     img.save(output_path)
-    add_layer_to_MapObject_config(config_list = config, category = "Grid", subcategory = "Grid", image_path=Path(output_path).relative_to(config.OUTPUT_PATH), image_size=(image_width, image_height))
+    add_layer_to_MapObject_config(config_list = json_config, category = "Grid", subcategory = "Grid", image_path=Path(output_path).relative_to(config.OUTPUT_PATH), image_size=(image_width, image_height))
 
