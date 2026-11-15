@@ -84,7 +84,7 @@ html, body {
 /* resource filter dropdown */
 #city-planner-container {
     position: absolute;
-    top: 200px;
+    top: 64vh; /* last third of the screen, below the opened bonus filter panel */
     right: 5px;
     width: 60px;
     box-sizing: border-box;
@@ -128,13 +128,21 @@ html, body {
 
 
 
-#bonus-select {
+/* Bonus filter: funnel button that opens a checkbox list (checkboxes reuse .checkbox-container) */
+#bonus-filter {
     position: absolute;
-    top: 100px;
+    top: 30px; /* directly under the about box */
     right: 5px;
     z-index: 1100;
-    font-size: 15px;
-    font-weight: bold;
+}
+#bonus-filter.hidden {
+    display: none;
+}
+#bonus-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
     color: var(--civ-white);
     cursor: pointer;
     background: var(--civ-blue-bg);
@@ -143,7 +151,63 @@ html, body {
     padding: 6px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-#bonus-select.hidden {
+/* same size as the burger button */
+#burger, #bonus-filter-toggle {
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+}
+#bonus-filter-panel {
+    box-sizing: border-box;
+    width: 200px;
+    margin-top: 6px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    background: var(--civ-blue-bg);
+    border: 2px solid var(--civ-border);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#bonus-filter-search {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 8px;
+    border: 1px solid var(--civ-border);
+    border-radius: 6px;
+    background: var(--civ-list-bg);
+    color: var(--civ-white);
+    font-size: 14px;
+}
+/* ticked options are moved here: they stay under the search bar and do not scroll or get hidden by the search */
+#bonus-filter-selected {
+    margin-bottom: 8px;
+    padding: 0 8px;
+    border-radius: 2px;
+    background: var(--civ-list-bg);
+    border: 1px solid var(--civ-border);
+}
+#bonus-filter-selected:empty {
+    display: none;
+}
+
+/* title of the full screen panel (portrait only), click closes it */
+#bonus-filter-header {
+    display: none;
+}
+
+/* only the list scrolls, the search bar stays on top */
+#bonus-filter-list {
+    /* up to 50vh, but never so tall that the panel reaches the city planner buttons (64vh) */
+    max-height: min(50vh, calc(60vh - 140px));
+    overflow-y: auto;
+    padding: 8px;
+    border-radius: 2px;
+    background: var(--civ-list-bg);
+    border: 1px solid var(--civ-border);
+}
+#bonus-filter-panel.hidden {
     display: none;
 }
 
@@ -558,6 +622,60 @@ details[open] summary {
         right: 5px;
         width: 60px;
         box-sizing: border-box;
+    }
+
+    /* bonus filter: funnel button under the burger, options slide in from the right over the whole screen */
+    #bonus-filter {
+        top: 95px;
+    }
+    #bonus-filter-toggle {
+        width: 60px;
+        height: 60px;
+    }
+    #bonus-filter-toggle svg {
+        width: 30px;
+        height: 30px;
+    }
+    #bonus-filter-panel,
+    #bonus-filter-panel.hidden {
+        display: flex;              /* stay in the layout so the slide can be animated */
+    }
+    #bonus-filter-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        margin: 0;
+        max-height: none;
+        z-index: 1100;
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.45s ease-in-out, visibility 0s;
+    }
+    #bonus-filter-panel.hidden {
+        transform: translateX(110%);
+        visibility: hidden;         /* not focusable while off screen */
+        transition: transform 0.45s ease-in-out, visibility 0s 0.45s;
+    }
+    #bonus-filter-header {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--civ-white);
+        margin: 0 0 12px 0;
+        letter-spacing: 1.5px;
+        border-bottom: 1px solid var(--civ-border);
+        padding-bottom: 4px;
+        cursor: pointer;
+    }
+    #bonus-filter-list {
+        flex: 1;
+        min-height: 0;
+        max-height: none;
     }
 }
 

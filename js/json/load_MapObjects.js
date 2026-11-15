@@ -1,5 +1,5 @@
 import { addLegendToggle } from "../UI/legend.js";
-import { addBonusFilter, initializeBonusSelect } from "../UI/bonus_filter.js";
+import { addBonusFilter, initializeBonusFilter } from "../UI/bonus_filter.js";
 import { initMapState, registerEntry, setSubcategoryEnabled, subcategoryKey } from "../map_state.js";
 
 
@@ -122,13 +122,13 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
         const container = document.querySelector('.options-container');
         const checkboxesByCategory = {};
 
-        // all bonus types / categories that can be selected in the bonus select
+        // all bonus types / categories that can be selected in the bonus filter
         const bonusTypes = new Set();
         for (const mapObject of data) {
             if (mapObject.bonusType) bonusTypes.add(mapObject.bonusType);
             if (mapObject.bonusCategory) bonusTypes.add(mapObject.bonusCategory);
         }
-        initializeBonusSelect(bonusTypes);
+        initializeBonusFilter(bonusTypes);
 
         for (const [category, subcategories] of Object.entries(groupByCategory(data))) {
             const details = document.createElement('details');

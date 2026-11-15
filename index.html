@@ -48,11 +48,19 @@
   </div>
 </div>
 
-<select id="bonus-select" class = "hidden">
-  <option value="all">show all</option>
-  <option value="health">health</option>
-  <option value="happiness">happiness</option>
-</select>
+<div id="bonus-filter" class="hidden">
+  <button id="bonus-filter-toggle" type="button" title="Filter bonuses" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/>
+    </svg>
+  </button>
+  <div id="bonus-filter-panel" class="hidden">
+    <h3 id="bonus-filter-header">Resource filter</h3>
+    <input type="search" id="bonus-filter-search" placeholder="Search...">
+    <div id="bonus-filter-selected"></div>
+    <div id="bonus-filter-list"></div>
+  </div>
+</div>
 
 
 <div id="city-planner-container">
