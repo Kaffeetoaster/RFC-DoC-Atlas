@@ -193,7 +193,7 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
             }
 
             // category specific UI that only needs to know about the checkboxes
-            if (category === "Religion") {
+            if (category === "Religions") {
                 for (const checkbox of checkboxesByCategory[category]) {
                     addLegendToggle(checkbox, checkboxesByCategory[category]);
                 }

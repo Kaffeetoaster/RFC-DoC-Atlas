@@ -924,15 +924,12 @@
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 7,
+    "y": 31,
     "source": "maps/layers/Religions/Judaism.webp",
     "category": "Religions",
     "subcategory": "Judaism",
-    "time_frame": [
-      7,
-      31
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 2912,
     "h": 1312,
@@ -940,14 +937,11 @@
   },
   {
     "x": 0,
-    "y": 0,
+    "y": 31,
     "source": "maps/layers/Religions/Orthodoxy.webp",
     "category": "Religions",
     "subcategory": "Orthodoxy",
-    "time_frame": [
-      0,
-      31
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 4800,
     "h": 1568,
@@ -955,14 +949,11 @@
   },
   {
     "x": 0,
-    "y": 0,
+    "y": 3,
     "source": "maps/layers/Religions/Catholicism.webp",
     "category": "Religions",
     "subcategory": "Catholicism",
-    "time_frame": [
-      0,
-      3
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 4800,
     "h": 2464,
@@ -970,119 +961,95 @@
   },
   {
     "x": 0,
-    "y": 0,
+    "y": 4,
     "source": "maps/layers/Religions/Protestantism.webp",
     "category": "Religions",
     "subcategory": "Protestantism",
-    "time_frame": [
-      0,
-      4
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 4800,
     "h": 2432,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 48,
+    "y": 17,
     "source": "maps/layers/Religions/Islam.webp",
     "category": "Religions",
     "subcategory": "Islam",
-    "time_frame": [
-      48,
-      17
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 3232,
     "h": 2016,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 97,
+    "y": 24,
     "source": "maps/layers/Religions/Hinduism.webp",
     "category": "Religions",
     "subcategory": "Hinduism",
-    "time_frame": [
-      97,
-      24
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 1280,
     "h": 928,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 100,
+    "y": 29,
     "source": "maps/layers/Religions/Jainism.webp",
     "category": "Religions",
     "subcategory": "Jainism",
-    "time_frame": [
-      100,
-      29
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 544,
     "h": 768,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 93,
+    "y": 24,
     "source": "maps/layers/Religions/Buddhism.webp",
     "category": "Religions",
     "subcategory": "Buddhism",
-    "time_frame": [
-      93,
-      24
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 1536,
     "h": 1376,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 105,
+    "y": 6,
     "source": "maps/layers/Religions/Confucianism.webp",
     "category": "Religions",
     "subcategory": "Confucianism",
-    "time_frame": [
-      105,
-      6
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 1248,
     "h": 2016,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 105,
+    "y": 40,
     "source": "maps/layers/Religions/Taoism.webp",
     "category": "Religions",
     "subcategory": "Taoism",
-    "time_frame": [
-      105,
-      40
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 992,
     "h": 928,
     "id": null
   },
   {
-    "x": 0,
-    "y": 0,
+    "x": 83,
+    "y": 40,
     "source": "maps/layers/Religions/Zoroastrianism.webp",
     "category": "Religions",
     "subcategory": "Zoroastrianism",
-    "time_frame": [
-      83,
-      40
-    ],
+    "time_frame": null,
     "type": "layer",
     "w": 736,
     "h": 640,
