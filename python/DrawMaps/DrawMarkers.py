@@ -59,7 +59,7 @@ def update_feature_despawn():
             dRemovedFeaturesDictExtended[(x,y)] = (event, dTileMap[(x, iWorldY-1-y)].get("feature", None))
     return dRemovedFeaturesDictExtended
 
-def update_Spawnresources():
+def update_Spawn_resources():
     dSpawnResourcesDictExtended = dSpawnResourcesDict
     for (x,y), event in dSpawnResourcesDictExtended.items():
         iresource = event[1]
@@ -130,7 +130,7 @@ def draw_resource_despawns(json_config):
 
 ## civ spawn resources
 def draw_civ_spawn_resources(json_config):
-    dSpawnResourcesDictExtended = update_Spawnresources()
+    dSpawnResourcesDictExtended = update_Spawn_resources()
     for (x,y), event in dSpawnResourcesDictExtended.items():
         iresource = event[1]
         text = event[0]
