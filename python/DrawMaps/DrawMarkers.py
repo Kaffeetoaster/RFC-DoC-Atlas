@@ -34,6 +34,14 @@ def update_resource_despawn():
             # maybe a spawned resource will despawn
             iresource = dResourcesDict[(x,y)][1]
             dRemovedResourcesDictExtended[(x,y)] = (event, iresource)
+        elif (x,y) in dSpawnResourcesDict and dSpawnResourcesDict[(x,y)][0] < event:
+            # maybe a civ based spawned resource will despawn
+            iresource = dSpawnResourcesDict[(x,y)][1]
+            dRemovedResourcesDictExtended[(x,y)] = (event, iresource)
+        elif (x,y) in dCivGroupResourcesDict and dCivGroupResourcesDict[(x,y)][2] < event:
+            # maybe a area based spawned resource will despawn
+            iresource = dCivGroupResourcesDict[(x,y)][1]
+            dRemovedResourcesDictExtended[(x,y)] = (event, iresource)    
         else:
             # otherwise its just the starting resource that despawns
             dRemovedResourcesDictExtended[(x,y)] = (event, dTileMap[(x, iWorldY-1-y)].get("bonus", None))
