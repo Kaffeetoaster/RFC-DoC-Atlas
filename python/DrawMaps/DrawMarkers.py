@@ -103,6 +103,8 @@ def draw_resource_despawns(json_config):
         year = str(event[0])
         if event[1] is None:
             new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Deletion.png"
+            bonus_type = None
+            bonus_category = None
         else:
             iresource = event[1]
             resource_info = LBonusXML[iresource]
@@ -182,6 +184,7 @@ def draw_feature_despawns(json_config):
         year = str(event[0])
         if event[1] is None:
             new_path = config.OUTPUT_PATH / "Assets/Art/Interface/Buttons/Deletion.png"
+            text = f"{year} \n Unknown feature"
         else:
             ifeature = event[1]
             feature_info = LFeatureXML[ifeature]
