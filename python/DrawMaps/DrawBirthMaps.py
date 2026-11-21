@@ -23,6 +23,9 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     if iPeriod is not None:
         filename = f"{name}_{dPeriodNames.get(iPeriod, '')}".replace(" ", "_")
         name = f"{name.replace('_', ' ')} -> {dPeriodNames.get(iPeriod, '').replace('_', ' ')}"
+        if respawn:
+            name = f"{name} respawn"
+        
         Capital_x, Capital_y = dPeriodCapitals.get(iPeriod, (Capital_x, Capital_y))
     elif extendedCore:
         name = f"{name} extended (AI only)"
@@ -68,12 +71,17 @@ def DrawBirthMaps(layers_config):
         else:
             if iCiv in dCoreArea:
                 draw_birth_map(layers_config, iCiv, dCoreArea[iCiv], dCoreAreaExceptions.get(iCiv, []), "maps/layers/Spawns", line_width=3)
+                
         for iPeriod in dCivPeriods.get(iCiv, []):
             if iPeriod in dPeriodCoreArea:
                 draw_birth_map(layers_config, iCiv, dPeriodCoreArea[iPeriod], dPeriodCoreAreaExceptions.get(iPeriod, []), "maps/layers/Spawns/Periods", 3,iPeriod)
             
+            if iPeriod in dPeriodRespawnArea:
+                draw_birth_map(layers_config, iCiv, dPeriodRespawnArea[iPeriod], dPeriodRespawnAreaExceptions.get(iPeriod, []), "maps/layers/Spawns/Respawns", 7,iPeriod, respawn=True)
+            
+            
         if iCiv in dExtendedBirthArea:
             draw_birth_map(layers_config, iCiv, dExtendedBirthArea[iCiv], dExtendedBirthAreaExceptions.get(iCiv, []), "maps/layers/Spawns/Extended", line_width=5,extendedCore=True)
+        
         if iCiv in dRespawnArea:
             draw_birth_map(layers_config, iCiv, dRespawnArea[iCiv], dRespawnAreaExceptions.get(iCiv, []), "maps/layers/Spawns/Respawns", line_width=7, respawn=True)
-
