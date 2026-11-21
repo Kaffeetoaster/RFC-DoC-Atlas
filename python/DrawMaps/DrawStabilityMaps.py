@@ -148,7 +148,7 @@ def draw_stability_map_for_period(iCiv, iPeriod, json_config):
 def should_draw_for_period(iPeriod):
 	period_name = dPeriodNames.get(iPeriod, "")
 	
-	return period_name!="" and (map_exists(f"Settler/Period/{period_name}.csv") or map_exists(f"War/Period/{period_name}.csv"))
+	return (iPeriod in dPeriodCoreArea) or map_exists(f"Settler/Period/{period_name}.csv") or map_exists(f"War/Period/{period_name}.csv")
 
 
 
@@ -160,6 +160,5 @@ def DrawStabilityMaps(json_config):
 			draw_stability_map_for_civ(iCiv, json_config)
 		
 		for iPeriod in dCivPeriods.get(iCiv, []):
-			if should_draw_for_period(iPeriod):
-				draw_stability_map_for_period(iCiv, iPeriod, json_config)
+			draw_stability_map_for_period(iCiv, iPeriod, json_config)
 	
