@@ -25,6 +25,8 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
         name = f"{name.replace('_', ' ')} -> {dPeriodNames.get(iPeriod, '').replace('_', ' ')}"
         if respawn:
             name = f"{name} respawn"
+        else:
+            name = f"{name} (Birth)"
         
         Capital_x, Capital_y = dPeriodCapitals.get(iPeriod, (Capital_x, Capital_y))
     elif extendedCore:
@@ -32,6 +34,8 @@ def draw_birth_map(json_config, iCiv, area, exceptions, folder,line_width, iPeri
     elif respawn:
         name = f"{name} respawn"
         Capital_x, Capital_y = dRespawnCapitals.get(iCiv, (Capital_x, Capital_y))
+    else:
+        name = f"{name} (Birth)"
     
     print(f"Drawing birth map for {name}... ")
 

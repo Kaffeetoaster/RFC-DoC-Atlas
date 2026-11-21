@@ -510,18 +510,22 @@ details[open] summary {
 /* --- Circular Glowing Checkboxes --- */
 .checkbox-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
-    padding-left: 28px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    min-height: 18px;
+    padding: 8px 8px 8px 28px;
+    margin: 0;
     cursor: pointer;
     font-size: 15px;
     color: var(--civ-white);
     user-select: none;
-    line-height: 14px;
-    padding-bottom: 5px;
+    line-height: 18px;
     border-bottom: 1px solid var(--civ-border);
+}
+
+.label-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .checkbox-container[hidden] {
@@ -537,7 +541,7 @@ details[open] summary {
 /* Circular outer ring */
 .checkmark {
     position: absolute;
-    top: 0px;
+    top: 11px;
     left: 5px;
     height: 12px;
     width: 12px;
