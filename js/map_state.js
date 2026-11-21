@@ -23,6 +23,7 @@ export const state = {
 };
 
 let map = null;
+const linkedMarkerCopies = new WeakSet();
 
 export function initMapState(leafletMap) {
     map = leafletMap;
@@ -35,11 +36,29 @@ export function subcategoryKey(data) {
 }
 
 // options (all optional):
-//   spread:  { spotKey, place } for markers that must not hide each other. All shown entries with the
-//            same spotKey are moved apart with place(dx, dy), see render().
+//   spread:  { spotKey } for markers that must not hide each other. All shown entries with the
+//            same spotKey are moved apart, see render().
 //   outline: leaflet objects that are only shown while a related marker is hovered, see setHighlight()
-export function registerEntry(data, items, { spread = null, outline = [] } = {}) {
-    const entry = { data, items, key: subcategoryKey(data), spread, outline, offset: null, related: [] };
+export function registerEntry(data, items, {
+    spread = null,
+    outline = [],
+    getCopyOffsets = null,
+    createCopy = null,
+    updateCopy = null,
+} = {}) {
+    const entry = {
+        data,
+        items,
+        key: subcategoryKey(data),
+        spread,
+        outline,
+        offset: null,
+        related: [],
+        copies: new Map(),
+        getCopyOffsets,
+        createCopy,
+        updateCopy,
+    };
     registry.push(entry);
     return entry;
 }
@@ -59,12 +78,15 @@ export function linkRelatedEntries() {
         const layers = group.filter(entry => entry.data.type === "layer");
         for (const marker of group.filter(entry => entry.data.type === "marker")) {
             marker.related = layers;
-            for (const item of marker.items) {
-                item.on("mouseover", () => setHighlight(marker, true));
-                item.on("mouseout", () => setHighlight(marker, false));
-            }
         }
     }
+}
+
+function linkMarkerCopy(markerEntry, item) {
+    if (linkedMarkerCopies.has(item)) return;
+    item.on("mouseover", () => setHighlight(markerEntry, true));
+    item.on("mouseout", () => setHighlight(markerEntry, false));
+    linkedMarkerCopies.add(item);
 }
 
 // Gold outline around the related layers of the marker, and all other area layers are dimmed (classes in style.css).
@@ -128,7 +150,6 @@ function spreadEntries(allowedEntries) {
             const [dx, dy] = offsets[index];
             if (entry.offset && entry.offset[0] === dx && entry.offset[1] === dy) return;
             entry.offset = [dx, dy];
-            entry.spread.place(dx, dy);
         });
     }
 }
@@ -143,12 +164,60 @@ export function render() {
 
     for (const entry of registry) {
         const allowed = allowedEntries.has(entry);
-        for (const item of entry.items) {
-            const inView = !item.getLatLng || viewBounds.contains(item.getLatLng());
-            const show = allowed && inView;
-            if (show === map.hasLayer(item)) continue;
-            if (show) item.addTo(map);
-            else item.removeFrom(map);
+
+        // DYNAMIC COPY CHANGE: entries without copy factories keep their existing fixed items.
+        if (!entry.getCopyOffsets || !entry.createCopy || !entry.updateCopy) {
+            for (const item of entry.items) {
+                const inView = !item.getLatLng || viewBounds.contains(item.getLatLng());
+                const show = allowed && inView;
+                if (show === map.hasLayer(item)) continue;
+                if (show) item.addTo(map);
+                else item.removeFrom(map);
+            }
+            continue;
+        }
+
+        const [dx, dy] = entry.offset ?? [0, 0];
+        const neededOffsets = allowed ? new Set(entry.getCopyOffsets(viewBounds)) : new Set();
+
+        entry.items = [];
+        entry.outline = [];
+
+        for (const [offset, copy] of entry.copies) {
+            if (!neededOffsets.has(offset)) {
+                for (const item of copy.items) item.removeFrom(map);
+                for (const outline of copy.outlines) outline.removeFrom(map);
+            }
+        }
+
+        for (const offset of neededOffsets) {
+            let copy = entry.copies.get(offset);
+            if (!copy) {
+                copy = entry.createCopy(offset, dx, dy);
+                entry.copies.set(offset, copy);
+            } else {
+                entry.updateCopy(copy, offset, dx, dy);
+            }
+
+            entry.items.push(...copy.items);
+            entry.outline.push(...copy.outlines);
+
+            for (const item of copy.items) {
+                const inView = !item.getLatLng || viewBounds.contains(item.getLatLng());
+                if (inView && !map.hasLayer(item)) item.addTo(map);
+                else if (!inView && map.hasLayer(item)) item.removeFrom(map);
+
+                if (dataTypeMarker(entry) && inView) linkMarkerCopy(entry, item);
+            }
+        }
+
+        for (const [offset, copy] of entry.copies) {
+            if (neededOffsets.has(offset)) continue;
+            entry.copies.delete(offset);
         }
     }
+}
+
+function dataTypeMarker(entry) {
+    return entry.data.type === "marker";
 }
