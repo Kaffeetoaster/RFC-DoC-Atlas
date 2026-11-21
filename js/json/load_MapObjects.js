@@ -46,9 +46,6 @@ function createMapLayer(layerData, GAME_TILE_SIZE, width, MAP_OFFSET) {
     // Create the image overlay
     const lat = GAME_TILE_SIZE * (layerData.y) + MAP_OFFSET;
     const lng = GAME_TILE_SIZE * (layerData.x);
-    const bounds = [[lat, lng], [lat + layerData.h, lng + layerData.w]];
-    const boundsLeft = [[lat, lng - width], [lat + layerData.h, lng + layerData.w - width]];
-    const boundsRight = [[lat, lng + width], [lat + layerData.h, lng + layerData.w + width]];
     
     // Layers that belong to a marker (they have an id) get the class "area-layer": the hovered marker highlights
     // its area and dims all other area layers, see style.css
@@ -56,42 +53,83 @@ function createMapLayer(layerData, GAME_TILE_SIZE, width, MAP_OFFSET) {
     if (layerData.subcategory === "Birth") options.pane = "OutlinePane";
     if (layerData[LINK_FIELD] != null) options.className = "area-layer";
 
-    const imageOverlay = L.imageOverlay(layerData.source, bounds, options);
-    const imageOverlayLeft = L.imageOverlay(layerData.source, boundsLeft, options);
-    const imageOverlayRight = L.imageOverlay(layerData.source, boundsRight, options);
+    // DYNAMIC COPY CHANGE: calculate only the world offsets whose overlay could intersect the view.
+    const getCopyOffsets = viewBounds => {
+        const west = viewBounds.getWest();
+        const east = viewBounds.getEast();
+        const kMin = Math.floor((west - lng - layerData.w) / width);
+        const kMax = Math.ceil((east - lng) / width);
+        const offsets = [];
+        for (let k = kMin; k <= kMax; k++) offsets.push(k);
+        return offsets;
+    };
 
-    // gold outline around the whole area, shown while the marker of the layer is hovered (see setHighlight in map_state.js)
-    let outline = [];
-    if (layerData[LINK_FIELD] != null) {
-        outline = [bounds, boundsLeft, boundsRight].map(areaBounds => L.rectangle(areaBounds, {
-            pane: "OutlinePane",    // above the image overlays
-            className: "area-outline",
-            color: "#ffcc66",
-            weight: 3,
-            fill: false,
-            interactive: false,
-        }));
-    }
-    return { imageOverlay, imageOverlayLeft, imageOverlayRight, outline };
+    const makeBounds = k => [
+        [lat, lng + k * width],
+        [lat + layerData.h, lng + layerData.w + k * width],
+    ];
+
+    const createCopy = k => {
+        const copyBounds = makeBounds(k);
+        const imageOverlay = L.imageOverlay(layerData.source, copyBounds, options);
+        const outlines = layerData[LINK_FIELD] != null
+            ? [L.rectangle(copyBounds, {
+                pane: "OutlinePane",
+                className: "area-outline",
+                color: "#ffcc66",
+                weight: 3,
+                fill: false,
+                interactive: false,
+            })]
+            : [];
+        return { items: [imageOverlay], outlines };
+    };
+
+    const updateCopy = (copy, k) => {
+        const copyBounds = makeBounds(k);
+        copy.items[0].setBounds(copyBounds);
+        for (const outline of copy.outlines) outline.setBounds(copyBounds);
+    };
+
+    return { getCopyOffsets, createCopy, updateCopy };
 }
 
-// Leaflet objects of one map object. Everything in the array is added/removed together.
-// place(dx, dy) moves all copies by dx / dy game tiles from the real position (dy > 0 = up).
+// Dynamic marker copies are added to the registry by world offset.
+// Spread offsets move all visible copies by dx/dy game tiles.
 function createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
     const lat = GAME_TILE_SIZE * mapObject.y + GAME_TILE_SIZE / 2 + MAP_OFFSET;
     const lng = GAME_TILE_SIZE * mapObject.x + GAME_TILE_SIZE / 2;
-    // centre, left wrap and right wrap copy
-    const lngs = [lng, lng + width, lng - width];
-    const items = lngs.map(wrappedLng => L.marker([lat, wrappedLng], { icon: createDivIcon(mapObject) }));
-    const place = (dx, dy) => items.forEach((item, index) =>
-        item.setLatLng([lat + dy * GAME_TILE_SIZE, lngs[index] + dx * GAME_TILE_SIZE]));
-    return { items, place };
+    // DYNAMIC COPY CHANGE: marker offsets are calculated from the current view.
+    const getCopyOffsets = viewBounds => {
+        const west = viewBounds.getWest();
+        const east = viewBounds.getEast();
+        const kMin = Math.floor((west - lng) / width) - 1;
+        const kMax = Math.ceil((east - lng) / width) + 1;
+        const offsets = [];
+        for (let k = kMin; k <= kMax; k++) offsets.push(k);
+        return offsets;
+    };
+
+    const createCopy = (k, dx = 0, dy = 0) => {
+        const item = L.marker([
+            lat + dy * GAME_TILE_SIZE,
+            lng + k * width + dx * GAME_TILE_SIZE,
+        ], { icon: createDivIcon(mapObject) });
+        return { items: [item], outlines: [] };
+    };
+
+    const updateCopy = (copy, k, dx = 0, dy = 0) => {
+        copy.items[0].setLatLng([
+            lat + dy * GAME_TILE_SIZE,
+            lng + k * width + dx * GAME_TILE_SIZE,
+        ]);
+    };
+
+    return { getCopyOffsets, createCopy, updateCopy };
 }
 
 function createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET) {
-    const { imageOverlay, imageOverlayLeft, imageOverlayRight, outline } =
-        createMapLayer(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
-    return { items: [imageOverlay, imageOverlayLeft, imageOverlayRight], outline };
+    return createMapLayer(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
 }
 
 // category -> subcategory -> [mapObjects]  (keeps the order of the json)
@@ -169,14 +207,18 @@ export function loadMapObjects(map, GAME_TILE_SIZE, width, height, MAP_OFFSET) {
                 // build the map objects of this subcategory and put them into the registry
                 for (const mapObject of mapObjects) {
                     if (mapObject.type === "marker") {
-                        const { items, place } = createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
+                        const { getCopyOffsets, createCopy, updateCopy } =
+                            createMarkerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
                         const spread = mapObject.category === SPREAD_CATEGORY
-                            ? { spotKey: `${mapObject.x},${mapObject.y}`, place }
+                            ? { spotKey: `${mapObject.x},${mapObject.y}` }
                             : null;
-                        registerEntry(mapObject, items, { spread });
+                        // DYNAMIC COPY CHANGE: register copy factories instead of fixed marker objects.
+                        registerEntry(mapObject, [], { spread, getCopyOffsets, createCopy, updateCopy });
                     } else if (mapObject.type === "layer") {
-                        const { items, outline } = createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
-                        registerEntry(mapObject, items, { outline });
+                        const { getCopyOffsets, createCopy, updateCopy } =
+                            createLayerItems(mapObject, GAME_TILE_SIZE, width, MAP_OFFSET);
+                        // DYNAMIC COPY CHANGE: register copy factories instead of fixed image overlays.
+                        registerEntry(mapObject, [], { getCopyOffsets, createCopy, updateCopy });
                     }
                 }
 
